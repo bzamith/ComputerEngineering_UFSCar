@@ -1,37 +1,53 @@
-# EngenhariaComputacao_UFSCar
-Projetos de Disciplinas - Engenharia de Computação, UFSCar (2015-2020)
-
+# Engenharia de Computação @ UFSCar
+Projetos Desenvolvidos para Disciplinas - Engenharia de Computação, UFSCar (2015-2020)
 
 ```
 ├── 2016-01
-│ └── circuitos-digitais (Circuitos Digitais - prof. Emerson Pedrino)
+│ └── circuitos-digitais
 ├── 2016-02
-│ ├── ori (Organização e Recuperação da Informação - prof. Jander Moreira)
-│ │ ├── compactador
-│ │ └── arvoreB
-│ └── paa (Projeto e Análise de Algoritmos - prof. Ednaldo Pizzolato)
+│ ├── ori
+│ └── paa
 ├── 2017-01
-│ ├── arq2 (Arquitetura de Computadores 2 - prof. Luciano Neris)
-│ ├── isi (Introdução a Sistemas de Informação - profa. Sandra Fabbri)
-│ │ ├── projeto 1
-│ │ ├── projeto 2
-│ │ ├── projeto 3
-│ │ └── projeto 4
-│ ├── mat-comp (Matemática Computacional - prof. Alexandre Levada)
-│ └── plp (Paradigmas de Linguagens de Programação - prof. Daniel Lucrédio)
+│ ├── arq2 
+│ ├── isi
+│ ├── mat-comp
+│ └── plp
 ├── 2018-01
-│ ├── redes-neurais (Introdução a Redes Neurais - prof. Ricardo Cerri)
-│ │ ├── projeto 1
-│ │ └── projeto 2
-│ ├── seguranca-cibernetica (Engenharia de Segurança Cibernética - prof. César Marcondes)
-│ └── so1 (Sistemas Operacionais 1 - profa. Kelen Vivaldini)
-│ │ ├── projeto 1
-│ │ ├── projeto 2
-│ │ └── projeto 3
+│ ├── redes-neurais
+│ ├── seguranca-cibernetica
+│ └── so1
 ├── 2018-02
-│ ├── banco-de-dados (Banco de Dados - profa. Marcela Ribeiro)
-│ ├── es1 (Engenharia de Software 1 - prof. Auri Vicenzi)
-│ └── microcontroladores (Microcontroladores e Aplicações - prof. Edilson Kato)
+│ ├── banco-de-dados 
+│ ├── es1
+│ └── microcontroladores
 └── 2019-01
-│ └── tec-com (Tecnologi ae Comunicação de Dados - prof. Rafael Aroca)
+│ └── tec-com
 ```
+
+### 2016-01
+Primeiro Semestre de 2016
+- [x] Circuitos Digitais - prof. Emerson Pedrino
+
+### 2016-02
+- [x] Organização e Recuperação da Informação - prof. Jander Moreira
+- [x] Projeto e Análise de Algoritmos - prof. Ednaldo Pizzolato
+
+### 2017-01
+- [x] Arquitetura de Computadores 2 - prof. Luciano Neris
+- [x] Introdução a Sistemas de Informação - profa. Sandra Fabbri
+- [x] Matemática Computacional - prof. Alexandre Levada
+- [x] Paradigmas de Linguagens de Programação - prof. Daniel Lucrédio
+
+### 2018-01
+- [x] Introdução a Redes Neurais - prof. Ricardo Cerri
+- [x] Engenharia de Segurança Cibernética - prof. César Marcondes
+- [x] Sistemas Operacionais 1 - profa. Kelen Vivaldini
+
+
+### 2018-02
+- [x] Banco de Dados - profa. Marcela Ribeiro
+- [x] Engenharia de Software 1 - prof. Auri Vicenzi
+- [x] Microcontroladores e Aplicações - prof. Edilson Kato
+
+### 2019-01
+- [x] Tecnologia e Comunicação de Dados - prof. Rafael Aroca
