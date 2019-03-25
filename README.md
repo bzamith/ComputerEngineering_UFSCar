@@ -33,7 +33,7 @@ Primeiro Semestre de 2015
 ### 2016-01
 Primeiro Semestre de 2016
 - [x] Circuitos Digitais - prof. Emerson Pedrino
-- [ ] Estrutura de Dados - prof. Roberto Ferrari
+- [x] Estrutura de Dados - prof. Roberto Ferrari
 
 ### 2016-02
 Segundo Semestre de 2016
