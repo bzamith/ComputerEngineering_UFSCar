@@ -1,0 +1,42 @@
+|qwwq
+HEX0[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= inst34.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= inst39.DB_MAX_OUTPUT_PORT_TYPE
+SW[0] => inst5.IN0
+SW[0] => inst9.IN1
+SW[0] => inst38.IN2
+SW[0] => inst28.IN0
+SW[0] => inst26.IN0
+SW[0] => inst25.IN0
+SW[0] => inst22.IN0
+SW[0] => inst17.IN2
+SW[0] => inst16.IN0
+SW[0] => inst12.IN0
+SW[1] => inst.IN0
+SW[1] => inst38.IN1
+SW[1] => inst37.IN1
+SW[1] => inst26.IN1
+SW[1] => inst35.IN0
+SW[1] => inst23.IN0
+SW[1] => inst22.IN1
+SW[1] => inst18.IN0
+SW[1] => inst14.IN1
+SW[1] => inst12.IN1
+SW[2] => inst4.IN0
+SW[2] => inst8.IN1
+SW[2] => inst38.IN0
+SW[2] => inst37.IN0
+SW[2] => inst29.IN0
+SW[2] => inst24.IN0
+SW[2] => inst20.IN1
+SW[2] => inst15.IN0
+SW[2] => inst13.IN1
+SW[3] => inst8.IN0
+SW[3] => inst37.IN2
+SW[3] => inst30.IN0
+
+
