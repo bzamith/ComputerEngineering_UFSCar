@@ -1,0 +1,2805 @@
+Microsoft (R) Macro Assembler Version 14.00.24210.0	    07/07/17 23:55:06
+ClockColors.asm						     Page 1 - 1
+
+
+				;Dados referentes a utilização da biblioteca IRVINE retirado de: http://programming.msjc.edu/asm/help/index.html?page=source%2Fabout.htm
+				;Este jogo refere-se ao trabalho final apresentado a disciplina de Laboratório de Arquitetura e Organização de Computadores do Deparatamento de Computação da Universidade Federal de São Carlos -  UFSCar
+				;Docente responsável: Professor Doutor Luciano Neris
+				;Autores:
+				;	Bruna Zamith Santos		Ra 628093
+				;	Marcos Augusto Faglioni Junior		Ra 628301
+				INCLUDE Irvine32.inc
+			      C ; Include file for Irvine32.lib             (Irvine32.inc)
+			      C 
+			      C ;OPTION CASEMAP:NONE		; optional: make identifiers case-sensitive
+			      C 
+			      C INCLUDE SmallWin.inc		; MS-Windows prototypes, structures, and constants
+			      C .NOLIST
+			      C .LIST
+			      C 
+			      C INCLUDE VirtualKeys.inc
+			      C ; VirtualKeys.inc
+			      C .NOLIST
+			      C .LIST
+			      C 
+			      C 
+			      C .NOLIST
+			      C .LIST
+			      C 
+
+ 00000000			.data
+ 00000000 43 4F 52 20 53		cor BYTE "COR SORTEADA:",0			;Nome do marcador das cores selecionadas
+	   4F 52 54 45 41
+	   44 41 3A 00
+ 0000000E 54 45 4D 50 4F		tempo BYTE "TEMPO:", 0				;Nome do marcador de Tempo 
+	   3A 00
+ 00000015 50 4F 4E 54 55		pontuacao BYTE "PONTUACAO:", 0		;Nome do marcador de Pontuação
+	   41 43 41 4F 3A
+	   00
+ 00000020 49 4E 49 43 49		biniciar BYTE "INICIAR",0			;Nome do botão para iniciar o jogo
+	   41 52 00
+ 00000028 43 52 45 44 49		bcreditos BYTE "CREDITOS",0			;Nome do botão para os creditos
+	   54 4F 53 00
+ 00000031 43 4F 4D 4F 20		bcomoJogar BYTE "COMO JOGAR",0		;Nome do botão para as instruções
+	   4A 4F 47 41 52
+	   00
+ 0000003C 43 4C 4F 43 4B		nome BYTE "CLOCK COLORS", 0			;Nome do Jogo
+	   20 43 4F 4C 4F
+	   52 53 00
+ 00000049 46 41 43 49 4C		bDificuldade1 BYTE "FACIL", 0		;Nome do botão para a dificuldade 1
+	   00
+ 0000004F 4D 45 44 49 4F		bDificuldade2 BYTE "MEDIO", 0		;Nome do botão para a dificuldade 2
+	   00
+ 00000055 44 49 46 49 43		bDificuldade3 BYTE "DIFICIL", 0		;Nome do botão para a dificuldade 3
+	   49 4C 00
+ 0000005D 5A				timeMax BYTE 90						;Armazena o tempo maximo de jogo
+ 0000005E 5A				time BYTE 90						;Armazena o tempo do jogo
+ 0000005F 00				score BYTE 0						;Armazena a pontuação do jogo
+ 00000060 00				posSeta BYTE 0						;Armazena a posição da seta no menu 
+ 00000061 00				posSeta1 BYTE 0						;Armazena a posição da seta no menu 
+ 00000062 3C				tMaxX BYTE 60						;Armazena a quantidade de colunas do ecrã do jogo
+ 00000063 1A				tMaxY BYTE 26						;Armazena a quantidade de linhas do ecrã do jogo
+ 00000064 1E				posXB BYTE 30						;Armazena a posição X do personagem
+ 00000065 18				posYB BYTE 24						;Armazena a posição Y do personagem
+ 00000066 05				distPlat BYTE 5						;Armazena a distancia entre as plataformas
+ 00000067 0F				nArmadilhas BYTE 15					;Numero de armadilhas por plataforma
+ 00000068 3C				quantArmadilhas BYTE 60				;Numero de elementos do vetor armadilhas
+ 00000069  0000003C [			armadilhas BYTE 60 DUP(?)			;Armazena as coordenadas x das armadilhas (são 3 armadilhas por plataforma)
+	    00
+	   ]
+ 000000A5 0008				platInicial WORD 8					;Armazena qual é a altura Y da plataforma mais alta
+ 000000A7 00				cont BYTE 0							;Contador auxiliar para trocar as cores da plataforma
+ 000000A8 00				contTime BYTE 0						;Contador auxiliar para o tempo
+ 000000A9 000E 0001 0002		coresDisp WORD yellow, blue, green, 
+	   0003 0004 0005
+	   000F 000C
+									cyan, red, magenta, 
+									white, lightRed 	;Vetor de Cores Disponíveis para as plataformas (cores pre definidas pela biblioteca Irvine)
+ 000000B9  00000002 [			corSele WORD 2 DUP(?)				;Vetor de cores sorteadas para as plataformas
+	    0000
+	   ]
+ 000000BD  00000001 [			corPlatAtual WORD 1 DUP(?)			;Armazena a cor atual da plataforma imediatamente acima do personagem
+	    0000
+	   ]
+					
+					;Os dados seguintes salvos na memória tem por objetivo armazenar o texto a ser exibido nas instrucões
+ 000000BF 45 53 54 45 20		mInstrucoes1 BYTE "ESTE JOGO CONSISTE EM GUIAR O ETEVALDO ATE A",0
+	   4A 4F 47 4F 20
+	   43 4F 4E 53 49
+	   53 54 45 20 45
+	   4D 20 47 55 49
+	   41 52 20 4F 20
+	   45 54 45 56 41
+	   4C 44 4F 20 41
+	   54 45 20 41 00
+ 000000EC 50 4C 41 54 41		mInstrucoes2 BYTE "PLATAFORMA MAIS ALTA QUE O JOGADOR CONSEGUIR CHEGAR",0
+	   46 4F 52 4D 41
+	   20 4D 41 49 53
+	   20 41 4C 54 41
+	   20 51 55 45 20
+	   4F 20 4A 4F 47
+	   41 44 4F 52 20
+	   43 4F 4E 53 45
+	   47 55 49 52 20
+	   43 48 45 47 41
+	   52 00
+ 00000120 45 4D 20 33 30		mInstrucoes3 BYTE "EM 30, 60 ou 90 SEGUNDOS.",0
+	   2C 20 36 30 20
+	   6F 75 20 39 30
+	   20 53 45 47 55
+	   4E 44 4F 53 2E
+	   00
+					
+ 0000013A 4E 45 53 53 41		mInstrucoes4 BYTE "NESSA AVENTURA, O ETEVALDO SO PODE PULAR SE A",0 
+	   20 41 56 45 4E
+	   54 55 52 41 2C
+	   20 4F 20 45 54
+	   45 56 41 4C 44
+	   4F 20 53 4F 20
+	   50 4F 44 45 20
+	   50 55 4C 41 52
+	   20 53 45 20 41
+	   00
+ 00000168 50 4C 41 54 41		mInstrucoes5 BYTE "PLATAFORMA IMEDIATAMENTE ACIMA DELE ESTIVER COM",0 
+	   46 4F 52 4D 41
+	   20 49 4D 45 44
+	   49 41 54 41 4D
+	   45 4E 54 45 20
+	   41 43 49 4D 41
+	   20 44 45 4C 45
+	   20 45 53 54 49
+	   56 45 52 20 43
+	   4F 4D 00
+ 00000198 55 4D 41 20 44		mInstrucoes6 BYTE "UMA DAS DUAS CORES SORTEADAS.",0
+	   41 53 20 44 55
+	   41 53 20 43 4F
+	   52 45 53 20 53
+	   4F 52 54 45 41
+	   44 41 53 2E 00
+					
+ 000001B6 50 41 52 41 20		mInstrucoes7 BYTE "PARA CADA PLATAFORMA EXISTIRAO OITO POSSIVEIS",0
+	   43 41 44 41 20
+	   50 4C 41 54 41
+	   46 4F 52 4D 41
+	   20 45 58 49 53
+	   54 49 52 41 4F
+	   20 4F 49 54 4F
+	   20 50 4F 53 53
+	   49 56 45 49 53
+	   00
+ 000001E4 43 4F 52 45 53		mInstrucoes8 BYTE "CORES, E NO TOTAL SERAO SELECIONADAS DUAS DESSAS CORES",0
+	   2C 20 45 20 4E
+	   4F 20 54 4F 54
+	   41 4C 20 53 45
+	   52 41 4F 20 53
+	   45 4C 45 43 49
+	   4F 4E 41 44 41
+	   53 20 44 55 41
+	   53 20 44 45 53
+	   53 41 53 20 43
+	   4F 52 45 53 00
+ 0000021B 51 55 45 20 4C		mInstrucoes9 BYTE "QUE LIBERARAO A PASSAGEM DO ET PARA A PLATAFORMA ACIMA.",0
+	   49 42 45 52 41
+	   52 41 4F 20 41
+	   20 50 41 53 53
+	   41 47 45 4D 20
+	   44 4F 20 45 54
+	   20 50 41 52 41
+	   20 41 20 50 4C
+	   41 54 41 46 4F
+	   52 4D 41 20 41
+	   43 49 4D 41 2E
+	   00
+					
+ 00000253 41 4C 45 4D 20		mInstrucoes10 BYTE "ALEM DE RESPEITAR AS CORES, DEVE-SE TOMAR CUIDADO",0
+	   44 45 20 52 45
+	   53 50 45 49 54
+	   41 52 20 41 53
+	   20 43 4F 52 45
+	   53 2C 20 44 45
+	   56 45 2D 53 45
+	   20 54 4F 4D 41
+	   52 20 43 55 49
+	   44 41 44 4F 00
+ 00000285 50 41 52 41 20		mInstrucoes11 BYTE "PARA QUE NAO PULE ONDE EXISTE UM BURACO BRANCO. ESTE",0
+	   51 55 45 20 4E
+	   41 4F 20 50 55
+	   4C 45 20 4F 4E
+	   44 45 20 45 58
+	   49 53 54 45 20
+	   55 4D 20 42 55
+	   52 41 43 4F 20
+	   42 52 41 4E 43
+	   4F 2E 20 45 53
+	   54 45 00
+ 000002BA 4C 45 56 45 52		mInstrucoes12 BYTE "LEVERA O ETEVALDO PARA OUTRA DIMENSAO, FAZENDO O",0
+	   41 20 4F 20 45
+	   54 45 56 41 4C
+	   44 4F 20 50 41
+	   52 41 20 4F 55
+	   54 52 41 20 44
+	   49 4D 45 4E 53
+	   41 4F 2C 20 46
+	   41 5A 45 4E 44
+	   4F 20 4F 00
+ 000002EB 4A 4F 47 41 44		mInstrucoes13 BYTE "JOGADOR PERDER.",0
+	   4F 52 20 50 45
+	   52 44 45 52 2E
+	   00
+					
+ 000002FB 50 41 52 41 20		mInstrucoes14 BYTE "PARA GUIAR O ET NESSE JOGO BASTA:",0			
+	   47 55 49 41 52
+	   20 4F 20 45 54
+	   20 4E 45 53 53
+	   45 20 4A 4F 47
+	   4F 20 42 41 53
+	   54 41 3A 00
+ 0000031D 2D 50 52 45 53		mInstrucoes15 BYTE "-PRESSIONAR A SETA PARA CIMA PARA PULAR;",0			
+	   53 49 4F 4E 41
+	   52 20 41 20 53
+	   45 54 41 20 50
+	   41 52 41 20 43
+	   49 4D 41 20 50
+	   41 52 41 20 50
+	   55 4C 41 52 3B
+	   00
+ 00000346 2D 50 52 45 53		mInstrucoes16 BYTE "-PRESSIONAR AS SETAS PARA A DIREITA OU ESQUERDA",0
+	   53 49 4F 4E 41
+	   52 20 41 53 20
+	   53 45 54 41 53
+	   20 50 41 52 41
+	   20 41 20 44 49
+	   52 45 49 54 41
+	   20 4F 55 20 45
+	   53 51 55 45 52
+	   44 41 00
+ 00000376 50 41 52 41 20		mInstrucoes17 BYTE "PARA SE MOVIMENTAR LATERALMENTE;",0			
+	   53 45 20 4D 4F
+	   56 49 4D 45 4E
+	   54 41 52 20 4C
+	   41 54 45 52 41
+	   4C 4D 45 4E 54
+	   45 3B 00
+ 00000397 2D 54 41 4D 42		mInstrucoes18 BYTE "-TAMBEM E POSSIVEL SAIR DO JOGO A QUALQUER",0
+	   45 4D 20 45 20
+	   50 4F 53 53 49
+	   56 45 4C 20 53
+	   41 49 52 20 44
+	   4F 20 4A 4F 47
+	   4F 20 41 20 51
+	   55 41 4C 51 55
+	   45 52 00
+ 000003C2 4D 4F 4D 45 4E		mInstrucoes19 BYTE "MOMENTO, PRESSIONANDO 'Q'.",0
+	   54 4F 2C 20 50
+	   52 45 53 53 49
+	   4F 4E 41 4E 44
+	   4F 20 27 51 27
+	   2E 00
+					
+					;Os dados seguintes salvos na memória tem por objetivo armazenar o texto a ser exibido nos crédito
+ 000003DD 4A 4F 47 4F 20		mcreditos1 BYTE "JOGO DESENVOLVIDO PARA A DISCIPLINA DE LABORATORIO DE",0
+	   44 45 53 45 4E
+	   56 4F 4C 56 49
+	   44 4F 20 50 41
+	   52 41 20 41 20
+	   44 49 53 43 49
+	   50 4C 49 4E 41
+	   20 44 45 20 4C
+	   41 42 4F 52 41
+	   54 4F 52 49 4F
+	   20 44 45 00
+ 00000413 41 52 51 55 49		mcreditos2 BYTE "ARQUITETURA E ORGANIZACAO DE COMPUTADORES, MINISTRADA",0
+	   54 45 54 55 52
+	   41 20 45 20 4F
+	   52 47 41 4E 49
+	   5A 41 43 41 4F
+	   20 44 45 20 43
+	   4F 4D 50 55 54
+	   41 44 4F 52 45
+	   53 2C 20 4D 49
+	   4E 49 53 54 52
+	   41 44 41 00
+ 00000449 50 45 4C 4F 20		mcreditos3 BYTE "PELO DOCENTE LUCIANO NERIS, NA UNIVERSIDADE FEDERAL",0
+	   44 4F 43 45 4E
+	   54 45 20 4C 55
+	   43 49 41 4E 4F
+	   20 4E 45 52 49
+	   53 2C 20 4E 41
+	   20 55 4E 49 56
+	   45 52 53 49 44
+	   41 44 45 20 46
+	   45 44 45 52 41
+	   4C 00
+ 0000047D 44 45 20 53 41		mcreditos4 BYTE "DE SAO CARLOS - UFSCAR, COM ENTREGA NO PRIMEIRO",0	
+	   4F 20 43 41 52
+	   4C 4F 53 20 2D
+	   20 55 46 53 43
+	   41 52 2C 20 43
+	   4F 4D 20 45 4E
+	   54 52 45 47 41
+	   20 4E 4F 20 50
+	   52 49 4D 45 49
+	   52 4F 00
+ 000004AD 53 45 4D 45 53		mcreditos5 BYTE "SEMESTRE DE 2017.",0
+	   54 52 45 20 44
+	   45 20 32 30 31
+	   37 2E 00
+					
+ 000004BF 50 52 4F 4A 45		mcreditos6 BYTE "PROJETO LICENCIADO POR GLP-3.0 E DISPONIVEL NO GITHUB",0
+	   54 4F 20 4C 49
+	   43 45 4E 43 49
+	   41 44 4F 20 50
+	   4F 52 20 47 4C
+	   50 2D 33 2E 30
+	   20 45 20 44 49
+	   53 50 4F 4E 49
+	   56 45 4C 20 4E
+	   4F 20 47 49 54
+	   48 55 42 00
+ 000004F5 45 4D 3A 20 47		mcreditos7 BYTE "EM: GITHUB.COM/MARCOSFAGLI/CLOCK-COLLORS",0
+	   49 54 48 55 42
+	   2E 43 4F 4D 2F
+	   4D 41 52 43 4F
+	   53 46 41 47 4C
+	   49 2F 43 4C 4F
+	   43 4B 2D 43 4F
+	   4C 4C 4F 52 53
+	   00
+					
+ 0000051E 44 45 53 45 4E		mcreditos8 BYTE "DESENVOLVEDORES E MEMBROS DO GRUPO:",0			
+	   56 4F 4C 56 45
+	   44 4F 52 45 53
+	   20 45 20 4D 45
+	   4D 42 52 4F 53
+	   20 44 4F 20 47
+	   52 55 50 4F 3A
+	   00
+ 00000542 42 52 55 4E 41		mcreditos9 BYTE "BRUNA ZAMITH SANTOS",0			
+	   20 5A 41 4D 49
+	   54 48 20 53 41
+	   4E 54 4F 53 00
+ 00000556 52 41 20 36 32		mcreditos10 BYTE "RA 628093",0
+	   38 30 39 33 00
+ 00000560 4D 41 52 43 4F		mcreditos11 BYTE "MARCOS AUGUSTO FAGLIONI JUNIOR",0			
+	   53 20 41 55 47
+	   55 53 54 4F 20
+	   46 41 47 4C 49
+	   4F 4E 49 20 4A
+	   55 4E 49 4F 52
+	   00
+ 0000057F 52 41 20 36 32		mcreditos12 BYTE "RA 628301",0
+	   38 33 30 31 00
+					
+					;Dados para a tela de derrota
+ 00000589 56 4F 43 45 20		mPerdeu1 BYTE "VOCE PERDEU!",0
+	   50 45 52 44 45
+	   55 21 00
+ 00000596 56 4F 43 45 20		mPerdeu21 BYTE "VOCE FOI DESCUIDADO E O ETEVALDO SOFREU",0
+	   46 4F 49 20 44
+	   45 53 43 55 49
+	   44 41 44 4F 20
+	   45 20 4F 20 45
+	   54 45 56 41 4C
+	   44 4F 20 53 4F
+	   46 52 45 55 00
+ 000005BE 43 4F 4D 20 41		mPerdeu22 BYTE "COM AS CONSEQUENCIAS",0
+	   53 20 43 4F 4E
+	   53 45 51 55 45
+	   4E 43 49 41 53
+	   00
+ 000005D3 53 55 41 20 50		mPerdeu3 BYTE "SUA PONTUACAO: ",0
+	   4F 4E 54 55 41
+	   43 41 4F 3A 20
+	   00
+ 000005E3 53 45 55 20 54		mPerdeu4 BYTE "SEU TEMPO: ",0
+	   45 4D 50 4F 3A
+	   20 00
+ 000005EF 4A 4F 47 41 52		mPerdeu5 BYTE "JOGAR NOVAMENTE",0
+	   20 4E 4F 56 41
+	   4D 45 4E 54 45
+	   00
+ 000005FF 53 41 49 52 00		mPerdeu6 BYTE "SAIR",0
+
+					;Dados para a tela de fim de jogo por tempo
+ 00000604 53 45 55 20 54		mPerdeuTempo1 BYTE "SEU TEMPO ACABOU!",0
+	   45 4D 50 4F 20
+	   41 43 41 42 4F
+	   55 21 00
+					
+ 00000000			.code
+ 00000000			LimpaTela PROC
+				;Objetivo: Limpar a tela do jogo em substituição a função CLRSCR do Irvine, esta função apenas escreve o caracter " "(espaço) em toda a matriz que esta contida no jogo
+				;Recebe: Sem parâmetros
+				;Retorna: Sem retorno
+ 00000000  B8 00000000			mov eax, black+(black*16)	;Para a função SETTEXTCOLOR deve ser passado al, onde os 4 bits HSB é a cor de fundo e os 4 LSB são a cor da letra, a multiplicação por 16 é equivalente a dar um shift de 4 bits para a esquerda
+ 00000005  E8 00000000 E		call SETTEXTCOLOR		;Função Irvine: Configura a cor do texto recebendo como parâmetro o registrador eax
+					
+ 0000000A  B2 00			mov dl, 0			;Move o cursor para a posição 0,0
+ 0000000C  B6 00			mov dh, 0
+ 0000000E  E8 00000000 E		call GOTOXY			;Função Irvine: Configura o cursor para a linha dh e a coluna dl
+					
+ 00000013  0F B6 0D			movzx ecx, tMaxY		;Inicializa o contador do loop com a quantidade de colunas
+	   00000063 R
+					
+ 0000001A			LLP1:					
+ 0000001A  B2 00			mov dl, 0
+ 0000001C  8A F1			mov dh, cl
+ 0000001E  E8 00000000 E		call GOTOXY
+					
+ 00000023  51				push ecx
+ 00000024  0F B6 0D			movzx ecx, tMaxX	;Inicializa o contador do loop com a quantidade de linhas
+	   00000062 R
+ 0000002B			LLP2:
+ 0000002B  B0 20			mov al, ' '
+ 0000002D  E8 00000000 E		call WRITECHAR		;Função Irvine: Escreve um caracter no terminal, tMaxX * tMaxY vezes (declarado de forma a ser dois loops aninhados)
+ 00000032  E2 F7			loop LLP2
+					
+ 00000034  59				pop ecx
+ 00000035  E2 E3			loop LLP1
+					
+ 00000037  B8 0000000F			mov eax, white+(black*16)
+ 0000003C  E8 00000000 E		call SETTEXTCOLOR
+					
+ 00000041  B2 00			mov dl, 0								
+ 00000043  B6 00			mov dh, 0
+ 00000045  E8 00000000 E		call GOTOXY
+					
+ 0000004A  C3				ret
+ 0000004B			LimpaTela ENDP
+
+ 0000004B			ImpPerso PROC
+				;Objetivo: Imprime um personagem na tela como sendo o seguinte:
+				;     @
+				;    /#\
+				;    / \
+				;Recebe: bl - Coordenada y (correspondente a coluna) que o personagem aparece, considere o centro do boneco (posição desejada do caracter '#')
+				;        bh - Coordenada x (correspondente a linha) que o personagem aparece, considere o centro do boneco (posição desejada do caracter '#')
+				;Retorna: Sem retorno
+ 0000004B  B8 0000000A			mov eax, lightGreen+(black*16)
+ 00000050  E8 00000000 E		call SETTEXTCOLOR
+					
+ 00000055  8A F7			mov dh, bh			;Posiciona o cursor sobre a cabeça do etevaldo
+ 00000057  8A D3			mov dl, bl
+ 00000059  80 EE 01			sub dh, 1
+ 0000005C  E8 00000000 E		call GOTOXY
+					
+ 00000061  B0 40			mov al, '@'			;Desenha a cabeça do etevaldo
+ 00000063  E8 00000000 E		call WRITECHAR
+					
+ 00000068  8A D3			mov dl, bl			;Posiciona o cursor sobre o braço direito do etevaldo
+ 0000006A  FE CA			dec dl
+ 0000006C  8A F7			mov dh, bh
+ 0000006E  E8 00000000 E		call GOTOXY
+					
+ 00000073  B0 2F			mov al, '/'
+ 00000075  E8 00000000 E		call WRITECHAR		;Desenha o braço direito
+ 0000007A  B0 23			mov al, '#'
+ 0000007C  E8 00000000 E		call WRITECHAR		;Desenha o corpo
+ 00000081  B0 5C			mov al, '\'
+ 00000083  E8 00000000 E		call WRITECHAR		;Desenha o braço esquerdo
+					
+ 00000088  8A D3			mov dl, bl		;Posiciona o cursor sobre a perna direita do etevaldo
+ 0000008A  FE CA			dec dl
+ 0000008C  8A F7			mov dh, bh
+ 0000008E  FE C6			inc dh
+ 00000090  E8 00000000 E		call GOTOXY
+					
+ 00000095  B0 2F			mov al, '/'
+ 00000097  E8 00000000 E		call WRITECHAR		;Desenha a perna direita
+ 0000009C  B0 20			mov al, ' '
+ 0000009E  E8 00000000 E		call WRITECHAR		;Desenha um espaço somente para deslocar o cursor de uma forma mais rápida que GOTOXY
+ 000000A3  B0 5C			mov al, '\'
+ 000000A5  E8 00000000 E		call WRITECHAR		;Desenha a perna esquerda
+					
+ 000000AA  B8 0000000F			mov eax, white+(black*16)
+ 000000AF  E8 00000000 E		call SETTEXTCOLOR
+					
+ 000000B4  B2 00			mov dl, 0								
+ 000000B6  8A 35 00000063 R		mov dh, tMaxY
+ 000000BC  E8 00000000 E		call GOTOXY
+					
+ 000000C1  C3				ret
+ 000000C2			ImpPerso ENDP
+
+
+ 000000C2			delPerso PROC
+				;Objetivo: Apaga o personagem sobrescrevendo-o pelo caracter " "(espaços)
+				;Recebe: O valor de entrada deve ser passado atravez de parâmetros armazenados na memória. Atenção, a posição X e Y passadas representa o caracter "#" exatamente no centro do boneco. Este é o parâmetro de referência para esta função
+				;			posXB
+				;			posYB
+				;Retorna: Sem retorno
+ 000000C2  B8 00000000			mov eax, black+(black*16)
+ 000000C7  E8 00000000 E		call SETTEXTCOLOR
+					
+ 000000CC  8A 15 00000064 R		mov dl, posXB		;Posiciona o cursor sobre a cabeça do etevaldo
+ 000000D2  8A 35 00000065 R		mov dh, posYB
+ 000000D8  FE CE			dec dh 
+ 000000DA  E8 00000000 E		call GOTOXY
+					
+ 000000DF  B0 20			mov al, ' '		;Apaga a cabeça do etevaldo
+ 000000E1  E8 00000000 E		call WRITECHAR
+					
+ 000000E6  8A 15 00000064 R		mov dl, posXB		;Posiciona o cursor sobre o braço direito do etevaldo
+ 000000EC  FE CA			dec dl
+ 000000EE  8A 35 00000065 R		mov dh, posYB
+ 000000F4  E8 00000000 E		call GOTOXY
+					
+ 000000F9  B9 00000003			mov ecx, 3		;Configura o loop para ser executado 3 vezes, apagando assim os dois braços e o corpo
+ 000000FE			LDP1:
+ 000000FE  B0 20			mov al, ' '
+ 00000100  E8 00000000 E		call WRITECHAR
+ 00000105  E2 F7			loop LDP1
+					
+ 00000107  8A 35 00000065 R		mov dh, posYB		;Posiciona o cursor sobre a perna direita do etevaldo
+ 0000010D  8A 15 00000064 R		mov dl, posXB
+ 00000113  FE C6			inc dh
+ 00000115  FE CA			dec dl
+ 00000117  E8 00000000 E		call GOTOXY
+					
+ 0000011C  B9 00000003			mov ecx, 3		;Configura um segundo loop para ser executado 3 vezes possibilitando apagar a duas perna
+ 00000121			LDP2:
+ 00000121  B0 20			mov al, ' '
+ 00000123  E8 00000000 E		call WRITECHAR
+ 00000128  E2 F7			loop LDP2
+					
+ 0000012A  B8 0000000F			mov eax, white+(black*16)
+ 0000012F  E8 00000000 E		call SETTEXTCOLOR
+					
+ 00000134  B2 00			mov dl, 0								
+ 00000136  8A 35 00000063 R		mov dh, tMaxY
+ 0000013C  E8 00000000 E		call GOTOXY
+					
+ 00000141  C3				ret
+ 00000142			delPerso ENDP
+
+
+ 00000142			PrintSeta PROC
+				;Objetivo: Apaga a seta da posição atual e reexibe na proxima opção (seta atual + distPlat), caso dl seja 0026h, ou (seta atual - distPlat), caso dl seja 0028h 
+				;		   Esta função verifica se a seta esta na posição mais alta antes de elevar, e verifica se esta na posição mais baixa antes de decrementar.
+				;Recebe: O valor de entrada deve ser passado atravez de parâmetros armazenados na memória.
+				;			dx - Recebe a tecla digitada antes da chamada da função
+				;			posSeta - Recebe os valores possiveis 1, 2 ou 3
+				;			distPlat
+				;			platInicial
+				;Retorna: Sem retorno
+ 00000142  66| 52			push dx
+					
+ 00000144  66| B8 0000			mov ax, 0
+ 00000148  A0 00000060 R		mov al, posSeta				;Recebe a posição atual da seta
+ 0000014D  66| 0F B6 15			movzx dx, distPlat
+	   00000066 R
+ 00000155  66| F7 E2			mul dx
+ 00000158  66| 03 05			add ax, platInicial			;Adiciona a multiplicação entre a distância entre as plataformas e a posSeta, com a platInicial
+	   000000A5 R
+					
+ 0000015F  B2 14			mov dl, 20				;Seta sempre estará na coluna 20			
+ 00000161  8A F0			mov dh, al				;Atribui a linha com o valor calculado acima
+ 00000163  E8 00000000 E		call GOTOXY
+					
+ 00000168  B8 00000000			mov eax, black+(black*16)
+ 0000016D  E8 00000000 E		call SETTEXTCOLOR
+					
+ 00000172  B0 20			mov al, ' '				;Apaga a seta
+ 00000174  E8 00000000 E		call WRITECHAR
+ 00000179  E8 00000000 E		call WRITECHAR
+					
+ 0000017E  66| 5A			pop dx
+					
+ 00000180  66| 83 FA 26			cmp dx, 0026h				;Realiza a comparação do valor dx passado com o código para a seta para cima, caso seja igual: será comparado se a posição da seta já é a mais alta, se for, salta para o fim, se não, decrementa a posição da seta; caso seja diferente, o código desvia para LPS1
+ 00000184  75 0F			jne LPS1
+ 00000186  80 3D 00000060 R		cmp posSeta, 0000h
+	   00
+ 0000018D  76 1B			jbe LPS2
+ 0000018F  FE 0D 00000060 R		dec posSeta
+ 00000195			LPS1:	
+ 00000195  66| 83 FA 28			cmp dx, 0028h				;Realiza a comparação do valor dx passado com o código para a seta para baixo, caso seja igual: será comparado se a posição da seta já é a mais baixa, se for, salta para o fim, se não, incrementa a posição da seta
+ 00000199  75 0F			jne LPS2
+ 0000019B  80 3D 00000060 R		cmp posSeta, 0002h
+	   02
+ 000001A2  73 06			jae LPS2
+ 000001A4  FE 05 00000060 R		inc posSeta
+ 000001AA			LPS2:
+					
+ 000001AA  66| 0F B6 05			movzx ax, posSeta			;Preparação para a impressão da seta (utiliza as contas da mesma forma que acima (adiciona e multiplica para atribuir a linha desejada de impressão))
+	   00000060 R
+ 000001B2  66| 0F B6 15			movzx dx, distPlat
+	   00000066 R
+ 000001BA  66| F7 E2			mul dx
+ 000001BD  66| 03 05			add ax, platInicial
+	   000000A5 R
+					
+ 000001C4  B2 14			mov dl, 20								
+ 000001C6  8A F0			mov dh, al
+ 000001C8  E8 00000000 E		call GOTOXY
+					
+ 000001CD  B8 0000000F			mov eax, white+(black*16)
+ 000001D2  E8 00000000 E		call SETTEXTCOLOR
+					
+ 000001D7  B0 2D			mov al, '-'				;Impressão da seta
+ 000001D9  E8 00000000 E		call WRITECHAR
+ 000001DE  B0 3E			mov al, '>'
+ 000001E0  E8 00000000 E		call WRITECHAR
+					
+ 000001E5  B2 00			mov dl, 0
+ 000001E7  8A 35 00000063 R		mov dh, tMaxY
+ 000001ED  E8 00000000 E		call GOTOXY
+					
+ 000001F2  C3				ret
+ 000001F3			PrintSeta ENDP	
+
+ 000001F3			Bordas PROC
+				;Objetivo: Desenha todas as bordas do jogo compostas pelo caracter "!"; 2 bordas laterais, borda superior e borda inferior, com a cor da letra vermelha e a cor do fundo preta.
+				;Recebe: tMaxX - Quantidade de colunas que compõe o jogo
+				;		 tMaxY - Quantidade de linhas que compõe o jogo
+				;Retorna: Sem retorno
+ 000001F3  B8 00000004			mov eax, red+(black*16)
+ 000001F8  E8 00000000 E		call SETTEXTCOLOR
+					
+ 000001FD  0F B6 0D			movzx ecx, tMaxX			;Trecho para impressão da primeira linha da matriz do jogo, imprime tMaxX vezes o caracter "!"
+	   00000062 R
+ 00000204  B0 21			mov al, '!'
+ 00000206			L1:
+ 00000206  E8 00000000 E		call WRITECHAR
+ 0000020B  E2 F9			loop L1
+
+ 0000020D  0F B6 0D			movzx ecx, tMaxY			;Trecho para impressão dos limites laterais do Jogo, imprime tMaxY vezes o caracter '!' de cada lado do inicio e fim da barra impressa anteriormente
+	   00000063 R
+ 00000214  B6 01			mov dh, 1
+ 00000216			L2:
+ 00000216  B2 00			mov dl, 0
+ 00000218  E8 00000000 E		call GOTOXY
+ 0000021D  E8 00000000 E		call WRITECHAR
+
+ 00000222  8A 15 00000062 R		mov dl, tMaxX
+ 00000228  FE CA			dec dl
+ 0000022A  E8 00000000 E		call GOTOXY
+ 0000022F  E8 00000000 E		call WRITECHAR
+ 00000234  FE C6			inc dh
+ 00000236  E2 DE			loop L2
+
+
+ 00000238  B2 00			mov dl, 0								
+ 0000023A  8A 35 00000063 R		mov dh, tMaxY
+ 00000240  E8 00000000 E		call GOTOXY
+ 00000245  0F B6 0D			movzx ecx, tMaxX			;Trecho para impressão da ultima linha da matriz do jogo, imprime tMaxX vezes o caracter "!"
+	   00000062 R
+ 0000024C			L3:
+ 0000024C  E8 00000000 E		call WRITECHAR
+ 00000251  E2 F9			loop L3
+					
+ 00000253  B8 0000000F			mov eax, white+(black*16)
+ 00000258  E8 00000000 E		call SETTEXTCOLOR
+					
+ 0000025D  C3				ret
+ 0000025E			Bordas ENDP	
+					
+ 0000025E			Plataformas PROC
+				;Objetivo: Imprimir as plataformas do jogo compostas pelo caracter ":", na cor verde
+				;Recebe: platInicial, distPlat, tMaxX - Variáveis na memória
+				;Retorna: Sem retorno
+ 0000025E  B8 00000002			mov eax, green				;IRVINE green - Seleção de cores pré definidas no IRVINE
+ 00000263  E8 00000000 E		call SETTEXTCOLOR
+ 00000268  B9 00000004			mov ecx, 4				;Configura o contador da quantidade de plataformas (4)
+ 0000026D  66| 8B 1D			mov bx, platInicial						
+	   000000A5 R
+ 00000274  66| 83 EB 02			sub bx, 2
+ 00000278			LP1:						;Propaga a execução da impressão de cada plataforma, para as 4 plataformas no jogo
+ 00000278  B2 01			mov dl, 1
+ 0000027A  8A F3			mov dh, bl
+ 0000027C  E8 00000000 E		call GOTOXY
+ 00000281  02 1D 00000066 R		add bl, distPlat
+ 00000287  51				push ecx
+ 00000288  0F B6 05			movzx eax, tMaxX
+	   00000062 R
+ 0000028F  83 E8 02			sub eax, 2
+ 00000292  8B C8			mov ecx, eax
+ 00000294			LP2:						;Imprime cada plataforma
+ 00000294  B0 3A			mov al, ':'
+ 00000296  E8 00000000 E		call WRITECHAR
+ 0000029B  E2 F7			loop LP2
+
+ 0000029D  59				pop ecx
+ 0000029E  E2 D8			loop LP1
+					
+ 000002A0  B8 0000000F			mov eax, white+(black*16)
+ 000002A5  E8 00000000 E		call SETTEXTCOLOR
+					
+ 000002AA  C3				ret
+ 000002AB			Plataformas ENDP
+
+ 000002AB			TelaInicio PROC
+				;Objetivo: Imprimir a tela inicial do jogo
+				;Recebe: nome, biniciar, bcomoJogar, bcreditos, distPlat, tMaxX - Variáveis na memória
+				;Retorna: Sem retorno
+ 000002AB  B8 0000000F			mov eax, white+(black*16)
+ 000002B0  E8 00000000 E		call SETTEXTCOLOR
+
+ 000002B5  B2 18			mov dl, 24				;Trecho para imprimir o nome do  jogo na tela principal
+ 000002B7  B6 03			mov dh, 3
+ 000002B9  E8 00000000 E		call GOTOXY
+ 000002BE  BA 0000003C R		mov edx, OFFSET nome
+ 000002C3  E8 00000000 E		call WRITESTRING
+					
+ 000002C8  0F B7 05			movzx eax, platInicial
+	   000000A5 R
+ 000002CF  B2 1A			mov dl, 26				;Trecho para imprimir a opção iniciar na tela principal
+ 000002D1  8A F0			mov dh, al 
+ 000002D3  E8 00000000 E		call GOTOXY
+ 000002D8  BA 00000020 R		mov edx, OFFSET biniciar
+ 000002DD  E8 00000000 E		call WRITESTRING
+					
+ 000002E2  02 05 00000066 R		add al, distPlat
+ 000002E8  B2 19			mov dl, 25				;Trecho para imprimir a opção Como jogar na tela principal
+ 000002EA  8A F0			mov dh, al
+ 000002EC  E8 00000000 E		call GOTOXY
+ 000002F1  BA 00000031 R		mov edx, OFFSET bcomoJogar
+ 000002F6  E8 00000000 E		call WRITESTRING
+					
+ 000002FB  02 05 00000066 R		add al, distPlat
+ 00000301  B2 1A			mov dl, 26				;Trecho para imprimir a opção creditos na tela principal
+ 00000303  8A F0			mov dh, al
+ 00000305  E8 00000000 E		call GOTOXY
+ 0000030A  BA 00000028 R		mov edx, OFFSET bcreditos
+ 0000030F  E8 00000000 E		call WRITESTRING
+					
+ 00000314  B8 0000000F			mov eax, white+(black*16)
+ 00000319  E8 00000000 E		call SETTEXTCOLOR
+					
+ 0000031E  B2 00			mov dl, 0
+ 00000320  8A 35 00000063 R		mov dh, tMaxY
+ 00000326  E8 00000000 E		call GOTOXY
+					
+ 0000032B  C3				ret
+ 0000032C			TelaInicio ENDP
+
+ 0000032C			SorteiaCores PROC
+				;Sorteia as cores que liberarão a passagem do jogador para a plataforma acima
+				;Recebe:	corSele, coresDisp - Variáveis na memória
+				;Retorna:	corSele - Após a função corSele conterá duas cores selecionadase diferentes entre sí
+ 0000032C  E8 00000000 E	    call Randomize              	;Configura o uso do Randomize
+ 00000331  B8 00000009		    mov  eax,9				;Define o intervalo do aleatório, 9 números
+
+ 00000336  E8 00000000 E	    call RandomRange			;Seleciona um número entre 0 e 8
+ 0000033B  66| A3		    mov  corSele,ax            		;Transfere o valor aleatório para corSele
+	   000000B9 R
+
+ 00000341  B8 00000009		L1: mov  eax,9				;Define o intervalo do aleatório, 9 números
+ 00000346  E8 00000000 E		call RandomRange		;Seleciona um número entre 0 e 8
+ 0000034B  66| 3B 05		    cmp ax, corSele			;Compara o segundo valor sorteado com o primeiro
+	   000000B9 R
+ 00000352  74 ED		    je L1                   		;Se for repetido, retorna para L1
+ 00000354  66| A3		    mov corSele[TYPE corSele],ax        ;Se não for repetido, transfere o valor de ax para corSele[2]
+	   000000BB R
+					
+					;Armazena a primeira cor
+ 0000035A  66| 8B 1D			mov bx, corSele
+	   000000B9 R
+ 00000361  66| 6B DB 02			imul bx, TYPE corSele
+ 00000365  66| 8B 83			mov ax, [coresDisp + bx]
+	   000000A9 R
+ 0000036C  66| A3			mov corSele, ax
+	   000000B9 R
+					
+					;Armazena a segunda cor
+ 00000372  66| 8B 1D			mov bx, corSele[TYPE corSele]
+	   000000BB R
+ 00000379  66| 6B DB 02			imul bx, TYPE corSele
+ 0000037D  66| 8B 83			mov ax, [coresDisp + bx]
+	   000000A9 R
+ 00000384  66| A3			mov corSele[TYPE corSele], ax
+	   000000BB R
+
+ 0000038A  C3				ret
+ 0000038B			SorteiaCores ENDP
+
+ 0000038B			ProcSetaDir PROC
+				;Realiza as ações caso a seta pressionada tenha sido a direita, durante o jogo
+				;Recebe:	tMaxX, posXB - Variáveis na memória
+				;Retorna:	Altera o valor de posXB
+					;Verifica se o jogador por ir para a direita
+ 0000038B  0F B6 05			movzx eax, tMaxX					
+	   00000062 R
+ 00000392  83 E8 03			sub eax, 3
+ 00000395  38 05 00000064 R		cmp posXB, al	
+ 0000039B  73 1F			jae fimProcDir				;Caso não possa, ir para o fim
+					
+ 0000039D  E8 FFFFFD20			call delPerso				;Caso possa, apaga o jogador da posição atual
+					
+ 000003A2  FE 05 00000064 R		inc posXB				;Define a nova posição
+ 000003A8  8A 1D 00000064 R		mov bl, posXB
+ 000003AE  A0 00000063 R		mov al, tMaxY
+ 000003B3  2C 02			sub al, 2
+ 000003B5  8A F8			mov bh, al 
+ 000003B7  E8 FFFFFC8F			call ImpPerso				;Imprime o personagem
+					
+ 000003BC			fimProcDir:
+ 000003BC  C3				ret
+ 000003BD			ProcSetaDir ENDP
+
+ 000003BD			ProcSetaEsq PROC
+				;Realiza as ações caso a seta pressionada tenha sido a esquerda, durante o jogo
+				;Recebe:	tMaxX, posXB - Variáveis na memória
+				;Retorna:	Altera o valor de posXB
+					;Verifica se o jogador por ir para a esquerda
+ 000003BD  80 3D 00000064 R		cmp posXB, 2
+	   02
+ 000003C4  76 1F			jbe fimProcEsq				;Caso não possa, ir para o fim
+					
+ 000003C6  E8 FFFFFCF7			call delPerso				;Caso possa, apaga o jogador da posição atual
+					
+ 000003CB  FE 0D 00000064 R		dec posXB				;Define a nova posição
+ 000003D1  8A 1D 00000064 R		mov bl, posXB
+ 000003D7  A0 00000063 R		mov al, tMaxY
+ 000003DC  2C 02			sub al, 2
+ 000003DE  8A F8			mov bh, al 
+ 000003E0  E8 FFFFFC66			call ImpPerso				;Imprime o personagem
+					
+ 000003E5			fimProcEsq:
+ 000003E5  C3				ret	
+ 000003E6			ProcSetaEsq ENDP
+
+ 000003E6			Colisao PROC
+				;Detecta se houve colisão com os obstaculos
+				;Recebe:	nArmadilhas, posXB - Variáveis na memória
+				;Retorna:	EAX - Retorna 1 em eax se não houve colisão, ou 0 caso haja colisão
+ 000003E6  0F B6 0D			movzx ecx, nArmadilhas
+	   00000067 R
+ 000003ED  BF 00000000			mov edi, 0
+					
+ 000003F2			L1:							;Repete o laço a quantidade de armadilhas por plataforma
+ 000003F2  8A 97 00000069 R		mov dl, armadilhas[edi]
+ 000003F8  3A 15 00000064 R		cmp dl, posXB					;Caso a posição do jogador seja igual a posição de alguma armadilha, direciona o fluxo para colidiu
+ 000003FE  74 0A			je colidiu
+ 00000400  47				inc edi						;Incrementa o registrador que está contido o endereço do vetor com as posições das armadilhas
+ 00000401  E2 EF			loop L1
+					
+ 00000403  B8 00000001			mov eax, 1					;Armazena 1 em eax, indicando que não houve colisão
+ 00000408  EB 05			jmp quit
+					
+ 0000040A			colidiu:						;Armazena 0 em eax, indicando que houve colisão
+ 0000040A  B8 00000000			mov eax, 0
+					
+ 0000040F			quit:
+ 0000040F  C3				ret
+ 00000410			Colisao ENDP
+
+ 00000410			VerificaPos PROC
+				;Função responsável por percorrer o vetor e verificar se o valor a ser inserido já está no vetor - esta função verifica somente para uma plataforma
+				;Recebe: 	eax - parâmetro passado pela pilha, e que armazena o valor do elemento a ser verifica se já pertence ao vetor
+				;			edi - parâmetro passado pela pilha, endereço do vetor a ser comparado
+				;			nArmadilhas - numero de armadilhas por platafomas
+				;Retorna:	ebx - retorna 1 se o valor fornecido não pertencer ao vetor; ou 0 se pertencer
+ 00000410  50				push eax
+ 00000411  52				push edx
+ 00000412  51				push ecx
+					
+ 00000413  0F B6 0D			movzx ecx, nArmadilhas
+	   00000067 R
+ 0000041A  BF 00000069 R		mov edi, OFFSET armadilhas
+ 0000041F  0F B6 1D			movzx ebx, quantArmadilhas
+	   00000068 R
+ 00000426  2B D9			sub ebx, ecx
+ 00000428  03 FB			add edi, ebx
+ 0000042A  BB 00000001			mov ebx, 1				;Armazena 1 em ebx para a saida, caso não exista o valor fornecido no vetor
+ 0000042F  FC				cld					;Configura a flag como 1 para indicar que a função scasb avançará o vetor
+ 00000430  F2/ AE			repne scasb				;repne - repete enquanto n for igual; scasb - compara o valor em al com o valor apontado por edi (incrementa edi a cada repetição (pois a carry flag é 1)
+ 00000432  75 05			jnz fim
+ 00000434  BB 00000000			mov ebx, 0				;Troca o valor de ebx para 0, caso já exista o valor no vetor
+					
+ 00000439			fim:						;Adiciona na pilha todos os valores dos registradores usados	
+ 00000439  59				pop ecx
+ 0000043A  5A				pop edx
+ 0000043B  58				pop eax
+
+ 0000043C  C3				ret
+ 0000043D			VerificaPos ENDP
+
+ 0000043D			PrcSetaCima PROC
+				;Realiza as ações caso a seta pressionada tenha sido para cima, durante o jogo. Essa função valida a subida, é feita a comparação com a cor selecionada e a se colidiu com algum obstaculo
+				;Recebe:	corPlatAtual, corSele, nArmadilhas, armadilhas, score, quantArmadilhas, tMaxX - Variáveis na memória
+				;Retorna:	EAX - Retorna 0 se falhou, ou seja, se o jogador não pode subir, e 1 se o jogador pode subir
+ 0000043D  E8 FFFFFFA4			call Colisao				;Instancia a função colidiu
+ 00000442  83 F8 00			cmp eax, 0
+ 00000445  0F 84 000000B2		je diferente				;Caso tenha colidido, direcionar o fluxo de de execução para diferente
+
+					;Verifica se a cor da plataforna no instante do salto, era compativel com a corSele
+ 0000044B  66| A1			mov ax, corPlatAtual
+	   000000BD R
+ 00000451  66| 3B 05			cmp ax, corSele
+	   000000B9 R
+ 00000458  74 1F			je igual
+ 0000045A  66| A1			mov ax, corPlatAtual
+	   000000BD R
+ 00000460  66| 3B 05			cmp ax, (corSele+2)
+	   000000BB R
+ 00000467  0F 85 00000090		jne diferente
+					
+ 0000046D  0F B6 0D			movzx ecx, nArmadilhas
+	   00000067 R
+ 00000474  BB 00000069 R		mov ebx, OFFSET armadilhas
+					
+					
+ 00000479			igual:						;Se tanto a cor da plataforma for compativel, quanto não colidiu:
+ 00000479  FE 05 0000005F R		inc score				;Pontuação é acrescida
+ 0000047F  E8 00000990			call ApagaArm				;Apaga as armadilhas existentes
+ 00000484  BB 00000000			mov ebx, 0
+ 00000489  0F B6 05			movzx eax, nArmadilhas
+	   00000067 R
+ 00000490  BA 00000003			mov edx, 3
+ 00000495  F7 E2			mul edx
+ 00000497  40				inc eax
+ 00000498  0F B6 15			movzx edx, nArmadilhas
+	   00000067 R
+ 0000049F  8B C8			mov ecx, eax
+					
+ 000004A1			shiftByte:					;Realiza um shift no vetor afim de resultar no efeito de abaixar as armadilhas (esta função foi implementada antes de  conhecermos o comando que realiza o shift, sendo assim, há formas mais eficientes que está.)
+ 000004A1  8A 82 00000069 R		mov al, armadilhas[edx]
+ 000004A7  88 83 00000069 R		mov armadilhas[ebx], al 
+ 000004AD  42				inc edx
+ 000004AE  43				inc ebx
+ 000004AF  E2 F0			loop shiftByte
+					
+ 000004B1  0F B6 0D			movzx ecx, nArmadilhas
+	   00000067 R
+ 000004B8  0F B6 15			movzx edx, quantArmadilhas
+	   00000068 R
+ 000004BF  2B D1			sub edx, ecx
+
+				;Funcionamento semelhante a cria armadilhas incial, mas aplicavel somente a uma plataforma
+ 000004C1			L1:
+ 000004C1  E8 00000000 E		call Randomize
+ 000004C6  0F B6 05		    movzx eax, tMaxX
+	   00000062 R
+ 000004CD  83 E8 04			sub eax, 4
+					
+ 000004D0  E8 00000000 E	    call RandomRange
+ 000004D5  FE C0			inc al
+ 000004D7  E8 FFFFFF34			call VerificaPos
+ 000004DC  83 FB 01			cmp ebx, 1
+ 000004DF  75 E0			jne L1
+ 000004E1  88 82 00000069 R	    mov  armadilhas[edx], al 
+ 000004E7  42				inc edx
+ 000004E8  E2 D7			loop L1
+					
+ 000004EA  B0 07			mov  al, 07h 
+ 000004EC  E8 00000000 E	    call WriteChar
+					
+ 000004F1  E8 0000097A			call DesenhaArm
+					
+ 000004F6  B8 00000001			mov eax, 1
+ 000004FB  EB 05			jmp fim
+					
+ 000004FD			diferente:					;Se diferente retorna que não pode subir, indicado por 0 em aex
+ 000004FD  B8 00000000			mov eax, 0
+
+ 00000502			fim:
+ 00000502  C3				ret
+					
+ 00000503			PrcSetaCima ENDP
+
+ 00000503			TelaJogo PROC
+				;Função responsável por gerenciar a tela de jogo
+				;Recebe:	tempo, pontuacao, cor, posXB, posYB, contTime, cont, time - Variáveis na memória
+				;Retorna:	EAX - retorna 0 se perdeu por colidir com a plataforma ou por colidir com um obstáculo; 1 caso o usuário tenha pressionado 'q' para sair da tela de jogo; 2 caso o acabou o tempo
+ 00000503  E8 FFFFFAF8			call LimpaTela	
+ 00000508  E8 FFFFFCE6			call Bordas
+ 0000050D  E8 FFFFFD4C			call Plataformas
+ 00000512  E8 00000853			call TempoTela
+ 00000517  E8 00000877			call ScoreTela
+ 0000051C  E8 000009C8			call CriaArmInicio
+
+					;Imprime as informações na tela do jogo
+ 00000521  B8 00000004			mov eax, red
+ 00000526  E8 00000000 E		call SETTEXTCOLOR
+ 0000052B  B2 06			mov dl, 6
+ 0000052D  B6 01			mov dh, 1
+ 0000052F  E8 00000000 E		call GOTOXY
+ 00000534  BA 0000000E R		mov edx, OFFSET tempo
+ 00000539  E8 00000000 E		call WRITESTRING
+ 0000053E  B2 13			mov dl, 19
+ 00000540  B6 01			mov dh, 1
+ 00000542  E8 00000000 E		call GOTOXY
+ 00000547  BA 00000015 R		mov edx, OFFSET pontuacao
+ 0000054C  E8 00000000 E		call WRITESTRING
+ 00000551  B2 23			mov dl, 35
+ 00000553  B6 01			mov dh, 1
+ 00000555  E8 00000000 E		call GOTOXY
+ 0000055A  BA 00000000 R		mov edx, OFFSET cor
+ 0000055F  E8 00000000 E		call WRITESTRING
+					
+ 00000564  B8 0000000F			mov eax, white+(black*16)
+ 00000569  E8 00000000 E		call SETTEXTCOLOR
+					
+ 0000056E  8A 1D 00000064 R		mov bl, posXB				;Configura a posição do personagem
+ 00000574  8A 3D 00000065 R		mov bh, posYB
+ 0000057A  E8 FFFFFACC			call ImpPerso
+					
+ 0000057F  E8 FFFFFDA8			call SorteiaCores
+ 00000584  E8 0000082D			call CorSelPlat
+					
+ 00000589			LTJ1:						;Executa a cada vez que cont chega em 10 (quase semelhante a 10ms)
+ 00000589  C6 05 000000A7 R		mov cont, 0
+	   00
+ 00000590  FE 05 000000A8 R		inc contTime
+ 00000596  80 3D 000000A8 R		cmp contTime, 2
+	   02
+ 0000059D  72 11			jnae LTJ3
+ 0000059F  E8 000007EF			call ScoreTela
+ 000005A4  E8 000007C1			call TempoTela
+ 000005A9  C6 05 000000A8 R		mov contTime, 0
+	   00
+ 000005B0			LTJ3:						;Troca a cor da plataforma cada vez que contTime é maior ou igual a 2
+ 000005B0  E8 00000998			call TrocaCorPlat
+ 000005B5			LTJ2:						;Laço mais interno, verifica o comando digitado pelo usuário
+ 000005B5  B8 00000032			mov eax, 50
+ 000005BA  FE 05 000000A7 R		inc cont
+ 000005C0  80 3D 000000A7 R		cmp cont, 10
+	   0A
+ 000005C7  77 C0			ja LTJ1
+ 000005C9  80 3D 0000005E R		cmp time, 0
+	   00
+ 000005D0  76 51			jbe fimTempo
+ 000005D2  E8 00000000 E	    call Delay
+ 000005D7  E8 00000000 E	    call ReadKey
+ 000005DC  74 D7		    jz LTJ2
+
+					;Seleciona a ação com base no que foi digitado pelo usuário
+ 000005DE  66| 83 FA 26			cmp  dx, 0026h
+ 000005E2  74 14			je setaCima
+ 000005E4  66| 83 FA 25			cmp dx, 0025h
+ 000005E8  74 1F			je setaEsq
+ 000005EA  66| 83 FA 27			cmp dx, 0027h
+ 000005EE  74 20			je setaDir
+ 000005F0  66| 83 FA 51			cmp dx, 0051h
+ 000005F4  74 27			je fimTelaJogo
+ 000005F6  EB BD			jmp LTJ2
+					
+				;Invoca os procedimentos caso tenha sido pressionado a tecla para cima
+ 000005F8			setaCima:
+ 000005F8  E8 FFFFFE40			call PrcSetaCima
+ 000005FD  83 F8 00			cmp eax, 0
+ 00000600  74 15			je fimPerdeuObs
+ 00000602  E8 000007AF			call CorSelPlat
+ 00000607  EB AC			jmp LTJ2
+					
+				;Invoca os procedimentos caso tenha sido pressionado a tecla para esquerda
+ 00000609			setaEsq:
+ 00000609  E8 FFFFFDAF			call ProcSetaEsq
+ 0000060E  EB A5			jmp LTJ2
+					
+				;Invoca os procedimentos caso tenha sido pressionado a tecla para direita
+ 00000610			setaDir:
+ 00000610  E8 FFFFFD76			call ProcSetaDir
+ 00000615  EB 9E			jmp LTJ2
+					
+				;Invoca os procedimentos caso o jogador tenha perdido por colidir com algum obstáculo
+ 00000617			fimPerdeuObs:
+ 00000617  B8 00000000			mov eax, 0
+ 0000061C  C3				ret
+					
+				;Invoca os procedimentos caso o jogador tenha pressionado 'q', para sair do jogo
+ 0000061D			fimTelaJogo:	
+ 0000061D  B8 00000001			mov eax, 1
+ 00000622  C3				ret
+
+				;Invoca os procedimentos caso o jogador tenha perdido por acabar o tempo limite
+ 00000623			fimTempo:
+ 00000623  B8 00000002			mov eax, 2
+ 00000628  C3				ret
+ 00000629			TelaJogo ENDP
+
+ 00000629			TelaDificuldade PROC
+				;Imprime a tela de dificuldades
+				;Recebe:	tMaxX - Tamanho do jogo em X
+				;			nome, bDificuldade1, bDificuldade1, bDificuldade1 - Mensagens salvas na memória 
+				;Retorna:	Sem retorno
+ 00000629  E8 FFFFF9D2			call LimpaTela
+ 0000062E  E8 FFFFFBC0			call Bordas
+ 00000633  E8 FFFFFC26			call Plataformas
+					
+ 00000638  B8 0000000F			mov eax, white+(black*16)
+ 0000063D  E8 00000000 E		call SETTEXTCOLOR
+
+ 00000642  B2 18			mov dl, 24				;Trecho para imprimir o nome do  jogo na tela de dificuldades
+ 00000644  B6 03			mov dh, 3
+ 00000646  E8 00000000 E		call GOTOXY
+ 0000064B  BA 0000003C R		mov edx, OFFSET nome
+ 00000650  E8 00000000 E		call WRITESTRING
+					
+ 00000655  0F B7 05			movzx eax, platInicial
+	   000000A5 R
+ 0000065C  B2 1B			mov dl, 27
+ 0000065E  8A F0			mov dh, al 
+ 00000660  E8 00000000 E		call GOTOXY
+ 00000665  BA 00000049 R		mov edx, OFFSET bDificuldade1
+ 0000066A  E8 00000000 E		call WRITESTRING
+					
+ 0000066F  02 05 00000066 R		add al, distPlat
+ 00000675  B2 1B			mov dl, 27
+ 00000677  8A F0			mov dh, al
+ 00000679  E8 00000000 E		call GOTOXY
+ 0000067E  BA 0000004F R		mov edx, OFFSET bDificuldade2
+ 00000683  E8 00000000 E		call WRITESTRING
+					
+ 00000688  02 05 00000066 R		add al, distPlat
+ 0000068E  B2 1A			mov dl, 26
+ 00000690  8A F0			mov dh, al
+ 00000692  E8 00000000 E		call GOTOXY
+ 00000697  BA 00000055 R		mov edx, OFFSET bDificuldade3
+ 0000069C  E8 00000000 E		call WRITESTRING
+					
+ 000006A1  B2 00			mov dl, 0
+ 000006A3  8A 35 00000063 R		mov dh, tMaxY
+ 000006A9  E8 00000000 E		call GOTOXY
+					
+ 000006AE  C3				ret
+ 000006AF			TelaDificuldade ENDP
+
+
+ 000006AF			TelaInstrucoes PROC
+				;Imprime a tela de créditos 
+				;Recebe:	tMaxX - Tamanho do jogo em X
+				;			nome, bcomoJogar, minstrucoes1 .. minstrucoes19 - Mensagens salvas na memória 
+				;Retorna:	Sem retorno
+ 000006AF			LTI3:
+ 000006AF  E8 FFFFF94C			call LimpaTela
+ 000006B4  E8 FFFFFB3A			call Bordas
+
+ 000006B9  B8 00000002			mov eax, green+(black*16)
+ 000006BE  E8 00000000 E		call SETTEXTCOLOR
+
+ 000006C3  B2 12			mov dl, 18
+ 000006C5  B6 02			mov dh, 2
+ 000006C7  E8 00000000 E		call GOTOXY
+					
+ 000006CC  BA 0000003C R		mov edx, OFFSET nome
+ 000006D1  E8 00000000 E		call WRITESTRING
+					
+ 000006D6  B0 2F			mov al, '/'
+ 000006D8  E8 00000000 E		call WRITECHAR
+					
+ 000006DD  BA 00000031 R		mov edx, OFFSET bcomoJogar
+ 000006E2  E8 00000000 E		call WRITESTRING
+					
+ 000006E7  B8 0000000F			mov eax, white+(black*16)
+ 000006EC  E8 00000000 E		call SETTEXTCOLOR
+					
+ 000006F1  B2 05			mov dl, 5
+ 000006F3  B6 04			mov dh, 4
+ 000006F5  E8 00000000 E		call GOTOXY
+ 000006FA  BA 000000BF R		mov edx, OFFSET mInstrucoes1
+ 000006FF  E8 00000000 E		call WRITESTRING
+ 00000704  B2 03			mov dl, 3
+ 00000706  B6 05			mov dh, 5
+ 00000708  E8 00000000 E		call GOTOXY
+ 0000070D  BA 000000EC R		mov edx, OFFSET mInstrucoes2
+ 00000712  E8 00000000 E		call WRITESTRING
+ 00000717  B2 03			mov dl, 3
+ 00000719  B6 06			mov dh, 6
+ 0000071B  E8 00000000 E		call GOTOXY
+ 00000720  BA 00000120 R		mov edx, OFFSET mInstrucoes3
+ 00000725  E8 00000000 E		call WRITESTRING
+					
+ 0000072A  B2 05			mov dl, 5
+ 0000072C  B6 08			mov dh, 8
+ 0000072E  E8 00000000 E		call GOTOXY
+ 00000733  BA 0000013A R		mov edx, OFFSET mInstrucoes4
+ 00000738  E8 00000000 E		call WRITESTRING
+ 0000073D  B2 03			mov dl, 3
+ 0000073F  B6 09			mov dh, 9
+ 00000741  E8 00000000 E		call GOTOXY
+ 00000746  BA 00000168 R		mov edx, OFFSET mInstrucoes5
+ 0000074B  E8 00000000 E		call WRITESTRING
+ 00000750  B2 03			mov dl, 3
+ 00000752  B6 0A			mov dh, 10
+ 00000754  E8 00000000 E		call GOTOXY
+ 00000759  BA 00000198 R		mov edx, OFFSET mInstrucoes6
+ 0000075E  E8 00000000 E		call WRITESTRING
+					
+ 00000763  B2 05			mov dl, 5
+ 00000765  B6 0C			mov dh, 12
+ 00000767  E8 00000000 E		call GOTOXY
+ 0000076C  BA 000001B6 R		mov edx, OFFSET mInstrucoes7
+ 00000771  E8 00000000 E		call WRITESTRING
+ 00000776  B2 03			mov dl, 3
+ 00000778  B6 0D			mov dh, 13
+ 0000077A  E8 00000000 E		call GOTOXY
+ 0000077F  BA 000001E4 R		mov edx, OFFSET mInstrucoes8
+ 00000784  E8 00000000 E		call WRITESTRING
+ 00000789  B2 03			mov dl, 3
+ 0000078B  B6 0E			mov dh, 14
+ 0000078D  E8 00000000 E		call GOTOXY
+ 00000792  BA 0000021B R		mov edx, OFFSET mInstrucoes9
+ 00000797  E8 00000000 E		call WRITESTRING
+
+ 0000079C  B2 05			mov dl, 5
+ 0000079E  B6 10			mov dh, 16
+ 000007A0  E8 00000000 E		call GOTOXY
+ 000007A5  BA 00000253 R		mov edx, OFFSET mInstrucoes10
+ 000007AA  E8 00000000 E		call WRITESTRING
+ 000007AF  B2 03			mov dl, 3
+ 000007B1  B6 11			mov dh, 17
+ 000007B3  E8 00000000 E		call GOTOXY
+ 000007B8  BA 00000285 R		mov edx, OFFSET mInstrucoes11
+ 000007BD  E8 00000000 E		call WRITESTRING
+ 000007C2  B2 03			mov dl, 3
+ 000007C4  B6 12			mov dh, 18
+ 000007C6  E8 00000000 E		call GOTOXY
+ 000007CB  BA 000002BA R		mov edx, OFFSET mInstrucoes12
+ 000007D0  E8 00000000 E		call WRITESTRING
+ 000007D5  B2 03			mov dl, 3
+ 000007D7  B6 13			mov dh, 19
+ 000007D9  E8 00000000 E		call GOTOXY
+ 000007DE  BA 000002EB R		mov edx, OFFSET mInstrucoes13
+ 000007E3  E8 00000000 E		call WRITESTRING
+					
+ 000007E8  0F B6 05			movzx eax, tMaxX
+	   00000062 R
+ 000007EF  83 E8 05			sub eax, 5
+ 000007F2  8A D0			mov dl, al	
+ 000007F4  0F B6 05			movzx eax, tMaxY
+	   00000063 R
+ 000007FB  83 E8 02			sub eax, 2
+ 000007FE  8A F0			mov dh, al
+ 00000800  E8 00000000 E		call GOTOXY
+					
+ 00000805  B8 00000002			mov eax, green+(black*16)
+ 0000080A  E8 00000000 E		call SETTEXTCOLOR
+					
+ 0000080F  B0 2D			mov al, '-'				;Imprime as duas setas de indicativo de avançar lateralmente
+ 00000811  E8 00000000 E		call WRITECHAR
+ 00000816  B0 3E			mov al, '>'
+ 00000818  E8 00000000 E		call WRITECHAR
+					
+ 0000081D  B2 00			mov dl, 0
+ 0000081F  8A 35 00000063 R		mov dh, tMaxY
+ 00000825  E8 00000000 E		call GOTOXY
+					
+ 0000082A			LTI1:						;Aguarda o comando das setas laterais, ou "q" para executar a proxima ação
+ 0000082A  B8 00000032		    mov  eax,50
+ 0000082F  E8 00000000 E	    call Delay
+ 00000834  E8 00000000 E	    call ReadKey
+ 00000839  74 EF		    jz   LTI1
+ 0000083B  66| 83 FA 27			cmp  dx, 0027h
+ 0000083F  75 E9			jne LTI1
+					
+ 00000841  E8 FFFFF7BA			call LimpaTela
+ 00000846  E8 FFFFF9A8			call Bordas
+					
+ 0000084B  B8 00000002			mov eax, green+(black*16)
+ 00000850  E8 00000000 E		call SETTEXTCOLOR
+					
+ 00000855  B2 12			mov dl, 18
+ 00000857  B6 02			mov dh, 2
+ 00000859  E8 00000000 E		call GOTOXY
+					
+ 0000085E  BA 0000003C R		mov edx, OFFSET nome
+ 00000863  E8 00000000 E		call WRITESTRING
+					
+ 00000868  B0 2F			mov al, '/'
+ 0000086A  E8 00000000 E		call WRITECHAR
+					
+ 0000086F  BA 00000031 R		mov edx, OFFSET bcomoJogar
+ 00000874  E8 00000000 E		call WRITESTRING
+					
+ 00000879  B2 0D			mov dl, 13
+ 0000087B  B6 04			mov dh, 4
+ 0000087D  E8 00000000 E		call GOTOXY
+ 00000882  BA 000002FB R		mov edx, OFFSET mInstrucoes14
+ 00000887  E8 00000000 E		call WRITESTRING
+					
+ 0000088C  B8 0000000F			mov eax, white+(black*16)
+ 00000891  E8 00000000 E		call SETTEXTCOLOR
+					
+ 00000896  B2 05			mov dl, 5
+ 00000898  B6 07			mov dh, 7
+ 0000089A  E8 00000000 E		call GOTOXY
+ 0000089F  BA 0000031D R		mov edx, OFFSET mInstrucoes15
+ 000008A4  E8 00000000 E		call WRITESTRING
+ 000008A9  B2 05			mov dl, 5
+ 000008AB  B6 0A			mov dh, 10
+ 000008AD  E8 00000000 E		call GOTOXY
+ 000008B2  BA 00000346 R		mov edx, OFFSET mInstrucoes16
+ 000008B7  E8 00000000 E		call WRITESTRING
+ 000008BC  B2 03			mov dl, 3
+ 000008BE  B6 0B			mov dh, 11
+ 000008C0  E8 00000000 E		call GOTOXY
+ 000008C5  BA 00000376 R		mov edx, OFFSET mInstrucoes17
+ 000008CA  E8 00000000 E		call WRITESTRING
+ 000008CF  B2 05			mov dl, 5
+ 000008D1  B6 0E			mov dh, 14
+ 000008D3  E8 00000000 E		call GOTOXY
+ 000008D8  BA 00000397 R		mov edx, OFFSET mInstrucoes18
+ 000008DD  E8 00000000 E		call WRITESTRING
+ 000008E2  B2 03			mov dl, 3
+ 000008E4  B6 0F			mov dh, 15
+ 000008E6  E8 00000000 E		call GOTOXY
+ 000008EB  BA 000003C2 R		mov edx, OFFSET mInstrucoes19
+ 000008F0  E8 00000000 E		call WRITESTRING
+					
+ 000008F5  B2 03			mov dl, 3
+ 000008F7  0F B6 05			movzx eax, tMaxY
+	   00000063 R
+ 000008FE  83 E8 02			sub eax, 2
+ 00000901  8A F0			mov dh, al
+ 00000903  E8 00000000 E		call GOTOXY
+					
+ 00000908  B8 00000002			mov eax, green+(black*16)
+ 0000090D  E8 00000000 E		call SETTEXTCOLOR
+					
+ 00000912  B0 3C			mov al, '<'				;Imprime as duas setas de indicativo de avançar lateralmente
+ 00000914  E8 00000000 E		call WRITECHAR
+ 00000919  B0 2D			mov al, '-'
+ 0000091B  E8 00000000 E		call WRITECHAR
+					
+ 00000920  0F B6 05			movzx eax, tMaxX
+	   00000062 R
+ 00000927  83 E8 05			sub eax, 5
+ 0000092A  8A D0			mov dl, al	
+ 0000092C  0F B6 05			movzx eax, tMaxY
+	   00000063 R
+ 00000933  83 E8 02			sub eax, 2
+ 00000936  8A F0			mov dh, al
+ 00000938  E8 00000000 E		call GOTOXY
+					
+ 0000093D  B0 2D			mov al, '-'
+ 0000093F  E8 00000000 E		call WRITECHAR
+ 00000944  B0 3E			mov al, '>'
+ 00000946  E8 00000000 E		call WRITECHAR
+					
+ 0000094B  B2 00			mov dl, 0
+ 0000094D  8A 35 00000063 R		mov dh, tMaxY
+ 00000953  E8 00000000 E		call GOTOXY
+
+ 00000958			LTI2:						;Aguarda o comando das setas laterais, ou "q" para executar a proxima ação
+ 00000958  B8 00000032		    mov  eax,50
+ 0000095D  E8 00000000 E	    call Delay
+ 00000962  E8 00000000 E	    call ReadKey
+ 00000967  74 EF		    jz   LTI2
+ 00000969  66| 83 FA 25			cmp  dx, 0025h
+ 0000096D  0F 84 FFFFFD3C		je LTI3
+ 00000973  66| 83 FA 27			cmp dx, 0027h
+ 00000977  75 DF			jne LTI2
+					
+ 00000979  C3				ret
+ 0000097A			TelaInstrucoes ENDP
+
+ 0000097A			TelaCreditos PROC
+				;Imprime a tela de créditos 
+				;Recebe:	tMaxX - Tamanho do jogo em X
+				;			nome, bcreditos, mcreditos1 .. mcreditos12 - Mensagens salvas na memória 
+				;Retorna:	
+ 0000097A  E8 FFFFF681			call LimpaTela
+ 0000097F  E8 FFFFF86F			call Bordas
+
+ 00000984  B8 00000002			mov eax, green+(black*16)
+ 00000989  E8 00000000 E		call SETTEXTCOLOR
+
+ 0000098E  B2 12			mov dl, 18
+ 00000990  B6 02			mov dh, 2
+ 00000992  E8 00000000 E		call GOTOXY
+					
+ 00000997  BA 0000003C R		mov edx, OFFSET nome
+ 0000099C  E8 00000000 E		call WRITESTRING
+					
+ 000009A1  B0 2F			mov al, '/'
+ 000009A3  E8 00000000 E		call WRITECHAR
+					
+ 000009A8  BA 00000028 R		mov edx, OFFSET bcreditos
+ 000009AD  E8 00000000 E		call WRITESTRING
+					
+ 000009B2  B8 0000000F			mov eax, white+(black*16)
+ 000009B7  E8 00000000 E		call SETTEXTCOLOR
+					
+ 000009BC  B2 05			mov dl, 5
+ 000009BE  B6 04			mov dh, 4
+ 000009C0  E8 00000000 E		call GOTOXY
+ 000009C5  BA 000003DD R		mov edx, OFFSET mcreditos1
+ 000009CA  E8 00000000 E		call WRITESTRING
+ 000009CF  B2 03			mov dl, 3
+ 000009D1  B6 05			mov dh, 5
+ 000009D3  E8 00000000 E		call GOTOXY
+ 000009D8  BA 00000413 R		mov edx, OFFSET mcreditos2
+ 000009DD  E8 00000000 E		call WRITESTRING
+ 000009E2  B2 03			mov dl, 3
+ 000009E4  B6 06			mov dh, 6
+ 000009E6  E8 00000000 E		call GOTOXY
+ 000009EB  BA 00000449 R		mov edx, OFFSET mcreditos3
+ 000009F0  E8 00000000 E		call WRITESTRING
+ 000009F5  B2 03			mov dl, 3
+ 000009F7  B6 07			mov dh, 7
+ 000009F9  E8 00000000 E		call GOTOXY
+ 000009FE  BA 0000047D R		mov edx, OFFSET mcreditos4
+ 00000A03  E8 00000000 E		call WRITESTRING
+ 00000A08  B2 03			mov dl, 3
+ 00000A0A  B6 08			mov dh, 8
+ 00000A0C  E8 00000000 E		call GOTOXY
+ 00000A11  BA 000004AD R		mov edx, OFFSET mcreditos5
+ 00000A16  E8 00000000 E		call WRITESTRING
+					
+ 00000A1B  B2 05			mov dl, 5
+ 00000A1D  B6 0A			mov dh, 10
+ 00000A1F  E8 00000000 E		call GOTOXY
+ 00000A24  BA 000004BF R		mov edx, OFFSET mcreditos6
+ 00000A29  E8 00000000 E		call WRITESTRING
+ 00000A2E  B2 03			mov dl, 3
+ 00000A30  B6 0B			mov dh, 11
+ 00000A32  E8 00000000 E		call GOTOXY
+ 00000A37  BA 000004F5 R		mov edx, OFFSET mcreditos7
+ 00000A3C  E8 00000000 E		call WRITESTRING
+					
+ 00000A41  B8 00000002			mov eax, green+(black*16)
+ 00000A46  E8 00000000 E		call SETTEXTCOLOR
+					
+ 00000A4B  B2 0C			mov dl, 12
+ 00000A4D  B6 10			mov dh, 16
+ 00000A4F  E8 00000000 E		call GOTOXY
+ 00000A54  BA 0000051E R		mov edx, OFFSET mcreditos8
+ 00000A59  E8 00000000 E		call WRITESTRING
+					
+ 00000A5E  B8 0000000F			mov eax, white+(black*16)
+ 00000A63  E8 00000000 E		call SETTEXTCOLOR
+					
+ 00000A68  B2 03			mov dl, 3
+ 00000A6A  B6 12			mov dh, 18
+ 00000A6C  E8 00000000 E		call GOTOXY
+ 00000A71  BA 00000542 R		mov edx, OFFSET mcreditos9
+ 00000A76  E8 00000000 E		call WRITESTRING
+ 00000A7B  B2 1E			mov dl, 30
+ 00000A7D  B6 13			mov dh, 19
+ 00000A7F  E8 00000000 E		call GOTOXY
+ 00000A84  BA 00000556 R		mov edx, OFFSET mcreditos10
+ 00000A89  E8 00000000 E		call WRITESTRING
+ 00000A8E  B2 03			mov dl, 3
+ 00000A90  B6 15			mov dh, 21
+ 00000A92  E8 00000000 E		call GOTOXY
+ 00000A97  BA 00000560 R		mov edx, OFFSET mcreditos11
+ 00000A9C  E8 00000000 E		call WRITESTRING
+ 00000AA1  B2 1E			mov dl, 30
+ 00000AA3  B6 16			mov dh, 22
+ 00000AA5  E8 00000000 E		call GOTOXY
+ 00000AAA  BA 0000057F R		mov edx, OFFSET mcreditos12
+ 00000AAF  E8 00000000 E		call WRITESTRING
+					
+ 00000AB4  0F B6 05			movzx eax, tMaxX
+	   00000062 R
+ 00000ABB  83 E8 05			sub eax, 5
+ 00000ABE  8A D0			mov dl, al	
+ 00000AC0  0F B6 05			movzx eax, tMaxY
+	   00000063 R
+ 00000AC7  83 E8 02			sub eax, 2
+ 00000ACA  8A F0			mov dh, al
+ 00000ACC  E8 00000000 E		call GOTOXY
+					
+ 00000AD1  B8 00000002			mov eax, green+(black*16)
+ 00000AD6  E8 00000000 E		call SETTEXTCOLOR
+					
+ 00000ADB  B0 2D			mov al, '-'
+ 00000ADD  E8 00000000 E		call WRITECHAR
+ 00000AE2  B0 3E			mov al, '>'
+ 00000AE4  E8 00000000 E		call WRITECHAR
+					
+ 00000AE9  B2 00			mov dl, 0
+ 00000AEB  8A 35 00000063 R		mov dh, tMaxY
+ 00000AF1  E8 00000000 E		call GOTOXY
+					
+ 00000AF6  B8 0000000F			mov eax, white+(black*16)
+ 00000AFB  E8 00000000 E		call SETTEXTCOLOR
+					
+ 00000B00			LTI1:
+ 00000B00  B8 00000032		    mov  eax,50
+ 00000B05  E8 00000000 E	    call Delay
+ 00000B0A  E8 00000000 E	    call ReadKey
+ 00000B0F  74 EF		    jz   LTI1
+ 00000B11  66| 83 FA 27			cmp  dx, 0027h
+ 00000B15  75 E9			jne LTI1
+					
+ 00000B17  C3				ret
+ 00000B18			TelaCreditos ENDP
+
+ 00000B18			SetaTelaPerdeu PROC
+				;Imprime uma seta na posição desejada das telas de derrota
+				;Recebe:	tMaxX - Tamanho do jogo em X
+				;			posSeta1 - Variável na memória da posição da seta da tela de derrota
+				;Retorna:	Sem retorno
+ 00000B18  66| 52			push dx
+
+ 00000B1A  B2 0F			mov dl, 15
+ 00000B1C  B6 12			mov dh, 18
+ 00000B1E  E8 00000000 E		call GOTOXY
+ 00000B23  B8 00000000			mov eax, black+(black*16)
+ 00000B28  E8 00000000 E		call SETTEXTCOLOR
+ 00000B2D  B0 20			mov al, ' '
+ 00000B2F  E8 00000000 E		call WRITECHAR
+ 00000B34  E8 00000000 E		call WRITECHAR
+					
+ 00000B39  B2 0F			mov dl, 15
+ 00000B3B  B6 15			mov dh, 21
+ 00000B3D  E8 00000000 E		call GOTOXY
+ 00000B42  B8 00000000			mov eax, black+(black*16)
+ 00000B47  E8 00000000 E		call SETTEXTCOLOR
+ 00000B4C  B0 20			mov al, ' '
+ 00000B4E  E8 00000000 E		call WRITECHAR
+ 00000B53  E8 00000000 E		call WRITECHAR
+					
+ 00000B58  66| 5A			pop dx
+					
+ 00000B5A  66| 83 FA 26			cmp dx, 0026h
+ 00000B5E  75 0F			jne LPS1
+ 00000B60  80 3D 00000061 R		cmp posSeta1, 0000h
+	   00
+ 00000B67  76 1B			jbe LPS2
+ 00000B69  FE 0D 00000061 R		dec posSeta1
+ 00000B6F			LPS1:	
+ 00000B6F  66| 83 FA 28			cmp dx, 0028h
+ 00000B73  75 0F			jne LPS2
+ 00000B75  80 3D 00000061 R		cmp posSeta1, 0001h
+	   01
+ 00000B7C  73 06			jae LPS2
+ 00000B7E  FE 05 00000061 R		inc posSeta1
+ 00000B84			LPS2:
+					
+ 00000B84  80 3D 00000061 R		cmp posSeta1, 0
+	   00
+ 00000B8B  74 04			je seta1
+ 00000B8D  B6 15			mov dh, 21
+ 00000B8F  EB 02			jmp setasai
+ 00000B91			seta1:	
+ 00000B91  B6 12			mov dh, 18
+ 00000B93			setasai:
+					
+ 00000B93  B2 0F			mov dl, 15
+ 00000B95  E8 00000000 E		call GOTOXY
+					
+ 00000B9A  B8 00000002			mov eax, green+(black*16)
+ 00000B9F  E8 00000000 E		call SETTEXTCOLOR
+					
+ 00000BA4  B0 2D			mov al, '-'
+ 00000BA6  E8 00000000 E		call WRITECHAR
+ 00000BAB  B0 3E			mov al, '>'
+ 00000BAD  E8 00000000 E		call WRITECHAR
+					
+ 00000BB2  B2 00			mov dl, 0
+ 00000BB4  8A 35 00000063 R		mov dh, tMaxY
+ 00000BBA  E8 00000000 E		call GOTOXY
+					
+ 00000BBF  B8 0000000F			mov eax, white+(black*16)
+ 00000BC4  E8 00000000 E		call SETTEXTCOLOR
+					
+ 00000BC9  C3				ret
+ 00000BCA			SetaTelaPerdeu ENDP
+
+ 00000BCA			TelaPerdeu PROC
+				;Imprime a tela de derrota por colisão
+				;Recebe:	mPerdeu1, mPerdeu21, mPerdeu22, mPerdeu3, mPerdeu4, mPerdeu5, mPerdeu6 - Mensagens salvas na memória 
+				;			tMaxX - Tamanho do jogo em X
+				;Retorna:	Sem retorno
+ 00000BCA  E8 FFFFF431			call LimpaTela
+ 00000BCF  E8 FFFFF61F			call Bordas
+					
+ 00000BD4  B8 00000002			mov eax, green+(black*16)
+ 00000BD9  E8 00000000 E		call SETTEXTCOLOR
+					
+ 00000BDE  B2 17			mov dl, 23
+ 00000BE0  B6 03			mov dh, 3
+ 00000BE2  E8 00000000 E		call GOTOXY
+
+ 00000BE7  BA 00000589 R		mov edx, OFFSET mPerdeu1
+ 00000BEC  E8 00000000 E		call WRITESTRING
+					
+ 00000BF1  B2 0F			mov dl, 15
+ 00000BF3  B6 12			mov dh, 18
+ 00000BF5  E8 00000000 E		call GOTOXY
+
+ 00000BFA  B0 2D			mov al, '-'
+ 00000BFC  E8 00000000 E		call WRITECHAR
+ 00000C01  B0 3E			mov al, '>'
+ 00000C03  E8 00000000 E		call WRITECHAR
+					
+ 00000C08  B8 0000000F			mov eax, white+(black*16)
+ 00000C0D  E8 00000000 E		call SETTEXTCOLOR
+					
+ 00000C12  B2 0A			mov dl, 10
+ 00000C14  B6 07			mov dh, 7
+ 00000C16  E8 00000000 E		call GOTOXY
+					
+ 00000C1B  BA 00000596 R		mov edx, OFFSET mPerdeu21
+ 00000C20  E8 00000000 E		call WRITESTRING
+					
+ 00000C25  B2 13			mov dl, 19
+ 00000C27  B6 08			mov dh, 8
+ 00000C29  E8 00000000 E		call GOTOXY
+					
+ 00000C2E  BA 000005BE R		mov edx, OFFSET mPerdeu22
+ 00000C33  E8 00000000 E		call WRITESTRING
+					
+ 00000C38  B2 16			mov dl, 22
+ 00000C3A  B6 0B			mov dh, 11
+ 00000C3C  E8 00000000 E		call GOTOXY
+					
+ 00000C41  BA 000005D3 R		mov edx, OFFSET mPerdeu3
+ 00000C46  E8 00000000 E		call WRITESTRING
+					
+ 00000C4B  0F B6 05			movzx eax, score
+	   0000005F R
+ 00000C52  E8 00000000 E		call WRITEDEC
+					
+ 00000C57  B2 18			mov dl, 24
+ 00000C59  B6 0D			mov dh, 13
+ 00000C5B  E8 00000000 E		call GOTOXY
+					
+ 00000C60  BA 000005E3 R		mov edx, OFFSET mPerdeu4
+ 00000C65  E8 00000000 E		call WRITESTRING
+					
+ 00000C6A  0F B6 05			movzx eax, timemax
+	   0000005D R
+ 00000C71  2A 05 0000005E R		sub al, time
+ 00000C77  E8 00000000 E		call WRITEDEC	
+					
+ 00000C7C  B2 16			mov dl, 22
+ 00000C7E  B6 12			mov dh, 18
+ 00000C80  E8 00000000 E		call GOTOXY
+					
+ 00000C85  BA 000005EF R		mov edx, OFFSET mPerdeu5
+ 00000C8A  E8 00000000 E		call WRITESTRING
+					
+ 00000C8F  B2 1B			mov dl, 27
+ 00000C91  B6 15			mov dh, 21
+ 00000C93  E8 00000000 E		call GOTOXY
+					
+ 00000C98  BA 000005FF R		mov edx, OFFSET mPerdeu6
+ 00000C9D  E8 00000000 E		call WRITESTRING
+					
+ 00000CA2  B2 00			mov dl, 0
+ 00000CA4  8A 35 00000063 R		mov dh, tMaxY
+ 00000CAA  E8 00000000 E		call GOTOXY
+					
+ 00000CAF  C3				ret
+ 00000CB0			TelaPerdeu ENDP
+
+ 00000CB0			TelaAcabaTempo PROC
+				;Imprime a tela de derrota por tempo
+				;Recebe:	mPerdeuTempo1, mPerdeu3, mPerdeu4, mPerdeu5, mPerdeu6 - Mensagens salvas na memória 
+				;			tMaxX - Tamanho do jogo em X
+				;Retorna:	Sem retorno
+ 00000CB0  E8 FFFFF34B			call LimpaTela
+ 00000CB5  E8 FFFFF539			call Bordas
+					
+ 00000CBA  B8 00000002			mov eax, green+(black*16)
+ 00000CBF  E8 00000000 E		call SETTEXTCOLOR
+					
+ 00000CC4  B2 15			mov dl, 21
+ 00000CC6  B6 06			mov dh, 6
+ 00000CC8  E8 00000000 E		call GOTOXY
+
+ 00000CCD  BA 00000604 R		mov edx, OFFSET mPerdeuTempo1
+ 00000CD2  E8 00000000 E		call WRITESTRING
+					
+ 00000CD7  B2 0F			mov dl, 15
+ 00000CD9  B6 12			mov dh, 18
+ 00000CDB  E8 00000000 E		call GOTOXY
+					
+ 00000CE0  B0 2D			mov al, '-'
+ 00000CE2  E8 00000000 E		call WRITECHAR
+ 00000CE7  B0 3E			mov al, '>'
+ 00000CE9  E8 00000000 E		call WRITECHAR
+					
+ 00000CEE  B8 0000000F			mov eax, white+(black*16)
+ 00000CF3  E8 00000000 E		call SETTEXTCOLOR
+					
+					
+ 00000CF8  B2 16			mov dl, 22
+ 00000CFA  B6 0B			mov dh, 11
+ 00000CFC  E8 00000000 E		call GOTOXY
+					
+ 00000D01  BA 000005D3 R		mov edx, OFFSET mPerdeu3
+ 00000D06  E8 00000000 E		call WRITESTRING
+					
+ 00000D0B  0F B6 05			movzx eax, score
+	   0000005F R
+ 00000D12  E8 00000000 E		call WRITEDEC
+					
+ 00000D17  B2 18			mov dl, 24
+ 00000D19  B6 0D			mov dh, 13
+ 00000D1B  E8 00000000 E		call GOTOXY
+					
+ 00000D20  BA 000005E3 R		mov edx, OFFSET mPerdeu4
+ 00000D25  E8 00000000 E		call WRITESTRING
+					
+ 00000D2A  0F B6 05			movzx eax, timemax
+	   0000005D R
+ 00000D31  E8 00000000 E		call WRITEDEC	
+					
+ 00000D36  B2 16			mov dl, 22
+ 00000D38  B6 12			mov dh, 18
+ 00000D3A  E8 00000000 E		call GOTOXY
+					
+ 00000D3F  BA 000005EF R		mov edx, OFFSET mPerdeu5
+ 00000D44  E8 00000000 E		call WRITESTRING
+					
+ 00000D49  B2 1B			mov dl, 27
+ 00000D4B  B6 15			mov dh, 21
+ 00000D4D  E8 00000000 E		call GOTOXY
+					
+ 00000D52  BA 000005FF R		mov edx, OFFSET mPerdeu6
+ 00000D57  E8 00000000 E		call WRITESTRING
+					
+ 00000D5C  B2 00			mov dl, 0
+ 00000D5E  8A 35 00000063 R		mov dh, tMaxY
+ 00000D64  E8 00000000 E		call GOTOXY
+					
+ 00000D69  C3				ret
+ 00000D6A			TelaAcabaTempo ENDP
+
+ 00000D6A			TempoTela PROC
+				;Imprime o tempo restante do jogador na tela
+				;Recebe:	time - Tempo percorrido de jogo
+				;			tMaxX - Tamanho do jogo em X
+				;Retorna:	Sem retorno
+ 00000D6A  B2 0D			mov dl, 13
+ 00000D6C  B6 01			mov dh, 1
+ 00000D6E  E8 00000000 E		call GOTOXY
+ 00000D73  0F B6 05			movzx eax, time
+	   0000005E R
+ 00000D7A  E8 00000000 E		call WRITEDEC
+ 00000D7F  48				dec eax
+ 00000D80  A2 0000005E R		mov time, al
+ 00000D85  B2 00			mov dl, 0
+ 00000D87  8A 35 00000063 R		mov dh, tMaxY
+ 00000D8D  E8 00000000 E		call GOTOXY
+ 00000D92  C3				ret
+ 00000D93			TempoTela ENDP
+					
+ 00000D93			ScoreTela PROC
+				;Imprime a pontuação
+				;Recebe:	score - Variável na memória que armazena o valor da pontuação
+				;			tMaxX - Tamanho do jogo em X
+				;Retorna:	Sem retorno
+ 00000D93  B2 1E			mov dl, 30
+ 00000D95  B6 01			mov dh, 1
+ 00000D97  E8 00000000 E		call GOTOXY
+ 00000D9C  0F B6 05			movzx eax, score
+	   0000005F R
+ 00000DA3  E8 00000000 E		call WRITEDEC
+					
+ 00000DA8  B2 00			mov dl, 0
+ 00000DAA  8A 35 00000063 R		mov dh, tMaxY
+ 00000DB0  E8 00000000 E		call GOTOXY
+					
+ 00000DB5  C3				ret
+ 00000DB6			ScoreTela ENDP
+
+ 00000DB6			CorSelPlat PROC
+				;Imprime as duas cores válidas para aceitar o salto na plataforma
+				;Recebe:	corSele - Vetor contendo as duas cores selecionadas para aceitar o salto
+				;			tMaxX - Tamanho do jogo em X
+				;Retorna:	Sem retorno
+ 00000DB6  B2 31			mov dl, 49
+ 00000DB8  B6 01			mov dh, 1
+ 00000DBA  E8 00000000 E		call GOTOXY
+
+ 00000DBF  0F B7 05			movzx eax, corSele
+	   000000B9 R
+ 00000DC6  BA 00000010			mov edx, 00000016
+ 00000DCB  F7 E2			mul edx
+ 00000DCD  E8 00000000 E		call SETTEXTCOLOR
+					
+ 00000DD2  B0 20			mov al, ' '
+ 00000DD4  E8 00000000 E		call WRITECHAR
+					
+ 00000DD9  B2 33			mov dl, 51
+ 00000DDB  B6 01			mov dh, 1
+ 00000DDD  E8 00000000 E		call GOTOXY
+					
+ 00000DE2  0F B7 05			movzx eax, (corSele+2)
+	   000000BB R
+ 00000DE9  BA 00000010			mov edx, 00000016
+ 00000DEE  F7 E2			mul edx
+ 00000DF0  E8 00000000 E		call SETTEXTCOLOR
+					
+ 00000DF5  B0 20			mov al, ' '
+ 00000DF7  E8 00000000 E		call WRITECHAR
+					
+ 00000DFC  B8 0000000F			mov eax, white+(black*16)
+ 00000E01  E8 00000000 E		call SETTEXTCOLOR
+					
+ 00000E06  B2 00			mov dl, 0
+ 00000E08  8A 35 00000063 R		mov dh, tMaxY
+ 00000E0E  E8 00000000 E		call GOTOXY
+
+ 00000E13  C3				ret
+ 00000E14			CorSelPlat ENDP
+					
+ 00000E14			ApagaArm PROC
+				;Função responsável por apagar as armadilhas já existentes na tela
+				;Recebe: 	nArmadilhas - quantidade de armadilhas por plataforma
+				;			armadilhas - vetor com as posições x das armadilhas
+				;			distPlat - Distância entre as plataformas
+				;			tMaxX - Tamanho do jogo em X
+				;Retorna:	Sem retorno
+ 00000E14  B8 00000000			mov eax, black+(black*16)
+ 00000E19  E8 00000000 E		call SETTEXTCOLOR
+
+ 00000E1E  B9 00000004			mov ecx, 4
+ 00000E23  66| BB 0015			mov bx, 21
+ 00000E27  66| 83 EB 02			sub bx, 2
+ 00000E2B  BE 00000000			mov esi, 0
+					
+ 00000E30			LP1:							;Permuta entre as 4 plataformas
+ 00000E30  8A F3			mov dh, bl
+ 00000E32  51				push ecx
+					
+ 00000E33  0F B6 0D			movzx ecx, nArmadilhas
+	   00000067 R
+					
+ 00000E3A			LP2:							;Apaga todas as armadilhas em uma plataforma
+ 00000E3A  8A 96 00000069 R		mov dl,armadilhas[esi]
+ 00000E40  E8 00000000 E		call GOTOXY
+ 00000E45  46				inc esi
+ 00000E46  B0 20			mov al, ' '
+ 00000E48  E8 00000000 E		call WRITECHAR
+ 00000E4D  E2 EB			loop LP2
+
+ 00000E4F  59				pop ecx
+ 00000E50  2A 1D 00000066 R		sub bl, distPlat
+ 00000E56  E2 D8			loop LP1
+					
+ 00000E58  B8 0000000F			mov eax, white+(black*16)
+ 00000E5D  E8 00000000 E		call SETTEXTCOLOR
+					
+ 00000E62  B2 00			mov dl, 0
+ 00000E64  8A 35 00000063 R		mov dh, tMaxY
+ 00000E6A  E8 00000000 E		call GOTOXY
+					
+ 00000E6F  C3				ret
+ 00000E70			ApagaArm ENDP	
+					
+ 00000E70			DesenhaArm PROC
+				;Função responsável por desenhar as armadilhas
+				;Recebe: 	nArmadilhas - quantidade de armadilhas por plataforma
+				;			armadilhas - vetor com as posições x das armadilhas
+				;			distPlat - Distância entre as plataformas
+				;			tMaxX - Tamanho do jogo em X
+				;Retorna:	Sem retorno
+ 00000E70  B8 0000000F			mov eax, white+(black*16)
+ 00000E75  E8 00000000 E		call SETTEXTCOLOR
+
+ 00000E7A  B9 00000004			mov ecx, 4
+ 00000E7F  66| BB 0015			mov bx, 21
+ 00000E83  66| 83 EB 02			sub bx, 2
+ 00000E87  BE 00000000			mov esi, 0
+					
+ 00000E8C			LP1:							;Permuta entre as 4 plataformas
+ 00000E8C  8A F3			mov dh, bl
+ 00000E8E  51				push ecx
+					
+ 00000E8F  0F B6 0D			movzx ecx, nArmadilhas
+	   00000067 R
+					
+ 00000E96			LP2:							;Imprime todas as armadilhas em uma plataforma
+ 00000E96  8A 96 00000069 R		mov dl,armadilhas[esi]	
+ 00000E9C  E8 00000000 E		call GOTOXY
+ 00000EA1  46				inc esi
+ 00000EA2  B0 26			mov al, '&'
+ 00000EA4  E8 00000000 E		call WRITECHAR
+ 00000EA9  E2 EB			loop LP2
+
+ 00000EAB  59				pop ecx
+ 00000EAC  2A 1D 00000066 R		sub bl, distPlat
+ 00000EB2  E2 D8			loop LP1
+					
+ 00000EB4  B8 0000000F			mov eax, white+(black*16)			;Configura o texto com a cor padrão
+ 00000EB9  E8 00000000 E		call SETTEXTCOLOR
+					
+ 00000EBE  B2 00			mov dl, 0
+ 00000EC0  8A 35 00000063 R		mov dh, tMaxY
+ 00000EC6  E8 00000000 E		call GOTOXY
+					
+ 00000ECB  C3				ret
+ 00000ECC			DesenhaArm ENDP
+
+ 00000ECC			VerificaPosIni PROC
+				;Função responsável por percorrer o vetor e verificar se o valor a ser inserido já está no vetor
+				;Recebe: 	eax - parâmetro passado pela pilha, e que armazena o valor do elemento a ser verifica se já pertence ao vetor
+				;			edi - parâmetro passado pela pilha, endereço do vetor a ser comparado
+				;			nArmadilhas - numero de armadilhas por platafomas
+				;Retorna:	ebx - retorna 1 se o valor fornecido não pertencer ao vetor; ou 0 se pertencer
+ 00000ECC  50				push eax
+ 00000ECD  51				push ecx
+ 00000ECE  57				push edi
+					
+ 00000ECF  0F B6 0D			movzx ecx, nArmadilhas
+	   00000067 R
+ 00000ED6  BB 00000001			mov ebx, 1				;Armazena 1 em ebx para a saida, caso não exista o valor fornecido no vetor
+ 00000EDB  FC				cld					;Configura a flag como 1 para indicar que a função scasb avançará o vetor
+ 00000EDC  F2/ AE			repne scasb				;repne - repete enquanto n for igual; scasb - compara o valor em al com o valor apontado por edi (incrementa edi a cada repetição (pois a carry flag é 1)
+ 00000EDE  75 05			jnz fim								
+ 00000EE0  BB 00000000			mov ebx, 0				;Troca o valor de ebx para 0, caso já exista o valor no vetor
+					
+ 00000EE5			fim:						;Adiciona na pilha todos os valores dos registradores usados
+ 00000EE5  5F				pop edi
+ 00000EE6  59				pop ecx
+ 00000EE7  58				pop eax
+
+ 00000EE8  C3				ret
+ 00000EE9			VerificaPosIni ENDP
+
+ 00000EE9			CriaArmInicio PROC
+				;Cria as armadilhas íniciais do jogo
+				;Recebe: 	armadilhas - vetor com as posições x das armadilhas
+				;			nArmadilhas - quantidade de armadilhas por plataforma
+				;			tMaxX - Tamanho do jogo em X
+				;Retorna: Sem retorno
+ 00000EE9  B9 00000004			mov ecx, 4					;Número de plataformas
+ 00000EEE  BB 00000001			mov ebx, 1					;Variável auxiliar
+ 00000EF3  BA 00000000			mov edx, 0					;Variável auxiliar
+ 00000EF8  BF 00000069 R		mov edi, OFFSET armadilhas			
+					
+ 00000EFD			L2:							;Loop externo: Varia a plataforma da criação da armadilha
+ 00000EFD  53				push ebx
+ 00000EFE  51				push ecx
+ 00000EFF  0F B6 0D			movzx ecx, nArmadilhas
+	   00000067 R
+ 00000F06			L1:							;Loop interno: Cria a posição das armadilhas de cada uma das 4 plataformas
+ 00000F06  E8 00000000 E		call Randomize					;Configura o uso do Randomize
+ 00000F0B  0F B6 05		    movzx eax, tMaxX					;Define o intervalo válido dos valores gerados aleatoriamente 0~ tamanho máximo em x
+	   00000062 R
+ 00000F12  83 E8 04			sub eax, 4					;Retira 4 o intervalo (dois de cada uma das laterais, e dois pela distância dos braços do boneco
+					
+ 00000F15  E8 00000000 E	    call RandomRange					;Instancia a chamada do randomico
+ 00000F1A  FE C0			inc al						;Incrementa o valor de retorno 
+ 00000F1C  E8 FFFFFFAB			call VerificaPosIni				;Verifica se a posição é válida
+ 00000F21  83 FB 01			cmp ebx, 1					;Compara o retorno da função, e desvia o fluxo, caso a posição sorteada já estreja no vetor
+ 00000F24  75 E0			jne L1
+ 00000F26  88 82 00000069 R	    mov  armadilhas[edx], al            ;Transfere o valor aleátorio para a memória
+ 00000F2C  42				inc edx
+ 00000F2D  E2 D7			loop L1
+					
+ 00000F2F  59				pop ecx						;Reposiciona os registradores para os determinados valores
+ 00000F30  5B				pop ebx
+ 00000F31  0F B6 05			movzx eax, nArmadilhas
+	   00000067 R
+ 00000F38  52				push edx
+ 00000F39  F7 E3			mul ebx
+ 00000F3B  5A				pop edx
+ 00000F3C  BF 00000069 R		mov edi, OFFSET armadilhas
+ 00000F41  03 F8			add edi, eax
+ 00000F43  47				inc edi
+ 00000F44  43				inc ebx
+ 00000F45  E2 B6			loop L2
+					
+ 00000F47  E8 FFFFFF24			call DesenhaArm					;Desenha as armadilhas
+
+ 00000F4C  C3				ret
+ 00000F4D			CriaArmInicio ENDP
+
+
+ 00000F4D			TrocaCorPlat PROC
+				;Troca a cor da plaforma mais baixa
+				;Recebe: 	coresDisp - Vetor com as cores disponíveis
+				;			tMaxX - - Tamanho do jogo em X
+				;Retorna: 	corPlatAtual - Cor da platafoma inicial
+ 00000F4D  E8 00000000 E	    call Randomize						;Configura o uso do Randomize
+ 00000F52  B8 00000009			mov  eax, 9						;Armazena o intervalo do valor desejado - número de cores disponíveis
+ 00000F57  E8 00000000 E	    call RandomRange						;Sortei um número entre 0 e 8
+ 00000F5C  66| 6B C0 02			imul ax, TYPE coresDisp					;Multiplica ax pelo tipo do vetor das cores das platformas
+ 00000F60  66| 8B 98			mov bx, [coresDisp + ax]				;Transfere para bx o conteúdo de coresDisp+ax (contém o código referente a uma cor)
+	   000000A9 R
+					
+ 00000F67  66| 89 1D			mov corPlatAtual, bx					;Transfere para a variável que armazena a cor da plataforma atual
+	   000000BD R
+
+ 00000F6E  0F B7 C3			movzx eax, bx
+ 00000F71  E8 00000000 E		call SETTEXTCOLOR					;Configura a cor do texto
+
+ 00000F76  A0 00000063 R		mov al, tMaxY						;Posiciona o cursor para a impressão da platforma
+ 00000F7B  2C 05			sub al, 5
+ 00000F7D  B2 01			mov dl, 1
+ 00000F7F  8A F0			mov dh, al
+ 00000F81  E8 00000000 E		call GOTOXY
+
+ 00000F86  0F B6 05			movzx eax, tMaxX
+	   00000062 R
+ 00000F8D  83 E8 02			sub eax, 2
+ 00000F90  8B C8			mov ecx, eax	
+
+ 00000F92			LTCP1:								;Imprime a plataforma com a nova cor
+ 00000F92  B0 3A			mov al, ':'
+ 00000F94  E8 00000000 E		call WRITECHAR
+ 00000F99  E2 F7			loop LTCP1
+					
+ 00000F9B  B8 0000000F			mov eax, white+(black*16)
+ 00000FA0  E8 00000000 E		call SETTEXTCOLOR
+					
+ 00000FA5  B2 00			mov dl, 0
+ 00000FA7  8A 35 00000063 R		mov dh, tMaxY
+ 00000FAD  E8 00000000 E		call GOTOXY
+					
+ 00000FB2  C3				ret
+ 00000FB3			TrocaCorPlat ENDP
+					
+ 00000FB3			main PROC
+				;Responsável pela execução principal do jogo
+				;Não possui argumentos de entrada nem de saida
+ 00000FB3  E8 00000000 E		call CLRSCR						;IRVINE CLRSCR - Limpa a tela
+ 00000FB8			start:								;start - é invocado toda vez que é necessário voltar para tela inicial
+ 00000FB8  E8 FFFFF043			call LimpaTela						;Instancia a função limpa tela
+ 00000FBD  E8 FFFFF231			call Bordas						;Instancia a função bordas
+ 00000FC2  E8 FFFFF297			call Plataformas					;Instancia a função plataformas
+ 00000FC7  E8 FFFFF2DF			call TelaInicio						;Instancia a função da tela inicial
+ 00000FCC  C6 05 00000060 R		mov posSeta, 0						;Reseta a posição da seta e da pontuação
+	   00
+ 00000FD3  C6 05 00000061 R		mov posSeta1, 0
+	   00
+ 00000FDA  C6 05 0000005F R		mov score, 0
+	   00
+					
+ 00000FE1  B2 14			mov dl, 20						;Configura a posição inicial da seta e imprime
+ 00000FE3  8A 35 000000A5 R		mov dh, BYTE PTR [platInicial]
+ 00000FE9  E8 00000000 E		call GOTOXY
+					
+ 00000FEE  B8 0000000F			mov eax, white+(black*16)
+ 00000FF3  E8 00000000 E		call SETTEXTCOLOR
+
+ 00000FF8  B0 2D			mov al, '-'
+ 00000FFA  E8 00000000 E		call WRITECHAR
+ 00000FFF  B0 3E			mov al, '>'
+ 00001001  E8 00000000 E		call WRITECHAR
+					
+ 00001006  B2 00			mov dl, 0
+ 00001008  8A 35 00000063 R		mov dh, tMaxY
+ 0000100E  E8 00000000 E		call GOTOXY
+					
+ 00001013			AguardaTecla1:							;Trecho responsável por ler as teclas, e printar a seta no lugar desejado
+ 00001013  B8 00000032		    mov  eax,50          					;Tempo para o SO esperar (50 milisegundos)
+ 00001018  E8 00000000 E	    call Delay           					;Interrompe a execução do programa pelo tempo em eax = 50 ms
+ 0000101D  E8 00000000 E	    call ReadKey         					;Verifica se existe alguma tecla digitada
+ 00001022  74 EF		    jz   AguardaTecla1      				;Caso nenhuma tecla tenha sido pressionada, retorna para aguardaTecla1
+ 00001024  66| 83 FA 0D			cmp  dx,000Dh  						;Compara a entrada do teclado com "enter"
+ 00001028  74 11			je LS1							;Caso seja "enter" direciona o programa para o trecho onde seleciona a proxima tela
+ 0000102A  66| 83 FA 51			cmp dx, 0051h						;Caso seja 'q', o programa encerra
+ 0000102E  0F 84 00000191		je fim
+ 00001034  E8 FFFFF109			call PrintSeta						;Caso não seja nenhuma das opções, será chamada a função que reposiciona a seta
+ 00001039  75 D8		    jne  AguardaTecla1    					;Se o retorno da função PrintSeta não for enter, direciona para AguardaTecla1
+					
+ 0000103B			LS1:								;Verifica qual o valor na variável posSeta e direciona para tela correta (tela de jogo, intruções e crédito)
+ 0000103B  80 3D 00000060 R		cmp posSeta, 0000h
+	   00
+ 00001042  74 1A			je jogo
+ 00001044  80 3D 00000060 R		cmp posSeta, 0001h
+	   01
+ 0000104B  0F 84 000000FC		je instrucoes
+ 00001051  80 3D 00000060 R		cmp posSeta, 0002h
+	   02
+ 00001058  0F 84 000000F9		je creditos
+					
+ 0000105E			jogo:								;Direcionamento para o jogo
+ 0000105E  E8 FFFFF5C6			call TelaDificuldade
+
+ 00001063  B2 14			mov dl, 20							
+ 00001065  8A 35 000000A5 R		mov dh, BYTE PTR [platInicial]
+ 0000106B  E8 00000000 E		call GOTOXY
+					
+ 00001070  B8 0000000F			mov eax, white+(black*16)
+ 00001075  E8 00000000 E		call SETTEXTCOLOR
+
+ 0000107A  B0 2D			mov al, '-'
+ 0000107C  E8 00000000 E		call WRITECHAR
+ 00001081  B0 3E			mov al, '>'
+ 00001083  E8 00000000 E		call WRITECHAR
+					
+ 00001088  B2 00			mov dl, 0
+ 0000108A  8A 35 00000063 R		mov dh, tMaxY
+ 00001090  E8 00000000 E		call GOTOXY
+					
+ 00001095			AguardaTecla2:							;Seleção da dificuldade (mesma lógica do aguardaTecla1)
+ 00001095  B8 00000032		    mov  eax,50
+ 0000109A  E8 00000000 E	    call Delay
+ 0000109F  E8 00000000 E	    call ReadKey
+ 000010A4  74 EF		    jz   AguardaTecla2
+ 000010A6  66| 83 FA 0D			cmp  dx,000Dh
+ 000010AA  74 11			je LS2
+ 000010AC  66| 83 FA 51			cmp dx, 0051h
+ 000010B0  0F 84 0000010F		je fim
+ 000010B6  E8 FFFFF087			call PrintSeta
+ 000010BB  75 D8		    jne  AguardaTecla2
+					
+ 000010BD			LS2:								;Direciona para configurar as dificuldades
+ 000010BD  80 3D 00000060 R		cmp posSeta, 0000h
+	   00
+ 000010C4  74 12			je facil
+ 000010C6  80 3D 00000060 R		cmp posSeta, 0001h
+	   01
+ 000010CD  74 27			je medio
+ 000010CF  80 3D 00000060 R		cmp posSeta, 0002h
+	   02
+ 000010D6  74 3C			je dificil
+					
+ 000010D8			facil:								;Nivel fácil: número de armadilhas: 3; tempo: 90
+ 000010D8  C6 05 00000067 R		mov nArmadilhas, 3	
+	   03
+ 000010DF  C6 05 00000068 R		mov quantArmadilhas, 12
+	   0C
+ 000010E6  C6 05 0000005E R		mov time, 90
+	   5A
+ 000010ED  C6 05 0000005D R		mov timeMax, 90
+	   5A
+ 000010F4  EB 3A			jmp play
+ 000010F6			medio:								;Nivel fácil: número de armadilhas: 7; tempo: 60
+ 000010F6  C6 05 00000067 R		mov nArmadilhas, 7
+	   07
+ 000010FD  C6 05 00000068 R		mov quantArmadilhas, 28
+	   1C
+ 00001104  C6 05 0000005E R		mov time, 60
+	   3C
+ 0000110B  C6 05 0000005D R		mov timeMax, 60
+	   3C
+ 00001112  EB 1C			jmp play
+ 00001114			dificil:							;Nivel fácil: número de armadilhas: 15; tempo: 30
+ 00001114  C6 05 00000067 R		mov nArmadilhas, 15	
+	   0F
+ 0000111B  C6 05 00000068 R		mov quantArmadilhas, 60
+	   3C
+ 00001122  C6 05 0000005E R		mov time, 30
+	   1E
+ 00001129  C6 05 0000005D R		mov timeMax, 30
+	   1E
+					
+ 00001130			play:								;Chama a tela de jogo com as configurações selecionadas acima
+ 00001130  E8 FFFFF3CE			call TelaJogo
+ 00001135  83 F8 00			cmp eax, 0
+ 00001138  74 27			je fim1
+ 0000113A  83 F8 01			cmp eax, 1
+ 0000113D  0F 84 FFFFFE75		je start
+ 00001143  83 F8 02			cmp eax, 2
+ 00001146  74 4B			je fim2
+ 00001148  E9 FFFFFE6B			jmp start
+					
+ 0000114D			instrucoes:							;Chama a tela de instruções 
+ 0000114D  E8 FFFFF55D			call TelaInstrucoes
+ 00001152  E9 FFFFFE61			jmp start
+					
+ 00001157			creditos:							;Chama a tela de créditos
+ 00001157  E8 FFFFF81E			call TelaCreditos
+ 0000115C  E9 FFFFFE57			jmp start
+
+					
+ 00001161			fim1:								;Fim principal - esta tela é a tela de perdeu por colisão
+ 00001161  E8 FFFFFA64			call TelaPerdeu
+					
+ 00001166			AguardaTecla3:
+ 00001166  B8 00000032		    mov  eax,50
+ 0000116B  E8 00000000 E	    call Delay 
+ 00001170  E8 00000000 E	    call ReadKey
+ 00001175  74 EF		    jz   AguardaTecla3
+ 00001177  66| 83 FA 0D			cmp  dx,000Dh
+ 0000117B  74 07			je saiAguardaTecla3
+ 0000117D  E8 FFFFF996			call SetaTelaPerdeu
+ 00001182  75 E2		    jne  AguardaTecla3
+
+ 00001184			saiAguardaTecla3:
+ 00001184  80 3D 00000061 R		cmp posSeta1, 0
+	   00
+ 0000118B  0F 84 FFFFFE27		je start
+ 00001191  EB 32			jmp fim
+
+ 00001193			fim2:				;Fim alternativo: esta tela é a tela de perdeu por tempo
+ 00001193  E8 FFFFFB18			call TelaAcabaTempo
+
+ 00001198			AguardaTecla4:
+ 00001198  B8 00000032		    mov  eax,50
+ 0000119D  E8 00000000 E	    call Delay 
+ 000011A2  E8 00000000 E	    call ReadKey
+ 000011A7  74 EF		    jz   AguardaTecla4
+ 000011A9  66| 83 FA 0D			cmp  dx,000Dh
+ 000011AD  74 07			je saiAguardaTecla4
+ 000011AF  E8 FFFFF964			call SetaTelaPerdeu
+ 000011B4  75 E2		    jne  AguardaTecla4
+
+ 000011B6			saiAguardaTecla4:
+ 000011B6  80 3D 00000061 R		cmp posSeta1, 0
+	   00
+ 000011BD  0F 84 FFFFFDF5		je start
+ 000011C3  EB 00			jmp fim
+					
+
+ 000011C5			fim:				;Fim do jogo, executa algumas configurações para não alterar o terminal após a execução 
+ 000011C5  0F B6 05			movzx eax, tMaxY
+	   00000063 R
+ 000011CC  40				inc eax
+ 000011CD  B2 00			mov dl, 0
+ 000011CF  8A F0			mov dh, al 
+ 000011D1  E8 00000000 E		call GOTOXY
+ 000011D6  B8 0000000F			mov eax, white+(black*16)
+ 000011DB  E8 00000000 E		call SETTEXTCOLOR
+					
+					exit
+ 000011E0  6A 00	   *	    push   +000000000h
+ 000011E2  E8 00000000 E   *	    call   ExitProcess
+ 000011E7			main ENDP
+				END main
+Microsoft (R) Macro Assembler Version 14.00.24210.0	    07/07/17 23:55:06
+ClockColors.asm						     Symbols 2 - 1
+
+
+
+
+Structures and Unions:
+
+                N a m e                  Size
+                                         Offset      Type
+
+CONSOLE_CURSOR_INFO  . . . . . .	 00000008
+  dwSize . . . . . . . . . . . .	 00000000	 DWord
+  bVisible . . . . . . . . . . .	 00000004	 DWord
+CONSOLE_SCREEN_BUFFER_INFO . . .	 00000016
+  dwSize . . . . . . . . . . . .	 00000000	 DWord
+  dwCursorPosition . . . . . . .	 00000004	 DWord
+  wAttributes  . . . . . . . . .	 00000008	 Word
+  srWindow . . . . . . . . . . .	 0000000A	 QWord
+  dwMaximumWindowSize  . . . . .	 00000012	 DWord
+COORD  . . . . . . . . . . . . .	 00000004
+  X  . . . . . . . . . . . . . .	 00000000	 Word
+  Y  . . . . . . . . . . . . . .	 00000002	 Word
+FILETIME . . . . . . . . . . . .	 00000008
+  loDateTime . . . . . . . . . .	 00000000	 DWord
+  hiDateTime . . . . . . . . . .	 00000004	 DWord
+FOCUS_EVENT_RECORD . . . . . . .	 00000004
+  bSetFocus  . . . . . . . . . .	 00000000	 DWord
+FPU_ENVIRON  . . . . . . . . . .	 0000001C
+  controlWord  . . . . . . . . .	 00000000	 Word
+  statusWord . . . . . . . . . .	 00000004	 Word
+  tagWord  . . . . . . . . . . .	 00000008	 Word
+  instrPointerOffset . . . . . .	 0000000C	 DWord
+  instrPointerSelector . . . . .	 00000010	 DWord
+  operandPointerOffset . . . . .	 00000014	 DWord
+  operandPointerSelector . . . .	 00000018	 Word
+INPUT_RECORD . . . . . . . . . .	 00000014
+  EventType  . . . . . . . . . .	 00000000	 Word
+  Event  . . . . . . . . . . . .	 00000004	 XmmWord
+  bKeyDown . . . . . . . . . . .	 00000000	 DWord
+  wRepeatCount . . . . . . . . .	 00000004	 Word
+  wVirtualKeyCode  . . . . . . .	 00000006	 Word
+  wVirtualScanCode . . . . . . .	 00000008	 Word
+  uChar  . . . . . . . . . . . .	 0000000A	 Word
+  UnicodeChar  . . . . . . . . .	 00000000	 Word
+  AsciiChar  . . . . . . . . . .	 00000000	 Byte
+  dwControlKeyState  . . . . . .	 0000000C	 DWord
+  dwMousePosition  . . . . . . .	 00000000	 DWord
+  dwButtonState  . . . . . . . .	 00000004	 DWord
+  dwMouseControlKeyState . . . .	 00000008	 DWord
+  dwEventFlags . . . . . . . . .	 0000000C	 DWord
+  dwSize . . . . . . . . . . . .	 00000000	 DWord
+  dwCommandId  . . . . . . . . .	 00000000	 DWord
+  bSetFocus  . . . . . . . . . .	 00000000	 DWord
+KEY_EVENT_RECORD . . . . . . . .	 00000010
+  bKeyDown . . . . . . . . . . .	 00000000	 DWord
+  wRepeatCount . . . . . . . . .	 00000004	 Word
+  wVirtualKeyCode  . . . . . . .	 00000006	 Word
+  wVirtualScanCode . . . . . . .	 00000008	 Word
+  uChar  . . . . . . . . . . . .	 0000000A	 Word
+  UnicodeChar  . . . . . . . . .	 00000000	 Word
+  AsciiChar  . . . . . . . . . .	 00000000	 Byte
+  dwControlKeyState  . . . . . .	 0000000C	 DWord
+MENU_EVENT_RECORD  . . . . . . .	 00000004
+  dwCommandId  . . . . . . . . .	 00000000	 DWord
+MOUSE_EVENT_RECORD . . . . . . .	 00000010
+  dwMousePosition  . . . . . . .	 00000000	 DWord
+  dwButtonState  . . . . . . . .	 00000004	 DWord
+  dwMouseControlKeyState . . . .	 00000008	 DWord
+  dwEventFlags . . . . . . . . .	 0000000C	 DWord
+SMALL_RECT . . . . . . . . . . .	 00000008
+  Left . . . . . . . . . . . . .	 00000000	 Word
+  Top  . . . . . . . . . . . . .	 00000002	 Word
+  Right  . . . . . . . . . . . .	 00000004	 Word
+  Bottom . . . . . . . . . . . .	 00000006	 Word
+SYSTEMTIME . . . . . . . . . . .	 00000010
+  wYear  . . . . . . . . . . . .	 00000000	 Word
+  wMonth . . . . . . . . . . . .	 00000002	 Word
+  wDayOfWeek . . . . . . . . . .	 00000004	 Word
+  wDay . . . . . . . . . . . . .	 00000006	 Word
+  wHour  . . . . . . . . . . . .	 00000008	 Word
+  wMinute  . . . . . . . . . . .	 0000000A	 Word
+  wSecond  . . . . . . . . . . .	 0000000C	 Word
+  wMilliseconds  . . . . . . . .	 0000000E	 Word
+WINDOW_BUFFER_SIZE_RECORD  . . .	 00000004
+  dwSize . . . . . . . . . . . .	 00000000	 DWord
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+FLAT . . . . . . . . . . . . . .	GROUP
+STACK  . . . . . . . . . . . . .	32 Bit	 00001000 Para	  Stack	  'STACK'	 
+_DATA  . . . . . . . . . . . . .	32 Bit	 00000616 Para	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 000011E7 Para	  Public  'CODE'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+ApagaArm . . . . . . . . . . . .	P Near	 00000E14 _TEXT	Length= 0000005C Public STDCALL
+  LP1  . . . . . . . . . . . . .	L Near	 00000E30 _TEXT	
+  LP2  . . . . . . . . . . . . .	L Near	 00000E3A _TEXT	
+Bordas . . . . . . . . . . . . .	P Near	 000001F3 _TEXT	Length= 0000006B Public STDCALL
+  L1 . . . . . . . . . . . . . .	L Near	 00000206 _TEXT	
+  L2 . . . . . . . . . . . . . .	L Near	 00000216 _TEXT	
+  L3 . . . . . . . . . . . . . .	L Near	 0000024C _TEXT	
+CloseFile  . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+CloseHandle  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+Clrscr . . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+Colisao  . . . . . . . . . . . .	P Near	 000003E6 _TEXT	Length= 0000002A Public STDCALL
+  L1 . . . . . . . . . . . . . .	L Near	 000003F2 _TEXT	
+  colidiu  . . . . . . . . . . .	L Near	 0000040A _TEXT	
+  quit . . . . . . . . . . . . .	L Near	 0000040F _TEXT	
+CorSelPlat . . . . . . . . . . .	P Near	 00000DB6 _TEXT	Length= 0000005E Public STDCALL
+CreateFileA  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+CreateOutputFile . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+CriaArmInicio  . . . . . . . . .	P Near	 00000EE9 _TEXT	Length= 00000064 Public STDCALL
+  L2 . . . . . . . . . . . . . .	L Near	 00000EFD _TEXT	
+  L1 . . . . . . . . . . . . . .	L Near	 00000F06 _TEXT	
+Crlf . . . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+Delay  . . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+DesenhaArm . . . . . . . . . . .	P Near	 00000E70 _TEXT	Length= 0000005C Public STDCALL
+  LP1  . . . . . . . . . . . . .	L Near	 00000E8C _TEXT	
+  LP2  . . . . . . . . . . . . .	L Near	 00000E96 _TEXT	
+DumpMem  . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+DumpRegs . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+ExitProcess  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+FileTimeToDosDateTime  . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+FileTimeToSystemTime . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+FlushConsoleInputBuffer  . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+FormatMessageA . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+GetCommandLineA  . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+GetCommandTail . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+GetConsoleCP . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+GetConsoleCursorInfo . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+GetConsoleMode . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+GetConsoleScreenBufferInfo . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+GetDateTime  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+GetFileTime  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+GetKeyState  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+GetLastError . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+GetLocalTime . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+GetMaxXY . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+GetMseconds  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+GetNumberOfConsoleInputEvents  .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+GetProcessHeap . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+GetStdHandle . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+GetSystemTime  . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+GetTextColor . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+GetTickCount . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+Gotoxy . . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+HeapAlloc  . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+HeapCreate . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+HeapDestroy  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+HeapFree . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+HeapSize . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+ImpPerso . . . . . . . . . . . .	P Near	 0000004B _TEXT	Length= 00000077 Public STDCALL
+IsDigit  . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+LimpaTela  . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 0000004B Public STDCALL
+  LLP1 . . . . . . . . . . . . .	L Near	 0000001A _TEXT	
+  LLP2 . . . . . . . . . . . . .	L Near	 0000002B _TEXT	
+LocalFree  . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+MessageBoxA  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+MsgBoxAsk  . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+MsgBox . . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+OpenInputFile  . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+ParseDecimal32 . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+ParseInteger32 . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+PeekConsoleInputA  . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+Plataformas  . . . . . . . . . .	P Near	 0000025E _TEXT	Length= 0000004D Public STDCALL
+  LP1  . . . . . . . . . . . . .	L Near	 00000278 _TEXT	
+  LP2  . . . . . . . . . . . . .	L Near	 00000294 _TEXT	
+PrcSetaCima  . . . . . . . . . .	P Near	 0000043D _TEXT	Length= 000000C6 Public STDCALL
+  igual  . . . . . . . . . . . .	L Near	 00000479 _TEXT	
+  shiftByte  . . . . . . . . . .	L Near	 000004A1 _TEXT	
+  L1 . . . . . . . . . . . . . .	L Near	 000004C1 _TEXT	
+  diferente  . . . . . . . . . .	L Near	 000004FD _TEXT	
+  fim  . . . . . . . . . . . . .	L Near	 00000502 _TEXT	
+PrintSeta  . . . . . . . . . . .	P Near	 00000142 _TEXT	Length= 000000B1 Public STDCALL
+  LPS1 . . . . . . . . . . . . .	L Near	 00000195 _TEXT	
+  LPS2 . . . . . . . . . . . . .	L Near	 000001AA _TEXT	
+ProcSetaDir  . . . . . . . . . .	P Near	 0000038B _TEXT	Length= 00000032 Public STDCALL
+  fimProcDir . . . . . . . . . .	L Near	 000003BC _TEXT	
+ProcSetaEsq  . . . . . . . . . .	P Near	 000003BD _TEXT	Length= 00000029 Public STDCALL
+  fimProcEsq . . . . . . . . . .	L Near	 000003E5 _TEXT	
+Random32 . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+RandomRange  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+Randomize  . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+ReadChar . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+ReadConsoleA . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+ReadConsoleInputA  . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+ReadDec  . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+ReadFile . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+ReadFloat  . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+ReadFromFile . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+ReadHex  . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+ReadInt  . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+ReadKeyFlush . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+ReadKey  . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+ReadString . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+ScoreTela  . . . . . . . . . . .	P Near	 00000D93 _TEXT	Length= 00000023 Public STDCALL
+SetConsoleCursorInfo . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+SetConsoleCursorPosition . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+SetConsoleMode . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+SetConsoleScreenBufferSize . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+SetConsoleTextAttribute  . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+SetConsoleTitleA . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+SetConsoleWindowInfo . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+SetFilePointer . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+SetLocalTime . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+SetTextColor . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+SetaTelaPerdeu . . . . . . . . .	P Near	 00000B18 _TEXT	Length= 000000B2 Public STDCALL
+  LPS1 . . . . . . . . . . . . .	L Near	 00000B6F _TEXT	
+  LPS2 . . . . . . . . . . . . .	L Near	 00000B84 _TEXT	
+  seta1  . . . . . . . . . . . .	L Near	 00000B91 _TEXT	
+  setasai  . . . . . . . . . . .	L Near	 00000B93 _TEXT	
+ShowFPUStack . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+Sleep  . . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+SorteiaCores . . . . . . . . . .	P Near	 0000032C _TEXT	Length= 0000005F Public STDCALL
+  L1 . . . . . . . . . . . . . .	L Near	 00000341 _TEXT	
+StrLength  . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+Str_compare  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+Str_copy . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+Str_length . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+Str_trim . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+Str_ucase  . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+SystemTimeToFileTime . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+TelaAcabaTempo . . . . . . . . .	P Near	 00000CB0 _TEXT	Length= 000000BA Public STDCALL
+TelaCreditos . . . . . . . . . .	P Near	 0000097A _TEXT	Length= 0000019E Public STDCALL
+  LTI1 . . . . . . . . . . . . .	L Near	 00000B00 _TEXT	
+TelaDificuldade  . . . . . . . .	P Near	 00000629 _TEXT	Length= 00000086 Public STDCALL
+TelaInicio . . . . . . . . . . .	P Near	 000002AB _TEXT	Length= 00000081 Public STDCALL
+TelaInstrucoes . . . . . . . . .	P Near	 000006AF _TEXT	Length= 000002CB Public STDCALL
+  LTI3 . . . . . . . . . . . . .	L Near	 000006AF _TEXT	
+  LTI1 . . . . . . . . . . . . .	L Near	 0000082A _TEXT	
+  LTI2 . . . . . . . . . . . . .	L Near	 00000958 _TEXT	
+TelaJogo . . . . . . . . . . . .	P Near	 00000503 _TEXT	Length= 00000126 Public STDCALL
+  LTJ1 . . . . . . . . . . . . .	L Near	 00000589 _TEXT	
+  LTJ3 . . . . . . . . . . . . .	L Near	 000005B0 _TEXT	
+  LTJ2 . . . . . . . . . . . . .	L Near	 000005B5 _TEXT	
+  setaCima . . . . . . . . . . .	L Near	 000005F8 _TEXT	
+  setaEsq  . . . . . . . . . . .	L Near	 00000609 _TEXT	
+  setaDir  . . . . . . . . . . .	L Near	 00000610 _TEXT	
+  fimPerdeuObs . . . . . . . . .	L Near	 00000617 _TEXT	
+  fimTelaJogo  . . . . . . . . .	L Near	 0000061D _TEXT	
+  fimTempo . . . . . . . . . . .	L Near	 00000623 _TEXT	
+TelaPerdeu . . . . . . . . . . .	P Near	 00000BCA _TEXT	Length= 000000E6 Public STDCALL
+TempoTela  . . . . . . . . . . .	P Near	 00000D6A _TEXT	Length= 00000029 Public STDCALL
+TrocaCorPlat . . . . . . . . . .	P Near	 00000F4D _TEXT	Length= 00000066 Public STDCALL
+  LTCP1  . . . . . . . . . . . .	L Near	 00000F92 _TEXT	
+VerificaPosIni . . . . . . . . .	P Near	 00000ECC _TEXT	Length= 0000001D Public STDCALL
+  fim  . . . . . . . . . . . . .	L Near	 00000EE5 _TEXT	
+VerificaPos  . . . . . . . . . .	P Near	 00000410 _TEXT	Length= 0000002D Public STDCALL
+  fim  . . . . . . . . . . . . .	L Near	 00000439 _TEXT	
+WaitMsg  . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+WriteBinB  . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+WriteBin . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+WriteChar  . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+WriteConsoleA  . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+WriteConsoleOutputAttribute  . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+WriteConsoleOutputCharacterA . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+WriteDec . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+WriteFile  . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+WriteFloat . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+WriteHexB  . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+WriteHex . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+WriteInt . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+WriteStackFrameName  . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+WriteStackFrame  . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+WriteString  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+WriteToFile  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+WriteWindowsMsg  . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+delPerso . . . . . . . . . . . .	P Near	 000000C2 _TEXT	Length= 00000080 Public STDCALL
+  LDP1 . . . . . . . . . . . . .	L Near	 000000FE _TEXT	
+  LDP2 . . . . . . . . . . . . .	L Near	 00000121 _TEXT	
+main . . . . . . . . . . . . . .	P Near	 00000FB3 _TEXT	Length= 00000234 Public STDCALL
+  start  . . . . . . . . . . . .	L Near	 00000FB8 _TEXT	
+  AguardaTecla1  . . . . . . . .	L Near	 00001013 _TEXT	
+  LS1  . . . . . . . . . . . . .	L Near	 0000103B _TEXT	
+  jogo . . . . . . . . . . . . .	L Near	 0000105E _TEXT	
+  AguardaTecla2  . . . . . . . .	L Near	 00001095 _TEXT	
+  LS2  . . . . . . . . . . . . .	L Near	 000010BD _TEXT	
+  facil  . . . . . . . . . . . .	L Near	 000010D8 _TEXT	
+  medio  . . . . . . . . . . . .	L Near	 000010F6 _TEXT	
+  dificil  . . . . . . . . . . .	L Near	 00001114 _TEXT	
+  play . . . . . . . . . . . . .	L Near	 00001130 _TEXT	
+  instrucoes . . . . . . . . . .	L Near	 0000114D _TEXT	
+  creditos . . . . . . . . . . .	L Near	 00001157 _TEXT	
+  fim1 . . . . . . . . . . . . .	L Near	 00001161 _TEXT	
+  AguardaTecla3  . . . . . . . .	L Near	 00001166 _TEXT	
+  saiAguardaTecla3 . . . . . . .	L Near	 00001184 _TEXT	
+  fim2 . . . . . . . . . . . . .	L Near	 00001193 _TEXT	
+  AguardaTecla4  . . . . . . . .	L Near	 00001198 _TEXT	
+  saiAguardaTecla4 . . . . . . .	L Near	 000011B6 _TEXT	
+  fim  . . . . . . . . . . . . .	L Near	 000011C5 _TEXT	
+printf . . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External C
+scanf  . . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External C
+wsprintfA  . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External C
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000003h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+ALT_MASK . . . . . . . . . . . .	Number	 00000003h   
+CAPSLOCK_ON  . . . . . . . . . .	Number	 00000080h   
+CREATE_ALWAYS  . . . . . . . . .	Number	 00000002h   
+CREATE_NEW . . . . . . . . . . .	Number	 00000001h   
+CTRL_MASK  . . . . . . . . . . .	Number	 0000000Ch   
+CreateFile . . . . . . . . . . .	Text   	 CreateFileA
+DO_NOT_SHARE . . . . . . . . . .	Number	 00000000h   
+ENABLE_ECHO_INPUT  . . . . . . .	Number	 00000004h   
+ENABLE_LINE_INPUT  . . . . . . .	Number	 00000002h   
+ENABLE_MOUSE_INPUT . . . . . . .	Number	 00000010h   
+ENABLE_PROCESSED_INPUT . . . . .	Number	 00000001h   
+ENABLE_PROCESSED_OUTPUT  . . . .	Number	 00000001h   
+ENABLE_WINDOW_INPUT  . . . . . .	Number	 00000008h   
+ENABLE_WRAP_AT_EOL_OUTPUT  . . .	Number	 00000002h   
+ENHANCED_KEY . . . . . . . . . .	Number	 00000100h   
+FALSE  . . . . . . . . . . . . .	Number	 00000000h   
+FILE_APPEND_DATA . . . . . . . .	Number	 00000004h   
+FILE_ATTRIBUTE_ARCHIVE . . . . .	Number	 00000020h   
+FILE_ATTRIBUTE_COMPRESSED  . . .	Number	 00000800h   
+FILE_ATTRIBUTE_DEVICE  . . . . .	Number	 00000040h   
+FILE_ATTRIBUTE_DIRECTORY . . . .	Number	 00000010h   
+FILE_ATTRIBUTE_ENCRYPTED . . . .	Number	 00004000h   
+FILE_ATTRIBUTE_HIDDEN  . . . . .	Number	 00000002h   
+FILE_ATTRIBUTE_NORMAL  . . . . .	Number	 00000080h   
+FILE_ATTRIBUTE_NOT_CONTENT_INDEXED .	Number	 00002000h   
+FILE_ATTRIBUTE_OFFLINE . . . . .	Number	 00001000h   
+FILE_ATTRIBUTE_READONLY  . . . .	Number	 00000001h   
+FILE_ATTRIBUTE_REPARSE_POINT . .	Number	 00000400h   
+FILE_ATTRIBUTE_SPARSE_FILE . . .	Number	 00000200h   
+FILE_ATTRIBUTE_SYSTEM  . . . . .	Number	 00000004h   
+FILE_ATTRIBUTE_TEMPORARY . . . .	Number	 00000100h   
+FILE_BEGIN . . . . . . . . . . .	Number	 00000000h   
+FILE_CURRENT . . . . . . . . . .	Number	 00000001h   
+FILE_DELETE_CHILD  . . . . . . .	Number	 00000040h   
+FILE_END . . . . . . . . . . . .	Number	 00000002h   
+FILE_READ_DATA . . . . . . . . .	Number	 00000001h   
+FILE_SHARE_DELETE  . . . . . . .	Number	 00000004h   
+FILE_SHARE_READ  . . . . . . . .	Number	 00000001h   
+FILE_SHARE_WRITE . . . . . . . .	Number	 00000002h   
+FILE_WRITE_DATA  . . . . . . . .	Number	 00000002h   
+FOCUS_EVENT  . . . . . . . . . .	Number	 00000010h   
+FORMAT_MESSAGE_ALLOCATE_BUFFER .	Number	 00000100h   
+FORMAT_MESSAGE_FROM_SYSTEM . . .	Number	 00001000h   
+FormatMessage  . . . . . . . . .	Text   	 FormatMessageA
+GENERIC_ALL  . . . . . . . . . .	Number	 10000000h   
+GENERIC_EXECUTE  . . . . . . . .	Number	 20000000h   
+GENERIC_READ . . . . . . . . . .	Number	 -80000000h   
+GENERIC_WRITE  . . . . . . . . .	Number	 40000000h   
+GetCommandLine . . . . . . . . .	Text   	 GetCommandLineA
+HANDLE . . . . . . . . . . . . .	Text   	 DWORD
+HEAP_GENERATE_EXCEPTIONS . . . .	Number	 00000004h   
+HEAP_GROWABLE  . . . . . . . . .	Number	 00000002h   
+HEAP_NO_SERIALIZE  . . . . . . .	Number	 00000001h   
+HEAP_REALLOC_IN_PLACE_ONLY . . .	Number	 00000010h   
+HEAP_ZERO_MEMORY . . . . . . . .	Number	 00000008h   
+IDABORT  . . . . . . . . . . . .	Number	 00000003h   
+IDCANCEL . . . . . . . . . . . .	Number	 00000002h   
+IDCLOSE  . . . . . . . . . . . .	Number	 00000008h   
+IDCONTINUE . . . . . . . . . . .	Number	 0000000Bh   
+IDHELP . . . . . . . . . . . . .	Number	 00000009h   
+IDIGNORE . . . . . . . . . . . .	Number	 00000005h   
+IDNO . . . . . . . . . . . . . .	Number	 00000007h   
+IDOK . . . . . . . . . . . . . .	Number	 00000001h   
+IDRETRY  . . . . . . . . . . . .	Number	 00000004h   
+IDTIMEOUT  . . . . . . . . . . .	Number	 00007D00h   
+IDTRYAGAIN . . . . . . . . . . .	Number	 0000000Ah   
+IDYES  . . . . . . . . . . . . .	Number	 00000006h   
+INVALID_HANDLE_VALUE . . . . . .	Number	 -00000001h   
+KBDOWN_FLAG  . . . . . . . . . .	Number	 00000001h   
+KEY_EVENT  . . . . . . . . . . .	Number	 00000001h   
+KEY_MASKS  . . . . . . . . . . .	Number	 0000001Fh   
+LEFT_ALT_PRESSED . . . . . . . .	Number	 00000002h   
+LEFT_CTRL_PRESSED  . . . . . . .	Number	 00000008h   
+MB_ABORTRETRYIGNORE  . . . . . .	Number	 00000002h   
+MB_APPLMODAL . . . . . . . . . .	Number	 00000000h   
+MB_CANCELTRYCONTINUE . . . . . .	Number	 00000006h   
+MB_DEFBUTTON1  . . . . . . . . .	Number	 00000000h   
+MB_DEFBUTTON2  . . . . . . . . .	Number	 00000100h   
+MB_DEFBUTTON3  . . . . . . . . .	Number	 00000200h   
+MB_DEFBUTTON4  . . . . . . . . .	Number	 00000300h   
+MB_HELP  . . . . . . . . . . . .	Number	 00004000h   
+MB_ICONASTERISK  . . . . . . . .	Number	 00000040h   
+MB_ICONERROR . . . . . . . . . .	Number	 00000010h   
+MB_ICONEXCLAMATION . . . . . . .	Number	 00000030h   
+MB_ICONHAND  . . . . . . . . . .	Number	 00000010h   
+MB_ICONINFORMATION . . . . . . .	Number	 00000040h   
+MB_ICONQUESTION  . . . . . . . .	Number	 00000020h   
+MB_ICONSTOP  . . . . . . . . . .	Number	 00000010h   
+MB_ICONWARNING . . . . . . . . .	Number	 00000030h   
+MB_OKCANCEL  . . . . . . . . . .	Number	 00000001h   
+MB_OK  . . . . . . . . . . . . .	Number	 00000000h   
+MB_RETRYCANCEL . . . . . . . . .	Number	 00000005h   
+MB_SYSTEMMODAL . . . . . . . . .	Number	 00001000h   
+MB_TASKMODAL . . . . . . . . . .	Number	 00002000h   
+MB_USERICON  . . . . . . . . . .	Number	 00000080h   
+MB_YESNOCANCEL . . . . . . . . .	Number	 00000003h   
+MB_YESNO . . . . . . . . . . . .	Number	 00000004h   
+MENU_EVENT . . . . . . . . . . .	Number	 00000008h   
+MOUSE_EVENT  . . . . . . . . . .	Number	 00000002h   
+MessageBox . . . . . . . . . . .	Text   	 MessageBoxA
+NULL . . . . . . . . . . . . . .	Number	 00000000h   
+NUMLOCK_ON . . . . . . . . . . .	Number	 00000020h   
+OPEN_ALWAYS  . . . . . . . . . .	Number	 00000004h   
+OPEN_EXISTING  . . . . . . . . .	Number	 00000003h   
+PeekConsoleInput . . . . . . . .	Text   	 PeekConsoleInputA
+RIGHT_ALT_PRESSED  . . . . . . .	Number	 00000001h   
+RIGHT_CTRL_PRESSED . . . . . . .	Number	 00000004h   
+ReadConsoleInput . . . . . . . .	Text   	 ReadConsoleInputA
+ReadConsole  . . . . . . . . . .	Text   	 ReadConsoleA
+SCROLLLOCK_ON  . . . . . . . . .	Number	 00000040h   
+SHIFT_MASK . . . . . . . . . . .	Number	 00000010h   
+SHIFT_PRESSED  . . . . . . . . .	Number	 00000010h   
+STD_ERROR_HANDLE . . . . . . . .	Number	 -0000000Ch   
+STD_INPUT_HANDLE . . . . . . . .	Number	 -0000000Ah   
+STD_OUTPUT_HANDLE  . . . . . . .	Number	 -0000000Bh   
+SetConsoleTitle  . . . . . . . .	Text   	 SetConsoleTitleA
+TAB  . . . . . . . . . . . . . .	Number	 00000009h   
+TRUE . . . . . . . . . . . . . .	Number	 00000001h   
+TRUNCATE_EXISTING  . . . . . . .	Number	 00000005h   
+VK_11  . . . . . . . . . . . . .	Number	 000000BDh   
+VK_12  . . . . . . . . . . . . .	Number	 000000BBh   
+VK_ADD . . . . . . . . . . . . .	Number	 0000006Bh   
+VK_BACK  . . . . . . . . . . . .	Number	 00000008h   
+VK_CANCEL  . . . . . . . . . . .	Number	 00000003h   
+VK_CAPITAL . . . . . . . . . . .	Number	 00000014h   
+VK_CLEAR . . . . . . . . . . . .	Number	 0000000Ch   
+VK_CONTROL . . . . . . . . . . .	Number	 00000011h   
+VK_DECIMAL . . . . . . . . . . .	Number	 0000006Eh   
+VK_DELETE  . . . . . . . . . . .	Number	 0000002Eh   
+VK_DIVIDE  . . . . . . . . . . .	Number	 0000006Fh   
+VK_DOWN  . . . . . . . . . . . .	Number	 00000028h   
+VK_END . . . . . . . . . . . . .	Number	 00000023h   
+VK_ESCAPE  . . . . . . . . . . .	Number	 0000001Bh   
+VK_EXECUTE . . . . . . . . . . .	Number	 0000002Bh   
+VK_F10 . . . . . . . . . . . . .	Number	 00000079h   
+VK_F11 . . . . . . . . . . . . .	Number	 0000007Ah   
+VK_F12 . . . . . . . . . . . . .	Number	 0000007Bh   
+VK_F13 . . . . . . . . . . . . .	Number	 0000007Ch   
+VK_F14 . . . . . . . . . . . . .	Number	 0000007Dh   
+VK_F15 . . . . . . . . . . . . .	Number	 0000007Eh   
+VK_F16 . . . . . . . . . . . . .	Number	 0000007Fh   
+VK_F17 . . . . . . . . . . . . .	Number	 00000080h   
+VK_F18 . . . . . . . . . . . . .	Number	 00000081h   
+VK_F19 . . . . . . . . . . . . .	Number	 00000082h   
+VK_F1  . . . . . . . . . . . . .	Number	 00000070h   
+VK_F20 . . . . . . . . . . . . .	Number	 00000083h   
+VK_F21 . . . . . . . . . . . . .	Number	 00000084h   
+VK_F22 . . . . . . . . . . . . .	Number	 00000085h   
+VK_F23 . . . . . . . . . . . . .	Number	 00000086h   
+VK_F24 . . . . . . . . . . . . .	Number	 00000087h   
+VK_F2  . . . . . . . . . . . . .	Number	 00000071h   
+VK_F3  . . . . . . . . . . . . .	Number	 00000072h   
+VK_F4  . . . . . . . . . . . . .	Number	 00000073h   
+VK_F5  . . . . . . . . . . . . .	Number	 00000074h   
+VK_F6  . . . . . . . . . . . . .	Number	 00000075h   
+VK_F7  . . . . . . . . . . . . .	Number	 00000076h   
+VK_F8  . . . . . . . . . . . . .	Number	 00000077h   
+VK_F9  . . . . . . . . . . . . .	Number	 00000078h   
+VK_HELP  . . . . . . . . . . . .	Number	 0000002Fh   
+VK_HOME  . . . . . . . . . . . .	Number	 00000024h   
+VK_INSERT  . . . . . . . . . . .	Number	 0000002Dh   
+VK_LBUTTON . . . . . . . . . . .	Number	 00000001h   
+VK_LCONTROL  . . . . . . . . . .	Number	 000000A2h   
+VK_LEFT  . . . . . . . . . . . .	Number	 00000025h   
+VK_LMENU . . . . . . . . . . . .	Number	 000000A4h   
+VK_LSHIFT  . . . . . . . . . . .	Number	 000000A0h   
+VK_MENU  . . . . . . . . . . . .	Number	 00000012h   
+VK_MULTIPLY  . . . . . . . . . .	Number	 0000006Ah   
+VK_NEXT  . . . . . . . . . . . .	Number	 00000022h   
+VK_NUMLOCK . . . . . . . . . . .	Number	 00000090h   
+VK_NUMPAD0 . . . . . . . . . . .	Number	 00000060h   
+VK_NUMPAD1 . . . . . . . . . . .	Number	 00000061h   
+VK_NUMPAD2 . . . . . . . . . . .	Number	 00000062h   
+VK_NUMPAD3 . . . . . . . . . . .	Number	 00000063h   
+VK_NUMPAD4 . . . . . . . . . . .	Number	 00000064h   
+VK_NUMPAD5 . . . . . . . . . . .	Number	 00000065h   
+VK_NUMPAD6 . . . . . . . . . . .	Number	 00000066h   
+VK_NUMPAD7 . . . . . . . . . . .	Number	 00000067h   
+VK_NUMPAD8 . . . . . . . . . . .	Number	 00000068h   
+VK_NUMPAD9 . . . . . . . . . . .	Number	 00000069h   
+VK_PAUSE . . . . . . . . . . . .	Number	 00000013h   
+VK_PRINT . . . . . . . . . . . .	Number	 0000002Ah   
+VK_PRIOR . . . . . . . . . . . .	Number	 00000021h   
+VK_RBUTTON . . . . . . . . . . .	Number	 00000002h   
+VK_RCONTROL  . . . . . . . . . .	Number	 000000A3h   
+VK_RETURN  . . . . . . . . . . .	Number	 0000000Dh   
+VK_RIGHT . . . . . . . . . . . .	Number	 00000027h   
+VK_RMENU . . . . . . . . . . . .	Number	 000000A5h   
+VK_RSHIFT  . . . . . . . . . . .	Number	 000000A1h   
+VK_SCROLL  . . . . . . . . . . .	Number	 00000091h   
+VK_SEPARATER . . . . . . . . . .	Number	 0000006Ch   
+VK_SHIFT . . . . . . . . . . . .	Number	 00000010h   
+VK_SNAPSHOT  . . . . . . . . . .	Number	 0000002Ch   
+VK_SPACE . . . . . . . . . . . .	Number	 00000020h   
+VK_SUBTRACT  . . . . . . . . . .	Number	 0000006Dh   
+VK_TAB . . . . . . . . . . . . .	Number	 00000009h   
+VK_UP  . . . . . . . . . . . . .	Number	 00000026h   
+WINDOW_BUFFER_SIZE_EVENT . . . .	Number	 00000004h   
+WriteConsoleOutputCharacter  . .	Text   	 WriteConsoleOutputCharacterA
+WriteConsole . . . . . . . . . .	Text   	 WriteConsoleA
+armadilhas . . . . . . . . . . .	Byte	 00000069 _DATA	
+bDificuldade1  . . . . . . . . .	Byte	 00000049 _DATA	
+bDificuldade2  . . . . . . . . .	Byte	 0000004F _DATA	
+bDificuldade3  . . . . . . . . .	Byte	 00000055 _DATA	
+bcomoJogar . . . . . . . . . . .	Byte	 00000031 _DATA	
+bcreditos  . . . . . . . . . . .	Byte	 00000028 _DATA	
+biniciar . . . . . . . . . . . .	Byte	 00000020 _DATA	
+black  . . . . . . . . . . . . .	Number	 00000000h   
+blue . . . . . . . . . . . . . .	Number	 00000001h   
+brown  . . . . . . . . . . . . .	Number	 00000006h   
+contTime . . . . . . . . . . . .	Byte	 000000A8 _DATA	
+cont . . . . . . . . . . . . . .	Byte	 000000A7 _DATA	
+corPlatAtual . . . . . . . . . .	Word	 000000BD _DATA	
+corSele  . . . . . . . . . . . .	Word	 000000B9 _DATA	
+coresDisp  . . . . . . . . . . .	Word	 000000A9 _DATA	
+cor  . . . . . . . . . . . . . .	Byte	 00000000 _DATA	
+cyan . . . . . . . . . . . . . .	Number	 00000003h   
+distPlat . . . . . . . . . . . .	Byte	 00000066 _DATA	
+exit . . . . . . . . . . . . . .	Text   	 INVOKE ExitProcess,0
+gray . . . . . . . . . . . . . .	Number	 00000008h   
+green  . . . . . . . . . . . . .	Number	 00000002h   
+lightBlue  . . . . . . . . . . .	Number	 00000009h   
+lightCyan  . . . . . . . . . . .	Number	 0000000Bh   
+lightGray  . . . . . . . . . . .	Number	 00000007h   
+lightGreen . . . . . . . . . . .	Number	 0000000Ah   
+lightMagenta . . . . . . . . . .	Number	 0000000Dh   
+lightRed . . . . . . . . . . . .	Number	 0000000Ch   
+mInstrucoes10  . . . . . . . . .	Byte	 00000253 _DATA	
+mInstrucoes11  . . . . . . . . .	Byte	 00000285 _DATA	
+mInstrucoes12  . . . . . . . . .	Byte	 000002BA _DATA	
+mInstrucoes13  . . . . . . . . .	Byte	 000002EB _DATA	
+mInstrucoes14  . . . . . . . . .	Byte	 000002FB _DATA	
+mInstrucoes15  . . . . . . . . .	Byte	 0000031D _DATA	
+mInstrucoes16  . . . . . . . . .	Byte	 00000346 _DATA	
+mInstrucoes17  . . . . . . . . .	Byte	 00000376 _DATA	
+mInstrucoes18  . . . . . . . . .	Byte	 00000397 _DATA	
+mInstrucoes19  . . . . . . . . .	Byte	 000003C2 _DATA	
+mInstrucoes1 . . . . . . . . . .	Byte	 000000BF _DATA	
+mInstrucoes2 . . . . . . . . . .	Byte	 000000EC _DATA	
+mInstrucoes3 . . . . . . . . . .	Byte	 00000120 _DATA	
+mInstrucoes4 . . . . . . . . . .	Byte	 0000013A _DATA	
+mInstrucoes5 . . . . . . . . . .	Byte	 00000168 _DATA	
+mInstrucoes6 . . . . . . . . . .	Byte	 00000198 _DATA	
+mInstrucoes7 . . . . . . . . . .	Byte	 000001B6 _DATA	
+mInstrucoes8 . . . . . . . . . .	Byte	 000001E4 _DATA	
+mInstrucoes9 . . . . . . . . . .	Byte	 0000021B _DATA	
+mPerdeu1 . . . . . . . . . . . .	Byte	 00000589 _DATA	
+mPerdeu21  . . . . . . . . . . .	Byte	 00000596 _DATA	
+mPerdeu22  . . . . . . . . . . .	Byte	 000005BE _DATA	
+mPerdeu3 . . . . . . . . . . . .	Byte	 000005D3 _DATA	
+mPerdeu4 . . . . . . . . . . . .	Byte	 000005E3 _DATA	
+mPerdeu5 . . . . . . . . . . . .	Byte	 000005EF _DATA	
+mPerdeu6 . . . . . . . . . . . .	Byte	 000005FF _DATA	
+mPerdeuTempo1  . . . . . . . . .	Byte	 00000604 _DATA	
+magenta  . . . . . . . . . . . .	Number	 00000005h   
+mcreditos10  . . . . . . . . . .	Byte	 00000556 _DATA	
+mcreditos11  . . . . . . . . . .	Byte	 00000560 _DATA	
+mcreditos12  . . . . . . . . . .	Byte	 0000057F _DATA	
+mcreditos1 . . . . . . . . . . .	Byte	 000003DD _DATA	
+mcreditos2 . . . . . . . . . . .	Byte	 00000413 _DATA	
+mcreditos3 . . . . . . . . . . .	Byte	 00000449 _DATA	
+mcreditos4 . . . . . . . . . . .	Byte	 0000047D _DATA	
+mcreditos5 . . . . . . . . . . .	Byte	 000004AD _DATA	
+mcreditos6 . . . . . . . . . . .	Byte	 000004BF _DATA	
+mcreditos7 . . . . . . . . . . .	Byte	 000004F5 _DATA	
+mcreditos8 . . . . . . . . . . .	Byte	 0000051E _DATA	
+mcreditos9 . . . . . . . . . . .	Byte	 00000542 _DATA	
+nArmadilhas  . . . . . . . . . .	Byte	 00000067 _DATA	
+nome . . . . . . . . . . . . . .	Byte	 0000003C _DATA	
+platInicial  . . . . . . . . . .	Word	 000000A5 _DATA	
+pontuacao  . . . . . . . . . . .	Byte	 00000015 _DATA	
+posSeta1 . . . . . . . . . . . .	Byte	 00000061 _DATA	
+posSeta  . . . . . . . . . . . .	Byte	 00000060 _DATA	
+posXB  . . . . . . . . . . . . .	Byte	 00000064 _DATA	
+posYB  . . . . . . . . . . . . .	Byte	 00000065 _DATA	
+quantArmadilhas  . . . . . . . .	Byte	 00000068 _DATA	
+red  . . . . . . . . . . . . . .	Number	 00000004h   
+score  . . . . . . . . . . . . .	Byte	 0000005F _DATA	
+tMaxX  . . . . . . . . . . . . .	Byte	 00000062 _DATA	
+tMaxY  . . . . . . . . . . . . .	Byte	 00000063 _DATA	
+tempo  . . . . . . . . . . . . .	Byte	 0000000E _DATA	
+timeMax  . . . . . . . . . . . .	Byte	 0000005D _DATA	
+time . . . . . . . . . . . . . .	Byte	 0000005E _DATA	
+white  . . . . . . . . . . . . .	Number	 0000000Fh   
+wsprintf . . . . . . . . . . . .	Text   	 wsprintfA
+yellow . . . . . . . . . . . . .	Number	 0000000Eh   
+
+	   0 Warnings
+	   0 Errors
