@@ -2,8 +2,11 @@
 Projetos Desenvolvidos para Disciplinas - Engenharia de Computação, UFSCar (2015-2020)
 
 ```
+├── 2015-01
+│ └── cap
 ├── 2016-01
-│ └── circuitos-digitais
+│ ├── circuitos-digitais
+│ └── estrutura-dados
 ├── 2016-02
 │ ├── ori
 │ └── paa
@@ -23,10 +26,14 @@ Projetos Desenvolvidos para Disciplinas - Engenharia de Computação, UFSCar (20
 └── 2019-01
 │ └── tec-com
 ```
+### 2015-01
+Primeiro Semestre de 2015
+- [ ] Construção de Algoritmos e Programação - prof. Ricardo Ciferri
 
 ### 2016-01
 Primeiro Semestre de 2016
 - [x] Circuitos Digitais - prof. Emerson Pedrino
+- [ ] Estrutura de Dados - prof. Roberto Ferrari
 
 ### 2016-02
 Segundo Semestre de 2016
