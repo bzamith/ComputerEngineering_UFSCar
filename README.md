@@ -28,7 +28,7 @@ Projetos Desenvolvidos para Disciplinas - Engenharia de Computação, UFSCar (20
 ```
 ### 2015-1
 Primeiro Semestre de 2015
-- [ ] Construção de Algoritmos e Programação - prof. Ricardo Ciferri
+- [x] Construção de Algoritmos e Programação - prof. Ricardo Ciferri
 
 ### 2016-1
 Primeiro Semestre de 2016
