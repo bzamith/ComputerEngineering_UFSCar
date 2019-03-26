@@ -1,0 +1,33 @@
+Segunda Prova de Sistemas Operacionais 1,
+Professora Dra. Kelen Vivaldini
+Alunos:
+	Bruna Zamith Santos (RA: 628093)
+	Henrique Cordeiro Frajacomo (RA: 726536)
+	João Victor Pacheco (RA: 594970)
+	Marcos Augusto Faglioni Junior (RA: 628301)
+Primeiro Semestre de 2018
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+Para executar o projeto é necessário ter instalado o emulador QEMU (no ubuntu: apt-get install qemu).
+Após a instalação execute o seguinte comando no diretório desejado do projeto para compilá-lo e executá-lo:
+    make qemu
+Utilize o comando 
+	make clean 
+após a execução para excluir os arquivos gerados pela compilação.
+
+
+Observe que existem diferentes diretórios na pasta do projeto, sendo estes:
+	/original = xv6 original, sem qualquer modificação, (para baixar: git clone https://github.com/mit-pdos/xv6-public.git)
+	/task1 = implementação da task1
+	/task2 = implementação da task2
+	/task2_teste = implementado apenas o procedimento nullpointer, para testarmos o task2 antes da solução
+	/task3 = implementação da task3
+	/task3_teste = implementado apenas o procedimento permissionexploit, para testarmos o task3 antes da solução
+	/task4 = implementação da task4
+
+---------------------------------------------------------------------------------------
+
+Para uma versão mais completa desse trabalho, acessar:
+
+https://github.com/bzamith/so1_projeto2
