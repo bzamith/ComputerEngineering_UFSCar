@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7350B417-86B9-4F40-A795-5DA67BDAFD7F}</ProjectGuid>
+    <RootNamespace>Letris_versao2</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <NuGetPackageImportStamp>ef5c2acb</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AssociaAltura.h" />
+    <ClInclude Include="AssociaLetra.h" />
+    <ClInclude Include="ChamaTelaJogo.h" />
+    <ClInclude Include="DesempilhaUm.h" />
+    <ClInclude Include="Destroi.h" />
+    <ClInclude Include="EmpilhaNaPilhaCerta.h" />
+    <ClInclude Include="EstaNaPilha.h" />
+    <ClInclude Include="AssociaPilha.h" />
+    <ClInclude Include="FuncoesLetris1.h" />
+    <ClInclude Include="MenuInicial.h" />
+    <ClInclude Include="Pilha.h" />
+    <ClInclude Include="SpriteClick.h" />
+    <ClInclude Include="TelaDificuldade.h" />
+    <ClInclude Include="TelaInstrucoes1.h" />
+    <ClInclude Include="TelaInstrucoes2.h" />
+    <ClInclude Include="TelaInstrucoes3.h" />
+    <ClInclude Include="TelaInstrucoes4.h" />
+    <ClInclude Include="TelaPerdeu.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\sfml-system.redist.2.3.2.0\build\native\sfml-system.redist.targets" Condition="Exists('..\packages\sfml-system.redist.2.3.2.0\build\native\sfml-system.redist.targets')" />
+    <Import Project="..\packages\sfml-system.2.3.2.0\build\native\sfml-system.targets" Condition="Exists('..\packages\sfml-system.2.3.2.0\build\native\sfml-system.targets')" />
+    <Import Project="..\packages\sfml-window.redist.2.3.2.0\build\native\sfml-window.redist.targets" Condition="Exists('..\packages\sfml-window.redist.2.3.2.0\build\native\sfml-window.redist.targets')" />
+    <Import Project="..\packages\sfml-window.2.3.2.0\build\native\sfml-window.targets" Condition="Exists('..\packages\sfml-window.2.3.2.0\build\native\sfml-window.targets')" />
+    <Import Project="..\packages\sfml-graphics.redist.2.3.2.0\build\native\sfml-graphics.redist.targets" Condition="Exists('..\packages\sfml-graphics.redist.2.3.2.0\build\native\sfml-graphics.redist.targets')" />
+    <Import Project="..\packages\sfml-graphics.2.3.2.0\build\native\sfml-graphics.targets" Condition="Exists('..\packages\sfml-graphics.2.3.2.0\build\native\sfml-graphics.targets')" />
+    <Import Project="..\packages\sfml-audio.redist.2.3.2.0\build\native\sfml-audio.redist.targets" Condition="Exists('..\packages\sfml-audio.redist.2.3.2.0\build\native\sfml-audio.redist.targets')" />
+    <Import Project="..\packages\sfml-audio.2.3.2.0\build\native\sfml-audio.targets" Condition="Exists('..\packages\sfml-audio.2.3.2.0\build\native\sfml-audio.targets')" />
+    <Import Project="..\packages\sfml-network.redist.2.3.2.0\build\native\sfml-network.redist.targets" Condition="Exists('..\packages\sfml-network.redist.2.3.2.0\build\native\sfml-network.redist.targets')" />
+    <Import Project="..\packages\sfml-network.2.3.2.0\build\native\sfml-network.targets" Condition="Exists('..\packages\sfml-network.2.3.2.0\build\native\sfml-network.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\sfml-system.redist.2.3.2.0\build\native\sfml-system.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sfml-system.redist.2.3.2.0\build\native\sfml-system.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\sfml-system.2.3.2.0\build\native\sfml-system.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sfml-system.2.3.2.0\build\native\sfml-system.targets'))" />
+    <Error Condition="!Exists('..\packages\sfml-window.redist.2.3.2.0\build\native\sfml-window.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sfml-window.redist.2.3.2.0\build\native\sfml-window.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\sfml-window.2.3.2.0\build\native\sfml-window.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sfml-window.2.3.2.0\build\native\sfml-window.targets'))" />
+    <Error Condition="!Exists('..\packages\sfml-graphics.redist.2.3.2.0\build\native\sfml-graphics.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sfml-graphics.redist.2.3.2.0\build\native\sfml-graphics.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\sfml-graphics.2.3.2.0\build\native\sfml-graphics.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sfml-graphics.2.3.2.0\build\native\sfml-graphics.targets'))" />
+    <Error Condition="!Exists('..\packages\sfml-audio.redist.2.3.2.0\build\native\sfml-audio.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sfml-audio.redist.2.3.2.0\build\native\sfml-audio.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\sfml-audio.2.3.2.0\build\native\sfml-audio.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sfml-audio.2.3.2.0\build\native\sfml-audio.targets'))" />
+    <Error Condition="!Exists('..\packages\sfml-network.redist.2.3.2.0\build\native\sfml-network.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sfml-network.redist.2.3.2.0\build\native\sfml-network.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\sfml-network.2.3.2.0\build\native\sfml-network.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sfml-network.2.3.2.0\build\native\sfml-network.targets'))" />
+  </Target>
+</Project>
