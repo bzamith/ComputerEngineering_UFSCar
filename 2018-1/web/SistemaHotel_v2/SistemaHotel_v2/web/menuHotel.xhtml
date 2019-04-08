@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Sistema de Gerenciamento de Hotel</title>
+        <h:outputStylesheet library="css" name="estilo.css" />
+    </h:head>
+    <h:body>
+        <a href="/SistemaHotel_v2/faces/index.xhtml"><h1>Menu Hotel</h1></a><br/>
+        <h:messages globalOnly="true" />
+        <hr />
+        <div id="TOTAL">
+            <h:form>
+                <p><b>Bem-Vindo, Hotel #{usuarioLogado.infoUsername}!</b></p><br/>
+                <p><h2 onClick="document.getElementById('abaCadastrarPromocao').style = 'display: block;';">1. Cadastrar Promocao</h2>
+                <div style='display: none;' id='abaCadastrarPromocao'>
+                <p> Informe os dados da promoção a ser cadastrada:</p>
+                Hotel: #{usuarioLogado.infoUsername}
+                <br/>
+
+                Site de Reservas:
+                <h:selectOneMenu id="siteReserva"
+                             label="SiteReserva" required="true" value="#{cadastrarPromocao.url}"> 
+                    <f:selectItems value="#{listaSiteReserva.listaSiteReserva}"  var="site" itemValue="#{site.url}" itemLabel="#{site.nome}"/>
+                </h:selectOneMenu>   <br/>
+
+                Data Inicial:
+                <h:inputText id="dataInicial" label="DataInicial" required="true" value="#{cadastrarPromocao.dataInicial}" />
+                <h:message for="dataInicial"/>
+                <br/>
+
+                Data Final:
+                <h:inputText id="dataFinal" label="DataFinal" required="true" value="#{cadastrarPromocao.dataFinal}"/>
+                <h:message for="dataFinal"/>
+                <br/>
+
+                Preço:
+                <h:inputText id="preco" label="Preco" validator="#{cadastrarPromocao.validarPreco}" required="true" value="#{cadastrarPromocao.dadosPromocao.preco}" />
+                <h:message for="preco"/>
+                <br/>
+
+                <h:commandButton id="submit" value="Cadastrar" action="#{cadastrarPromocao.validarTudo}" />
+
+                <br/>
+                <br/>
+                </div></p>
+            </h:form>
+
+            <h:form>
+                <h:commandLink action="#{listaPromocoes.verPromocoes()}"><h2>2. Listar Promocoes para Este Hotel</h2></h:commandLink><br/>              
+                <br/>
+                <br/>
+            </h:form>        
+        </div>
+    </h:body>
+</html>

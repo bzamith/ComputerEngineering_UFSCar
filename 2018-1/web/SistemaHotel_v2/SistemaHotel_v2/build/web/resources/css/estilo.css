@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Ostrich'; /*a name to be used later*/
+    src: url('Fontes/ostrich-regular.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Champagne'; /*a name to be used later*/
+    src: url('Fontes/Caviar_Dreams_Bold.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Cocogoose'; /*a name to be used later*/
+    src: url('Fontes/Cocogoose-Narrow-Regular.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Caviar'; /*a name to be used later*/
+    src: url('Fontes/CaviarDreams.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Montserrat'; /*a name to be used later*/
+    src: url('Fontes/Montserrat-Regular.ttf'); /*URL to font*/
+}
+
+#TOTAL {
+    width: 600px;
+    margin: 0 auto;
+}
+
+#FORMS {
+    width: 400px;
+    margin: 0 auto;
+    width:
+}
+
+body {
+    background-image:url('Imagens/bg_degrade.png');
+}
+
+h1 { /* Cabeçalho com o título "Sistema de Gerenciamento de hotel" */
+    font-family: 'Cocogoose';
+    font-size: 50px;
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 1px; 
+    background: url('Imagens/Pattern15.jpg') 0 0 repeat-x;
+    position:relative;
+    text-align: center;
+    margin:0 0px;
+    padding:0 10px;
+    /*border-style: outset*/
+}
+
+a:link {
+    text-decoration:none;
+}
+
+a:hover {
+    font-weight: bolder;
+}
+
+h2 {
+    color: black; 
+    font-family: 'Montserrat';     
+}
+
+h2:hover {
+    text-decoration: underline
+}
+
+p { 
+    color: black; 
+    font-family: 'Montserrat';
+}
+
+a { 
+    color: black; 
+}
+
+form { 
+    font-family: 'Montserrat';
+}
+
+#verTodosHoteisCadastrados {
+    text-decoration: underline;
+}
+
+table { 
+    border-collapse: collapse; 
+}
+
+table, th, td { 
+    border: 1px solid black; 
+}
+
+th { 
+    background-color: #339999; color:black; 
+}
+
+td { text-align: center; }
+td.esquerda { text-align: left; }
+ul.erro { color: red; }

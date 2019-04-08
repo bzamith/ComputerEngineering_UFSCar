@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Sistema de Gerenciamento de Hotel</title>
+        <h:outputStylesheet library="css" name="estilo.css" />
+    </h:head>
+    <h:body>
+        <a href="/SistemaHotel_v2/faces/index.xhtml"><h1>Menu Administrador</h1></a><br/>
+        <h:messages globalOnly="true" />
+        <hr />
+        <div id="TOTAL">
+        <h:form>
+            <p><h2 onClick="document.getElementById('abaCadastrarHotel').style = 'display: block;';">1. Cadastrar Hotel</h2>
+            <div style='display: none;' id='abaCadastrarHotel'>
+                <p> Informe os dados do hotel a ser cadastrado:</p>
+                <div style="text-align: center">
+                    CNPJ:
+                    <h:inputText id="cnpj" style="width: 50%" label="Cnpj" required="true" validator="#{cadastrarHotel.validarCnpj}" value="#{cadastrarHotel.dadosHotel.cnpj}" /> 
+                    <h:message for="cnpj"/>
+                    <br/>
+
+                    Nome:
+                    <h:inputText id="username" style="width: 48.8%" label="Nome" required="true" value="#{cadastrarHotel.dadosHotel.nome}" />
+                    <h:message for="username"/>
+                    <br/>
+
+                    Cidade:
+                    <h:inputText id="cidade" style="width: 47.6%" label="Cidade" required="true" value="#{cadastrarHotel.dadosHotel.cidade}" />
+                    <h:message for="cidade"/>
+                    <br/>
+
+                    Senha:
+                    <h:inputSecret id="senha" style="width: 48.6%" label="Senha" required="true" value="#{cadastrarHotel.dadosHotel.senha}" />
+                    <h:message for="senha"/>
+                    <br/>
+
+                    Confirmar Senha:
+                    <h:inputSecret id="confirmarSenha" style="width: 34.3%" label="ConfirmarSenha" required="true" value="#{cadastrarHotel.confSenha}" />
+                    <h:message for="confirmarSenha"/>
+                    <br/>
+
+                    <div style="text-align: center">
+                        <h:commandButton id="submit"  value="Cadastrar" action="#{cadastrarHotel.validarTudo}" />
+                    </div>
+                </div>
+                <br/>
+                <br/>
+            </div></p>
+        </h:form>
+        
+        <h:form>
+        <p><h2 onClick="document.getElementById('abaCadastrarSiteReservas').style = 'display: block;';">2. Cadastrar Site de Reservas</h2>
+        <div style='display: none;' id='abaCadastrarSiteReservas'>
+        <p> Informe os dados do site de reservas a ser cadastrado:</p>
+        
+            Url:
+            <h:inputText id="url" label="Url" required="true" validator="#{cadastrarSiteReserva.validarUrl}" value="#{cadastrarSiteReserva.dadosSiteReserva.url}" /> 
+            <h:message for="url"/>
+            <br/>
+            
+            Nome:
+            <h:inputText id="nome" label="Nome" required="true" value="#{cadastrarSiteReserva.dadosSiteReserva.nome}" /> 
+            <h:message for="nome"/>
+            <br/>
+            
+            Telefone:
+            <h:inputText id="telefone" label="Telefone" required="true" validator="#{cadastrarSiteReserva.validarTelefone}" value="#{cadastrarSiteReserva.dadosSiteReserva.telefone}" />
+            <h:message for="telefone"/>
+            <br/>
+
+            Senha:
+            <h:inputSecret id="senha" label="Senha" required="true" value="#{cadastrarSiteReserva.dadosSiteReserva.senha}" />
+            <h:message for="senha"/>
+            <br/>
+
+            Confirmar Senha:
+            <h:inputSecret id="confirmarSenha" label="ConfirmarSenha" required="true" value="#{cadastrarSiteReserva.confSenha}" />
+            <h:message for="confirmarSenha"/>
+            <br/>
+            
+            <h:commandButton id="submit" value="Cadastrar" action="#{cadastrarSiteReserva.validarTudo}" />
+              
+            <br/>
+            <br/>
+        </div></p>   
+        </h:form>  
+        </div>
+    </h:body>
+</html>
