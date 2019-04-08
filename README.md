@@ -18,6 +18,7 @@ Projetos Desenvolvidos para Disciplinas - Engenharia de Computação, UFSCar (20
 ├── 2018-1
 │ ├── redes-neurais
 │ ├── seguranca-cibernetica
+│ ├── web
 │ └── so1
 ├── 2018-2
 │ ├── banco-de-dados 
@@ -52,6 +53,7 @@ Primeiro Semestre de 2017
 Primeiro Semestre de 2018
 - [x] Introdução a Redes Neurais - prof. Ricardo Cerri
 - [x] Engenharia de Segurança Cibernética - prof. César Marcondes
+- [x] Desenvolvimento WEB - prof. Daniel Lucrédio
 - [x] Sistemas Operacionais 1 - profa. Kelen Vivaldini
 
 ### 2018-2
