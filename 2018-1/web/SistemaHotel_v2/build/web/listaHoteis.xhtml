@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Sistema de Gerenciamento de Hotel</title>
+        <h:outputStylesheet library="css" name="estilo.css"/>
+    </h:head>
+    <h:body>
+        <a href="/SistemaHotel_v2/faces/index.xhtml"><h1>Lista Hoteis</h1></a><br/>
+        <h:messages globalOnly="true" />
+        <hr />
+        <hr /><div id="TOTAL">
+        <p>Exibindo <b>TODOS</b> os hoteis cadastrados. Se deseja selecionar uma cidade, digite a desejada:</p>
+        <h:form>
+        Cidade:
+            <h:inputText id="cidade" label="Cidade" required="" value="#{listaHoteis.selecaoCidade}" />
+            <h:message for="cidade"/> 
+            <h:commandButton id="submit" value="Buscar" action="#{listaHoteis.verTodosHoteisSelecao()}" />
+            <br/> 
+        </h:form>
+        <h:form>
+            <br/>
+            <h:commandLink action="#{listaHoteis.verTodosHoteis()}"><u>Listar Tudo</u></h:commandLink><br/>
+            <br/>
+        </h:form>
+        <h:form>
+            <h:dataTable id="hoteis"
+                         summary="Hoteis Cadastrados"
+                         value="#{listaHoteis.listaHoteis}"
+                         var="hotel">
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Nome" />
+                    </f:facet>
+                    <h:outputText id="nomeHotel"
+                                  value="#{hotel.nome}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="CNPJ" />
+                    </f:facet>
+                    <h:outputText id="cnpjHotel" value="#{hotel.cnpj}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Cidade" />
+                    </f:facet>
+                    <h:outputText id="cidadeHotel" value="#{hotel.cidade}" />
+                </h:column>
+
+            </h:dataTable>
+        </h:form>
+        </div>
+    </h:body>
+</html>
+
