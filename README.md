@@ -62,3 +62,5 @@ Segundo Semestre de 2018
 ### 2019-1
 Primeiro Semestre de 2019
 - [x] Tecnologia e Comunicação de Dados - prof. Rafael Aroca
+- [ ] Inteligência Artificial - prof. Murilo Naldi
+- [ ] Construção de Compiladores 1 - prof. Daniel Lucrédio
