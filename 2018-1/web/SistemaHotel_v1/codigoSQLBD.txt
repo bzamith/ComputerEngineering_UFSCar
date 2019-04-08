@@ -1,0 +1,31 @@
+create table SiteReserva
+(
+url varchar(256) not null PRIMARY KEY,
+senha varchar(256) not null,
+nome varchar(256) not null,
+telefone varchar(24) not null
+);
+
+create table Hotel
+(
+cnpj varchar(14) not null PRIMARY KEY,
+senha varchar(256) not null,
+nome varchar(256) not null,
+cidade varchar(256) not null
+);
+
+create table Promocao
+(
+id integer not null generated always as identity (start with 1, increment by 1) PRIMARY KEY,
+url varchar(256) references SiteReserva (url),
+cnpj varchar(14) references Hotel (cnpj),
+preco double not null,
+dataInicial date not null,
+dataFinal date not null
+);
+
+create table Admin
+(
+username varchar(256) not null PRIMARY KEY,
+senha varchar(256) not null
+);

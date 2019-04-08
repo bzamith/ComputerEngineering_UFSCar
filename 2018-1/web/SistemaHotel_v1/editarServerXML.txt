@@ -1,0 +1,6 @@
+	<Resource name="jdbc/SistemaHotel" auth="Container" type="javax.sql.DataSource"
+				maxActive="100" maxIdle="30" maxWait="10000"
+				username="sistemaHotel" password="web"
+				driverClassName="org.apache.derby.jdbc.ClientDriver"
+				url="jdbc:derby://localhost:1527/SistemaHotel"/>
+  </GlobalNamingResources>
