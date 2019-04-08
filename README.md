@@ -24,6 +24,7 @@ Projetos Desenvolvidos para Disciplinas - Engenharia de Computação, UFSCar (20
 │ ├── es1
 │ └── microcontroladores
 └── 2019-1
+│ ├── lab-bd 
 │ └── tec-com
 ```
 ### 2015-1
@@ -62,3 +63,6 @@ Segundo Semestre de 2018
 ### 2019-1
 Primeiro Semestre de 2019
 - [x] Tecnologia e Comunicação de Dados - prof. Rafael Aroca
+- [ ] Inteligência Artificial - prof. Murilo Naldi
+- [ ] Construção de Compiladores 1 - prof. Daniel Lucrédio
+- [x] Laboratório de Banco de Dados - profa. Marilde Santos 
