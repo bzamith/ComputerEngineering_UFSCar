@@ -1,0 +1,20 @@
+Para cada projeto "proj":
+$ git clone https proj
+$ cd /proj
+$ mvn -T 64 clean package -DskipTests
+
+Para o Jenkins, ir no SonarCloud, projeto do Jenkins, aba Administration > General Settings 
+Para C, C++ e Objective-C colocar o sufixo como "-" (sem as aspas)
+
+Para o Che:
+npm install em dashboard
+install go, yarn e docker
+$ sudo mvn -T 64 clean package -DskipTests=true -Dlicense.skip=true
+
+
+$ sudo mvn -T 64 -DskipTests=true -Dlicense.skip=true \
+  sonar:sonar \
+  -Dsonar.projectKey=bzamith_che \
+  -Dsonar.organization=bzamith-github \
+  -Dsonar.host.url=https://sonarcloud.io \
+  -Dsonar.login=c3bb2725f27cfd6b2203d6966b151e678a4964c3
