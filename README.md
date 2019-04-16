@@ -68,5 +68,5 @@ Primeiro Semestre de 2019
 - [x] Tecnologia e Comunicação de Dados - prof. Rafael Aroca
 - [ ] Inteligência Artificial - prof. Murilo Naldi
 - [ ] Construção de Compiladores 1 - prof. Daniel Lucrédio
-- [ ] Engenharia de Software 2 - prof. Valter Camargo
+- [x] Engenharia de Software 2 - prof. Valter Camargo
 - [x] Laboratório de Banco de Dados - profa. Marilde Santos 
