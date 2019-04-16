@@ -27,6 +27,7 @@ Projetos Desenvolvidos para Disciplinas - Engenharia de Computação, UFSCar (20
 └── 2019-1
 │ ├── lab-bd 
 │ ├── es2
+│ ├── redes
 │ └── tec-com
 ```
 ### 2015-1
@@ -70,3 +71,4 @@ Primeiro Semestre de 2019
 - [ ] Construção de Compiladores 1 - prof. Daniel Lucrédio
 - [x] Engenharia de Software 2 - prof. Valter Camargo
 - [x] Laboratório de Banco de Dados - profa. Marilde Santos 
+- [x] Redes de Computadores - prof. Jó Ueyama (USP) 
