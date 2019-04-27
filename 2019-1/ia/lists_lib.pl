@@ -212,7 +212,7 @@ count_occ(Elem,[_|Tail],N) :- count_occ(Elem,Tail,N).
 even_or_odd_list(L,"Even") :- count_elements(L,R), X is mod(R,2), X == 0.
 even_or_odd_list(L,"Odd") :- count_elements(L,R), X is mod(R,2), X \== 0.
 
-% POT 
+%POT 
 % Return the pot of two numbers 
 % Base case: Pot is 0
 % Recursive case: See below
@@ -220,7 +220,7 @@ even_or_odd_list(L,"Odd") :- count_elements(L,R), X is mod(R,2), X \== 0.
 pot(_,0,1).
 pot(X,Y,R) :- Y > 0, Y1 is Y-1, pot(X,Y1,R1), R is X * R1.
 
-% FACTORIAL
+%FACTORIAL
 % Returns the factorial of a given number
 % Base case: X is 0
 % Recursive case: See below
@@ -229,7 +229,7 @@ factorial(X,R) :- X>=0, fat(X,R).
 fat(0,1) :- !.
 fat(X,R) :- X1 is X-1, fat(X1,R1), R is R1*X.
 
-% INVERT LIST (REVERSE)
+%INVERT LIST (REVERSE)
 % Inverts the elements of a given list
 % Base case: List is empty 
 % Recursive case: Reverses tail and concatenates with head 
@@ -237,7 +237,7 @@ fat(X,R) :- X1 is X-1, fat(X1,R1), R is R1*X.
 invert_list([],[]).
 invert_list([Head|Tail],R) :- invert_list(Tail,RTail), concatenate(RTail,[Head],R).
 
-% SEPARATES LIST IN POSITIVES (+ ZERO) AND NEGATIVES NUMBERS
+%SEPARATES LIST IN POSITIVES (+ ZERO) AND NEGATIVES NUMBERS
 % Given a list of numbers, create another two, one with positive numbers and other with negative
 % Base case: List is empty
 % Recursive case: See below 
@@ -246,7 +246,7 @@ sep_posit_negat([],[],[]) :- !.
 sep_posit_negat([Head|Tail],[Head|TailPosit],LN) :- Head >=0, sep_posit_negat(Tail,TailPosit,LN),!.
 sep_posit_negat([Head|Tail],LP,[Head|TailNegat]) :- sep_posit_negat(Tail,LP,TailNegat).
 
-% SEPARATES LIST IN EVEN AND ODD NUMBERS
+%SEPARATES LIST IN EVEN AND ODD NUMBERS
 % Given a list of numbers, create another two, one with even numbers and other with odd
 % Base case: List is empty
 % Recursive case: See below 
