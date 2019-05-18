@@ -75,3 +75,4 @@ Primeiro Semestre de 2019
 - [x] Engenharia de Software 2 - prof. Valter Camargo
 - [x] Laboratório de Banco de Dados - profa. Marilde Santos 
 - [x] Redes de Computadores - prof. Jó Ueyama (USP) 
+- [ ] Sistemas Operacionais 2 - prof. Helio Crestana Guardia
