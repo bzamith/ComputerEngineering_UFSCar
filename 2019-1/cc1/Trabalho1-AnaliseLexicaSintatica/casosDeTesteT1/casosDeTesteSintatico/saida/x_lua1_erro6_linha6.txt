@@ -1,0 +1,2 @@
+Erro: linha 6:16
+Fim da analise. Com erros sintaticos.
