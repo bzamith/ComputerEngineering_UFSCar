@@ -71,7 +71,7 @@ Primeiro Semestre de 2019
 - [x] Tecnologia e Comunicação de Dados - prof. Rafael Aroca
 - [X] Inteligência Artificial - prof. Murilo Naldi
 - [x] Sistemas Distribuídos - prof. Fredy Valente
-- [ ] Construção de Compiladores 1 - prof. Daniel Lucrédio
+- [x] Construção de Compiladores 1 - prof. Daniel Lucrédio
 - [x] Engenharia de Software 2 - prof. Valter Camargo
 - [x] Laboratório de Banco de Dados - profa. Marilde Santos 
 - [x] Redes de Computadores - prof. Jó Ueyama (USP) 
