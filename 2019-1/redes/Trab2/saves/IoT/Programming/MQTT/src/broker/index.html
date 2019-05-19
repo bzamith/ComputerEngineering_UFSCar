@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="bootstrap.min.css" />
+	<link rel="stylesheet" href="bootstrap-toggle.min.css" />
+	<link rel="stylesheet" href="style.css" />
+	<script src="jquery.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script src="bootstrap-toggle.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="page-header"><h2>MQTT Broker</h2></div>
+		<div class="panel panel-default" id="servicePanel">
+			<div class="panel-heading">Service</div>
+			<div class="panel-body">
+				<div class="form-group">
+					<input type="checkbox" id="serviceToggle" data-toggle="toggle" data-onstyle="success" data-offstyle="danger" checked>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default" id="authorizedUsersPanel">
+			<div class="panel-heading">Authorized Users</div>
+			<div class="panel-body">
+				<div class="form-group">
+					<input type="text" class="form-control" id="inputUsername" placeholder="Username">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" id="inputPassword" placeholder="Password">
+				</div>
+				<div class="form-group">
+					<button type="button" class="btn btn-primary" id="btnAddUser">Add</button>
+					<p id="msgAddUser"></p>
+				</div>
+			</div>
+			<div class="panel-body" id="authorizedUsersPanelBody">
+				<table class="table table-striped table-hover">
+					<thead>
+						<tr>
+							<th>Username</th>
+							<th>Password</th>
+						</tr>
+					</thead>
+					<tbody id="authorizedUsersTable"></tbody>
+				</table>
+				<div class="form-group">
+					<button type="button" class="btn btn-primary" id="btnRemoveUser">Remove</button>
+					<p id="msgRemoveUser"></p>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default" id="clientsPanel">
+			<div class="panel-heading">Clients</div>
+			<div class="panel-body">
+				<table class="table table-striped table-hover">
+					<thead>
+						<tr>
+							<th>Name (ID)</th>
+						</tr>
+					</thead>
+					<tbody id="clientsTable"></tbody>
+				</table>
+			</div>
+		</div>
+		<div class="panel panel-default" id="subscriptionsPanel">
+			<div class="panel-heading">Subscriptions</div>
+			<div class="panel-body">
+				<table class="table table-striped table-hover">
+					<thead>
+						<tr>
+							<th>Topic</th>
+							<th>Clients</th>
+						</tr>
+					</thead>
+					<tbody id="subscriptionsTable"></tbody>
+				</table>
+			</div>
+		</div>
+		<div class="panel panel-default" id="eventLogPanel">
+			<div class="panel-heading">Event Log</div>
+			<div class="panel-body" id="eventLogPanelBody"></div>
+		</div>
+	</div>
+	<div id="debug"></div>
+	<script src="script.js"></script>
+</body>
+</html>

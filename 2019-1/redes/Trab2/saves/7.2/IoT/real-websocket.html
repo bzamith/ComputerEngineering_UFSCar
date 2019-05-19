@@ -1,0 +1,83 @@
+<html>
+<head>
+  <script language="javascript" type="text/javascript">
+
+  var count = 10;
+  var log_ui = null;
+  var ws_url= "ws://localhost:8765/ws";
+  var ws = null;
+
+  function ping(text) {
+    ws.send(text);
+    log_message("ping: " + text);
+  }
+  
+  function pong(evt) {
+    log_message('... pong: ' + evt.data);
+
+    if(count > 0)
+        setTimeout(function(){send_ws_message();}, 1000);
+    else
+        ws.close();
+  }
+
+  function send_ws_message() {
+      ping("hello: " + count--);
+  }
+
+  function on_ws_open(evt) {
+    log_message("! connected to websocket @ " + ws_url);
+    send_ws_message();
+  }
+
+  function on_ws_error(evt) {
+    log_message("! websocket error: " + evt.data);
+  }
+
+  function on_ws_close(evt) {
+    log_message("! disconnected from websocket");
+  }
+
+
+
+  function log_message(message) {
+    var line = document.createElement("div");
+    line.innerHTML = message;
+    log_ui.appendChild(line);
+  }
+
+  function setup() {
+    ws = new WebSocket(ws_url);
+
+    ws.onmessage = pong;
+    ws.onerror = on_ws_error;
+    ws.onopen = on_ws_open;
+    ws.onclose = on_ws_close;
+
+    log_ui = document.getElementById("log_ui");
+  }
+
+  window.addEventListener("load", setup, false);
+
+  </script>
+</head>
+<body >
+  <h2>Cisco Packet Tracer Websocket Client Demo</h2>
+  <pre>
+  In order to run this demo the user may do as follows:
+
+  1. Start Cisco Packet Tracer and load a sample file: real-websocket.pkt
+  2. Click on the device named WebSockets HTTP Server.
+  3. In the dialog that opens navigate to programming tab and 
+     start one of the server applications. In order for this 
+     to work correctly one may need to enable an option 
+     [&#x2714;] Enable External Network Access from Device Scripts
+     in Options/Preferences dialog, Miscellaneous tab.
+  4. Refesh this page in the browser. The outpus one would see will 
+     resemple echo-server behavior.
+  </pre>
+  <input id="disconnect_btn" type="button" value="Disconnect"></><p/>
+  <div id="log_ui"/>
+</body>
+</html>
+

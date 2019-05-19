@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="bootstrap.min.css" />
+	<link rel="stylesheet" href="style.css" />
+	<script src="jquery.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="page-header"><h2>MQTT Client</h2></div>
+		<div class="panel panel-default" id="connectionPanel">
+			<div class="panel-heading">Connection</div>
+			<div class="panel-body">
+				<div class="form-group">
+					<input type="text" class="form-control" id="inputBrokerAddress" placeholder="Broker Address">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" id="inputUsername" placeholder="Username (optional)">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" id="inputPassword" placeholder="Password (optional)">
+				</div>
+				<div class="form-group">
+					<button type="button" class="btn btn-success" id="btnConnect">Connect</button>
+					<p class="text-warning" id="msgConnection"></p>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default collapse" id="subscriptionsPanel">
+			<div class="panel-heading">Subscriptions</div>
+			<div class="panel-body">
+				<div class="form-group">
+					<input type="text" class="form-control" id="inputSubscribeTopic" placeholder="Topic">
+				</div>
+				<div class="form-group">
+					<button type="button" class="btn btn-primary" id="btnSubscribe">Subscribe</button>
+					<p id="msgSubscribeTopic"></p>
+				</div>
+			</div>
+			<div class="panel-body">
+				<div class="form-group">
+					<div>
+						<select class="form-control" id="selectUnsubscribeTopic" placeholder="Topic">
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<button type="button" class="btn btn-primary" id="btnUnsubscribe">Unsubscribe</button>
+					<p id="msgUnsubscribeTopic"></p>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default collapse" id="publishPanel">
+			<div class="panel-heading">Publish</div>
+			<div class="panel-body">
+				<div class="form-group">
+					<input type="text" class="form-control" id="inputPublishTopic" placeholder="Topic">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" id="inputPublishPayload" placeholder="Payload">
+				</div>
+				<div class="form-group">
+					<input type="number" class="form-control" id="inputQoS" min="0" max="2" placeholder="QoS (default: 0)">
+				</div>
+				<div class="form-group">
+					<button type="button" class="btn btn-primary" id="btnPublish">Publish</button>
+					<p id="msgPublish"></p>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default collapse" id="messagesPanel">
+			<div class="panel-heading">Messages</div>
+			<div class="panel-body" id="messagesPanelBody"></div>
+		</div>
+		<div class="panel panel-default" id="eventLogPanel">
+			<div class="panel-heading">Event Log</div>
+			<div class="panel-body" id="eventLogPanelBody"></div>
+		</div>
+	</div>
+	<div id="debug"></div>
+	<script src="script.js"></script>
+</body>
+</html>

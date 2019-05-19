@@ -1,0 +1,41 @@
+<!-- An app manifest file is required
+     for desktop apps or exporting as a .pkp file. -->
+<application>
+  
+  <!-- Unique ID to identify this project,
+       recommend using reverse domain name notation -->
+  <id>com.cisco.mqttbroker</id>
+  <version>1.0</version>
+  <name>MQTT Broker</name>
+  
+  <!-- Optional tags -->
+  <description>MQTT broker GUI and CLI app.</description>
+  <author>Tuan Hoang</author>
+  <contact>tuhoang@cisco.com</contact>
+  
+  <!-- If this app is to be installed on the Desktop,
+       provide this tag and its children. -->
+  <gui>
+    <name>MQTT Broker</name>
+    <html>index.html</html>
+    <icon>icon.png</icon>
+    <background>true</background>
+  </gui>
+  
+  <!-- If this app is to provide commands in the Command Prompt,
+       provide this tag and a command tag for each command. -->
+  <cli>
+    <command>
+      <name>mqttbroker</name>
+      <description>Enter mqttbroker in the command prompt for the complete list of MQTT broker commands.</description>
+    </command>
+  </cli>
+  
+  <!-- If this app is to be exported, you can specify the devices
+       that this app will automatically installed on.
+	   Either the gui or cli tag is required.
+	   Possible values are PC, Laptop, Server, Tablet, Smartphone, SBC, Thing. -->
+  <auto-install>
+  </auto-install>
+  
+</application>
