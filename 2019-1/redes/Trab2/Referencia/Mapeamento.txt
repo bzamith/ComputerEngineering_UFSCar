@@ -15,3 +15,13 @@ Casa9 -> 14
 Casa10 -> 15
 Casa11 -> 16
 Casa12 -> 17
+
+
+Casa0 > Router0 -> 1.0.0.0
+Casa1 > Router0 -> 2.0.0.0
+Casa2 > Router9 -> 3.0.0.0
+Casa3 > Router11 -> 4.0.0.0
+Casa4 > Router11 -> 5.0.0.0
+Casa5 > Router2 -> 6.0.0.0
+Casa6 > Router2 -> 7.0.0.0
+Casa7 > Router2 -> 8.0.0.0
