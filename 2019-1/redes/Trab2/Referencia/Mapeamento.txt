@@ -25,3 +25,51 @@ Casa4 > Router11 -> 5.0.0.0
 Casa5 > Router2 -> 6.0.0.0
 Casa6 > Router2 -> 7.0.0.0
 Casa7 > Router2 -> 8.0.0.0
+Casa8 > Router1 -> 9.0.0.0
+Casa9 > Router3 -> 10.0.0.0
+Casa10 > Router5 -> 11.0.0.0
+Casa11 > Router10 -> 12.0.0.0
+Casa12 > Router8 -> 13.0.0.0
+
+0 OK
+1 OK
+2 OK
+3 OK
+4 OK
+5 OK
+6 OK
+7 OK
+8 OK
+9 OK
+10 OK
+11 OK
+
+Router0 > Router11 -> 14.0.0.0
+Router0 > Router2 -> 15.0.0.0 
+Router1 > Router3 -> 16.0.0.0
+Router1 > Router4 -> 17.0.0.0
+Router2 > Router3 -> 18.0.0.0
+Router4 > Router5 -> 19.0.0.0
+Router5 > Router6 -> 20.0.0.0
+Router6 > Router7 -> 21.0.0.0
+Router7 > Router8 -> 22.0.0.0
+Router8 > Router10 -> 23.0.0.0
+Router9 > Router10 -> 24.0.0.0
+Router9 > Router11 -> 25.0.0.0
+
+
+MG > Router5 -> 26.0.0.0
+MG > Router6 -> 27.0.0.0
+MG > Router7 -> 28.0.0.0
+
+DF > Router9 -> 29.0.0.0
+DF > Router2 -> 30.0.0.0
+DF > Router11 -> 31.0.0.0
+
+RS > Router7 -> 32.0.0.0
+RS > Router10 -> 33.0.0.0
+RS > Router8 -> 34.0.0.0
+
+PB > Router1 -> 35.0.0.0
+PB > Router4 -> 36.0.0.0
+PB > Router3 -> 37.0.0.0
