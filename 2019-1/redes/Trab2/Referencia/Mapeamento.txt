@@ -1,0 +1,166 @@
+___________________________________________________________
+
+LANS
+___________________________________________________________
+
+MG -> 1
+DF -> 2
+RS -> 3
+PB -> 4
+Casa0 -> 5
+Casa1 -> 6
+Casa2 -> 7
+Casa3 -> 8
+Casa4 -> 9
+Casa5 -> 10
+Casa6 -> 11
+Casa7 -> 12
+Casa8 -> 13
+Casa9 -> 14
+Casa10 -> 15
+Casa11 -> 16
+Casa12 -> 17
+
+___________________________________________________________
+
+AS 111
+___________________________________________________________
+
+Casa0 1/0 > Router0 0/0 -> 1.0.0.0
+Casa1 1/0 > Router0 1/0 -> 2.0.0.0
+Casa2 1/0 > Router0 2/0 -> 3.0.0.0
+Casa3 1/0 > Router0 3/0 -> 4.0.0.0
+Casa4 1/0 > Router2 0/0 -> 5.0.0.0
+Casa5 1/0 > Router2 1/0 -> 6.0.0.0
+Casa6 1/0 > Router2 2/0 -> 7.0.0.0
+Casa7 1/0 > Router2 3/0 -> 8.0.0.0 
+Router0 4/0 > Router2 4/0 -> 9.0.0.0
+
+___________________________________________________________
+
+AS 222
+___________________________________________________________
+
+Casa8 1/0 > Router1 0/0 -> 10.0.0.0
+Casa9 1/0 > Router3 0/0 -> 11.0.0.0
+PB 1/0 > Router4 0/0 -> 12.0.0.0
+Router1 1/0 > Router3 1/0 -> 13.0.0.0
+Router1 2/0 > Router4 1/0 -> 14.0.0.0
+Router3 2/0 > Router4 2/0 -> 15.0.0.0
+
+___________________________________________________________
+
+AS 333
+___________________________________________________________
+
+Casa11 1/0 > Router10 0/0 -> 16.0.0.0
+DF 1/0 > Router11 0/0 -> 17.0.0.0
+Router9 0/0 > Router10 1/0 -> 18.0.0.0
+Router9 1/0 > Router11 1/0 -> 19.0.0.0
+Router10 2/0 > Router11 2/0 -> 20.0.0.0
+
+AS 444
+Casa10 1/0 > Router5 0/0 -> 21.0.0.0
+Casa12 1/0 > Router7 0/0 -> 22.0.0.0
+MG 1/0 > Router6 0/0 -> 23.0.0.0
+Router5 1/0 > Router6 1/0 -> 24.0.0.0
+Router5 2/0 > Router7 1/0 -> 25.0.0.0
+Router6 2/0 > Router7 2/0 -> 26.0.0.0
+
+___________________________________________________________
+
+AS 555
+___________________________________________________________
+
+RS > Router8 -> 27.0.0.0
+
+___________________________________________________________
+
+COMANDOS UTEIS
+___________________________________________________________
+
+copy running-config startup-config
+show ip route
+show ip bgp
+___________________________________________________________
+
+BGP: AS 111 - AS 222
+___________________________________________________________
+
+Cada router com 
+network rip
+
+Router0 5/0 > Router3 3/0 -> 27.0.0.0
+Router2 5/0 > Router4 3/0 -> 28.0.0.0
+
+Router0:
+router bgp 111
+no synchronization
+redistribute connected
+neighbor 27.0.0.2 remote-as 222
+router rip
+redistribute eigrp 111
+
+Router3:
+router bgp 222
+no synchronization
+redistribute connected
+neighbor 27.0.0.1 remote-as 111
+router rip
+redistribute eigrp 222
+
+Router2
+router bgp 111
+no synchronization
+redistribute connected
+neighbor 28.0.0.2 remote-as 222ex
+router rip
+redistribute eigrp 111
+
+Router4:
+router bgp 222
+no synchronization
+redistribute connected
+neighbor 28.0.0.1 remote-as 111
+router rip
+redistribute eigrp 222
+
+___________________________________________________________
+
+BGP: AS 111 - AS 333
+___________________________________________________________
+
+Router0 6/0 > Router9 2/0 -> 29.0.0.0
+Router2 6/0 > Router11 3/0 -> 30.0.0.0
+
+Router0:
+router bgp 111
+no synchronization
+redistribute connected
+neighbor 29.0.0.2 remote-as 333
+router rip
+redistribute eigrp 111
+
+Router9:
+router bgp 333
+no synchronization
+redistribute connected
+neighbor 29.0.0.1 remote-as 111
+router rip
+redistribute eigrp 333
+
+Router2:
+router bgp 111
+no synchronization
+redistribute connected
+neighbor 30.0.0.2 remote-as 333
+router rip
+redistribute eigrp 111
+
+Router11:
+router bgp 333
+no synchronization
+redistribute connected
+neighbor 30.0.0.1 remote-as 111
+router rip
+redistribute eigrp 333
