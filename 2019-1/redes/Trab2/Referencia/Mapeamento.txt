@@ -1,6 +1,6 @@
 ___________________________________________________________
 
-LANS ADDRESSES
+LANS
 ___________________________________________________________
 
 MG -> 1
@@ -59,7 +59,11 @@ Router9 0/0 > Router10 1/0 -> 18.0.0.0
 Router9 1/0 > Router11 1/0 -> 19.0.0.0
 Router10 2/0 > Router11 2/0 -> 20.0.0.0
 
+___________________________________________________________
+
 AS 444
+___________________________________________________________
+
 Casa10 1/0 > Router5 0/0 -> 21.0.0.0
 Casa12 1/0 > Router7 0/0 -> 22.0.0.0
 MG 1/0 > Router6 0/0 -> 23.0.0.0
@@ -87,39 +91,13 @@ ___________________________________________________________
 BGP: AS 111 - AS 222
 ___________________________________________________________
 
-Cada router com 
-network rip
-
-Router2 /0 > Router3 /0 -> 28.0.0.0
-
-Router2:
-router bgp 111
-no synchronization
-redistribute connected
-neighbor 28.0.0.2 remote-as 222
-router rip
-redistribute eigrp 111
+Router2 5/0 > Router3 3/0 -> 28.0.0.0
 
 Router3:
 router bgp 222
-no synchronization
+%no synchronization
 redistribute connected
-neighbor 27.0.0.1 remote-as 111
-router rip
-redistribute eigrp 222
-
-Router2
-router bgp 111
-no synchronization
-redistribute connected
-neighbor 28.0.0.2 remote-as 222ex
-router rip
-redistribute eigrp 111
-
-Router4:
-router bgp 222
-no synchronization
-redistribute connected
+network rip
 neighbor 28.0.0.1 remote-as 111
 router rip
 redistribute eigrp 222
@@ -129,37 +107,40 @@ ___________________________________________________________
 BGP: AS 111 - AS 333
 ___________________________________________________________
 
-Router0 6/0 > Router9 2/0 -> 29.0.0.0
-Router2 6/0 > Router11 3/0 -> 30.0.0.0
+Router0 5/0 > Router11 3/0 -> 29.0.0.0
 
-Router0:
-router bgp 111
-no synchronization
-redistribute connected
-neighbor 29.0.0.2 remote-as 333
-router rip
-redistribute eigrp 111
+___________________________________________________________
 
-Router9:
-router bgp 333
-no synchronization
-redistribute connected
-neighbor 29.0.0.1 remote-as 111
-router rip
-redistribute eigrp 333
+BGP: AS 333 - AS 555
+___________________________________________________________
 
-Router2:
-router bgp 111
-no synchronization
-redistribute connected
-neighbor 30.0.0.2 remote-as 333
-router rip
-redistribute eigrp 111
+Router10 3/0 > Router8 1/0 -> 30.0.0.0
 
-Router11:
-router bgp 333
-no synchronization
-redistribute connected
-neighbor 30.0.0.1 remote-as 111
-router rip
-redistribute eigrp 333
+___________________________________________________________
+
+BGP: AS 222 - AS 444
+___________________________________________________________
+
+Router4 3/0 > Router6 3/0 -> 31.0.0.0
+
+___________________________________________________________
+
+BGP: AS 555 - AS 444
+___________________________________________________________
+
+Router8 2/0 > Router7 3/0 -> 32.0.0.0
+
+
+___________________________________________________________
+
+Borda Teste
+___________________________________________________________
+
+Router4 9/0 > UT0MCU -> 192.168.18
+Router6 9/0 > UT1MCU -> 192.168.19
+Router7 9/0 > UT2MCU -> 192.168.20
+Router8 9/0 > UT3MCU -> 192.168.21
+
+Router0 9/0 > Mov0MCU -> 192.168.22
+Router9 9/0 > Mov1MCU -> 192.168.23
+Router10 9/0 > Mov2MCU -> 192.168.24
