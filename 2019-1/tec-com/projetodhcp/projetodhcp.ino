@@ -27,23 +27,26 @@ class DHCP {
 
   public:
     String provided_ip(String mac_address){
-      String ip;
-      check_full();
-      int check = check_mac_address(mac_address);
-      if(check == -1){
-        hash_macs[provided_ips] = mac_address;
-        ip = ip_subnet + String(provided_ips);
-        provided_ips++;
-      }
-      else{
-        ip = ip_subnet + String(check);
-      }
-      return ip;
+        String ip;
+        check_full();
+        int check = check_mac_address(mac_address);
+        
+        if(check == -1){
+          hash_macs[provided_ips] = mac_address;
+          ip = ip_subnet + String(provided_ips);
+          provided_ips++;
+        }
+        else{
+          ip = ip_subnet + String(check);
+        }
+        return ip;
     }
     
     void check_full(){
       if(provided_ips == MAX_IPS){
-        Serial.println("Restarting numbering, %i ips - full!", MAX_IPS);
+        Serial.print("Restarting numbering, ");
+        Serial.print(MAX_IPS);
+        Serial.println(" ips - full!");
         provided_ips = 0;
       }
     }
@@ -51,7 +54,9 @@ class DHCP {
     int check_mac_address(String mac_address){
       for(int counter=0; counter < MAX_IPS; counter++){
         if(hash_macs[counter]==mac_address){
-          Serial.println("Mac Address %s already assigned, ignoring request", mac_address);
+          Serial.print("Mac Address ");
+          Serial.print(mac_address);
+          Serial.println(" already assigned, ignoring request!");
           return counter;
         }
       }
@@ -59,9 +64,10 @@ class DHCP {
     }
      
     void disconnect_ip(String mac_address){
-      check = check_mac_address(mac_address);
+      int check = check_mac_address(mac_address);
       if(check == -1){
-        Serial.println("%s not assigned", mac_address);
+        Serial.print(mac_address);
+        Serial.println(" not assigned.");
       }
       else{
         hash_macs[check]="Empty";
@@ -72,9 +78,9 @@ class DHCP {
       // check if receiver is broadcast
       // waits for reply to assign on hash
       char op_code = request[0];
+      return "e";
     }
-  
-}
+};
 
 
 class Wiznet5100 {
@@ -904,4 +910,3 @@ void loop() {
 
   }
 }
-
