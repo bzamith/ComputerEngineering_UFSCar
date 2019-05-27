@@ -806,8 +806,7 @@ void printMACAddress(const uint8_t address[6])
 }
 
 /******* For DHCP *******/ 
-
-char return_Padded_Hex(uint8_t byte)
+char get_Padded_Hex(uint8_t byte)
 {
   char str[2];
   str[0] = (byte >> 4) & 0x0f;
@@ -822,11 +821,11 @@ char return_Padded_Hex(uint8_t byte)
   }
 }
 
-String return_mac_address(const uint8_t address[6])
+String get_mac_address(const uint8_t address[6])
 {
   char mac_address[6];
   for (uint8_t i = 0; i < 6; ++i) {
-    mac_address[i] = return_Padded_Hex(address[i]);
+    mac_address[i] = get_Padded_Hex(address[i]);
   }
   return(String(mac_address));
 }
@@ -868,7 +867,7 @@ void loop() {
     Serial.print("Dest=");
     printMACAddress(&buffer[0]);
 
-    dhcp_server.provided_ip(return_mac_address(&buffer[0]));
+    dhcp_server.provided_ip(get_mac_address(&buffer[0]));
 
     
     Serial.print("Src=");
