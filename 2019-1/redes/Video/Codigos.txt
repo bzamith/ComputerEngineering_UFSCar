@@ -1,0 +1,55 @@
+=> Dar uma introdução rápida sobre o que vai fazer
+=> Inserir a placa e o led
+=> Configurar uma execução simples com python ou java script
+=> Mostrar como fazer o código
+
+_______________________________________
+
+var LED = 0;
+
+function setup() {
+	pinMode(LED, OUTPUT);
+}
+
+function loop() {
+	digitalWrite(LED, HIGH);
+	Serial.println("LED Aceso!");
+	delay(1000);
+	digitalWrite(LED, LOW);
+	Serial.println("LED Apagado!");
+	delay(1000);
+}
+
+_______________________________________
+
+
+var LED = 0;
+var BOTAO = 1;
+
+var pressionado = 0;
+var pressionado_anterior = 0;
+
+function setup() {
+	pinMode(LED, OUTPUT);
+	pinMode(BOTAO,INPUT);
+	
+}
+
+function loop() {
+	if(digitalRead(BOTAO,HIGH)){ // ALT + Press
+		pressionado = 1;
+		digitalWrite(LED, HIGH);
+		if(pressionado_anterior != pressionado){
+			Serial.println("BOTAO Pressionado - LED Aceso!");
+			pressionado_anterior = pressionado;
+		}
+	}
+	else{
+		pressionado = 0;
+		digitalWrite(LED, LOW);
+		if(pressionado_anterior != pressionado){
+			Serial.println("BOTAO Nao Pressionado - LED Apagado!");
+			pressionado_anterior = pressionado;
+		}
+	}
+}
