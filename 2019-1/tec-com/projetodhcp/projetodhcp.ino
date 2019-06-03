@@ -1,6 +1,8 @@
 /*
+
    DC - UFSCar - Comunicação de dados
    Baseado em: https://github.com/njh/W5100MacRaw
+
 */
 
 
@@ -10,84 +12,15 @@
 #include <stdint.h>
 #include <Arduino.h>
 
-#define MAX_IPS 257
-
-class DHCP {
-  private:
-    String ip_subnet = "192.168.163."; 
-    int provided_ips = 2;
-    String hash_macs[MAX_IPS];
-
-  public:
-    void init_dhcp(){
-      hash_macs[0] = "broadcast";
-      hash_macs[1] = "itself";
-    }
-  
-    String provided_ip(String mac_address){
-        String ip;
-        check_full();
-        int check = check_mac_address(mac_address);
-        
-        if(check == -1){
-          hash_macs[provided_ips] = mac_address;
-          ip = ip_subnet + String(provided_ips);
-          provided_ips++;
-        }
-        else{
-          ip = ip_subnet + String(check);
-        }
-        return ip;
-    }
-    
-    void check_full(){
-      if(provided_ips == MAX_IPS){
-        Serial.print("Restarting numbering, ");
-        Serial.print(MAX_IPS);
-        Serial.println(" ips - full!");
-        provided_ips = 0;
-      }
-    }
-    
-    int check_mac_address(String mac_address){
-      for(int counter=0; counter < MAX_IPS; counter++){
-        if(hash_macs[counter]==mac_address){
-          Serial.print("Mac Address ");
-          Serial.print(mac_address);
-          Serial.println(" already assigned, ignoring request!");
-          return counter;
-        }
-      }
-      return -1;
-    }
-     
-    void disconnect_ip(String mac_address){
-      int check = check_mac_address(mac_address);
-      if(check == -1){
-        Serial.print(mac_address);
-        Serial.println(" not assigned.");
-      }
-      else{
-        hash_macs[check]=atoi("Empty");
-      }
-    }
-    
-    String process_dhcp_request(String request){
-      // check if receiver is broadcast
-      // waits for reply to assign on hash
-      char op_code = request[0];
-      return "e";
-    }
-};
-
-
 class Wiznet5100 {
+
   public:
     /**
        Constructor that uses the default hardware SPI pins
        @param cs the Arduino Chip Select / Slave Select pin (default 10)
     */
     Wiznet5100(int8_t cs = SS);
+
 
     /**
        Initialise the Ethernet controller
@@ -119,6 +52,7 @@ class Wiznet5100 {
                or 0 if no packet was received
     */
     uint16_t readFrame(uint8_t *buffer, uint16_t bufsize);
+
 
   private:
     static const uint16_t TxBufferAddress = 0x4000;  /* Internal Tx buffer address of the iinchip */
@@ -484,7 +418,9 @@ class Wiznet5100 {
 #endif // W5100_H
 
 
+
 #include <SPI.h>
+
 
 uint8_t Wiznet5100::wizchip_read(uint16_t address)
 {
@@ -780,6 +716,7 @@ uint16_t Wiznet5100::sendFrame(const uint8_t *buf, uint16_t len)
   return len;
 }
 
+
 void printPaddedHex(uint8_t byte)
 {
   char str[2];
@@ -805,31 +742,6 @@ void printMACAddress(const uint8_t address[6])
   Serial.println();
 }
 
-/******* For DHCP *******/ 
-char get_Padded_Hex(uint8_t byte)
-{
-  char str[2];
-  str[0] = (byte >> 4) & 0x0f;
-  str[1] = byte & 0x0f;
-
-  for (int i = 0; i < 2; i++) {
-    // base for converting single digit numbers to ASCII is 48
-    // base for 10-16 to become lower-case characters a-f is 87
-    if (str[i] > 9) str[i] += 39;
-    str[i] += 48;
-    return(str[i]);
-  }
-}
-
-String get_mac_address(const uint8_t address[6])
-{
-  char mac_address[6];
-  for (uint8_t i = 0; i < 6; ++i) {
-    mac_address[i] = get_Padded_Hex(address[i]);
-  }
-  return(String(mac_address));
-}
-
 const byte mac_address[] = {
   0xae, 0x03, 0xf3, 0xc7, 0x08, 0x78
 };
@@ -844,6 +756,51 @@ void setup() {
   w5100.begin(mac_address);
 }
 
+boolean check_broadcast(uint8_t buffer[]){
+  int i=0;
+  for(i=0; i<6; i++){
+    if(buffer[i]!=0xff){
+      return false;
+    }
+  }
+  return true;
+}
+
+boolean check_dhcp_discover(uint8_t buffer[]){
+  if(check_broadcast(buffer)){
+    //check ip
+    if(buffer[12]==0x08 && buffer[13]==0x00){
+      //check source port
+      if(buffer[35]==0x44){
+        //check destination port
+        if(buffer[37]==0x43){
+          //check protocol udp
+          if(buffer[23]==0x11){
+            //check discover type
+            if(buffer[284]=0x01){
+                return true;
+            }
+          }
+        }
+      }
+    }
+  }
+  return false;
+}
+
+boolean send_request(uint8_t buffer[], uint16_t len){
+  
+
+  w5100.sendFrame(buffer, len);
+  return false;
+}
+
+int ip = 0;
+
+int provide_ip(){
+  ip++;
+  return ip;  
+}
 
 uint8_t buffer[800];
 uint8_t send_count = 0;
@@ -853,49 +810,23 @@ unsigned long previousMillis = 0;
 const long interval = 10000;
 
 void loop() {
-  // Creates object dhcp_server
-  DHCP dhcp_server;
-  dhcp_server.init_dhcp();
 
   // Reads frame
   uint16_t len = w5100.readFrame(buffer, sizeof(buffer));
   
-  if (len > 0 ) {
-    Serial.print("Len=");
-    Serial.println(len, DEC);
-
-    Serial.print("Dest=");
-    printMACAddress(&buffer[0]);
-
-    dhcp_server.provided_ip(get_mac_address(&buffer[0]));
-
-    
-    Serial.print("Src=");
-    printMACAddress(&buffer[6]);
-
-    // 0x0800 = IPv4
-    // 0x0806 = ARP
-    // 0x86DD = IPv6
-    Serial.print("Type=0x");
-    printPaddedHex(buffer[12]);
-    printPaddedHex(buffer[13]);
-    Serial.println();
-    
+  if ( len > 0 ) {   
     Serial.println("BYTES:");
     for (int i = 0; i < len; i++) {
       printPaddedHex(buffer[i]);
       Serial.print(" ");
     }    
     Serial.println();
- 
-    Serial.print("Byte 15=");
-    Serial.println(buffer[15], DEC);
-
-    if (buffer[12] == 0x88 && buffer[13] == 0xB5) {
-      Serial.println("ACAO! Acender LED");
+    if(check_dhcp_discover(buffer)==true){
+      Serial.println("Recebeu DHCP Discover!");
     }
-
     Serial.println();
+    Serial.println();
+    
   }
 
   unsigned long currentMillis = millis();
@@ -906,29 +837,6 @@ void loop() {
     for (int i = 0; i < len; i++) {
       buffer[i] = 0xFF;
     }
-
-    //Destino pode ser fixo ou broadcast (0xFF 6 vezes)
-    buffer[0] = 0x34;
-    buffer[1] = 0x23;
-    buffer[2] = 0x87;
-    buffer[3] = 0x74;
-    buffer[4] = 0xca;
-    buffer[5] = 0xf5;
-/*
-    buffer[0] = 0xFF;
-    buffer[1] = 0xFF;
-    buffer[2] = 0xFF;
-    buffer[3] = 0xFF;
-    buffer[4] = 0xFF;
-    buffer[5] = 0xFF;
-*/
-    
-    
-    memcpy(&buffer[0], &buffer[0], 6);   // Set Destination to Source
-    memcpy(&buffer[6], mac_address, 6);  // Set Source to our MAC address
-    buffer[14] = send_count++;
-    w5100.sendFrame(buffer, len);
-
-
   }
 }
+
