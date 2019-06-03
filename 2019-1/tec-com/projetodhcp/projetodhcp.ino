@@ -756,6 +756,16 @@ void setup() {
   w5100.begin(mac_address);
 }
 
+/**DHCP a partir daqui**/
+int ip = 2;
+
+void check_ip(){
+  if(ip == 255){
+    ip = 1;
+  }
+  ip++;
+}
+
 boolean check_broadcast(uint8_t buffer[]){
   int i=0;
   for(i=0; i<6; i++){
@@ -788,18 +798,75 @@ boolean check_dhcp_discover(uint8_t buffer[]){
   return false;
 }
 
-boolean send_request(uint8_t buffer[], uint16_t len){
+boolean send_offer(uint8_t buffer[], uint16_t len){
+  uint8_t send[800];
+  int i=0;
+
+  //destination [0-5] = quem mandou (source atual [6-11])
+  for(i=0; i<6; i++){
+    send[i]=buffer[6+i];
+  }
+
+  //source [6-11] = mac_address do arduino
+  for(i=0; i<6; i++){
+    send[6+i] = mac_address[i];
+  }
+
+  for(i=12; i<26; i++){
+    send[i] = buffer[i];
+  }
+
+  // [26-29] = server ip
+  send[26] = 192;
+  send[27] = 168;
+  send[28] = 1;
+  send[29] = 1;
   
+  for(i=30; i<35; i++){
+    send[i] = buffer[i];
+  }
+  
+  // [35] = [37]
+  send[35] = buffer[37];
+  send[36] = buffer[38];
+  
+  // [37] = [35]
+  send[37] = buffer[35];
+  send[38] = buffer[36];
 
-  w5100.sendFrame(buffer, len);
+  for(i=39; i<58; i++){
+    send[i] = buffer[i];
+  }
+
+  // [58-61] ip que estamos oferecendo
+  send[58] = 192;
+  send[59] = 168;
+  send[60] = 1;
+  send[61] = ip;
+
+  // [62-65] server ip
+  send[62] = 192;
+  send[63] = 168;
+  send[64] = 1;
+  send[65] = 1;
+
+  for(i=66; i<284; i++){
+    send[i] = buffer[i];
+  }
+
+  // [284] = 2 (OFFER)
+  send[284] = 2;  
+
+  for(i=285; i<342; i++){
+    send[i] = buffer[i];
+  }
+
+  if(w5100.sendFrame(buffer, len)!=-1){
+    check_ip();
+    return true;
+  }
+
   return false;
-}
-
-int ip = 0;
-
-int provide_ip(){
-  ip++;
-  return ip;  
 }
 
 uint8_t buffer[800];
@@ -823,6 +890,9 @@ void loop() {
     Serial.println();
     if(check_dhcp_discover(buffer)==true){
       Serial.println("Recebeu DHCP Discover!");
+        if(send_offer(buffer,len)==true){
+          Serial.println("ENVIOU SAPORRA");
+        }
     }
     Serial.println();
     Serial.println();
