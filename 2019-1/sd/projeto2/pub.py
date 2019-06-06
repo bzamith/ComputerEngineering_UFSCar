@@ -9,7 +9,9 @@ def publisher_thread(stock):
     ctx = zmq.Context.instance()
 
     publisher = ctx.socket(zmq.PUB)
-    publisher.bind("tcp://*:6000")
+    publisher.connect("tcp://localhost:6000")
+
+    print(stock)
 
     stock_value = random.random() 
 

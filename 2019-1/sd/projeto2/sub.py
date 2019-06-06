@@ -17,8 +17,10 @@ def subscriber_thread(topic):
     count = 0
     while True:
         try:
+            print(topic)
             msg = subscriber.recv_multipart()
             print(msg)
+            time.sleep(5)
         except zmq.ZMQError as e:
             if e.errno == zmq.ETERM:
                 break           # Interrupted
@@ -31,8 +33,8 @@ def subscriber_thread(topic):
 def main():
     s_thread = Thread(target=subscriber_thread, args=["Nasdaq"])
     s_thread.start()
-    #s_thread2 = Thread(target=subscriber_thread, args=["Bovespa"])
-    #s_thread2.start()
+    s_thread2 = Thread(target=subscriber_thread, args=["Bovespa"])
+    s_thread2.start()
     #s_thread3 = Thread(target=subscriber_thread, args=["Nasdaq"])
     #s_thread3.start()
 
