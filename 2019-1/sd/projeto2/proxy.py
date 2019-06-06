@@ -1,22 +1,14 @@
 # Espresso Pattern
 # This shows how to capture data using a pub-sub proxy
-#
+# https://github.com/booksbyus/zguide/blob/master/examples/Python/espresso.py
 
 import time
 
-from random import randint
-from string import ascii_uppercase as uppercase
 from threading import Thread
-
 import zmq
 from zmq.devices import monitored_queue
-
 import binascii
 import os
-
-import sub as sb
-import pub as pb 
-
 
 def zpipe(ctx):
     """build inproc pipe for talking to threads
@@ -50,14 +42,8 @@ def listener_thread (pipe):
 # The main task starts the subscriber and publisher, and then sets
 # itself up as a listening proxy. The listener runs as a child thread:
 def main ():
-
     # Start child threads
     ctx = zmq.Context.instance()
-    p_thread = Thread(target=pb.publisher_thread)
-    s_thread = Thread(target=sb.subscriber_thread, args="A")
-    p_thread.start()
-    s_thread.start()
-
     pipe = zpipe(ctx)
 
     subscriber = ctx.socket(zmq.XSUB)

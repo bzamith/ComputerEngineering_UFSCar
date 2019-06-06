@@ -1,20 +1,23 @@
 import zmq
-from random import randint
+import random
 import time
+from threading import Thread
 
 # publisher thread
 # The publisher sends random messages starting with A-J:
-def publisher_thread():
+def publisher_thread(stock):
     ctx = zmq.Context.instance()
 
     publisher = ctx.socket(zmq.PUB)
     publisher.bind("tcp://*:6000")
 
+    stock_value = random.random() 
+
     while True:
-        #string = "%s-%05d" % (uppercase[randint(0,10)], randint(0,100000))
-        string = "B-%05d" % randint(0,100000)
+        while time.localtime().tm_sec%5==0:
+            stock_value = random.random()
+        string = "%s-%f" % (stock,stock_value)
         try:
-            print("Cai aqui")
             publisher.send(string.encode('utf-8'))
         except zmq.ZMQError as e:
             if e.errno == zmq.ETERM:
@@ -22,3 +25,12 @@ def publisher_thread():
             else:
                 raise
         time.sleep(0.1)         # Wait for 1/10th second
+
+def main():
+    nasdaq = Thread(target=publisher_thread, args=["Nasdaq"])
+    nasdaq.start()
+    bovespa = Thread(target=publisher_thread, args=["Bovespa"])
+    bovespa.start()
+
+if __name__ == '__main__':
+    main()
