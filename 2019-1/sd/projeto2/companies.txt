@@ -1,0 +1,29 @@
+--NASDAQ
+AAPL = Apple Inc.
+FB = Facebook
+MSFT = Microsoft Corporation
+
+--BOVESPA
+ABEV = AmBev
+BBAS = Banco do Brasil
+PETR = Petrobras
+
+--TOKYOSE
+TYO = Toyota Motors
+NIP = Nippon Telegraph & Telephone
+KEY = Keyence
+
+--NYSE
+BABA = Alibaba
+BRK = Berkshire Hathaway inc 
+JNJ = Johnson&Johnson
+
+--EURONEXT
+LVMH = Louis Vitton
+OR = L'Oreal
+SAN = Sanofi
+
+--LONDONSE
+RDSA = Royal Dutch Shell
+ULVR = Unilever
+BHP = BHP Billiton
