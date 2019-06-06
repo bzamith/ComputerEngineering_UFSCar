@@ -10,6 +10,7 @@ COLUMN_EMPRESA = 10
 COLUMN_VALOR = 20
 COLUMN_DIF = 30
 
+stocks_list = ["NASDAQ","BOVESPA","TOKYOSE","NYSE","EURONEXT","LONDONSE"]
 term = Terminal()
 
 def print_header():
@@ -33,11 +34,10 @@ def print_term(msg,posX,posY):
     with term.location(posX, posY):
         print(msg)
 
-# The subscriber thread requests messages starting with
+# The subscriber thread requests messages starting with the corresponding topic
 def subscriber_thread(topic, line):
     ctx = zmq.Context.instance()
 
-    # Subscribe to "A" and "B"
     subscriber = ctx.socket(zmq.SUB)
     subscriber.connect("tcp://localhost:6001")
 
@@ -65,15 +65,13 @@ def subscriber_thread(topic, line):
             else:
                 raise
 
-    print ("Subscriber received %d messages" % count)
-
-stocks_list = ["NASDAQ","BOVESPA","TOKYOSE","NYSE","EURONEXT","LONDONSE"]
-
+# Prints the stock list for selection
 def print_stocks():
     for i in range(0,len(stocks_list)):
         string = "%i - %s" % (i+1,stocks_list[i])
         print(string)
 
+# Gets the input 
 def get_stocks():
     print("Favor inserir o numeros das bolsas que deseja se inscrever, separado por virgulas:")
     print_stocks()

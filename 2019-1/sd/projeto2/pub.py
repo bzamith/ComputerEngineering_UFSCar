@@ -11,10 +11,10 @@ NYSE_list = {"BABA":0, "BRK":0, "JNJ": 0}
 EURONEXT_list = {"LVMH": 0, "OR": 0, "SAN": 0}
 LONDONSE_list = {"RDSA": 0, "ULVR": 0, "BHP": 0}
 
-#Dict for lists for each stock market name
+# Dict for lists for each stock market name
 stocks_list = {"NASDAQ": NASDAQ_list, "BOVESPA": BOVESPA_list, "TOKYOSE": TOKYOSE_list, "NYSE": NYSE_list, "EURONEXT": EURONEXT_list, "LONDONSE": LONDONSE_list}
 
-#Get list given a stock market name
+# Get list given a stock market name
 def get_list(name):
     return stocks_list[name]
 

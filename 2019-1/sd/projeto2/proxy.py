@@ -12,9 +12,7 @@ import os
 
 # main thread
 # The main task starts the subscriber and publisher, and then sets
-# itself up as a listening proxy. The listener runs as a child thread:
 def main ():
-    # Start child threads
     ctx = zmq.Context.instance()
     subscriber = ctx.socket(zmq.XSUB)
     subscriber.bind("tcp://*:6000")
