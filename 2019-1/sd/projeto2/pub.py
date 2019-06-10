@@ -2,6 +2,7 @@ import zmq
 import random
 import time
 from threading import Thread
+from multiprocessing import Process
 
 #Dict for companies on stock market
 NASDAQ_list = {"AAPL": 0,"FB": 0, "MSFT": 0}
@@ -52,8 +53,8 @@ def publisher_thread(stock_market):
 
 # Creates publisher thread for each stock market
 def main():
-    nasdaq = Stock_Market("NASDAQ", 0.1)
-    bovespa = Stock_Market("BOVESPA", 0.2)
+    nasdaq = Stock_Market("NASDAQ", 1)
+    bovespa = Stock_Market("BOVESPA", 1.5)
     tokyose = Stock_Market("TOKYOSE",0.15)
     nyse = Stock_Market("NYSE",0.15)
     euronext = Stock_Market("EURONEXT", 0.15)
@@ -62,7 +63,7 @@ def main():
     stocks = [nasdaq,bovespa,tokyose,nyse,euronext,londonse]
 
     for i in range(0,len(stocks)):
-        Thread(target=publisher_thread, args=[stocks[i]]).start()
+        Process(target=publisher_thread, args=[stocks[i]]).start()
     
 if __name__ == '__main__':
     main()
