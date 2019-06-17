@@ -762,7 +762,7 @@ int ip = 2;
 
 void check_ip(){
   if(ip == 255){
-    ip = 1;
+    ip = 2;
   }
   ip++;
 }
@@ -837,7 +837,6 @@ boolean check_dhcp_request(uint8_t buffer[]){
             if(buffer[23]==0x11){
               //check request type
               if(buffer[284]==03){
-                  //check_ip();
                   return true;
               }
             }
@@ -848,6 +847,7 @@ boolean check_dhcp_request(uint8_t buffer[]){
   }
   return false;
 }
+
 
 boolean send_offer(uint8_t buffer[], uint16_t len){
   uint8_t send[800];
@@ -921,8 +921,97 @@ boolean send_offer(uint8_t buffer[], uint16_t len){
     send[i] = buffer[i];
   }
 
+  // Lease time
+  send[291] = 0x33;
+  send[292] = 0x04;
+
+  if(w5100.sendFrame(send, len)!=-1){
+    return true;
+  }
+
+
+  return false;
+}
+boolean send_ack(uint8_t buffer[], uint16_t len){
+  uint8_t send[800];
+  int i=0;
+
+  //destination [0-5] = quem mandou (source atual [6-11])
+  for(i=0; i<6; i++){
+    send[i]=buffer[i];
+  }
+
+  //source [6-11] = mac_address do arduino
+  for(i=0; i<6; i++){
+    send[6+i] = mac_address[i];
+  }
+
+  for(i=12; i<26; i++){
+    send[i] = buffer[i];
+  }
+  
+  // check sum ip
+  uint16_t cs = calculate_check_sum(send);
+  send[24] = 0xb6;//(cs >> 8);
+  send[25] = 0x41; //cs & 0xff;
+
+  // [26-29] = server ip
+  send[26] = 192;
+  send[27] = 168;
+  send[28] = 1;
+  send[29] = 1;
+
+  // destination
+  send[30] = 192;
+  send[31] = 168;
+  send[32] = 1;
+  send[33] = ip;
+  
+  // [35] = [37]
+  send[34] = buffer[36];
+  send[35] = buffer[37];
+  
+  // [37] = [35]
+  send[36] = buffer[34];
+  send[37] = buffer[35];
+
+  for(i=38; i<58; i++){
+    send[i] = buffer[i];
+  }
+
+  // udp check sum
+  send[40] = 0x00;
+  send[41] = 0x00;
+
+  // [58-61] ip que estamos oferecendo
+  send[58] = 192;
+  send[59] = 168;
+  send[60] = 1;
+  send[61] = ip;
+
+  // [62-65] server ip
+  send[62] = 192;
+  send[63] = 168;
+  send[64] = 1;
+  send[65] = 1;
+
+  for(i=66; i<284; i++){
+    send[i] = buffer[i];
+  }
+
+  // [284] = 5 (ACK)
+  send[284] = 5;  
+
+  for(i=285; i<342; i++){
+    send[i] = buffer[i];
+  }
+
+  // Lease time
+  send[291] = 0x33;
+  send[292] = 0x04;
+
 //  Serial.println();
-//  Serial.println("OFFER:");
+//  Serial.println("ACK:");
 //  for (int i = 0; i < len; i++) {
 //    printPaddedHex(send[i]);
 //    Serial.print(" ");
@@ -959,11 +1048,16 @@ void loop() {
     if(check_dhcp_discover(buffer)==true){
       Serial.println(">>>> Recebeu DHCP Discover!");
         if(send_offer(buffer,len)==true){
-          Serial.println(">>>> Enviou DHCP Offer!");        }
+          Serial.println(">>>> Enviou DHCP Offer!");        
+        }
     }
         
     if(check_dhcp_request(buffer)==true){
-      Serial.println(">>>> Recebeu DHCP Request!");      
+      Serial.println(">>>> Recebeu DHCP Request!");
+      if(send_ack(buffer,len)==true){
+        Serial.println(">>>> Enviou DHCP ACK!");
+        check_ip();        
+      }      
     }   
   }
 
