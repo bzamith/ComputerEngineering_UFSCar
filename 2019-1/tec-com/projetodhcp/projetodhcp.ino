@@ -813,7 +813,7 @@ boolean check_dhcp_discover(uint8_t buffer[]){
           //check protocol udp
           if(buffer[23]==0x11){
             //check discover type
-            if(buffer[284]=0x01){
+            if(buffer[284]==0x01){
                 return true;
             }
           }
@@ -825,20 +825,21 @@ boolean check_dhcp_discover(uint8_t buffer[]){
 }
 
 boolean check_dhcp_request(uint8_t buffer[]){
-  if(check_broadcast(buffer)){
-    //check ip
-    if(buffer[12]==0x08 && buffer[13]==0x00){
-      //check source port
-      if(buffer[35]==0x44){
-        //check destination port
-        if(buffer[37]==0x43){
-          //check protocol udp
-          if(buffer[23]==0x11){
-            //check request type
-            if(buffer[284]==0x03){
-                check_ip();
-                Serial.println("OI!");
-                return true;
+  if(buffer[284]==0x03){
+    if(check_broadcast(buffer)){
+      //check ip
+      if(buffer[12]==0x08 && buffer[13]==0x00){
+        //check source port
+        if(buffer[35]==0x44){
+          //check destination port
+          if(buffer[37]==0x43){
+            //check protocol udp
+            if(buffer[23]==0x11){
+              //check request type
+              if(buffer[284]==03){
+                  //check_ip();
+                  return true;
+              }
             }
           }
         }
@@ -920,13 +921,13 @@ boolean send_offer(uint8_t buffer[], uint16_t len){
     send[i] = buffer[i];
   }
 
-  Serial.println();
-  Serial.println("OFFER:");
-  for (int i = 0; i < len; i++) {
-    printPaddedHex(send[i]);
-    Serial.print(" ");
-  }
-  Serial.println();
+//  Serial.println();
+//  Serial.println("OFFER:");
+//  for (int i = 0; i < len; i++) {
+//    printPaddedHex(send[i]);
+//    Serial.print(" ");
+//  }
+//  Serial.println();
 
   if(w5100.sendFrame(send, len)!=-1){
     return true;
@@ -946,8 +947,7 @@ const long interval = 10000;
 void loop() {
 
   // Reads frame
-  uint16_t len = w5100.readFrame(buffer, sizeof(buffer));
-  
+  uint16_t len = w5100.readFrame(buffer, sizeof(buffer));  
   if ( len > 0 ) {   
     Serial.println("BYTES:");
     for (int i = 0; i < len; i++) {
@@ -955,18 +955,16 @@ void loop() {
       Serial.print(" ");
     }    
     Serial.println();
-    if(check_dhcp_discover(buffer)==true){
-      Serial.println("Recebeu DHCP Discover!");
-        if(send_offer(buffer,len)==true){
-          Serial.println("Enviou DHCP Offer!");
-        }
-    }
-    if(check_dhcp_request(buffer)==true){
-      Serial.println("Recebeu DHCP Request!");
-    }
-    Serial.println();
-    Serial.println();
     
+    if(check_dhcp_discover(buffer)==true){
+      Serial.println(">>>> Recebeu DHCP Discover!");
+        if(send_offer(buffer,len)==true){
+          Serial.println(">>>> Enviou DHCP Offer!");        }
+    }
+        
+    if(check_dhcp_request(buffer)==true){
+      Serial.println(">>>> Recebeu DHCP Request!");      
+    }   
   }
 
   unsigned long currentMillis = millis();
