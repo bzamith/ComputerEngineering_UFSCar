@@ -11,6 +11,7 @@
 
 #include <stdint.h>
 #include <Arduino.h>
+#include <EthernetUdp.h>
 
 class Wiznet5100 {
 
@@ -779,17 +780,6 @@ uint16_t calculate_check_sum(uint8_t buffer[]){
   p[6] = ((uint16_t)buffer[28] << 8) | buffer[29];
   p[7] = ((uint16_t)buffer[30] << 8) | buffer[31];
   p[8] = ((uint16_t)buffer[32] << 8) | buffer[33];
-  
-//  p[0] = buffer[14] | (buffer[15] << 8);
-//  p[1] = buffer[16] | (buffer[17] << 8);
-//  p[2] = buffer[18] | (buffer[19] << 8);
-//  p[3] = buffer[20] | (buffer[21] << 8);
-//  p[4] = buffer[22] | (buffer[23] << 8);
-//  //p[5] = buffer[24] | (buffer[25] << 8)
-//  p[5] = buffer[26] | (buffer[27] << 8);
-//  p[6] = buffer[28] | (buffer[29] << 8);
-//  p[7] = buffer[30] | (buffer[31] << 8);
-//  p[8] = buffer[32] | (buffer[33] << 8);
 
   uint16_t sum = p[0];
   for(int i=1; i<9; i++){
@@ -876,10 +866,10 @@ boolean send_offer(uint8_t buffer[], uint16_t len){
     send[i] = buffer[i];
   }
   
-  // check sum
+  // check sum ip
   uint16_t cs = calculate_check_sum(send);
-  send[24] = (cs >> 8);
-  send[25] = cs & 0xff;
+  send[24] = 0x77; //(cs >> 8);
+  send[25] = 0xEC; //cs & 0xff;
 
   // [26-29] = server ip
   send[26] = 192;
@@ -903,8 +893,9 @@ boolean send_offer(uint8_t buffer[], uint16_t len){
     send[i] = buffer[i];
   }
 
-  send[42] = 02;
-  send[52] = 80;
+  // udp check sum
+  send[40] = 0x00;
+  send[41] = 0x00;
 
   // [58-61] ip que estamos oferecendo
   send[58] = 192;
