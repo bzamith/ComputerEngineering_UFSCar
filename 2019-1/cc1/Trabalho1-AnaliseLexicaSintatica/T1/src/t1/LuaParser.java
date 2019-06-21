@@ -1,5 +1,6 @@
-// Generated from Lua.g4 by ANTLR 4.7.2
 package t1;
+
+// Generated from Lua.g4 by ANTLR 4.7.2
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -116,7 +117,6 @@ public class LuaParser extends Parser {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
-
 	public static class ProgramaContext extends ParserRuleContext {
 		public TrechoContext trecho() {
 			return getRuleContext(TrechoContext.class,0);
