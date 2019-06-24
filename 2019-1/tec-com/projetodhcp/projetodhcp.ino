@@ -757,9 +757,14 @@ void setup() {
   w5100.begin(mac_address);
 }
 
-/**DHCP a partir daqui**/
-int ip = 2;
+/*  Inicio das modificacoes do codigo para DHCP
+    Todo o codigo acima foi baseado em codigo de aula cedido pelo professor.
+*/
 
+int ip = 2;// IP começa em 2  (IP 1 eh o do proprio DHCP)
+
+
+// Funcao check_ip: incrementa o valor de ip no intervalo [2, 255]
 void check_ip(){
   if(ip == 255){
     ip = 2;
@@ -767,6 +772,7 @@ void check_ip(){
   ip++;
 }
 
+// Funçao para calcular o CheckSum
 uint16_t calculate_check_sum(uint8_t buffer[]){
   // do 14 ao 33
   uint16_t p[9];
@@ -791,7 +797,7 @@ uint16_t calculate_check_sum(uint8_t buffer[]){
   return sum;  
 }
 
-
+//Funçao que verifica se os dados do buffer foram enviados para broadcast
 boolean check_broadcast(uint8_t buffer[]){
   int i=0;
   for(i=0; i<6; i++){
@@ -802,17 +808,18 @@ boolean check_broadcast(uint8_t buffer[]){
   return true;
 }
 
+//Funcao que verifica se os dados sao uma requisiçao do tipo dhcp_discover
 boolean check_dhcp_discover(uint8_t buffer[]){
   if(check_broadcast(buffer)){
-    //check ip
+    //verifica ip:
     if(buffer[12]==0x08 && buffer[13]==0x00){
-      //check source port
+      //verifica source port:
       if(buffer[35]==0x44){
-        //check destination port
+        //verifica destination port:
         if(buffer[37]==0x43){
-          //check protocol udp
+          //verifica protocolo udp:
           if(buffer[23]==0x11){
-            //check discover type
+            //verifica discover type:
             if(buffer[284]==0x01){
                 return true;
             }
@@ -824,18 +831,19 @@ boolean check_dhcp_discover(uint8_t buffer[]){
   return false;
 }
 
+//Funçao que verifica se os dados sao uma requisiçao do tipo dhcp_request
 boolean check_dhcp_request(uint8_t buffer[]){
   if(buffer[284]==0x03){
     if(check_broadcast(buffer)){
-      //check ip
+      //verifica ip:
       if(buffer[12]==0x08 && buffer[13]==0x00){
-        //check source port
+        //verifica source port:
         if(buffer[35]==0x44){
-          //check destination port
+          //verifica destination port:
           if(buffer[37]==0x43){
-            //check protocol udp
+            //verifica protocol udp:
             if(buffer[23]==0x11){
-              //check request type
+              //verifica request type:
               if(buffer[284]==03){
                   return true;
               }
@@ -848,7 +856,7 @@ boolean check_dhcp_request(uint8_t buffer[]){
   return false;
 }
 
-
+// Funcao que envia um offer de dhcp
 boolean send_offer(uint8_t buffer[], uint16_t len){
   uint8_t send[800];
   int i=0;
@@ -914,7 +922,7 @@ boolean send_offer(uint8_t buffer[], uint16_t len){
     send[i] = buffer[i];
   }
 
-  // [284] = 2 (OFFER)
+  // [284] = 2(tipo: OFFER)
   send[284] = 2;  
 
   for(i=285; i<342; i++){
@@ -932,6 +940,8 @@ boolean send_offer(uint8_t buffer[], uint16_t len){
 
   return false;
 }
+
+//Funçao que faz um Ack no dchp
 boolean send_ack(uint8_t buffer[], uint16_t len){
   uint8_t send[800];
   int i=0;
@@ -999,7 +1009,7 @@ boolean send_ack(uint8_t buffer[], uint16_t len){
     send[i] = buffer[i];
   }
 
-  // [284] = 5 (ACK)
+  // [284] = 5 (tipo:ACK)
   send[284] = 5;  
 
   for(i=285; i<342; i++){
