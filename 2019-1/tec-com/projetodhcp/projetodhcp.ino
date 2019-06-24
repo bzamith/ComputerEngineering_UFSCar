@@ -790,6 +790,9 @@ uint16_t calculate_check_sum(uint8_t buffer[]){
   uint16_t sum = p[0];
   for(int i=1; i<9; i++){
     sum = p[i]+sum;
+    if(sum>0xFF){
+    	sum -= 0xFF;
+    }
   }
 
   sum = ~sum;
@@ -877,8 +880,8 @@ boolean send_offer(uint8_t buffer[], uint16_t len){
   
   // check sum ip
   uint16_t cs = calculate_check_sum(send);
-  send[24] = 0x77; //(cs >> 8);
-  send[25] = 0xEC; //cs & 0xff;
+  send[24] = cs>>8; //0x77; //(cs >> 8);
+  send[25] = cs & 0xff; //0xEC; //cs & 0xff;
 
   // [26-29] = server ip
   send[26] = 192;
@@ -937,6 +940,13 @@ boolean send_offer(uint8_t buffer[], uint16_t len){
     return true;
   }
 
+  Serial.println();
+  Serial.println("OFFER:");
+  for (int i = 0; i < len; i++) {
+    printPaddedHex(send[i]);
+    Serial.print(" ");
+  }
+  Serial.println();
 
   return false;
 }
