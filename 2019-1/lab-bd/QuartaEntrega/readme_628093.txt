@@ -1,0 +1,17 @@
+#. Requisito Funcional - Descrição - Visão do Usuário - Tipo
+Favor tomar como referência o arquivo ref-docRequisitos.pdf
+
+1. Requisito 88 - Consultar Proposta de Programa de Extensao - Membro do CoEx e do CaEx - View.
+2. Requisito 85 - Alterar Edital - Membro do CaEx - Procedure.
+3. Requisito 82 - Consultar Reunião Convocada para o CaEx - Membro do CaEx - View.
+4. Requisito 81 - Consultar Reunião Convocada para o CoEx - Membro do CoEx - View.
+5. Requisito 83 - Consultar Reunião Convocada pelo Pró-Reitor - Pró-Reitor - View.
+6. Requisito 64 - Cadastrar Pró-Reitor - Pró-Reitor - Trigger.
+7. Requisito 70 - Incluir Data Demissão Servidor - Membro do CaEx - Cursor.
+8. Requisito 63 - Logar no Sistema - Todos - Function.
+9. Requisito 72 - Convocar Reunião - Pró-Reitor - Trigger.
+10. Requisito 73 - Incluir Ata - Pró-Reitor - Procedure.
+11. Requisito Novo - Cancelar Reuniões - Pró-Reitor - Procedure.
+12. Requisito Novo - Ajusta Codigo Reunião - Pró-Reitor - Sequence.
+13. Requisito Novo - Conta Número de Reuniões em Determinada Data - Pró-Reitor - Function.
+14. Requisito Novo - Demite Servidor - Membro do CaEx - Cursor Parametrizado.
