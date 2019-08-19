@@ -36,7 +36,6 @@ Projetos Desenvolvidos para Disciplinas - Engenharia de Computação, UFSCar (20
 │ ├── siai 
 │ ├── pmac
 │ └── cg
-
 ```
 ### 2015-1
 Primeiro Semestre de 2015
