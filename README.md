@@ -24,7 +24,7 @@ Projetos Desenvolvidos para Disciplinas - Engenharia de Computação, UFSCar (20
 │ ├── banco-de-dados 
 │ ├── es1
 │ └── microcontroladores
-└── 2019-1
+├── 2019-1
 │ ├── lab-bd 
 │ ├── es2
 │ ├── redes
@@ -32,6 +32,11 @@ Projetos Desenvolvidos para Disciplinas - Engenharia de Computação, UFSCar (20
 │ ├── ia
 │ ├── so2
 │ └── tec-com
+└── 2019-2
+│ ├── siai 
+│ ├── pmac
+│ └── cg
+
 ```
 ### 2015-1
 Primeiro Semestre de 2015
@@ -77,3 +82,9 @@ Primeiro Semestre de 2019
 - [x] Laboratório de Banco de Dados - profa. Marilde Santos 
 - [x] Redes de Computadores - prof. Jó Ueyama (USP) 
 - [x] Sistemas Operacionais 2 - prof. Helio Crestana Guardia
+
+### 2019-2
+Segundo Semestre de 2019
+- [ ] Sistemas de Integração e Automação Industrial - prof. Orides Morandin
+- [ ] Projeto e Manufatura Assistidos por Computador - profa. Kelen Vivaldini
+- [ ] Computação Gráfica - profa. Agma Juci Machado (USP)
