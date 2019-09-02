@@ -9,6 +9,7 @@ class Cromossomo:
 		self.kd = kd
 		self.taxa_erro = 0
 	def calculaTaxaErro(self):
+		self.taxa_erro = 10
 		return 10
 	def printaCromossomo(self):
 		print("Kp = "+str(self.kp)+"\n"
@@ -42,12 +43,9 @@ def populacaoInicial(qntd):
 def selecao(populacao, qntd):
 	erros = {}	
 	for i in range(0, len(populacao)):
-		erros[i]=populacao[i].calculaTaxaErro()
-		print(erros[i])
-	#erros.sort()
-	sorted_erros = sorted(erros.items(), key=lambda x: x[1])
-	sorted_dict = collections.OrderedDict(sorted_erros)
-	return 
+		populacao[i].calculaTaxaErro()
+	sorted_erros = sorted(populacao, key=operator.attrgetter('taxa_erro'))
+	return sorted_erros
 
 if __name__ == "__main__":
 	teste = selecao(populacaoInicial(10),10)
