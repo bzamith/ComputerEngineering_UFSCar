@@ -26,8 +26,6 @@ def calculaRangeKi():
 def calculaRangeKd():
 	return 10,30.5
 
-
-
 def populacaoInicial(qntd):
 	populacao = list()	
 	pmin, pmax = calculaRangeKp()
