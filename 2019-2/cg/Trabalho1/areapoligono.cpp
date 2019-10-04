@@ -1,11 +1,12 @@
 #include "areapoligono.h"
 #include "ui_areapoligono.h"
+#include "et.h"
 
-#include <et.cpp>
 #include <QPointF>
 #include <QPainter>
 #include <QColor>
 #include <QDebug>
+#include <math.h>
 
 AreaPoligono::AreaPoligono(QWidget *parent) :
     QWidget(parent),
@@ -58,8 +59,12 @@ void AreaPoligono::mousePressEvent(QMouseEvent *event)
 {
     if(iniciou && !encerrou)
     {
-        QPoint ponto = event->pos();
+        int x = floor(event->pos().x());
+        int y = floor(event->pos().y());
+        qDebug() << x << "|"<< y;
+        QPoint ponto = QPoint(x,y);
         vertices.append(ponto);
+
         if(vertices.size()>1)
         {
             QLine linha = QLine(vertices.at(vertices.size()-2),vertices.last());
@@ -75,18 +80,25 @@ void AreaPoligono::paintEvent(QPaintEvent *event)
     QPainter painter(this);
     QPen linepen(cor);
     linepen.setCapStyle(Qt::RoundCap);
-    linepen.setWidth(1);
     painter.setRenderHint(QPainter::Antialiasing,true);
     painter.setPen(linepen);
-    if(!vertices.empty())
+    if(!vertices.empty() && !encerrou)
     {
+        linepen.setWidth(9);
+        painter.setPen(linepen);
         painter.drawPoints(vertices);
     }
-    if(!arestas.empty())
+    if(!arestas.empty() && encerrou)
     {
+        linepen.setWidth(1);
+        painter.setPen(linepen);
+        painter.drawPoints(vertices);
         painter.drawLines(arestas);
     }
 }
 
-
+void AreaPoligono::teste()
+{
+    ET teste = ET(this->getArestas());
+}
 

@@ -23,7 +23,8 @@ public:
     void limparTudo();
     QVector<QPoint> getVertices();
     QVector<QLine> getArestas();
-    void fechaPoligono();
+    void fechaPoligono(); // Desenha a ultima aresta que conecta
+    void teste();
     ~AreaPoligono();
 
 protected:

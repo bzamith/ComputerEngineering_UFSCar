@@ -28,7 +28,6 @@ void MainWindow::on_botaoLimpar_clicked()
 void MainWindow::on_botaoIniciar_clicked()
 {
     ui->areaPoligono->iniciou = true;
-    qDebug() << ui->areaPoligono->iniciou;
 }
 
 /* Pressionando o botao Encerrar */
@@ -36,6 +35,7 @@ void MainWindow::on_botaoEncerrar_clicked()
 {
     ui->areaPoligono->encerrou = true;
     ui->areaPoligono->fechaPoligono();
+    ui->areaPoligono->teste();
 }
 
 /* Selecionando a cor */
