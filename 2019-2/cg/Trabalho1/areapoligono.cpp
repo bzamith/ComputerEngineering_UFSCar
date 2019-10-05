@@ -1,6 +1,7 @@
 #include "areapoligono.h"
 #include "ui_areapoligono.h"
 #include "et.h"
+#include "aet.h"
 
 #include <QPointF>
 #include <QPainter>
@@ -100,5 +101,8 @@ void AreaPoligono::paintEvent(QPaintEvent *event)
 void AreaPoligono::teste()
 {
     ET teste = ET(this->getArestas());
+    AET teste2 = AET(teste.getLVs());
+    arestas += teste2.getLVs();
+    update();
 }
 

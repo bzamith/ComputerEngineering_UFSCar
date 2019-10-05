@@ -15,27 +15,29 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-/* Pressionando o botao Limpar */
-void MainWindow::on_botaoLimpar_clicked()
+/* Pressionando o botao de controle */
+void MainWindow::on_botaoControle_clicked()
 {
-    ui->areaPoligono->limparTudo();
-    ui->areaPoligono->iniciou = false;
-    ui->areaPoligono->encerrou = false;
-    ui->areaPoligono->update();
-}
-
-/* Pressionando o botao Iniciar */
-void MainWindow::on_botaoIniciar_clicked()
-{
-    ui->areaPoligono->iniciou = true;
-}
-
-/* Pressionando o botao Encerrar */
-void MainWindow::on_botaoEncerrar_clicked()
-{
-    ui->areaPoligono->encerrou = true;
-    ui->areaPoligono->fechaPoligono();
-    ui->areaPoligono->teste();
+    if(ui->botaoControle->text() == "Iniciar")
+    {
+        ui->areaPoligono->iniciou = true;
+        ui->botaoControle->setText("Encerrar");
+    }
+    else if(ui->botaoControle->text() == "Encerrar")
+    {
+        ui->areaPoligono->encerrou = true;
+        ui->areaPoligono->fechaPoligono();
+        ui->areaPoligono->teste();
+        ui->botaoControle->setText("Limpar");
+    }
+    else if(ui->botaoControle->text() == "Limpar")
+    {
+        ui->areaPoligono->limparTudo();
+        ui->areaPoligono->iniciou = false;
+        ui->areaPoligono->encerrou = false;
+        ui->areaPoligono->update();
+        ui->botaoControle->setText("Iniciar");
+    }
 }
 
 /* Selecionando a cor */
@@ -63,3 +65,4 @@ void MainWindow::on_dropdownCores_currentTextChanged(const QString &arg1)
             ui->areaPoligono->cor = Qt::green;
     }
 }
+

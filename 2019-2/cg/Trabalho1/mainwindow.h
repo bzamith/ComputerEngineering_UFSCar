@@ -16,13 +16,9 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_botaoLimpar_clicked();
-
-    void on_botaoEncerrar_clicked();
-
-    void on_botaoIniciar_clicked();
-
     void on_dropdownCores_currentTextChanged(const QString &arg1);
+
+    void on_botaoControle_clicked();
 
 private:
     Ui::MainWindow *ui;

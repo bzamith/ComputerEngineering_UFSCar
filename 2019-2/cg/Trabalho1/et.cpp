@@ -7,13 +7,18 @@ ET::ET(){}
 
 ET::ET(QVector<QLine> arestas)
 {
-    //arestas = casoTeste3();
+    //arestas = casoTeste1();
     maxLV = encontraMaxLV(arestas);
     for(int i=0; i<maxLV; i++){
         linhasVarredura.append(nullptr);
     }
     populaET(arestas);
     printaET();
+}
+
+QVector<ETNode*> ET::getLVs()
+{
+    return linhasVarredura;
 }
 
 bool ET::verificaHorizontal(QLine aresta)

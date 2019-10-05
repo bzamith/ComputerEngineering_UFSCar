@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>AreaPoligono</class>
  <widget class="QWidget" name="AreaPoligono">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -457,6 +460,9 @@
   </property>
   <property name="windowTitle">
    <string>Form</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
   </property>
  </widget>
  <resources/>

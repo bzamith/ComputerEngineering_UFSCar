@@ -14,11 +14,12 @@ class ETNode
         void insereOrdenado(ETNode* node); // Insere uma ETNode no next mas de maneira ordenada (linked list)
         void insereUltimo(ETNode* node); // Insere uma ETNode no fim, transverse
         void printaNode();
+        void atualizaXMin(); // Método que soma o xmin com o minv
     private:
         double calculaMInv(QLine aresta);
         int calculaYMax(QLine aresta);
         int calculaXMin(QLine aresta);
-        void atualizaXMin(); // Método que soma o xmin com o minv
+
 };
 
 #endif // ETNODE_H

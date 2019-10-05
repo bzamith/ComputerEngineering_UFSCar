@@ -481,7 +481,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="botaoIniciar">
+       <widget class="QPushButton" name="botaoControle">
         <property name="text">
          <string>Iniciar</string>
         </property>
@@ -532,20 +532,6 @@
           <string>Gray</string>
          </property>
         </item>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="botaoEncerrar">
-        <property name="text">
-         <string>Encerrar</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="botaoLimpar">
-        <property name="text">
-         <string>Limpar</string>
-        </property>
        </widget>
       </item>
      </layout>
