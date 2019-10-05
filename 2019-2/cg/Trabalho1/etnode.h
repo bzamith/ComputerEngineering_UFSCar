@@ -8,6 +8,7 @@ class ETNode
     public:
         ETNode(QLine aresta);
         ETNode(QLine aresta, ETNode next);
+        ETNode(double xmin, double ymax, double minv);
         // Atributos da classe ETNode
         double ymax, xmin, minv;
         ETNode *next;

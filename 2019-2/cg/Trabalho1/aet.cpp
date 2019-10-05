@@ -88,14 +88,30 @@ void AET::removeYAtingidos(int index)
 
 void AET::atualizaXMins(int index)
 {
+   ETNode* novo;
    ETNode* atual = niveis.at(index);
    if(atual==nullptr)
        return;
+
+   atual->atualizaXMin();
+   novo = new ETNode(atual->xmin, atual->ymax, atual->minv);
+   atual = atual->next;
+   niveis.replace(index,novo);
    while(atual != nullptr)
    {
        atual->atualizaXMin();
+       novo = new ETNode(atual->xmin, atual->ymax, atual->minv);
+       if(niveis.at(index)->xmin >= novo->xmin)
+       {
+           novo->next = niveis.at(index);
+           niveis.replace(index,novo);
+       }
+       else{
+           niveis.at(index)->insereOrdenado(novo);
+       }
        atual = atual->next;
    }
+
 }
 
 void AET::mergeET(int i)

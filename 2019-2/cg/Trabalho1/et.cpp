@@ -7,7 +7,7 @@ ET::ET(){}
 
 ET::ET(QVector<QLine> arestas)
 {
-    //arestas = casoTeste1();
+    //arestas = casoTeste2();
     maxLV = encontraMaxLV(arestas);
     for(int i=0; i<maxLV; i++){
         linhasVarredura.append(nullptr);
@@ -88,10 +88,10 @@ void ET::printaET()
 QVector<QLine> ET::casoTeste1()
 {
     QPoint pontoA = QPoint(0,0);
-    QPoint pontoB = QPoint(3,4);
-    QPoint pontoC = QPoint(7,4);
-    QPoint pontoD = QPoint(5,2);
-    QPoint pontoE = QPoint(7,0);
+    QPoint pontoB = QPoint(300,400);
+    QPoint pontoC = QPoint(700,400);
+    QPoint pontoD = QPoint(500,200);
+    QPoint pontoE = QPoint(700,0);
 
     QLine linhaAB = QLine(pontoA,pontoB);
     QLine linhaBC = QLine(pontoB,pontoC);
@@ -112,9 +112,9 @@ QVector<QLine> ET::casoTeste1()
 QVector<QLine> ET::casoTeste2()
 {
     QPoint pontoA = QPoint(0,0);
-    QPoint pontoB = QPoint(1,6);
-    QPoint pontoC = QPoint(7,0);
-    QPoint pontoD = QPoint(8,6);
+    QPoint pontoB = QPoint(100,600);
+    QPoint pontoC = QPoint(700,0);
+    QPoint pontoD = QPoint(800,600);
 
     QLine linhaAB = QLine(pontoA,pontoB);
     QLine linhaBC = QLine(pontoB,pontoC);

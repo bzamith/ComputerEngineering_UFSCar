@@ -19,6 +19,14 @@ ETNode::ETNode(QLine aresta, ETNode next)
     this->next = &next;
 }
 
+ETNode::ETNode(double xmin, double ymax, double minv)
+{
+    this->xmin = xmin;
+    this->ymax = ymax;
+    this->minv = minv;
+    this->next = nullptr;
+}
+
 double ETNode::calculaMInv(QLine aresta)
 {
     double num = aresta.y2()-aresta.y1();
