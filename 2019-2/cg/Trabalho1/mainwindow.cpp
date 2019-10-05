@@ -20,6 +20,8 @@ void MainWindow::on_botaoControle_clicked()
 {
     if(ui->botaoControle->text() == "Iniciar")
     {
+        qDebug() << "*** INICIO POLIGONO ***";
+        qDebug() << "*** Printa Pontos ***";
         ui->areaPoligono->iniciou = true;
         ui->botaoControle->setText("Encerrar");
     }
@@ -27,7 +29,7 @@ void MainWindow::on_botaoControle_clicked()
     {
         ui->areaPoligono->encerrou = true;
         ui->areaPoligono->fechaPoligono();
-        ui->areaPoligono->teste();
+        ui->areaPoligono->preenchePoligono();
         ui->botaoControle->setText("Limpar");
     }
     else if(ui->botaoControle->text() == "Limpar")
@@ -36,6 +38,7 @@ void MainWindow::on_botaoControle_clicked()
         ui->areaPoligono->iniciou = false;
         ui->areaPoligono->encerrou = false;
         ui->areaPoligono->update();
+        qDebug() << "*** FIM POLIGONO ***";
         ui->botaoControle->setText("Iniciar");
     }
 }
@@ -44,7 +47,6 @@ void MainWindow::on_botaoControle_clicked()
 void MainWindow::on_dropdownCores_currentTextChanged(const QString &arg1)
 {
     QString cor = ui->dropdownCores->currentText();
-    if (!ui->areaPoligono->iniciou){
         if (cor == "Black")
             ui->areaPoligono->cor = Qt::black;
         else if(cor == "Red")
@@ -63,6 +65,5 @@ void MainWindow::on_dropdownCores_currentTextChanged(const QString &arg1)
             ui->areaPoligono->cor = Qt::gray;
         else if (cor == "Green")
             ui->areaPoligono->cor = Qt::green;
-    }
 }
 

@@ -24,7 +24,7 @@ public:
     QVector<QPoint> getVertices();
     QVector<QLine> getArestas();
     void fechaPoligono(); // Desenha a ultima aresta que conecta
-    void teste();
+    void preenchePoligono();
     ~AreaPoligono();
 
 protected:

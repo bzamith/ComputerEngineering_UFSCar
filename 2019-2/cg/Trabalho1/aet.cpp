@@ -16,6 +16,7 @@ QVector<QLine> AET::getLVs(){
 
 void AET::populaAET()
 {
+    qDebug() << "*** Printa AET ***";
     //Comeca recebendo o primeiro da AET
     niveis.append(etPreenchida.at(0));
     etPreenchida.removeFirst();
@@ -34,15 +35,13 @@ void AET::populaAET()
         // Junta com o da et
         mergeET(i);
         //Calcula range
-        printaAET(i);
         calculaRange(i);
     }
 }
 
 void AET::printaAET(int level)
 {
-    qDebug() << "*** Printa AET ***";
-    if (niveis.at(level) != nullptr){
+     if (niveis.at(level) != nullptr){
        qDebug() << "LV = " << level;
        niveis.at(level)->printaNode();
     }
@@ -54,7 +53,7 @@ void AET::calculaRange(int index){
         while(atual != nullptr){
             QPoint p1 = QPoint(ceil(atual->xmin),index);
             QPoint p2 = QPoint(floor(atual->next->xmin),index);
-            qDebug() << "[" << ceil(atual->xmin) << "," << floor(atual->next->xmin) << ")";
+            //qDebug() << "[" << ceil(atual->xmin) << "," << floor(atual->next->xmin) << ")";
             tracos.append(QLine(p1,p2));
             atual = atual->next->next;
         }
@@ -76,10 +75,10 @@ void AET::removeYAtingidos(int index)
    {
        while(atual->next!=nullptr)
        {
-           if(atual->next->ymax == index){
+           if(atual->next->ymax == index)
                atual->next = atual->next->next;
-           }
-           atual = atual->next;
+           else
+               atual = atual->next;
            if (atual == nullptr)
                return;
        }
@@ -122,7 +121,7 @@ void AET::mergeET(int i)
         {
             if(niveis.at(i)==nullptr)
             {
-                niveis.insert(i,etPreenchida.first());
+                niveis.replace(i,etPreenchida.first());
             }
             else
             {
@@ -142,6 +141,7 @@ void AET::mergeET(int i)
                     atual = proximo;
                 }
             }
+            printaAET(i);
         }
         //Remove da ET
         etPreenchida.removeFirst();

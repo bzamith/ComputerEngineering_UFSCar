@@ -19,11 +19,6 @@ class ET
         int encontraMaxLV(QVector<QLine> arestas); // Encontra a linha de varredura maxima
         void populaET(QVector<QLine> arestas); // Preenche a ET (cria os ETNodes e ordena)
         QVector<ETNode*> linhasVarredura;
-        // Casos de teste para checagem manual
-        QVector<QLine> casoTeste1();
-        QVector<QLine> casoTeste2();
-        QVector<QLine> casoTeste3();
-
 };
 
 #endif // ET_H

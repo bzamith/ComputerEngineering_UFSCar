@@ -98,11 +98,11 @@ void AreaPoligono::paintEvent(QPaintEvent *event)
     }
 }
 
-void AreaPoligono::teste()
+void AreaPoligono::preenchePoligono()
 {
-    ET teste = ET(this->getArestas());
-    AET teste2 = AET(teste.getLVs());
-    arestas += teste2.getLVs();
+    ET et = ET(this->getArestas());
+    AET aet = AET(et.getLVs());
+    arestas += aet.getLVs();
     update();
 }
 

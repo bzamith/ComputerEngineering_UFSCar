@@ -1,4 +1,5 @@
 #include "et.h"
+#include "casosteste.h"
 
 #include <QtDebug>
 #include <math.h>
@@ -7,7 +8,8 @@ ET::ET(){}
 
 ET::ET(QVector<QLine> arestas)
 {
-    //arestas = casoTeste2();
+//    casosTeste* teste = new casosTeste();
+//    arestas = teste->casoTeste3();
     maxLV = encontraMaxLV(arestas);
     for(int i=0; i<maxLV; i++){
         linhasVarredura.append(nullptr);
@@ -30,7 +32,7 @@ bool ET::verificaHorizontal(QLine aresta)
 
 int ET::calculaLV(QLine aresta)
 {
-    return ceil(std::min(aresta.y1(),aresta.y2()));
+    return std::min(aresta.y1(),aresta.y2());
 }
 
 /* Encontra a ultima linha de varredura */
@@ -56,7 +58,7 @@ void ET::populaET(QVector<QLine> arestas)
             int level = calculaLV(arestas.at(i));
             if(linhasVarredura.at(level)==nullptr)
             {
-                linhasVarredura.insert(level,atual);
+                linhasVarredura.replace(level,atual);
             }
             else
             {
@@ -85,76 +87,4 @@ void ET::printaET()
     }
 }
 
-QVector<QLine> ET::casoTeste1()
-{
-    QPoint pontoA = QPoint(0,0);
-    QPoint pontoB = QPoint(300,400);
-    QPoint pontoC = QPoint(700,400);
-    QPoint pontoD = QPoint(500,200);
-    QPoint pontoE = QPoint(700,0);
-
-    QLine linhaAB = QLine(pontoA,pontoB);
-    QLine linhaBC = QLine(pontoB,pontoC);
-    QLine linhaCD = QLine(pontoC,pontoD);
-    QLine linhaDE = QLine(pontoD,pontoE);
-    QLine linhaAE = QLine(pontoA,pontoE);
-
-    QVector<QLine> arestasTeste;
-    arestasTeste.append(linhaDE);
-    arestasTeste.append(linhaBC);
-    arestasTeste.append(linhaCD);
-    arestasTeste.append(linhaAB);
-    arestasTeste.append(linhaAE);
-
-    return arestasTeste;
-}
-
-QVector<QLine> ET::casoTeste2()
-{
-    QPoint pontoA = QPoint(0,0);
-    QPoint pontoB = QPoint(100,600);
-    QPoint pontoC = QPoint(700,0);
-    QPoint pontoD = QPoint(800,600);
-
-    QLine linhaAB = QLine(pontoA,pontoB);
-    QLine linhaBC = QLine(pontoB,pontoC);
-    QLine linhaCD = QLine(pontoC,pontoD);
-    QLine linhaAD = QLine(pontoA,pontoD);
-
-    QVector<QLine> arestasTeste;
-    arestasTeste.append(linhaAB);
-    arestasTeste.append(linhaBC);
-    arestasTeste.append(linhaCD);
-    arestasTeste.append(linhaAD);
-
-    return arestasTeste;
-}
-
-QVector<QLine> ET::casoTeste3()
-{
-    QPoint pontoA = QPoint(0,0);
-    QPoint pontoB = QPoint(3,4);
-    QPoint pontoC = QPoint(7,4);
-    QPoint pontoD = QPoint(5,2);
-    QPoint pontoE = QPoint(7,0);
-
-    QLine linhaAB = QLine(pontoA,pontoB);
-    QLine linhaBC = QLine(pontoB,pontoC);
-    QLine linhaCD = QLine(pontoC,pontoD);
-    QLine linhaDE = QLine(pontoD,pontoE);
-    QLine linhaAE = QLine(pontoA,pontoE);
-    QLine linhaAD = QLine(pontoA,pontoD);
-    QLine linhaAC = QLine(pontoA,pontoC);
-
-    QVector<QLine> arestasTeste;
-    arestasTeste.append(linhaDE);
-    arestasTeste.append(linhaBC);
-    arestasTeste.append(linhaAD);
-    arestasTeste.append(linhaCD);
-    arestasTeste.append(linhaAC);
-    arestasTeste.append(linhaAB);
-    arestasTeste.append(linhaAE);
-
-    return arestasTeste;
-}
 

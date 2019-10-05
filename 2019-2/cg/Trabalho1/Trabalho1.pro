@@ -18,6 +18,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     aet.cpp \
     areapoligono.cpp \
+    casosteste.cpp \
     et.cpp \
     etnode.cpp \
     main.cpp \
@@ -26,6 +27,7 @@ SOURCES += \
 HEADERS += \
     aet.h \
     areapoligono.h \
+    casosteste.h \
     et.h \
     etnode.h \
     mainwindow.h

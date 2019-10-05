@@ -38,15 +38,15 @@ double ETNode::calculaMInv(QLine aresta)
 
 int ETNode::calculaYMax(QLine aresta)
 {
-    return ceil(std::max(aresta.y1(),aresta.y2()));
+    return std::max(aresta.y1(),aresta.y2());
 }
 
 int ETNode::calculaXMin(QLine aresta)
 {
     if(aresta.y1() < aresta.y2()){
-        return ceil(aresta.x1());
+        return aresta.x1();
     }
-    return ceil(aresta.x2());
+    return aresta.x2();
 }
 
 void ETNode::atualizaXMin()
