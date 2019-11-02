@@ -8,7 +8,6 @@ PID::PID(double posDesejada){
     this->integral = 0;
     this->maxPos = 1000;
     this->minPos = 0;
-    this->maxIteracoes = 5000;
     this->preErro = 0;
     this->erro;
     this->posAtual = 0;
@@ -23,7 +22,7 @@ void PID::movimenta(){
     do{
         calculaPID();
         iteracao++;
-    }while(abs(this->erro) > 0.0001 || iteracao < maxIteracoes);
+    }while(abs(this->erro) > 0.0001 && iteracao < MAX_ITERACOES);
 }
 
 void PID::calculaPID(){

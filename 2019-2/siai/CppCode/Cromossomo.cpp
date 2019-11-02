@@ -6,6 +6,7 @@ Cromossomo::Cromossomo(double kp, double ki, double kd){
     this->kp = kp;
     this->ki = ki;
     this->kd = kd;
+    this->fitnessValue = fitnessFunction();
 }
 
 double Cromossomo::fitnessFunction(){
@@ -22,6 +23,10 @@ PID Cromossomo::criaPID(){
     pid.setKi(this->ki);
     pid.setKd(this->kd);
     return pid;
+}
+
+double Cromossomo::getFitnessValue(){
+    return this->fitnessValue;
 }
 
 double Cromossomo::getKp(){
@@ -47,3 +52,4 @@ void Cromossomo::setKi(double ki){
 void Cromossomo::setKd(double kd){
     this->kd = kd;
 }
+

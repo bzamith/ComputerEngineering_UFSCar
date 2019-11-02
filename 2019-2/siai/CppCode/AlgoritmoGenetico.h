@@ -13,8 +13,16 @@ using namespace std;
 class AlgoritmoGenetico{
     public:
         AlgoritmoGenetico();
-        double fitnessFunction(Cromossomo cromossomo);  // colocar private
+        void setRangeKp(double minKp, double maxKp);
+        void setRangeKi(double minKi, double maxKi);
+        void setRangeKd(double minKd, double maxKd);
 
     private:
+        double maxKp, maxKi, maxKd, minKp, minKi, minKd;
         Cromossomo populacao[TAM_POPULACAO];
+        void criaPopulacaoInicial();
+        void printaPopulacao();
+        double geraKp();
+        double geraKi();
+        double geraKd();
 };

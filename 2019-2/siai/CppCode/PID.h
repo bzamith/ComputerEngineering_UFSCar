@@ -2,6 +2,8 @@
     #define PID_H
 #endif
 
+#define MAX_ITERACOES 5000
+
 #include <cmath>
 
 class PID{
@@ -23,7 +25,7 @@ class PID{
         // Calculo
         double dt, integral;
         // Restricoes
-        double maxPos, minPos, maxIteracoes;
+        double maxPos, minPos;
         // Estado
         double preErro, erro, posAtual, termoProporcional, termoIntegrativo, termoDerivativo;
         // Posicao Desejada

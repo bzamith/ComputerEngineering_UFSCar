@@ -18,10 +18,12 @@ class Cromossomo{
         double getKp();
         double getKi();
         double getKd();
+        double getFitnessValue();
         void setKp(double kp);
         void setKi(double ki);
         void setKd(double kd);
     
     private:
         double kp, ki, kd;
+        double fitnessValue;
 };
