@@ -4,7 +4,7 @@ using namespace std;
     #define PID_H
 #endif
 
-#define MAX_ITERACOES 100000
+#define NUM_ITERACOES_PID 100000
 #define MAX_POS 1000.0
 #define MIN_POS 0.0
 

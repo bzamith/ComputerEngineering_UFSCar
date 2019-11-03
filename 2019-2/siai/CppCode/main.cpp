@@ -8,12 +8,5 @@ using namespace std;
 int main(){   
     AlgoritmoGenetico ag = AlgoritmoGenetico();
     ag.rodaAG();
-    //gerarPopulacaoInicial()
-    //while(){
-    //calcularErrosPopulacao()
-    //fazerCruzamento()
-    //fazerMutacao()
-    //}
-    //retornarelhorIndividuo()
     return 0;
 }

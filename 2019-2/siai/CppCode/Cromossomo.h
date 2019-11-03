@@ -21,6 +21,7 @@ class Cromossomo{
         void setKp(double kp);
         void setKi(double ki);
         void setKd(double kd);
+        void printaCromossomo();
     
     private:
         double kp, ki, kd;

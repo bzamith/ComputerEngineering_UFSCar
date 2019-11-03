@@ -20,8 +20,8 @@ bool PID::movimenta(){
     do{
         calculaPID();
         iteracao++;
-    }while(abs(this->erro) > 0.01 && iteracao < MAX_ITERACOES);
-    if(iteracao == MAX_ITERACOES)
+    }while(abs(this->erro) > 0.01 && iteracao < NUM_ITERACOES_PID);
+    if(iteracao == NUM_ITERACOES_PID)
         return true;
     else 
         return false;

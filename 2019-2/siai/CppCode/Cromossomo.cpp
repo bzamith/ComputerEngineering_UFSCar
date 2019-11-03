@@ -50,13 +50,21 @@ double Cromossomo::getAtingiuMaximo(){
 
 void Cromossomo::setKp(double kp){
     this->kp = kp;
+    this->fitnessValue = fitnessFunction();
 }
 
 void Cromossomo::setKi(double ki){
     this->ki = ki;
+    this->fitnessValue = fitnessFunction();
 }
 
 void Cromossomo::setKd(double kd){
     this->kd = kd;
+    this->fitnessValue = fitnessFunction();
 }
 
+void Cromossomo::printaCromossomo(){
+    cout << "Kp = " << this->kp << " | Ki = " << 
+            this->ki << " | Kd = " << this->kd << " | Fitness Value = " << 
+            this->fitnessValue << endl;
+}
