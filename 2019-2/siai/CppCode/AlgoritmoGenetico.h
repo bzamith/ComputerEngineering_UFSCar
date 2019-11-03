@@ -4,9 +4,9 @@ using namespace std;
     #define ALGORITMOGENETICO_H
 #endif
 
-#define TAM_POPULACAO 100
-#define TAM_SELECAO 20
-#define TAM_TORNEIO 10
+#define TAM_POPULACAO 200
+#define TAM_SELECAO 50
+#define TAM_TORNEIO 25
 #define NUM_ITERACOES_AG 300
 
 #include<vector>
@@ -17,28 +17,43 @@ using namespace std;
 
 class AlgoritmoGenetico{
     public:
+        //Construtores
         AlgoritmoGenetico();
+        // Getters and setters
+        double getMelhorKp();
+        double getMelhorKi();
+        double getMelhorKd();
+        double getMelhorFitnessValue();
         void setRangeKp(double minKp, double maxKp);
         void setRangeKi(double minKi, double maxKi);
         void setRangeKd(double minKd, double maxKd);
-        vector<double> rodaAG();
+        // Roda AG
+        void rodaAG();
 
     private:
+        // Ranges
         double maxKp, maxKi, maxKd, minKp, minKi, minKd;
+        // Verificacao
+        bool rodouAG;
+        // Populacoes
         vector<Cromossomo> populacaoAtual;
         vector<Cromossomo> populacaoSelecionada;
+        // Resultado
+        Cromossomo melhorCromossomo;
+        // Funcoes principais
         void criaPopulacaoInicial();
-        void printaPopulacao(vector<Cromossomo> populacao);
-        double geraKp();
-        double geraKi();
-        double geraKd();
-        void ordenaPopulacaoAtual();
-        void ordenaPopulacaoSelecionada();
         void fazSelecao();
-        Cromossomo fazSelecaoTorneio();
-        Cromossomo selecionaCromossomoAleatoriamente();
         void fazCruzamento();
         void fazElitismo();
-        vector<double> retornaMelhoresConstantes();
-        Cromossomo retornaMelhorCromossomo();
+        void encontraMelhorCromossomo();
+        // Funcoes secundarias
+        double geraKpAleatorio();
+        double geraKiAleatorio();
+        double geraKdAleatorio();
+        Cromossomo fazSelecaoTorneio();
+        Cromossomo selecionaCromossomoAleatoriamente();
+        void ordenaPopulacao(vector<Cromossomo> &populacao);
+        // Debug
+        bool verificaRodouAG();
+        void printaPopulacao(vector<Cromossomo> populacao);  
 };

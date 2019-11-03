@@ -10,9 +10,9 @@ Cromossomo::Cromossomo(double kp, double ki, double kd){
 }
 
 double Cromossomo::fitnessFunction(){
-    PID pid = criaPID();
+    PID pid = setaPID();
     auto tempoInicial = chrono::high_resolution_clock::now();
-    this->atingiuMaximo = pid.movimenta();
+    this->atingiuMaximo = pid.rodaPID();
     auto tempoFinal = chrono::high_resolution_clock::now();
     if(this->atingiuMaximo == true)
         return 100000;
@@ -20,7 +20,7 @@ double Cromossomo::fitnessFunction(){
         return chrono::duration_cast<chrono::microseconds>(tempoFinal - tempoInicial).count();
 } 
 
-PID Cromossomo::criaPID(){
+PID Cromossomo::setaPID(){
     PID pid = PID(POS_DESEJADA);
     pid.setKp(this->kp);
     pid.setKi(this->ki);
@@ -28,8 +28,10 @@ PID Cromossomo::criaPID(){
     return pid;
 }
 
-double Cromossomo::getFitnessValue(){
-    return this->fitnessValue;
+void Cromossomo::printaCromossomo(){
+    cout << "Kp = " << this->kp << " | Ki = " << 
+            this->ki << " | Kd = " << this->kd << " | Fitness Value = " << 
+            this->fitnessValue << endl;
 }
 
 double Cromossomo::getKp(){
@@ -42,6 +44,10 @@ double Cromossomo::getKi(){
 
 double Cromossomo::getKd(){
     return this->kd;
+}
+
+double Cromossomo::getFitnessValue(){
+    return this->fitnessValue;
 }
 
 double Cromossomo::getAtingiuMaximo(){
@@ -61,10 +67,4 @@ void Cromossomo::setKi(double ki){
 void Cromossomo::setKd(double kd){
     this->kd = kd;
     this->fitnessValue = fitnessFunction();
-}
-
-void Cromossomo::printaCromossomo(){
-    cout << "Kp = " << this->kp << " | Ki = " << 
-            this->ki << " | Kd = " << this->kd << " | Fitness Value = " << 
-            this->fitnessValue << endl;
 }

@@ -11,8 +11,10 @@ using namespace std;
 
 class Cromossomo{
     public:
+        // Construtores
         Cromossomo();
         Cromossomo(double kp, double ki, double kd);
+        // Getters and Setters
         double getKp();
         double getKi();
         double getKd();
@@ -21,12 +23,17 @@ class Cromossomo{
         void setKp(double kp);
         void setKi(double ki);
         void setKd(double kd);
+        // Printa
         void printaCromossomo();
     
     private:
+        // Genes
         double kp, ki, kd;
+        // Fitness Value
         double fitnessValue;
+        // Debug
         bool atingiuMaximo;
+        // Funcoes
         double fitnessFunction();
-        PID criaPID();
+        PID setaPID();
 };

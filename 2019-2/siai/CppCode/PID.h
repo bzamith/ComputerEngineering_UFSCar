@@ -13,16 +13,17 @@ using namespace std;
 
 class PID{
     public:
+        // Construtores
         PID(double posDesejada);
-        
-        //getters and setters
+        // Getters and setters
         double getKp();
         double getKi();
         double getKd();
         void setKp(double kp);
         void setKi(double ki);
         void setKd(double kd);
-        bool movimenta();  
+        // Roda PID
+        bool rodaPID();  
 
     private:
         // Constantes
@@ -34,11 +35,12 @@ class PID{
         // Posicao Desejada
         double posDesejada;
         // Funcoes 
+        void calculaPID();  
         void calculaErro();
         void calculaProporcional();
         void calculaIntegrativo();
         void calculaDerivativo();
         double calculaPosicaoSugerida();
         void calculaPosicaoFinal(double posSugerida);
-        void calculaPID();          
+                
 };

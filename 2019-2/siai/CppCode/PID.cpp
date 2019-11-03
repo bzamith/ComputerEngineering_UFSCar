@@ -15,7 +15,7 @@ PID::PID(double posDesejada){
     this->posDesejada = posDesejada;
 }
 
-bool PID::movimenta(){
+bool PID::rodaPID(){
     int iteracao = 0;
     do{
         calculaPID();

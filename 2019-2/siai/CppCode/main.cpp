@@ -8,5 +8,9 @@ using namespace std;
 int main(){   
     AlgoritmoGenetico ag = AlgoritmoGenetico();
     ag.rodaAG();
+    cout << "Kp = " << ag.getMelhorKp() << endl;
+    cout << "Ki = " << ag.getMelhorKi() << endl;
+    cout << "Kd = " << ag.getMelhorKd() << endl;
+    cout << "Fitness Value = " << ag.getMelhorFitnessValue() << endl;
     return 0;
 }
