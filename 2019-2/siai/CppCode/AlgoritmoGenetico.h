@@ -8,6 +8,7 @@ using namespace std;
 
 #include<vector>
 #include<iostream>
+#include <algorithm>
 #include "Cromossomo.h"
 
 class AlgoritmoGenetico{
@@ -16,6 +17,7 @@ class AlgoritmoGenetico{
         void setRangeKp(double minKp, double maxKp);
         void setRangeKi(double minKi, double maxKi);
         void setRangeKd(double minKd, double maxKd);
+        void rodaAG();
 
     private:
         double maxKp, maxKi, maxKd, minKp, minKi, minKd;
@@ -25,4 +27,6 @@ class AlgoritmoGenetico{
         double geraKp();
         double geraKi();
         double geraKd();
+        void bubbleSortSwap(Cromossomo &a, Cromossomo &b);
+        void bubbleSort(Cromossomo *array);
 };

@@ -1,26 +1,26 @@
 #include "AlgoritmoGenetico.h"
 
 AlgoritmoGenetico::AlgoritmoGenetico(){
-    this->maxKp = 1;
-    this->maxKi = 1;
-    this->maxKd = 1;
-    this->minKp = 0.001;
-    this->minKi = 0.001;
-    this->minKd = 0.001;
+    this->maxKp = 0.5;
+    this->maxKi = 0.05;
+    this->maxKd = 0;
+    this->minKp = 0;
+    this->minKi = 0;
+    this->minKd = 0;
+}
 
+void AlgoritmoGenetico::rodaAG(){
     criaPopulacaoInicial();
-    // printaPopulacao();
+    bubbleSort(this->populacao);
+    printaPopulacao();
 }
 
 void AlgoritmoGenetico::criaPopulacaoInicial(){
     for(int i=0; i<TAM_POPULACAO; i++){
-        cout << i << endl;
         double kp = geraKp();
-        cout << "Kp = " << kp << endl;
         double ki = geraKi();
-        cout << "Ki = " << ki << endl;
-        double kd = geraKd();
-        cout << "Kd = " << kd << endl;
+        double kd = 0;
+        //double kd = geraKd();
         Cromossomo cromossomoAtual = Cromossomo(kp,ki,kd);
         populacao[i] = cromossomoAtual;
     }
@@ -30,15 +30,15 @@ void AlgoritmoGenetico::printaPopulacao(){
     for(int i=0; i<TAM_POPULACAO; i++){
         Cromossomo cromossomoAtual = this->populacao[i];
         cout << "Cromossomo " << i << " | Kp = " << cromossomoAtual.getKp() << " | Ki = " << 
-            cromossomoAtual.getKi() << " | Kd = " << cromossomoAtual.getKp() << " | Fitness Value = " << cromossomoAtual.getFitnessValue() << endl;
+            cromossomoAtual.getKi() << " | Kd = " << cromossomoAtual.getKd() << " | Fitness Value = " << 
+            cromossomoAtual.getFitnessValue() << " | Max = " << cromossomoAtual.getAtingiuMaximo() << endl;
     }
 }
-
 
 double AlgoritmoGenetico::geraKp(){
     double kp;
     do{
-        kp = (double)rand()/RAND_MAX*0.1;
+        kp = ((double)rand()/RAND_MAX);
     }while(kp > this->maxKp || kp < this->minKp);
     return kp;
 }
@@ -46,7 +46,7 @@ double AlgoritmoGenetico::geraKp(){
 double AlgoritmoGenetico::geraKi(){
     double ki;
     do{
-        ki = (double)rand()/RAND_MAX*0.1;
+        ki = ((double)rand()/RAND_MAX)*0.1;
     }while(ki > this->maxKi || ki < this->minKi);
     return ki;
 }
@@ -54,7 +54,7 @@ double AlgoritmoGenetico::geraKi(){
 double AlgoritmoGenetico::geraKd(){
     double kd;
     do{
-        kd = (double)rand()/RAND_MAX*0.1;
+        kd = ((double)rand()/RAND_MAX)*0.1;
     }while(kd > this->maxKd || kd < this->minKd);
     return kd;
 }
@@ -74,3 +74,23 @@ void AlgoritmoGenetico::setRangeKi(double minKi, double maxKi){
     this->maxKi = maxKi;
 }
 
+void AlgoritmoGenetico::bubbleSortSwap(Cromossomo &a, Cromossomo &b) {
+   Cromossomo temp;
+   temp = a;
+   a = b;
+   b = temp;
+}
+
+void AlgoritmoGenetico::bubbleSort(Cromossomo *array) {
+   for(int i = 0; i<TAM_POPULACAO; i++) {
+      bool swaps = false;
+      for(int j = 0; j<TAM_POPULACAO-i-1; j++) {
+         if(array[j].getFitnessValue() > array[j+1].getFitnessValue()) {
+            bubbleSortSwap(array[j], array[j+1]);
+            swaps = true;
+         }
+      }
+      if(!swaps)
+         break;
+   }
+}

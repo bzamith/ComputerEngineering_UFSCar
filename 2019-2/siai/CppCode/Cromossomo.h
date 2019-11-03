@@ -4,7 +4,7 @@ using namespace std;
     #define CROMOSSOMO_H
 #endif
 
-#define POS_DESEJADA 80.0
+#define POS_DESEJADA 100.0
 
 #include <chrono>
 #include "PID.h"
@@ -13,11 +13,10 @@ class Cromossomo{
     public:
         Cromossomo();
         Cromossomo(double kp, double ki, double kd);
-        double fitnessFunction();
-        PID criaPID();
         double getKp();
         double getKi();
         double getKd();
+        double getAtingiuMaximo();
         double getFitnessValue();
         void setKp(double kp);
         void setKi(double ki);
@@ -26,4 +25,7 @@ class Cromossomo{
     private:
         double kp, ki, kd;
         double fitnessValue;
+        bool atingiuMaximo;
+        double fitnessFunction();
+        PID criaPID();
 };

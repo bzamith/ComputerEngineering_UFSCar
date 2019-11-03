@@ -12,9 +12,12 @@ Cromossomo::Cromossomo(double kp, double ki, double kd){
 double Cromossomo::fitnessFunction(){
     PID pid = criaPID();
     auto tempoInicial = chrono::high_resolution_clock::now();
-    pid.movimenta();
+    this->atingiuMaximo = pid.movimenta();
     auto tempoFinal = chrono::high_resolution_clock::now();
-    return chrono::duration_cast<chrono::microseconds>(tempoFinal - tempoInicial).count();
+    if(this->atingiuMaximo == true)
+        return 100000;
+    else 
+        return chrono::duration_cast<chrono::microseconds>(tempoFinal - tempoInicial).count();
 } 
 
 PID Cromossomo::criaPID(){
@@ -39,6 +42,10 @@ double Cromossomo::getKi(){
 
 double Cromossomo::getKd(){
     return this->kd;
+}
+
+double Cromossomo::getAtingiuMaximo(){
+    return this->atingiuMaximo;
 }
 
 void Cromossomo::setKp(double kp){

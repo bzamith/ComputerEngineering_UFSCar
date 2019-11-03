@@ -6,8 +6,6 @@ PID::PID(double posDesejada){
     this->kd = 0;
     this->dt = 0.01;
     this->integral = 0;
-    this->maxPos = 1000;
-    this->minPos = 0;
     this->preErro = 0;
     this->erro;
     this->posAtual = 0;
@@ -17,12 +15,16 @@ PID::PID(double posDesejada){
     this->posDesejada = posDesejada;
 }
 
-void PID::movimenta(){
+bool PID::movimenta(){
     int iteracao = 0;
     do{
         calculaPID();
         iteracao++;
-    }while(abs(this->erro) > 0.0001 && iteracao < MAX_ITERACOES);
+    }while(abs(this->erro) > 0.01 && iteracao < MAX_ITERACOES);
+    if(iteracao == MAX_ITERACOES)
+        return true;
+    else 
+        return false;
 }
 
 void PID::calculaPID(){
@@ -58,10 +60,10 @@ double PID::calculaPosicaoSugerida(){
 }
 
 void PID::calculaPosicaoFinal(double posicaoSugerida){
-    if(posicaoSugerida > this->maxPos)
-        this->posAtual = this->maxPos;
-    else if(posicaoSugerida < this->minPos)
-        this->posAtual = this->minPos;
+    if(posicaoSugerida > MAX_POS)
+        this->posAtual = MAX_POS;
+    else if(posicaoSugerida < MIN_POS)
+        this->posAtual = MIN_POS;
     else
         this->posAtual = posicaoSugerida;
 }

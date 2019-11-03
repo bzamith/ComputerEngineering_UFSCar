@@ -1,9 +1,14 @@
+using namespace std;
+
 #ifndef PID_H
     #define PID_H
 #endif
 
-#define MAX_ITERACOES 5000
+#define MAX_ITERACOES 100000
+#define MAX_POS 1000.0
+#define MIN_POS 0.0
 
+#include <iostream>
 #include <cmath>
 
 class PID{
@@ -17,15 +22,13 @@ class PID{
         void setKp(double kp);
         void setKi(double ki);
         void setKd(double kd);
-        void movimenta();  
+        bool movimenta();  
 
     private:
         // Constantes
         double kp, ki, kd;
         // Calculo
         double dt, integral;
-        // Restricoes
-        double maxPos, minPos;
         // Estado
         double preErro, erro, posAtual, termoProporcional, termoIntegrativo, termoDerivativo;
         // Posicao Desejada
