@@ -1,89 +1,53 @@
-# Engenharia de Computação @ UFSCar
-Projetos Desenvolvidos para Disciplinas - Engenharia de Computação, UFSCar (2015-2020)
+# Computer Engineering @ UFSCar
+Projects developed as an Undergraduate Student in Computer Engineering, UFSCar (2015-2020)
 
-```
-├── 2015-1
-│ └── cap
-├── 2016-1
-│ ├── circuitos-digitais
-│ └── estrutura-dados
-├── 2016-2
-│ ├── ori
-│ └── paa
-├── 2017-1
-│ ├── arq2 
-│ ├── isi
-│ ├── mat-comp
-│ └── plp
-├── 2018-1
-│ ├── redes-neurais
-│ ├── seguranca-cibernetica
-│ ├── web
-│ └── so1
-├── 2018-2
-│ ├── banco-de-dados 
-│ ├── es1
-│ └── microcontroladores
-├── 2019-1
-│ ├── lab-bd 
-│ ├── es2
-│ ├── redes
-│ ├── sd
-│ ├── ia
-│ ├── so2
-│ └── tec-com
-└── 2019-2
-│ ├── siai 
-│ ├── pmac
-│ └── cg
-```
 ### 2015-1
-Primeiro Semestre de 2015
-- [x] Construção de Algoritmos e Programação - prof. Ricardo Ciferri
+First Semester, 2015
+- [x] **cap** - ALGORITHMS CONSTRUCTION AND PROGRAMMING - prof. Ricardo Ciferri
 
 ### 2016-1
-Primeiro Semestre de 2016
-- [x] Circuitos Digitais - prof. Emerson Pedrino
-- [x] Estrutura de Dados - prof. Roberto Ferrari
+First Semester, 2016
+- [x] **circuitos-digitais** - DIGITAL CIRCUITS - prof. Emerson Pedrino
+- [x] **estruturas-dados** - DATA STRUCTURES - prof. Roberto Ferrari
 
 ### 2016-2
-Segundo Semestre de 2016
-- [x] Organização e Recuperação da Informação - prof. Jander Moreira
-- [x] Projeto e Análise de Algoritmos - prof. Ednaldo Pizzolato
+Second Semester, 2016
+- [x] **ori** - DATA ORGANIZATION AND RECOVERY - prof. Jander Moreira
+- [x] **paa** - ALGORITHMS DESIGN AND ANALYSIS - prof. Ednaldo Pizzolato
 
 ### 2017-1
-Primeiro Semestre de 2017
-- [x] Arquitetura de Computadores 2 - prof. Luciano Neris
-- [x] Introdução a Sistemas de Informação - profa. Sandra Fabbri
-- [x] Matemática Computacional - prof. Alexandre Levada
-- [x] Paradigmas de Linguagens de Programação - prof. Daniel Lucrédio
+First Semester, 2017
+- [x] **arq2** - COMPUTER ARCHITECTURE AND ORGANIZATION 2 - prof. Luciano Neris
+- [x] **isi** - INTRODUCTION TO INFORMATION SYSTEMS - prof. Sandra Fabbri
+- [x] **mat-comp** - COMPUTATIONAL MATHEMATICS - prof. Alexandre Levada
+- [x] **plp** - PARADIGMS OF PROGRAMMING LANGUAGES - prof. Daniel Lucrédio
 
 ### 2018-1
-Primeiro Semestre de 2018
-- [x] Introdução a Redes Neurais - prof. Ricardo Cerri
-- [x] Engenharia de Segurança Cibernética - prof. César Marcondes
-- [x] Desenvolvimento WEB - prof. Daniel Lucrédio
-- [x] Sistemas Operacionais 1 - profa. Kelen Vivaldini
+First Semester, 2018
+- [x] **redes-neurais** - INTRODUCTION TO NEURAL NETWORKS - prof. Ricardo Cerri
+- [x] **seguranca-cibernetica** - CYBER SECURITY ENGINEERING - prof. César Marcondes
+- [x] **web** - WEB DEVELOPMENT - prof. Daniel Lucrédio
+- [x] **so1** - OPERATING SYSTEMS 1 - prof. Kelen Vivaldini
 
 ### 2018-2
-Segundo Semestre de 2018
-- [x] Banco de Dados - profa. Marcela Ribeiro
-- [x] Engenharia de Software 1 - prof. Auri Vicenzi
-- [x] Microcontroladores e Aplicações - prof. Edilson Kato
+Second Semester, 2018
+- [x] **banco-de-dados** - DATABASES - prof. Marcela Ribeiro
+- [x] **es1** - SOFTWARE ENGINEERING 1 - prof. Auri Vicenzi
+- [x] **microcontroladores** - MICROCONTROLLERS AND APPLICATIONS - prof. Edilson Kato
 
 ### 2019-1
-Primeiro Semestre de 2019
-- [x] Tecnologia e Comunicação de Dados - prof. Rafael Aroca
-- [X] Inteligência Artificial - prof. Murilo Naldi
-- [x] Sistemas Distribuídos - prof. Fredy Valente
-- [x] Construção de Compiladores 1 - prof. Daniel Lucrédio
-- [x] Engenharia de Software 2 - prof. Valter Camargo
-- [x] Laboratório de Banco de Dados - profa. Marilde Santos 
-- [x] Redes de Computadores - prof. Jó Ueyama (USP) 
-- [x] Sistemas Operacionais 2 - prof. Helio Crestana Guardia
+First Semester, 2019
+- [x] **tec-com** - TECHNOLOGY AND DATA COMMUNICATION - prof. Rafael Aroca
+- [X] **ia** - ARTIFICIAL INTELLIGENCE - prof. Murilo Naldi
+- [x] **sd** - DISTRIBUTED SYSTEMS - prof. Fredy Valente
+- [x] **cc1** - COMPILERS 1 - prof. Daniel Lucrédio
+- [x] **es2** - SOFTWARE ENGINEERING 2 - prof. Valter Camargo
+- [x] **lab-bd** - DATABASES LAB - prof. Marilde Santos 
+- [x] **redes** - COMPUTER NETWORK - prof. Jó Ueyama (USP) 
+- [x] **so2** - OPERATING SYSTEMS 2 - prof. Helio Crestana Guardia
 
 ### 2019-2
-Segundo Semestre de 2019
-- [ ] Sistemas de Integração e Automação Industrial - prof. Orides Morandin
-- [ ] Projeto e Manufatura Assistidos por Computador - profa. Kelen Vivaldini
-- [ ] Computação Gráfica - profa. Agma Juci Machado (USP)
+Second Semester, 2019
+- [ ] **siai** - INDUSTRIAL AUTOMATION AND INTEGRATION SYSTEMS - prof. Orides Morandin
+- [ ] **pmac** - COMPUTER AIDED DESIGN AND MANUFACTURING - prof. Kelen Vivaldini
+- [ ] **cg** - COMPUTER GRAPHICS - prof. Agma Juci Machado (USP)
