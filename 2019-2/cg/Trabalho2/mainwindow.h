@@ -26,7 +26,7 @@ private slots:
 
     void on_rOk_clicked();
 
-    void on_pushButton_clicked();
+    void on_botaoLimpa_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -8,6 +8,11 @@ Cube::Cube(QWidget *parent) : QGLWidget(parent)
 {
     setFormat(QGLFormat(QGL::DoubleBuffer | QGL::DepthBuffer));
 
+    novoCubo();
+}
+
+void Cube::novoCubo()
+{
     vertices = {
         QVector3D(+1, -1, +1),
         QVector3D(+1, -1, -1),
@@ -36,6 +41,9 @@ Cube::Cube(QWidget *parent) : QGLWidget(parent)
         Qt::yellow,
         Qt::magenta
     };
+
+    QVector<QString> ajusteFinal = {"T","z","-10"};
+    vertices = CubeTransformation::Transform(vertices, ajusteFinal);
 }
 
 void Cube::initializeGL()
@@ -90,7 +98,7 @@ vector<QVector3D> Cube::getVertices()
     return this->vertices;
 }
 
-void Cube::transformeCube()
+void Cube::transformeCube(QVector<QVector<QString>> transformacoes)
 {
-    this->vertices = CubeTransformation::Transform(vertices);
+    this->vertices = CubeTransformation::Transform(vertices, transformacoes.last());
 }

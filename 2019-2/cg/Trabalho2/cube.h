@@ -16,7 +16,8 @@ private:
 
 public:
     Cube(QWidget *parent = nullptr);
-    void transformeCube();
+    void transformeCube(QVector<QVector<QString>> transformacoes);
+    void novoCubo();
 
 protected:
     void initializeGL();

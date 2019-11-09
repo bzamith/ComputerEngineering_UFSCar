@@ -3,15 +3,43 @@
 #include <QMatrix4x4>
 #include <math.h>
 
-vector<QVector3D> CubeTransformation::Transform(vector<QVector3D>& points)
+vector<QVector3D> CubeTransformation::Transform(vector<QVector3D>& points, QVector<QString> infoTransformacao)
 {
-    // moves the cube 10 units backwards,
-    // so it can fit in the far / near clipping planes
-    auto tz = translationZ(-10);
-    return applyTransformation (points, tz);
+    QString tipo = infoTransformacao.at(0);
+    QString eixo = infoTransformacao.at(1);
+    float valor = infoTransformacao.at(2).toFloat();
+
+    vector<vector<float>> transformacao;
+
+    if(tipo.toUpper() == "T"){
+        if(eixo.toUpper() == "X")
+            transformacao = translacaoX(valor);
+        else if(eixo.toUpper()=="Y")
+            transformacao = translacaoY(valor);
+        else
+            transformacao = translacaoZ(valor);
+    }
+    else if(tipo.toUpper() == "E"){
+        if(eixo.toUpper() == "X")
+            transformacao = escalaX(valor);
+        else if(eixo.toUpper()=="Y")
+            transformacao = escalaY(valor);
+        else
+            transformacao = escalaZ(valor);
+    }
+    else{
+        if(eixo.toUpper() == "X")
+            transformacao = rotacaoX(valor);
+        else if(eixo.toUpper()=="Y")
+            transformacao = rotacaoY(valor);
+        else
+            transformacao = rotacaoZ(valor);
+    }
+
+    return applyTransformation (points, transformacao);
 }
 
-vector<vector<float>> CubeTransformation::translationX (float x)
+vector<vector<float>> CubeTransformation::translacaoX(float x)
 {
     return
     {
@@ -22,7 +50,7 @@ vector<vector<float>> CubeTransformation::translationX (float x)
     };
 }
 
-vector<vector<float>> CubeTransformation::translationY (float y)
+vector<vector<float>> CubeTransformation::translacaoY(float y)
 {
     return
     {
@@ -33,7 +61,7 @@ vector<vector<float>> CubeTransformation::translationY (float y)
     };
 }
 
-vector<vector<float>> CubeTransformation::translationZ (float z)
+vector<vector<float>> CubeTransformation::translacaoZ(float z)
 {
     return
     {
@@ -45,7 +73,7 @@ vector<vector<float>> CubeTransformation::translationZ (float z)
 }
 
 
-vector<vector<float>> CubeTransformation::scaleX (float x)
+vector<vector<float>> CubeTransformation::escalaX(float x)
 {
     return
     {
@@ -56,7 +84,7 @@ vector<vector<float>> CubeTransformation::scaleX (float x)
     };
 }
 
-vector<vector<float>> CubeTransformation::scaleY (float y)
+vector<vector<float>> CubeTransformation::escalaY(float y)
 {
     return
     {
@@ -67,7 +95,7 @@ vector<vector<float>> CubeTransformation::scaleY (float y)
     };
 }
 
-vector<vector<float>> CubeTransformation::scaleZ (float z)
+vector<vector<float>> CubeTransformation::escalaZ(float z)
 {
     return
     {
@@ -78,10 +106,10 @@ vector<vector<float>> CubeTransformation::scaleZ (float z)
     };
 }
 
-vector<vector<float>> CubeTransformation::rotationX (float teta)
+vector<vector<float>> CubeTransformation::rotacaoX(float theta)
 {
-    float c = cos(teta);
-    float s = sin(teta);
+    float c = cos(theta);
+    float s = sin(theta);
     return
     {
         {1, 0, 0, 0},
@@ -91,10 +119,10 @@ vector<vector<float>> CubeTransformation::rotationX (float teta)
     };
 }
 
-vector<vector<float>> CubeTransformation::rotationY (float teta)
+vector<vector<float>> CubeTransformation::rotacaoY(float theta)
 {
-    float c = cos(teta);
-    float s = sin(teta);
+    float c = cos(theta);
+    float s = sin(theta);
     return
     {
         {c, 0, s, 0},
@@ -104,10 +132,10 @@ vector<vector<float>> CubeTransformation::rotationY (float teta)
     };
 }
 
-vector<vector<float>> CubeTransformation::rotationZ (float teta)
+vector<vector<float>> CubeTransformation::rotacaoZ(float theta)
 {
-    float c = cos(teta);
-    float s = sin(teta);
+    float c = cos(theta);
+    float s = sin(theta);
     return
     {
         {c, -s, 0, 0},
