@@ -16,15 +16,15 @@ class AreaPoligono : public QWidget
     Q_OBJECT
 
 public:
-    bool iniciou;
-    bool encerrou;
+    bool iniciou, encerrou, comecouAlterar, alterou;
+    int valorAlterar;
     QColor cor;
-    explicit AreaPoligono(QWidget *parent = nullptr);
-    void limparTudo();
     QVector<QPoint> getVertices();
     QVector<QLine> getArestas();
-    void fechaPoligono(); // Desenha a ultima aresta que conecta
-    void preenchePoligono();
+    explicit AreaPoligono(QWidget *parent = nullptr);
+    void limpaTudo();
+    void criaArestas();
+    void scanLine();
     ~AreaPoligono();
 
 protected:

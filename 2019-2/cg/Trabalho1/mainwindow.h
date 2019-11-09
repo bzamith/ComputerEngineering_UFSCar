@@ -20,6 +20,8 @@ private slots:
 
     void on_botaoControle_clicked();
 
+    void on_botaoAlterar_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

@@ -54,20 +54,6 @@ void ETNode::atualizaXMin()
     this->xmin = this->xmin + this->minv;
 }
 
-void ETNode::insereUltimo(ETNode* node)
-{
-    ETNode* atual = this;
-    if(this->next == nullptr)
-        this->next = node;
-    else
-    {
-        while(atual->next!=nullptr){
-            atual = atual->next;
-        }
-        atual->next = node;
-    }
-}
-
 void ETNode::insereOrdenado(ETNode* node)
 {
     ETNode* atual = this;

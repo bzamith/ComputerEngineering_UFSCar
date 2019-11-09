@@ -13,7 +13,6 @@ class ETNode
         double ymax, xmin, minv;
         ETNode *next;
         void insereOrdenado(ETNode* node); // Insere uma ETNode no next mas de maneira ordenada (linked list)
-        void insereUltimo(ETNode* node); // Insere uma ETNode no fim, transverse
         void printaNode();
         void atualizaXMin(); // Método que soma o xmin com o minv
     private:

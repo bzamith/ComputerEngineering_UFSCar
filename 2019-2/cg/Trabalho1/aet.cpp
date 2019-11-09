@@ -2,15 +2,12 @@
 #include <QDebug>
 #include<math.h>
 
-AET::AET() {}
-
 AET::AET(QVector<ETNode*> etPreenchida)
 {
     this->etPreenchida = etPreenchida;
-    populaAET();
 }
 
-QVector<QLine> AET::getLVs(){
+QVector<QLine> AET::getTracos(){
     return tracos;
 }
 
@@ -18,16 +15,16 @@ void AET::populaAET()
 {
     qDebug() << "*** Printa AET ***";
     //Comeca recebendo o primeiro da AET
-    niveis.append(etPreenchida.at(0));
+    linhasVarredura.append(etPreenchida.at(0));
     etPreenchida.removeFirst();
     printaAET(0);
     calculaRange(0);
     int i = 0;
-    while(!(etPreenchida.isEmpty() && niveis.at(i)==nullptr))
+    while(!(etPreenchida.isEmpty() && linhasVarredura.at(i)==nullptr))
     {
         i++;
         // Copia do nivel anterior
-        niveis.append(niveis.at(i-1));
+        linhasVarredura.append(linhasVarredura.at(i-1));
         // Checa se nao tem nenhum com y atingido
         removeYAtingidos(i);
         // Atualiza xmin
@@ -41,15 +38,15 @@ void AET::populaAET()
 
 void AET::printaAET(int level)
 {
-     if (niveis.at(level) != nullptr){
+     if (linhasVarredura.at(level) != nullptr){
        qDebug() << "LV = " << level;
-       niveis.at(level)->printaNode();
+       linhasVarredura.at(level)->printaNode();
     }
 }
 
 void AET::calculaRange(int index){
-    if(niveis.at(index)!=nullptr){
-        ETNode* atual = niveis.at(index);
+    if(linhasVarredura.at(index)!=nullptr){
+        ETNode* atual = linhasVarredura.at(index);
         while(atual != nullptr){
             QPoint p1 = QPoint(ceil(atual->xmin),index);
             QPoint p2 = QPoint(floor(atual->next->xmin),index);
@@ -62,11 +59,11 @@ void AET::calculaRange(int index){
 
 void AET::removeYAtingidos(int index)
 {
-   ETNode* atual = niveis.at(index);
+   ETNode* atual = linhasVarredura.at(index);
    if(atual==nullptr)
         return;
    while(atual->ymax==index){
-       niveis.replace(index,atual->next);
+       linhasVarredura.replace(index,atual->next);
        atual=atual->next;
        if(atual==nullptr)
            return;
@@ -88,40 +85,40 @@ void AET::removeYAtingidos(int index)
 void AET::atualizaXMins(int index)
 {
    ETNode* novo;
-   ETNode* atual = niveis.at(index);
+   ETNode* atual = linhasVarredura.at(index);
    if(atual==nullptr)
        return;
 
    atual->atualizaXMin();
    novo = new ETNode(atual->xmin, atual->ymax, atual->minv);
    atual = atual->next;
-   niveis.replace(index,novo);
+   linhasVarredura.replace(index,novo);
    while(atual != nullptr)
    {
        atual->atualizaXMin();
        novo = new ETNode(atual->xmin, atual->ymax, atual->minv);
-       if(niveis.at(index)->xmin >= novo->xmin)
+       if(linhasVarredura.at(index)->xmin >= novo->xmin)
        {
-           novo->next = niveis.at(index);
-           niveis.replace(index,novo);
+           novo->next = linhasVarredura.at(index);
+           linhasVarredura.replace(index,novo);
        }
        else{
-           niveis.at(index)->insereOrdenado(novo);
+           linhasVarredura.at(index)->insereOrdenado(novo);
        }
        atual = atual->next;
    }
 
 }
 
-void AET::mergeET(int i)
+void AET::mergeET(int index)
 {
     if(!etPreenchida.isEmpty())
     {
         if(etPreenchida.first()!=nullptr)
         {
-            if(niveis.at(i)==nullptr)
+            if(linhasVarredura.at(index)==nullptr)
             {
-                niveis.replace(i,etPreenchida.first());
+                linhasVarredura.replace(index,etPreenchida.first());
             }
             else
             {
@@ -130,18 +127,18 @@ void AET::mergeET(int i)
                 {
                     ETNode* proximo = atual->next;
                     atual->next = nullptr;
-                    if(niveis.at(i)->xmin >= atual->xmin)
+                    if(linhasVarredura.at(index)->xmin >= atual->xmin)
                     {
-                        atual->next = niveis.at(i);
-                        niveis.replace(i,atual);
+                        atual->next = linhasVarredura.at(index);
+                        linhasVarredura.replace(index,atual);
                     }
                     else{
-                        niveis.at(i)->insereOrdenado(atual);
+                        linhasVarredura.at(index)->insereOrdenado(atual);
                     }
                     atual = proximo;
                 }
             }
-            printaAET(i);
+            printaAET(index);
         }
         //Remove da ET
         etPreenchida.removeFirst();

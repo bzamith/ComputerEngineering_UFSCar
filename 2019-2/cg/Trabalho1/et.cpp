@@ -4,18 +4,16 @@
 #include <QtDebug>
 #include <math.h>
 
-ET::ET(){}
-
 ET::ET(QVector<QLine> arestas)
 {
 //    casosTeste* teste = new casosTeste();
 //    arestas = teste->casoTeste3();
-    maxLV = encontraMaxLV(arestas);
+    this->arestas = arestas;
+    maxLV = encontraMaxLV();
     for(int i=0; i<maxLV; i++){
         linhasVarredura.append(nullptr);
     }
-    populaET(arestas);
-    printaET();
+
 }
 
 QVector<ETNode*> ET::getLVs()
@@ -23,20 +21,20 @@ QVector<ETNode*> ET::getLVs()
     return linhasVarredura;
 }
 
-bool ET::verificaHorizontal(QLine aresta)
+bool ET::verificaHorizontal(int index)
 {
-    if(aresta.y1() == aresta.y2())
+    if(arestas.at(index).y1() == arestas.at(index).y2())
         return true;
     return false;
 }
 
-int ET::calculaLV(QLine aresta)
+int ET::calculaLV(int index)
 {
-    return std::min(aresta.y1(),aresta.y2());
+    return std::min(arestas.at(index).y1(),arestas.at(index).y2());
 }
 
 /* Encontra a ultima linha de varredura */
-int ET::encontraMaxLV(QVector<QLine> arestas)
+int ET::encontraMaxLV()
 {
     int maxLV = 0;
     for(int i=0; i<arestas.size();i++){
@@ -48,14 +46,14 @@ int ET::encontraMaxLV(QVector<QLine> arestas)
     return maxLV;
 }
 
-void ET::populaET(QVector<QLine> arestas)
+void ET::populaET()
 {
     for(int i=0; i<arestas.size();i++)
     {
-        ETNode *atual = new ETNode(arestas.at(i));
-        if(!verificaHorizontal(arestas.at(i)))
+        if(!verificaHorizontal(i))
         {
-            int level = calculaLV(arestas.at(i));
+            ETNode *atual = new ETNode(arestas.at(i));
+            int level = calculaLV(i);
             if(linhasVarredura.at(level)==nullptr)
             {
                 linhasVarredura.replace(level,atual);
@@ -73,6 +71,7 @@ void ET::populaET(QVector<QLine> arestas)
             }
         }
     }
+    printaET();
 }
 
 void ET::printaET()

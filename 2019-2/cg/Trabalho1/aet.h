@@ -5,19 +5,19 @@
 
 class AET
 {
-public:
-    AET();
-    AET(QVector<ETNode*> etPreenchida);
-    QVector<ETNode*> niveis;
-    QVector<ETNode*> etPreenchida;
-    QVector<QLine> tracos;
-    void populaAET();
-    void printaAET(int level);
-    void calculaRange(int index);
-    QVector<QLine> getLVs();
-    void removeYAtingidos(int index);
-    void atualizaXMins(int index);
-    void mergeET(int i);
+    public:
+        AET(QVector<ETNode*> etPreenchida);
+        QVector<QLine> getTracos();
+        void printaAET(int level);
+        void populaAET();
+    private:
+        QVector<ETNode*> linhasVarredura;
+        QVector<ETNode*> etPreenchida;
+        QVector<QLine> tracos;
+        void calculaRange(int index);
+        void removeYAtingidos(int index);
+        void atualizaXMins(int index);
+        void mergeET(int index);
 };
 
 #endif // AET_H
