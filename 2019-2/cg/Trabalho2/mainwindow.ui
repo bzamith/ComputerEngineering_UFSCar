@@ -241,7 +241,7 @@ p, li { white-space: pre-wrap; }
      <string>Encerrar</string>
     </property>
    </widget>
-   <widget class="Cube" name="widget" native="true">
+   <widget class="Cube" name="areaDesenho" native="true">
     <property name="geometry">
      <rect>
       <x>380</x>
@@ -265,7 +265,7 @@ p, li { white-space: pre-wrap; }
    <zorder>sValor</zorder>
    <zorder>rValor</zorder>
    <zorder>pushButton</zorder>
-   <zorder>widget</zorder>
+   <zorder>areaDesenho</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

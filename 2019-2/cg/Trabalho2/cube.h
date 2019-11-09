@@ -16,6 +16,7 @@ private:
 
 public:
     Cube(QWidget *parent = nullptr);
+    void transformeCube();
 
 protected:
     void initializeGL();

@@ -81,7 +81,6 @@ bool MainWindow::confereEntrada(QString valor){
 void MainWindow::on_pushButton_clicked()
 {
     encerrou = true;
-//    Cube cube;
-//    cube.resize(500, 500);
-//    cube.show();
+    ui->areaDesenho->transformeCube();
+    ui->areaDesenho->update();
 }

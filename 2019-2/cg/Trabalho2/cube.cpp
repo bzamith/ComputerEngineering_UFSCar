@@ -87,5 +87,10 @@ void Cube::draw()
 
 vector<QVector3D> Cube::getVertices()
 {
-    return CubeTransformation::Transform(vertices);
+    return this->vertices;
+}
+
+void Cube::transformeCube()
+{
+    this->vertices = CubeTransformation::Transform(vertices);
 }
