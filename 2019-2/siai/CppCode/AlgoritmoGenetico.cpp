@@ -1,9 +1,9 @@
 #include "AlgoritmoGenetico.h"
 
 AlgoritmoGenetico::AlgoritmoGenetico(){
-    this->maxKp = 1;
-    this->maxKi = 0.1;
-    this->maxKd = 0.05;
+    this->maxKp = 10;
+    this->maxKi = 4;
+    this->maxKd = 5;
     this->minKp = 0;
     this->minKi = 0;
     this->minKd = 0;
@@ -14,6 +14,7 @@ void AlgoritmoGenetico::rodaAG(){
     srand(time(0)); // seta o seed
     criaPopulacaoInicial();
     for(int i=0; i<NUM_ITERACOES_AG; i++){
+        cout << "Iteracao " << i << endl;
         fazSelecao();
         fazCruzamento();
         fazElitismo();

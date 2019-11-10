@@ -4,12 +4,9 @@ using namespace std;
     #define PID_H
 #endif
 
-#define NUM_ITERACOES_PID 100000
-#define MAX_POS 1000.0
-#define MIN_POS 0.0
-
 #include <iostream>
 #include <cmath>
+#include "Communication.h"
 
 class PID{
     public:
@@ -23,24 +20,11 @@ class PID{
         void setKi(double ki);
         void setKd(double kd);
         // Roda PID
-        bool rodaPID();  
+        double rodaPID();  
 
     private:
         // Constantes
         double kp, ki, kd;
-        // Calculo
-        double dt, integral;
-        // Estado
-        double preErro, erro, posAtual, termoProporcional, termoIntegrativo, termoDerivativo;
         // Posicao Desejada
-        double posDesejada;
-        // Funcoes 
-        void calculaPID();  
-        void calculaErro();
-        void calculaProporcional();
-        void calculaIntegrativo();
-        void calculaDerivativo();
-        double calculaPosicaoSugerida();
-        void calculaPosicaoFinal(double posSugerida);
-                
+        double posDesejada;                
 };

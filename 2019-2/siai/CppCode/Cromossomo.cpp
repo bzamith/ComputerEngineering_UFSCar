@@ -11,13 +11,7 @@ Cromossomo::Cromossomo(double kp, double ki, double kd){
 
 double Cromossomo::fitnessFunction(){
     PID pid = setaPID();
-    auto tempoInicial = chrono::high_resolution_clock::now();
-    this->atingiuMaximo = pid.rodaPID();
-    auto tempoFinal = chrono::high_resolution_clock::now();
-    if(this->atingiuMaximo == true)
-        return 100000;
-    else 
-        return chrono::duration_cast<chrono::microseconds>(tempoFinal - tempoInicial).count();
+    return pid.rodaPID();
 } 
 
 PID Cromossomo::setaPID(){
