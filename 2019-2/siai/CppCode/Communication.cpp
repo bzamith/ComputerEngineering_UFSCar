@@ -5,8 +5,8 @@ Communication::Communication(double kp, double ki, double kd, double posDesejada
     this->param2 = ki;
     this->param3 = kd;
     this->param4 = posDesejada;
-    this->matlabPath = "usr/local/MATLAB/R2018b/bin/";
-    this->workspaceAtual = "/home/zamith/Documents/Faculdade/10o_Semestre/SIAI/CppCode/";
+    this->matlabPath = "/usr/local/MATLAB/R2018b/bin/";
+    this->workspaceAtual = "/~/CppCode/";
 }
 
 void Communication::writeMatlabScript(){
