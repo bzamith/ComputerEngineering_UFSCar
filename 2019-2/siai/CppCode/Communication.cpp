@@ -6,7 +6,7 @@ Communication::Communication(double kp, double ki, double kd, double posDesejada
     this->param3 = kd;
     this->param4 = posDesejada;
     this->matlabPath = "usr/local/MATLAB/R2018b/bin/";
-    this->workspaceAtual = "/home/zamith/Documents/Faculdade/10o_Semestre/SIAI/";
+    this->workspaceAtual = "/home/zamith/Documents/Faculdade/10o_Semestre/SIAI/CppCode/";
 }
 
 void Communication::writeMatlabScript(){
@@ -35,7 +35,7 @@ void Communication::runMatlabScript(){
     // command = str.c_str();
     // system(command);
 
-    str = "matlab -nodisplay -nosplash -nodesktop -r \"run('"+this->workspaceAtual+"parametros.m');exit;\" >> \"output.txt\"";
+    str = "matlab -nodisplay -nosplash -nodesktop -r \"run('"+this->workspaceAtual+"script.m');exit;\" >> \"output.txt\"";
     command = str.c_str(); 
     system(command);
 }

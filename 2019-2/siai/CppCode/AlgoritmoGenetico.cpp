@@ -26,6 +26,7 @@ void AlgoritmoGenetico::rodaAG(){
 void AlgoritmoGenetico::criaPopulacaoInicial(){
     this->populacaoAtual.clear();
     for(int i=0; i<TAM_POPULACAO; i++){
+        cout << "Cromossomo Inicial " << i << endl;
         double kp = geraKpAleatorio();
         double ki = geraKiAleatorio();
         double kd = geraKdAleatorio();
