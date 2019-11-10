@@ -245,10 +245,52 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>340</x>
-      <y>0</y>
+      <y>100</y>
       <width>571</width>
-      <height>621</height>
+      <height>521</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>20</y>
+      <width>551</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Mono</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Trabalho 2 - Bruna Zamith, NUSP 11383109</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>60</y>
+      <width>551</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Computação Gráfica - SCC0250. ICMC-USP. Profa. Agma Juci Machado Traina</string>
     </property>
    </widget>
    <zorder>rBox</zorder>
@@ -266,6 +308,8 @@ p, li { white-space: pre-wrap; }
    <zorder>rValor</zorder>
    <zorder>botaoLimpa</zorder>
    <zorder>areaDesenho</zorder>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

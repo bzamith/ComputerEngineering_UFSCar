@@ -37,7 +37,8 @@ vector<QVector3D> CubeTransformation::Transform(vector<QVector3D>& points, QVect
         else
             transformacao = rotacaoZ(valor);
     }
-    return applyTransformation(points,transformacao);
+    points = applyTransformation(points,transformacao);
+    return points;
 }
 
 vector<vector<float>> CubeTransformation::translacao(float x, float y, float z)
@@ -111,15 +112,7 @@ vector<QVector3D> CubeTransformation::applyTransformation (vector<QVector3D>& pt
 
     for (size_t i = 0; i < pts.size(); i++) {
         auto pt = pts[i];
-        float x = pt.x();
-        float y = pt.y();
-        float z = pt.z();
-
-        //pt = applyTransformation(pt,translacao(-x,-y,-z));
         pt = applyTransformation(pt,trans);
-        //pt = applyTransformation(pt,translacao(x,y,z));
-        //pt = applyTransformation(pt,trans);
-        //pt = applyTransformation(pt,translacao(-x,-y,-z));
         outpts[i] = pt;
     }
 
