@@ -14,12 +14,11 @@ class Communication{
         Communication(double kp, double ki, double kd, double posDesejada);
         // Getters and setters
         void writeMatlabScript();
-        void runMatlabScript();
+        void rodaMatlabScript();
         double readMatlabOutput();
 
     private:
         double param1, param2, param3, param4;
-        string removeSpaces(string input);
         string matlabPath;
         string workspaceAtual;
 };

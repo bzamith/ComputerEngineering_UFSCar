@@ -4,10 +4,10 @@ using namespace std;
     #define ALGORITMOGENETICO_H
 #endif
 
-#define TAM_POPULACAO 20 // 100
-#define TAM_SELECAO 10 // 20
-#define TAM_TORNEIO 5 // 15
-#define NUM_ITERACOES_AG 15 //300
+#define TAM_POPULACAO 8 // 100
+#define TAM_SELECAO 6 // 20
+#define TAM_TORNEIO 4 // 15
+#define NUM_ITERACOES_AG 10 //300
 
 #include<vector>
 #include<ctime>

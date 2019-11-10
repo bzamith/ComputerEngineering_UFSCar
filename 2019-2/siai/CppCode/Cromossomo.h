@@ -4,7 +4,7 @@ using namespace std;
     #define CROMOSSOMO_H
 #endif
 
-#define POS_DESEJADA 100.0
+#define POS_DESEJADA 25.0
 
 #include <chrono>
 #include "PID.h"

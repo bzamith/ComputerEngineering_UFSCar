@@ -5,8 +5,8 @@ Communication::Communication(double kp, double ki, double kd, double posDesejada
     this->param2 = ki;
     this->param3 = kd;
     this->param4 = posDesejada;
-    this->matlabPath = "/usr/local/MATLAB/R2018b/bin/";
-    this->workspaceAtual = "/~/CppCode/";
+    this->matlabPath = "usr/local/MATLAB/R2018b/bin/";
+    this->workspaceAtual = "/home/zamith/Documents/Faculdade/10o_Semestre/SIAI/CppCode/";
 }
 
 void Communication::writeMatlabScript(){
@@ -26,7 +26,7 @@ void Communication::writeMatlabScript(){
 }
 
 
-void Communication::runMatlabScript(){
+void Communication::rodaMatlabScript(){
     string str = "export PATH=/"+this->matlabPath+":$PATH";
     const char *command = str.c_str(); 
     system(command);
@@ -65,10 +65,4 @@ double Communication::readMatlabOutput(){
     infile.close();
     remove("output.txt");
     return valor;
-}
-
-string removeSpaces(string input)
-{
-  input.erase(std::remove(input.begin(),input.end(),' '),input.end());
-  return input;
 }

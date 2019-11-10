@@ -1,12 +1,13 @@
 #include "AlgoritmoGenetico.h"
 
 AlgoritmoGenetico::AlgoritmoGenetico(){
-    this->maxKp = 5;
-    this->maxKi = 4;
-    this->maxKd = 2;
-    this->minKp = 1;
-    this->minKi = 0.01;
-    this->minKd = 0.01;
+    this->maxKp = 10;
+    this->maxKi = 2.5;
+    this->maxKd = 1.5;
+    
+    this->minKp = 1.5;
+    this->minKi = 1;
+    this->minKd = 1;
     this->rodouAG = false;
 }
 
@@ -30,7 +31,9 @@ void AlgoritmoGenetico::criaPopulacaoInicial(){
         double kp = geraKpAleatorio();
         double ki = geraKiAleatorio();
         double kd = geraKdAleatorio();
+        cout << "kp = "<<kp<<" ki = "<<ki<<" kd = "<<kd<<endl;
         Cromossomo cromossomoAtual = Cromossomo(kp,ki,kd);
+        cromossomoAtual.printaCromossomo();
         populacaoAtual.push_back(cromossomoAtual);
     }
 }
@@ -72,7 +75,8 @@ void AlgoritmoGenetico::encontraMelhorCromossomo(){
 double AlgoritmoGenetico::geraKpAleatorio(){
     double kp;
     do{
-        kp = ((double)rand()/RAND_MAX);
+        kp = (double)rand() / (double)RAND_MAX;
+        kp =  this->minKp + kp * (this->maxKp - this->minKp);
     }while(kp > this->maxKp || kp < this->minKp);
     return kp;
 }
@@ -80,7 +84,8 @@ double AlgoritmoGenetico::geraKpAleatorio(){
 double AlgoritmoGenetico::geraKiAleatorio(){
     double ki;
     do{
-        ki = ((double)rand()/RAND_MAX);
+        ki = (double)rand() / (double)RAND_MAX;
+        ki =  this->minKp + ki * (this->maxKi - this->minKi);
     }while(ki > this->maxKi || ki < this->minKi);
     return ki;
 }
@@ -88,7 +93,8 @@ double AlgoritmoGenetico::geraKiAleatorio(){
 double AlgoritmoGenetico::geraKdAleatorio(){
     double kd;
     do{
-        kd = ((double)rand()/RAND_MAX);
+        kd = (double)rand() / (double)RAND_MAX;
+        kd =  this->minKd + kd * (this->maxKd - this->minKd);
     }while(kd > this->maxKd || kd < this->minKd);
     return kd;
 }

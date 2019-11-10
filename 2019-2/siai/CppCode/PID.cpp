@@ -10,7 +10,7 @@ PID::PID(double posDesejada){
 double PID::rodaPID(){
     Communication com = Communication(this->kp,this->ki,this->kd,this->posDesejada);
     com.writeMatlabScript();
-    com.runMatlabScript();
+    com.rodaMatlabScript();
     return com.readMatlabOutput();
 }
 
