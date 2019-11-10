@@ -244,10 +244,10 @@ p, li { white-space: pre-wrap; }
    <widget class="Cube" name="areaDesenho" native="true">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>30</y>
-      <width>511</width>
-      <height>531</height>
+      <x>340</x>
+      <y>0</y>
+      <width>571</width>
+      <height>621</height>
      </rect>
     </property>
    </widget>

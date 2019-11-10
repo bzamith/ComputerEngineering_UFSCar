@@ -3,6 +3,7 @@
 
 #include <QVector3D>
 #include <GL/glu.h>
+#include <QtDebug>
 
 Cube::Cube(QWidget *parent) : QGLWidget(parent)
 {
@@ -34,10 +35,10 @@ void Cube::novoCubo()
     };
 
     faceColors = {
-        Qt::red,
+        Qt::cyan,
         Qt::green,
         Qt::blue,
-        Qt::cyan,
+        Qt::red,
         Qt::yellow,
         Qt::magenta
     };
@@ -56,14 +57,13 @@ void Cube::initializeGL()
 
 void Cube::resizeGL(int width, int height)
 {
+    glMatrixMode(GL_VIEWPORT);
     glViewport(0, 0, width, height);
+    auto ratio = double(width) / height;
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-
-    auto ratio = double(width) / height;
-
-    glFrustum(-ratio, ratio, -1.0, 1.0, 4.0, 15.0);
-    glMatrixMode(GL_MODELVIEW);
+    glFrustum(-ratio, ratio, -1, 1, 1, 15);
+    qDebug() << width << "  " << height << "\n";
 }
 
 void Cube::paintGL()
