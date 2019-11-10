@@ -1,12 +1,12 @@
 #include "AlgoritmoGenetico.h"
 
 AlgoritmoGenetico::AlgoritmoGenetico(){
-    this->maxKp = 10;
+    this->maxKp = 5;
     this->maxKi = 4;
-    this->maxKd = 5;
-    this->minKp = 0;
-    this->minKi = 0;
-    this->minKd = 0;
+    this->maxKd = 2;
+    this->minKp = 1;
+    this->minKi = 0.01;
+    this->minKd = 0.01;
     this->rodouAG = false;
 }
 
