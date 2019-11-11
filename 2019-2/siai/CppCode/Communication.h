@@ -8,6 +8,8 @@ using namespace std;
 #include <iostream>
 #include <bits/stdc++.h> 
 
+#define LIMITE_ERRO 0.1
+
 class Communication{
     public:
         //Construtores

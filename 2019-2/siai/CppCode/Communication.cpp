@@ -11,6 +11,9 @@ Communication::Communication(double kp, double ki, double kd, double posDesejada
 
 void Communication::writeMatlabScript(){
     ofstream outfile;
+    double limiteInferior = this->param4*(double)(1-LIMITE_ERRO);
+    double limiteSuperior = this->param4*(double)(1+LIMITE_ERRO);
+
     outfile.open("script.m");
     outfile << "clear" << endl;
     outfile << "clc" << endl;
@@ -19,6 +22,8 @@ void Communication::writeMatlabScript(){
     outfile << "kp = "<< this->param1 << ";" << endl;
     outfile << "ki = "<< this->param2 << ";" << endl;
     outfile << "kd = "<< this->param3 << ";" << endl;
+    outfile << "limInferior ="<< limiteInferior << ";" << endl;
+    outfile << "limSuperior ="<< limiteSuperior << ";" << endl;
     outfile << "pid = sim('PID.slx')" << endl;
     outfile << "posfinal.getdatasamples(size(pid,1))" << endl;
     outfile << "tempo = pid(size(pid,1))" << endl;
