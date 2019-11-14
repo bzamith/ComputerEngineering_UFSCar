@@ -2,14 +2,19 @@
 
 #include <QMatrix4x4>
 #include <math.h>
+#include <iostream>
 
 #define PI 3.14159265
+
+using namespace std;
 
 vector<QVector3D> CubeTransformation::Transform(vector<QVector3D>& points, QVector<QString> infoTransformacao)
 {
     QString tipo = infoTransformacao.at(0);
     QString eixo = infoTransformacao.at(1);
     float valor = infoTransformacao.at(2).toFloat();
+
+    cout << "Valor = " << valor << endl;
 
     vector<vector<float>> transformacao;
 
@@ -38,6 +43,12 @@ vector<QVector3D> CubeTransformation::Transform(vector<QVector3D>& points, QVect
             transformacao = rotacaoZ(valor);
     }
     points = applyTransformation(points,transformacao);
+    for(int i=0; i<4; i++){
+        for(int j=0; j<4; j++){
+            cout << transformacao[i][j] << " ";
+        }
+        cout << endl;
+    }
     return points;
 }
 

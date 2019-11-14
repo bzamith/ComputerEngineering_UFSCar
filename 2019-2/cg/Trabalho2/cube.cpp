@@ -62,8 +62,7 @@ void Cube::resizeGL(int width, int height)
     auto ratio = double(width) / height;
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    glFrustum(-ratio, ratio, -1, 1, 1, 15);
-    qDebug() << width << "  " << height << "\n";
+    glOrtho(-5*ratio, 5*ratio, -5.0, 5.0, 1.0, 15.0);
 }
 
 void Cube::paintGL()
@@ -100,5 +99,9 @@ vector<QVector3D> Cube::getVertices()
 
 void Cube::transformeCube(QVector<QVector<QString>> transformacoes)
 {
+    QVector<QString> ajusteFinal = {"T","z","10"};
+    vertices = CubeTransformation::Transform(vertices, ajusteFinal);
     this->vertices = CubeTransformation::Transform(vertices, transformacoes.last());
+    ajusteFinal = {"T","z","-10"};
+    vertices = CubeTransformation::Transform(vertices, ajusteFinal);
 }
