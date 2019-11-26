@@ -7,8 +7,8 @@ PID::PID(double posDesejada){
     this->posDesejada = posDesejada;
 }
 
-double PID::rodaPID(){
-    Communication com = Communication(this->kp,this->ki,this->kd,this->posDesejada);
+double PID::calcula(){
+    SimulacaoMatlab com = SimulacaoMatlab(this->kp,this->ki,this->kd,this->posDesejada);
     com.writeMatlabScript();
     com.rodaMatlabScript();
     return com.readMatlabOutput();

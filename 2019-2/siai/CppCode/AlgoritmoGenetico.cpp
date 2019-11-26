@@ -1,8 +1,8 @@
 #include "AlgoritmoGenetico.h"
 
 AlgoritmoGenetico::AlgoritmoGenetico(){
-    this->maxKp = 10;
-    this->maxKi = 2.5;
+    this->maxKp = 20;
+    this->maxKi = 5;
     this->maxKd = 1.5;
     
     this->minKp = 1.5;
@@ -18,6 +18,7 @@ void AlgoritmoGenetico::rodaAG(){
         cout << "Iteracao " << i << endl;
         fazSelecao();
         fazCruzamento();
+        fazMutacao();
         fazElitismo();
     }
     encontraMelhorCromossomo();
@@ -51,6 +52,15 @@ void AlgoritmoGenetico::fazCruzamento(){
         double segKd = this->populacaoSelecionada[TAM_SELECAO - i - 1].getKd();
         this->populacaoSelecionada[i].setKd(segKd);
         this->populacaoSelecionada[TAM_SELECAO - i - 1].setKd(priKd);
+    }
+}
+
+void AlgoritmoGenetico::fazMutacao(){
+    for(int i=0; i<this->populacaoSelecionada.size(); i++){
+        double probabilidade = (double)rand() / (double)RAND_MAX;
+        if(probabilidade<=PROB_MUTACAO){
+            this->populacaoSelecionada[i].setKi(this->geraKiAleatorio());
+        }
     }
 }
 

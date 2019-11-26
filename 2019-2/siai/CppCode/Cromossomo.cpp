@@ -11,7 +11,7 @@ Cromossomo::Cromossomo(double kp, double ki, double kd){
 
 double Cromossomo::fitnessFunction(){
     PID pid = setaPID();
-    return pid.rodaPID();
+    return pid.calcula();
 } 
 
 PID Cromossomo::setaPID(){

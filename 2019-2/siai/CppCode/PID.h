@@ -6,7 +6,7 @@ using namespace std;
 
 #include <iostream>
 #include <cmath>
-#include "Communication.h"
+#include "SimulacaoMatlab.h"
 
 class PID{
     public:
@@ -20,7 +20,7 @@ class PID{
         void setKi(double ki);
         void setKd(double kd);
         // Roda PID
-        double rodaPID();  
+        double calcula();  
 
     private:
         // Constantes

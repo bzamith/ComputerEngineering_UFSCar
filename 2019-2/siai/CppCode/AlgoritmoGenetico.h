@@ -8,6 +8,7 @@ using namespace std;
 #define TAM_SELECAO 6 // 20
 #define TAM_TORNEIO 4 // 15
 #define NUM_ITERACOES_AG 10 //300
+#define PROB_MUTACAO 0.1
 
 #include<vector>
 #include<ctime>
@@ -44,6 +45,7 @@ class AlgoritmoGenetico{
         void criaPopulacaoInicial();
         void fazSelecao();
         void fazCruzamento();
+        void fazMutacao();
         void fazElitismo();
         void encontraMelhorCromossomo();
         // Funcoes secundarias
