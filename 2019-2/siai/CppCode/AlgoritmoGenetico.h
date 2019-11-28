@@ -1,13 +1,22 @@
+/* AlgoritmoGenetico.h
+ * 
+ * @description:
+ *      Definição da classe AlgoritmoGenetico que contém os cromossomos e métodos utilizados na otimização
+ *
+ */
 using namespace std;
 
+/*
+ *	Libraries and Definitions
+ ***********************************************************************/
 #ifndef ALGORITMOGENETICO_H
     #define ALGORITMOGENETICO_H
 #endif
 
-#define TAM_POPULACAO 8 // 100
-#define TAM_SELECAO 6 // 20
-#define TAM_TORNEIO 4 // 15
-#define NUM_ITERACOES_AG 10 //300
+#define TAM_POPULACAO 100
+#define TAM_SELECAO 20
+#define TAM_TORNEIO 15
+#define NUM_ITERACOES_AG 300
 #define PROB_MUTACAO 0.1
 
 #include<vector>
@@ -18,44 +27,57 @@ using namespace std;
 
 class AlgoritmoGenetico{
     public:
-        //Construtores
+        /* Construtor */
         AlgoritmoGenetico();
-        // Getters and setters
+        
+        /* Métodos getters */
         double getMelhorKp();
         double getMelhorKi();
         double getMelhorKd();
         double getMelhorFitnessValue();
+
+        /* Algoritmo que setta o range de Kp */
         void setRangeKp(double minKp, double maxKp);
+        /* Algoritmo que setta o range de Ki */
         void setRangeKi(double minKi, double maxKi);
+        /* Algoritmo que setta o range de Kd */
         void setRangeKd(double minKd, double maxKd);
-        // Roda AG
+        
+        /* Executa a lógica do Algoritmo Genético */
         void rodaAG();
 
     private:
-        // Ranges
+        
+        /* Definição dos ranges */
         double maxKp, maxKi, maxKd, minKp, minKi, minKd;
-        // Verificacao
+        
+        /* flags */
         bool rodouAG;
-        // Populacoes
+
+        /* Populações definidas */
         vector<Cromossomo> populacaoAtual;
         vector<Cromossomo> populacaoSelecionada;
-        // Resultado
+
+        /* Resultado final */
         Cromossomo melhorCromossomo;
-        // Funcoes principais
+
+        /* Métodos principais do AG */
         void criaPopulacaoInicial();
         void fazSelecao();
         void fazCruzamento();
         void fazMutacao();
         void fazElitismo();
         void encontraMelhorCromossomo();
-        // Funcoes secundarias
+        
+        /* Métodos secundarios do AG */
         double geraKpAleatorio();
         double geraKiAleatorio();
         double geraKdAleatorio();
         Cromossomo fazSelecaoTorneio();
         Cromossomo selecionaCromossomoAleatoriamente();
         void ordenaPopulacao(vector<Cromossomo> &populacao);
-        // Debug
+        
+        /* Funções específicas para debugging */
         bool verificaRodouAG();
         void printaPopulacao(vector<Cromossomo> populacao);  
 };
