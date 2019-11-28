@@ -33,6 +33,8 @@ void AlgoritmoGenetico::rodaAG(){
         fazCruzamento();
         fazMutacao();
         fazElitismo();
+	encontraMelhorCromossomo();
+        this->melhorCromossomo.printaCromossomo();
     }
     encontraMelhorCromossomo();
     this->rodouAG = true;
@@ -72,17 +74,17 @@ void AlgoritmoGenetico::fazSelecao(){
 
 /* método: fazCruzamento()
  *
- * @descrição: Realiza troca o último "gene" entre os cromossosmos
+ * @descrição: Realiza troca o primeiro "gene" entre os cromossosmos
  * @parametros: nenhum
  * @retorno: nenhum
  */
 void AlgoritmoGenetico::fazCruzamento(){
     for(int i=0; i<TAM_SELECAO/2; i++){
-        double priKd = this->populacaoSelecionada[i].getKd();
-        // kd = TAM_SELECAO - i - 1
-        double segKd = this->populacaoSelecionada[TAM_SELECAO - i - 1].getKd();
-        this->populacaoSelecionada[i].setKd(segKd);
-        this->populacaoSelecionada[TAM_SELECAO - i - 1].setKd(priKd);
+        double priKp = this->populacaoSelecionada[i].getKp();
+        // kp = TAM_SELECAO - i - 1
+        double segKp = this->populacaoSelecionada[TAM_SELECAO - i - 1].getKp();
+        this->populacaoSelecionada[i].setKp(segKp);
+        this->populacaoSelecionada[TAM_SELECAO - i - 1].setKp(priKp);
     }
 }
 
