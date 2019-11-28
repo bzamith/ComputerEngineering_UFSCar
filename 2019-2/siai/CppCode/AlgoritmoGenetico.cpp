@@ -51,7 +51,6 @@ void AlgoritmoGenetico::criaPopulacaoInicial(){
         double kp = geraKpAleatorio();
         double ki = geraKiAleatorio();
         double kd = geraKdAleatorio();
-        cout << "kp = "<<kp<<" ki = "<<ki<<" kd = "<<kd<<endl;
         Cromossomo cromossomoAtual = Cromossomo(kp,ki,kd);
         cromossomoAtual.printaCromossomo();
         populacaoAtual.push_back(cromossomoAtual);

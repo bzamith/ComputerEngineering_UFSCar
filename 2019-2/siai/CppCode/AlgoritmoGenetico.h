@@ -36,11 +36,9 @@ class AlgoritmoGenetico{
         double getMelhorKd();
         double getMelhorFitnessValue();
 
-        /* Algoritmo que setta o range de Kp */
+        /* Métodos setters */
         void setRangeKp(double minKp, double maxKp);
-        /* Algoritmo que setta o range de Ki */
         void setRangeKi(double minKi, double maxKi);
-        /* Algoritmo que setta o range de Kd */
         void setRangeKd(double minKd, double maxKd);
         
         /* Executa a lógica do Algoritmo Genético */

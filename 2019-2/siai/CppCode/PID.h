@@ -1,5 +1,14 @@
+/* PID.h
+ * 
+ * @description:
+ *      Definição da classe PID que contém os métodos e dados referente ao controle PID
+ *
+ */
 using namespace std;
 
+/*
+ *	Libraries and Definitions
+ ***********************************************************************/
 #ifndef PID_H
     #define PID_H
 #endif
@@ -10,21 +19,26 @@ using namespace std;
 
 class PID{
     public:
-        // Construtores
+        /* Construtor */
         PID(double posDesejada);
-        // Getters and setters
+        
+        /* Métodos getters */
         double getKp();
         double getKi();
         double getKd();
+
+        /* Métodos setters */
         void setKp(double kp);
         void setKi(double ki);
         void setKd(double kd);
-        // Roda PID
+        
+        /* Executa o PID */
         double calcula();  
 
     private:
-        // Constantes
+        /* Valores de Kp, Ki e Kd do PID */
         double kp, ki, kd;
-        // Posicao Desejada
+        
+        /* Posicao desejada */
         double posDesejada;                
 };

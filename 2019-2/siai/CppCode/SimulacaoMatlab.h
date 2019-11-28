@@ -1,5 +1,14 @@
+/* SimulacaoMatlab.h
+ * 
+ * @description:
+ *      Métodos e atributos referentes a simulação do controle PID no matlab
+ *
+ */
 using namespace std;
 
+/*
+ *	Libraries and Definitions
+ ***********************************************************************/
 #ifndef SIMULACAOMATLAB_H
     #define SIMULACAOMATLAB_H
 #endif
@@ -12,14 +21,16 @@ using namespace std;
 
 class SimulacaoMatlab{
     public:
-        //Construtores
+        /* Construtor */
         SimulacaoMatlab(double kp, double ki, double kd, double posDesejada);
-        // Getters and setters
+        
+        /* Métodos getters e setters */
         void writeMatlabScript();
         void rodaMatlabScript();
         double readMatlabOutput();
 
     private:
+        /* Atributos necessários à integração ao matlab */
         double param1, param2, param3, param4;
         string matlabPath;
         string workspaceAtual;
