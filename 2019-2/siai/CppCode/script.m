@@ -1,12 +1,12 @@
 clear
 clc
 close all
-posDesejada = 25;
-kp = 19.0251;
-ki = 2.48394;
-kd = 1.44081;
-limInferior =22.5;
-limSuperior =27.5;
+posDesejada = 100;
+kp = 19.1119;
+ki = 2.15527;
+kd = 1.0573;
+limInferior =90;
+limSuperior =110;
 pid = sim('PID.slx')
 posfinal.getdatasamples(size(pid,1))
 tempo = pid(size(pid,1))
