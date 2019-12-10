@@ -1,0 +1,219 @@
+Input file: D:\PMAC\Projeto Fresadora\Fresadora_furada\fresadora_motion_x-fresadora_solution_x.minp
+
+Solver running in Simcenter Mode
+
+
+Solver: Simcenter Motion Version 12 (12.0) Aug 31 2017 16:04:02 Intel Release 64bit
+Interface: R12P27_rc1 2017-09-04
+Hostname: LMC003-DEMEC
+OS Type: Windows
+Release: 6.2
+Version: Build 9200
+Machine: 8664
+Integer size:    5000000
+Real size:    5000000
+Mcheps: 0.22204460492503E-15
+LMSMOTGGL is active
+
+[1482]
+NOTE:  The system data element specifies inconsistent units:
+  LENGTH.UNIT = MILLIMETER
+  MASS.UNIT   = KILOGRAM
+  FORCE.UNIT  = NEWTON
+Force and mass values are converted to a consistent set of units for
+solution and then converted back to the specified units before being
+reported.
+
+[1296]
+Warning (dynamic data element):  When "INTERPOLATED" is selected for the
+print method, the print frequency feature cannot be used.  PRINT.Freq is
+being reset to zero (disabled) and execution is continuing.
+ The GGL formulation is turned on.
+
+License Server is [28000@10.0.0.251]
+
+Features requiring licenses
+-----------------------
+sc_motion_solver "Motion Solver"
+
+
+[1134]
+Warning:  Prior to assembly the number of constraints, drivers and
+initial conditions is not equal to the number of generalized
+coordinates.  The assembly algorithm will be executed but the
+result will represent one of several possible solutions.
+Number of constraints, drivers, I.C's =                   21
+Number of generalized coordinates     =                   22
+
+Results achieved by the model assembly process with drivers:
+
+  Number of function evaluations =     1
+  Maximum constraint violation   =   0.796518E-11
+
+ Element: Bloco_Y_Z
+    Coordinate    New Value     Original Value  Difference
+    X              849.95         849.95         0.0000    
+    Y              425.33         425.33         0.0000    
+    Z              333.72         333.72         0.0000    
+    E0            0.67786        0.67786         0.0000    
+    E1            0.73497        0.73497         0.0000    
+    E2            0.84661E-02    0.84661E-02     0.0000    
+    E3           -0.16191E-01   -0.16191E-01     0.0000    
+
+ Element: Eixo
+    Coordinate    New Value     Original Value  Difference
+    X              525.17         525.17         0.0000    
+    Y              400.00         400.00         0.0000    
+    Z              53.334         53.334         0.0000    
+    E0            0.54372        0.54372         0.0000    
+    E1            0.45207        0.45207         0.0000    
+    E2            0.54373        0.54373         0.0000    
+    E3            0.45207        0.45207         0.0000    
+
+ Element: the_ground
+    Coordinate    New Value     Original Value  Difference
+    X              0.0000         0.0000         0.0000    
+    Y              0.0000         0.0000         0.0000    
+    Z              0.0000         0.0000         0.0000    
+    E0             1.0000         1.0000         0.0000    
+    E1             0.0000         0.0000         0.0000    
+    E2             0.0000         0.0000         0.0000    
+    E3             0.0000         0.0000         0.0000    
+
+ Element: MOTION_J002_RZ
+    Coordinate    New Value     Original Value  Difference
+    Rel.angle     0.15808E-13    0.15808E-13     0.0000    
+
+Ignoring Initial conditions, the following were chosen
+as independent coordinates:
+
+
+ Element: Eixo
+    Coordinate:  X         
+ Using QR Initial Velocity Method
+
+[1286]
+Warning:  Initial conditions may not be sufficient (DAP2).
+Solution of initial velocities, using QR method:
+
+ Element: Bloco_Y_Z
+    Coordinate    Velocity
+    X             -5.00000    
+    Y              0.00000    
+    Z             0.197933E-12
+    E0             0.00000    
+    E1             0.00000    
+    E2             0.00000    
+    E3             0.00000    
+
+ Element: Eixo
+    Coordinate    Velocity
+    X              0.00000    
+    Y            -0.498009E-04
+    Z            -0.160492E-03
+    E0           -0.197254E-01
+    E1            0.237241E-01
+    E2           -0.197252E-01
+    E3            0.237245E-01
+
+ Element: the_ground
+    Coordinate    Velocity
+    X              0.00000    
+    Y              0.00000    
+    Z              0.00000    
+    E0             0.00000    
+    E1             0.00000    
+    E2             0.00000    
+    E3             0.00000    
+
+ Element: MOTION_J002_RZ
+    Coordinate    Velocity
+    Rel.angle     0.872665E-01
+
+Solution of velocities in local coordinates:
+
+ Element: Bloco_Y_Z
+    Coordinate    Velocity
+    X             -5.00000    
+    Y              0.00000    
+    Z             0.197933E-12
+    OMEGA_XL       0.00000    
+    OMEGA_YL       0.00000    
+    OMEGA_ZL       0.00000    
+
+ Element: Eixo
+    Coordinate    Velocity
+    X              0.00000    
+    Y            -0.498009E-04
+    Z            -0.160492E-03
+    OMEGA_XL     -0.630071E-06
+    OMEGA_YL      0.956585E-06
+    OMEGA_ZL      0.872665E-01
+
+ Element: the_ground
+    Coordinate    Velocity
+    X              0.00000    
+    Y              0.00000    
+    Z              0.00000    
+    OMEGA_XL       0.00000    
+    OMEGA_YL       0.00000    
+    OMEGA_ZL       0.00000    
+
+Number of real data in the system     =     47963
+Number of integer data in the system  =     29379
+
+
+Solution of accelerations in local coordinates:
+
+ Element: Bloco_Y_Z
+    Coordinate    Acceleration
+    X              0.00000    
+    Y              0.00000    
+    Z              0.00000    
+    OMEGAD_XL      0.00000    
+    OMEGAD_YL      0.00000    
+    OMEGAD_ZL      0.00000    
+
+ Element: Eixo
+    Coordinate    Acceleration
+    X              0.00000    
+    Y             0.140055E-04
+    Z            -0.434595E-05
+    OMEGAD_XL    -0.195156E-17
+    OMEGAD_YL    -0.108420E-17
+    OMEGAD_ZL     0.108420E-18
+
+ Element: the_ground
+    Coordinate    Acceleration
+    X              0.00000    
+    Y              0.00000    
+    Z              0.00000    
+    OMEGAD_XL      0.00000    
+    OMEGAD_YL      0.00000    
+    OMEGAD_ZL      0.00000    
+
+Total Number of Bodies             =    3
+
+Total Number of Degrees of Freedom =   19
+Number of Kinematic Constraints    =   18
+Number of Drivers                  =    2
+Number of Initial Conditions       =    0
+Number of Degrees of Freedom       =    1
+
+The number of symbolic factorizations of the Acceleration matrix =                    1
+
+The number of symbolic factorizations of BDF Jacobian matrix =                    1
+
+[1441]
+Final integrator statistics:
+  Number of steps                 =                 5006
+  Number of f-s                   =                 6828
+  Number of j-s                   =                    4
+  Ratio of f-s/steps              =  1.3639632441071
+  Ratio of j-s/steps              = 0.79904115061926E-03
+  Current time                    =  50.000000000000
+  Total velocity computations     =                    0
+  Total position computations     =                    0
+
+    Total elapsed CPU time:   13.38000    
+    Total clock time:         13
