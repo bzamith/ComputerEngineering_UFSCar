@@ -48,6 +48,6 @@ First Semester, 2019
 
 ### 2019-2
 Second Semester, 2019
-- [ ] **siai** - INDUSTRIAL AUTOMATION AND INTEGRATION SYSTEMS - prof. Orides Morandin
-- [ ] **pmac** - COMPUTER AIDED DESIGN AND MANUFACTURING - prof. Kelen Vivaldini
-- [ ] **cg** - COMPUTER GRAPHICS - prof. Agma Juci Machado (USP)
+- [x] **siai** - INDUSTRIAL AUTOMATION AND INTEGRATION SYSTEMS - prof. Orides Morandin
+- [x] **pmac** - COMPUTER AIDED DESIGN AND MANUFACTURING - prof. Kelen Vivaldini
+- [x] **cg** - COMPUTER GRAPHICS - prof. Agma Juci Machado (USP)
