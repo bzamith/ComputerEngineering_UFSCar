@@ -1,0 +1,2309 @@
+Posicao;Nome;Curso;Opcao;Grupo;Media
+1;Paul Meiras;Engenharia de Computacao - Sao Carlos;1;5;999.00
+2;Dylan Sullivan Bradshaw;Ciencias Econimcas - Sorocaba;1;3;951.11
+3;Jasper Holmes Dotson;Engenharia de alimentos - Lagoa do Sino;1;4;936.89
+4;Robert Kirkland Cain;Medicina - Sao Carlos;1;2;935.29
+5;Donna;Ciencias Biologicas - Araras;1;5;932.88
+6;Reagan Snow Simon;Biotecnologia - Sao Carlos;1;3;925.25
+7;Freya Pruitt Maxwell;Biblioteconomia - Sao Carlos;1;3;920.88
+8;Shelby Lamb Green;Administracao - Sorocaba;1;1;920.25
+9;Zachary Gray Simpson;Ciencia da Computacao - Sorocaba;1;2;919.50
+10;Sydney Owens Flowers;Quimica - Sorocaba;1;1;919.33
+11;Priscilla Snyder Boyd;Estatistica - Sao Carlos;1;2;917.43
+12;Lucian Buckner Castro;Educacao Fisica - Sao Carlos;1;4;915.83
+13;Jillian Montgomery Holmes;Matematica - Sao Carlos;1;1;910.29
+14;Tyler Harris Lambert;Geografia - Sorocaba;1;5;909.75
+15;Jameson Sherman Mcgee;Enhenharia de Producao - Sao Carlos;1;3;909.57
+16;Genevieve Murphy Wilkins;Biotecnologia - Araras;1;3;908.11
+17;Justin Robles Hatfield;Quimica - Araras;1;4;907.00
+18;Bianca Caldwell Clements;Educacao Fisica - Sao Carlos;1;5;905.50
+19;Patience Ayers Gordon;Engenharia Ambiental - Lagoa do Sino;1;1;903.00
+20;Slade Mckay Norman;Engenharia Civil - Sao Carlos;1;1;902.75
+21;Carly Wolf Carr;Ciencia da Computacao - Sorocaba;1;2;902.50
+22;Sebastian Moran Perez;Engenharia Quimica - Sao Carlos;1;2;900.57
+23;Angelica Mccormick Vaughan;Biotecnologia - Araras;1;1;899.00
+24;August Berger Moreno;Gerontologia - Sao Carlos;1;4;898.78
+25;Shoshana Castro Roth;Estatistica - Sao Carlos;1;4;898.14
+26;Connor Odom Mosley;Fisioterapia - Sao Carlos;1;1;897.38
+27;Clarke;Ciencias Biologicas - Araras;1;4;896.88
+28;Rhiannon Hayden Guerra;Enfermagem - Sao Carlos;1;4;896.25
+29;Forrest Luna Stuart;Imagem Som - Sao Carlos;1;4;896.13
+30;Vielka Colon Fry;Geografia - Sorocaba;1;5;896.00
+31;William Rice Goff;Estatistica - Sao Carlos;1;3;895.00
+32;Carson Gilliam Farrell;Engenharia Eletrica - Sao Carlos;1;3;893.14
+33;Isaiah White Dillon;Quimica - Sorocaba;1;2;891.56
+34;Lee Farrell Casey;Administracao - Sorocaba;1;3;891.13
+35;Heidi Welch Lowe;Administracao - Sorocaba;1;2;891.13
+36;Lucian Holmes West;Biotecnologia - Sao Carlos;1;4;888.75
+37;Roary Hoover Bradshaw;Geografia - Sorocaba;1;3;886.75
+38;Akeem Lopez Woods;Turismo - Sorocaba;1;3;886.67
+39;Gavin Horne Steele;Ciencia da Computacao - Sao Carlos;1;3;885.25
+40;Perry Winters Walton;Engenharia Quimica - Sao Carlos;1;5;884.86
+41;Bruce Case Crane;Engenharia de Producao - Sorocaba;1;4;884.00
+42;Luke Hancock Moore;Ciencias Biologicas - Araras;1;1;883.63
+43;Carla Santana Snow;Engenharia Fisica - Sao Carlos;1;2;882.71
+44;Lane Nelson Rios;Engenharia Eletrica - Sao Carlos;1;4;882.29
+45;Madison Noble Flowers;Engenharia de Materiais - Sao Carlos;1;3;881.86
+46;Laith Lloyd Phillips;Gestao e Analise Ambiental - Sao Carlos;1;5;881.38
+47;Vincent;Ciencias Biologicas - Araras;1;3;880.88
+48;Ricardo Ciferri;Engenharia de Computacao - Sao Carlos;1;4;880.13
+49;Autumn Ramirez Clayton;Engenharia de Materiais - Sao Carlos;1;5;878.43
+50;Kylee Valenzuela Armstrong;Filosofia - Sao Carlos;1;5;878.38
+51;Addison Wilkerson Daugherty;Ciencias Biologicas - Araras;1;1;877.88
+52;Channing Hurst Clark;Estatistica - Sao Carlos;1;3;876.14
+53;Vielka Fry Velazquez;Engenharia Quimica - Sao Carlos;1;3;875.86
+54;Kelsie Barnett Newton;Ciencias Econimcas - Sorocaba;1;3;874.00
+55;Cally Buchanan Gates;Fisica - Sorocaba;1;4;873.89
+56;Amity Nash Bishop;Matematica - Sorocaba;1;3;873.50
+57;Cherokee Daniels Cantrell;Linguistica - Sao Carlos;1;5;872.75
+58;Cameron;Ciencias Biologicas - Araras;1;3;872.63
+59;Zorita Rowe Pugh;Engenharia Agronomica - Araras;1;1;872.57
+60;Barry Rodgers Mcgowan;Engenharia Mecanica - Sao Carlos;1;3;872.29
+61;Curran Bryant Fitzgerald;Quimica - Sao Carlos;1;3;872.00
+62;Seth;Biotecnologia - Araras;1;5;872.00
+63;Chelsea Roman Willis;Educacao Fisica - Sao Carlos;1;1;871.83
+64;Rogan Bright Mendez;Pedagogia - Sao Carlos;1;2;871.57
+65;Quamar Finch Humphrey;Engenharia de alimentos - Lagoa do Sino;1;1;871.11
+66;Tarik Barnett Steele;Enfermagem - Sao Carlos;1;3;870.50
+67;Xenos Lamb Erickson;Engenharia Civil - Sao Carlos;1;2;870.38
+68;Sebastian Salinas Brennan;Psicologia - Sao Carlos;1;5;869.33
+69;Emi Gould Castro;Fisica - Araras;1;3;869.00
+70;Ashely Franklin Stephens;Ciencias Econimcas - Sorocaba;1;3;868.78
+71;Vivian Glenn Dennis;Engenharia Agronomica - Araras;1;3;868.71
+72;Melinda;Agroecologia - Araras;1;2;868.43
+73;Jacob Greene Moon;Matematica - Sorocaba;1;4;868.38
+74;Jenna;Biotecnologia - Araras;1;2;868.22
+75;Nolan Morris Brock;Fisica - Sao Carlos;1;2;868.00
+76;Brianna Conway Sims;Enfermagem - Sao Carlos;1;3;867.75
+77;Kimberley Knapp Eaton;Educacao Fisica - Sao Carlos;1;4;867.67
+78;Christen Burgess Anderson;Pedagogia - Sao Carlos;1;1;867.57
+79;Chava;Ciencias Biologicas - Araras;1;3;867.13
+80;Sydnee Rutledge Roberts;Psicologia - Sao Carlos;1;2;867.11
+81;Emma Cash Mcdonald;Engenharia Ambiental - Lagoa do Sino;1;2;867.00
+82;Daphne Downs Johns;Gerontologia - Sao Carlos;1;4;867.00
+83;Chantale Lopez Carter;Engenharia Civil - Sao Carlos;1;2;866.38
+84;Barrett Woodard George;Quimica - Sorocaba;1;2;866.00
+85;Ursa Henson Hendricks;Estatistica - Sao Carlos;1;3;865.71
+86;Denise Goodwin Mills;Engenharia Agronomica - Lagoa do Sino;1;5;864.67
+87;Frances Holder Giles;Enfermagem - Sao Carlos;1;2;864.13
+88;Barbara Obrien Shepherd;Ciencia da Computacao - Sao Carlos;1;4;864.00
+89;Nicholas Mathis Townsend;Fisica - Araras;1;2;863.89
+90;Uta Leblanc Bonner;Filosofia - Sao Carlos;1;4;863.75
+91;Deanna;Biotecnologia - Araras;1;5;863.44
+92;Aileen Dyer Hull;Engenharia Ambiental - Lagoa do Sino;1;1;862.44
+93;Dalton;Biotecnologia - Araras;1;1;862.33
+94;Brianna Callahan Bowers;Biotecnologia - Sao Carlos;1;3;862.25
+95;Erica Cook Kent;Engenharia de Computacao - Sao Carlos;1;3;862.13
+96;Haley Reid Elliott;Quimica - Araras;1;5;861.89
+97;Jameson Smith Hicks;Ciencias Sociais - Sao Carlos;1;4;861.86
+98;Hedy Brewer Parks;Estatistica - Sao Carlos;1;2;861.43
+99;Timothy Sharpe William;Fisica - Sorocaba;1;1;860.89
+100;Alexander Aguirre Castaneda;Biblioteconomia - Sao Carlos;1;1;860.88
+101;Tobias Dillard Johnson;Pedagogia - Sao Carlos;1;2;860.86
+102;Yen Pope Patrick;Engenharia Florestal - Sorocaba;1;1;860.38
+103;Charity Schroeder Nelson;Imagem Som - Sao Carlos;1;2;859.63
+104;Germaine Gilmore Burke;Filosofia - Sao Carlos;1;2;859.38
+105;Stephen Oneal Mcmahon;Engenharia Agronomica - Araras;1;3;859.29
+106;Serina Levy Schultz;Engenharia Agronomica - Araras;1;3;859.14
+107;Ryan;Ciencias Biologicas - Araras;1;1;858.50
+108;Ryan Gamble Stokes;Engenharia Ambiental - Lagoa do Sino;1;2;857.89
+109;Serina Mosley Dawson;Ciencias Econimcas - Sorocaba;1;2;857.00
+110;Myles Robles Cohen;Fisica - Sorocaba;1;1;856.89
+111;Sydnee Phillips Ballard;Letras - Sao Carlos;1;4;856.88
+112;Kaseem Lowery Garrison;Letras - Sao Carlos;1;2;855.63
+113;Kaseem Manning Gutierrez;Matematica - Sao Carlos;1;4;855.57
+114;Rudyard Webster Neal;Engenharia Eletrica - Sao Carlos;1;4;855.57
+115;Ezra Dorsey Salas;Engenharia Quimica - Sao Carlos;1;2;855.57
+116;Pascale Richardson Bernard;Engenharia Mecanica - Sao Carlos;1;3;855.57
+117;Jorden Michael Patrick;Engenharia Agronomica - Araras;1;4;855.43
+118;Cadman;Agroecologia - Araras;1;3;855.14
+119;Colleen Delgado Russo;Quimica - Sorocaba;1;4;855.11
+120;Sloane Dominguez Durham;Engenharia Agronomica - Araras;1;5;855.00
+121;Carol Reyes Banks;Ciencias Sociais - Sao Carlos;1;5;854.57
+122;Herrod Henry Cotton;Engenharia Fisica - Sao Carlos;1;1;854.57
+123;Kadeem Kirkland Rowe;Ciencia da Computacao - Sorocaba;1;2;853.88
+124;Baxter Newman Quinn;Ciencia da Computacao - Sao Carlos;1;1;853.88
+125;Hayes Meyers Durham;Engenharia de Producao - Sorocaba;1;1;853.25
+126;Kenyon Good Becker;Engenharia Florestal - Sorocaba;1;1;852.88
+127;Martha Valdez Potter;Engenharia Agronomica - Lagoa do Sino;1;2;852.78
+128;Mary Savage William;Filosofia - Sao Carlos;1;2;852.25
+129;Jesse Goodman Simpson;Linguistica - Sao Carlos;1;5;852.25
+130;Stella Edwards Haney;Engenharia Eletrica - Sao Carlos;1;5;852.00
+131;Wilma Henderson Dunlap;Gerontologia - Sao Carlos;1;5;851.89
+132;Barbara Fletcher Pickett;Biblioteconomia - Sao Carlos;1;1;851.88
+133;Ali Blair Meyer;Quimica - Sao Carlos;1;3;851.80
+134;Phelan;Biotecnologia - Araras;1;3;851.78
+135;Noah Wolfe Hickman;Psicologia - Sao Carlos;1;3;851.33
+136;Cheyenne;Biotecnologia - Araras;1;4;851.11
+137;Wayne Garrison Donaldson;Ciencias Biologicas - Sorocaba;1;2;851.00
+138;Charity Thornton Charles;Enhenharia de Producao - Sao Carlos;1;1;850.57
+139;Melissa Parker Jordan;Engenharia Mecanica - Sao Carlos;1;5;850.43
+140;Iliana Juarez Ford;Engenharia Agronomica - Araras;1;4;850.43
+141;Lance;Agroecologia - Araras;1;5;850.43
+142;Basil Berger Whitehead;Ciencia da Computacao - Sao Carlos;1;3;850.25
+143;Luke Lyons Salinas;Ciencia da Computacao - Sao Carlos;1;4;850.25
+144;Desiree Velez Conway;Matematica - Sao Carlos;1;2;850.14
+145;Tatum;Ciencias Biologicas - Araras;1;4;850.13
+146;Regina;Agroecologia - Araras;1;5;849.86
+147;Paki Lopez Gross;Quimica - Sao Carlos;1;1;849.60
+148;Eagan Harding Higgins;Enhenharia de Producao - Sao Carlos;1;4;849.29
+149;Kibo;Ciencias Biologicas - Araras;1;2;849.00
+150;Fay Houston Lewis;Gerontologia - Sao Carlos;1;2;848.78
+151;Marcia Alford Kline;Engenharia Florestal - Sorocaba;1;1;848.75
+152;Althea Bryant Barlow;Pedagogia - Sao Carlos;1;2;848.71
+153;Blossom Hayden Johnson;Pedagogia - Sao Carlos;1;3;848.71
+154;Lucian Gay Kramer;Engenharia Civil - Sao Carlos;1;1;848.63
+155;Reagan Rowland Conrad;Engenharia Mecanica - Sao Carlos;1;4;847.86
+156;Quamar Hicks Blankenship;Engenharia Agronomica - Araras;1;1;847.71
+157;Holmes Holder West;Engenharia Ambiental - Lagoa do Sino;1;5;847.44
+158;Oleg Lucas Cox;Engenharia Fisica - Sao Carlos;1;2;847.29
+159;Justin Gomez Henson;Turismo - Sorocaba;1;1;847.22
+160;Emily Brown Murphy;Engenharia de Materiais - Sao Carlos;1;4;846.86
+161;Simone Tate Bradshaw;Ciencia da Computacao - Sorocaba;1;4;846.63
+162;Britanney Bender Mueller;Quimica - Araras;1;4;846.44
+163;Carolyn Stark Pacheco;Fisica - Sorocaba;1;2;846.11
+164;Noelani Randall Rivas;Gerontologia - Sao Carlos;1;2;846.00
+165;Virginia Shepard Guerrero;Filosofia - Sao Carlos;1;2;845.25
+166;Allegra Kline Hebert;Engenharia Mecanica - Sao Carlos;1;2;845.14
+167;Elizabeth Rhodes Jordan;Ciencias Biologicas - Araras;1;1;845.00
+168;Drake Buchanan Stokes;Linguistica - Sao Carlos;1;3;844.88
+169;Willow Battle Calhoun;Fisioterapia - Sao Carlos;1;3;844.75
+170;Dustin Carrillo Murphy;Engenharia de Producao - Sorocaba;1;4;843.88
+171;Zena Wolf Garcia;Agroecologia - Araras;1;2;843.86
+172;Laura Marks Rogers;Engenharia Fisica - Sao Carlos;1;5;843.86
+173;Kaseem Gallegos Eaton;Matematica - Sorocaba;1;4;843.38
+174;Farrah Watts Hodge;Terapia Ocupacional - Sao Carlos;1;3;843.22
+175;Joel Stewart Mayer;Ciencias Sociais - Sao Carlos;1;2;843.14
+176;Patience Webster Kirk;Fisioterapia - Sao Carlos;1;1;843.00
+177;Cecilia;Ciencias Biologicas - Araras;1;3;842.88
+178;April Pace Henson;Gestao e Analise Ambiental - Sao Carlos;1;4;842.50
+179;Jesse May Kane;Pedagogia - Sao Carlos;1;5;842.43
+180;Clio Macias Hart;Enhenharia de Producao - Sao Carlos;1;1;842.29
+181;Perry Andrews Copeland;Terapia Ocupacional - Sao Carlos;1;2;841.89
+182;Laura York Moreno;Matematica - Sorocaba;1;1;841.88
+183;Melvin Walton Pratt;Ciencias Biologicas - Sorocaba;1;2;841.63
+184;Minerva Sellers Richmond;Enhenharia de Producao - Sao Carlos;1;4;841.57
+185;Leslie Baxter Tillman;Terapia Ocupacional - Sao Carlos;1;1;841.33
+186;Madonna Frederick Myers;Engenharia Ambiental - Lagoa do Sino;1;1;841.33
+187;Sade Miller Rowland;Engenharia de Materiais - Sao Carlos;1;4;841.29
+188;Nolan Best Meadows;Biotecnologia - Sao Carlos;1;1;841.25
+189;Jameson Diaz Cervantes;Ciencias Econimcas - Sorocaba;1;4;840.89
+190;Adara Howard Lawrence;Gestao e Analise Ambiental - Sao Carlos;1;2;840.88
+191;Grace Palmer Lee;Pedagogia - Sao Carlos;1;4;840.86
+192;Hayes Burris Erickson;Quimica - Araras;1;5;840.56
+193;Sean Moon Hewitt;Gestao e Analise Ambiental - Sao Carlos;1;4;840.38
+194;Rafael Baker Monroe;Administracao - Sorocaba;1;5;840.25
+195;Regan Boyer Rowland;Biotecnologia - Sao Carlos;1;5;840.25
+196;Hyacinth Estes Daniel;Quimica - Sao Carlos;1;3;840.00
+197;Jade Juarez Summers;Enfermagem - Sao Carlos;1;2;840.00
+198;Tashya Garner Guerrero;Engenharia Agronomica - Lagoa do Sino;1;3;839.78
+199;Dai Ray Leon;Ciencias Biologicas - Araras;1;3;839.75
+200;Jeanette Snider Ford;Engenharia de alimentos - Lagoa do Sino;1;5;839.44
+201;Darryl Thornton Patel;Biblioteconomia - Sao Carlos;1;4;839.00
+202;Aidan Montoya Cooke;Estatistica - Sao Carlos;1;3;838.71
+203;Kristen House Harmon;Quimica - Sao Carlos;1;3;838.60
+204;Aristotle Collins Graves;Engenharia Fisica - Sao Carlos;1;3;837.86
+205;Giovanni Brogiato;Educacao Fisica - Sao Carlos;1;5;837.83
+206;Zelenia Townsend Hensley;Ciencias Biologicas - Sorocaba;1;4;837.75
+207;MacKenzie Wynn Dudley;Pedagogia - Sao Carlos;1;1;837.71
+208;Hyacinth Farmer Vance;Fisica - Sorocaba;1;1;837.67
+209;Amber;Agroecologia - Araras;2;1;837.57
+210;Sarah Hays Kirby;Engenharia Mecanica - Sao Carlos;1;5;837.29
+211;Trevor Serrano Wood;Pedagogia - Sorocaba;1;4;837.00
+212;Vernon Fisher Bradford;Engenharia Florestal - Sorocaba;1;2;836.75
+213;Abra Wallace Wright;Ciencias Econimcas - Sorocaba;1;5;836.56
+214;Courtney Perez Nichols;Estatistica - Sao Carlos;1;1;836.14
+215;Melinda Kennedy Mendoza;Ciencia da Computacao - Sao Carlos;1;1;836.13
+216;Audra Myers Gutierrez;Engenharia Agronomica - Araras;1;2;836.00
+217;Ignacia Delgado Hubbard;Engenharia de Computacao - Sao Carlos;1;3;835.63
+218;Rose Bernard Mcgee;Engenharia de Materiais - Sao Carlos;1;4;835.29
+219;Hasad Sanders Suarez;Terapia Ocupacional - Sao Carlos;1;4;834.44
+220;Pamela Hodges Reeves;Filosofia - Sao Carlos;1;5;834.38
+221;Evelyn Allison Richardson;Biotecnologia - Araras;1;1;834.33
+222;Lilah King Mccall;Estatistica - Sao Carlos;1;1;834.29
+223;Zena Sparks Morin;Quimica - Araras;1;5;834.11
+224;Aretha Larsen Holt;Fisica - Araras;1;4;833.89
+225;Wynne Christian Barnes;Matematica - Sao Carlos;1;1;833.86
+226;Colorado Harris House;Engenharia de Producao - Sorocaba;1;2;833.50
+227;Christopher Moon May;Enhenharia de Producao - Sao Carlos;1;5;833.43
+228;Allistair Branch Davenport;Engenharia Agronomica - Lagoa do Sino;1;3;833.33
+229;Kato Strickland Ferrell;Educacao Especial - Sao Carlos;1;4;833.14
+230;Kessie Lawrence Rhodes;Fisioterapia - Sao Carlos;1;2;833.13
+231;Sade Vega Jennings;Biblioteconomia - Sao Carlos;2;1;833.13
+232;Nayda Gomez Chen;Estatistica - Sao Carlos;1;3;833.00
+233;Chandler Mooney Vargas;Engenharia Eletrica - Sao Carlos;1;4;833.00
+234;Wylie Franks Bean;Psicologia - Sao Carlos;1;5;832.89
+235;Hiram Wyatt Mcintyre;Engenharia de Producao - Sorocaba;1;3;832.75
+236;Stephen Valenzuela Luna;Linguistica - Sao Carlos;1;4;832.75
+237;Lucy Lindsay Baxter;Educacao Fisica - Sao Carlos;1;1;832.67
+238;Aline Mcgowan Chan;Quimica - Araras;1;4;832.33
+239;Igor Rush Waller;Matematica - Sorocaba;1;1;832.25
+240;Dustin Trujillo Roy;Pedagogia - Sorocaba;2;2;831.88
+241;MacKenzie Mathews Harvey;Engenharia Florestal - Sorocaba;1;4;831.88
+242;Brennan Ramos Mcmahon;Ciencias Econimcas - Sorocaba;1;1;831.67
+243;Carly England Russell;Engenharia de Materiais - Sao Carlos;1;4;831.57
+244;Carlos Santiago Caldwell;Letras - Sao Carlos;1;5;831.50
+245;Tobias Rowland Wilder;Quimica - Sao Carlos;1;5;831.40
+246;Sebastian Bradshaw Buckley;Turismo - Sorocaba;1;3;831.22
+247;Jesse Hayden Snyder;Fisica - Sao Carlos;1;4;830.57
+248;Howard Richardson Harrell;Psicologia - Sao Carlos;1;1;830.56
+249;Graham Fischer Nash;Gestao e Analise Ambiental - Sao Carlos;1;4;830.50
+250;Jasper Nielsen Mccullough;Engenharia Florestal - Sorocaba;1;3;830.25
+251;Hedda Cash Burris;Engenharia Mecanica - Sao Carlos;1;5;830.14
+252;Arsenio Marquez Sykes;Engenharia Civil - Sao Carlos;1;5;830.13
+253;Kirsten Mccormick Wagner;Gerontologia - Sao Carlos;1;2;829.44
+254;Amos Vance Maddox;Filosofia - Sao Carlos;1;3;829.25
+255;Charde Mcdonald Harding;Ciencia da Computacao - Sao Carlos;1;1;829.13
+256;Camille Watson Gates;Pedagogia - Sao Carlos;2;5;829.00
+257;Constance Middleton Goodman;Engenharia Mecanica - Sao Carlos;1;1;828.86
+258;Nevada Heath Day;Turismo - Sorocaba;1;4;828.67
+259;Fleur Singleton Knox;Engenharia de Producao - Sorocaba;1;1;828.38
+260;Sybil Goff Grant;Terapia Ocupacional - Sao Carlos;1;2;827.89
+261;Lois Graves Curry;Quimica - Araras;1;3;827.89
+262;Kay Wood Warren;Engenharia de Computacao - Sao Carlos;1;4;827.75
+263;Derek Aguilar Gordon;Engenharia Civil - Sao Carlos;1;3;827.63
+264;Benjamin Scott Cleveland;Educacao Fisica - Sao Carlos;1;1;827.50
+265;Stone Butler Harrington;Biblioteconomia - Sao Carlos;1;5;827.38
+266;Lenore Talley Ayala;Matematica - Sao Carlos;2;1;827.00
+267;Zephr Jordan Lang;Ciencias Econimcas - Sorocaba;1;5;826.89
+268;Gannon Aguirre Herring;Engenharia Florestal - Sorocaba;1;2;826.88
+269;Shellie Cochran Cummings;Fisica - Araras;1;3;826.78
+270;Mohammad Camacho Mccormick;Enhenharia de Producao - Sao Carlos;1;2;826.71
+271;Britanney Kinney Vazquez;Engenharia Eletrica - Sao Carlos;1;5;826.71
+272;Veronica Jackson Doyle;Engenharia Florestal - Sorocaba;1;4;826.38
+273;Jennifer English Cunningham;Engenharia Eletrica - Sao Carlos;1;3;826.29
+274;Lamar Salazar Carey;Educacao Especial - Sao Carlos;1;5;826.14
+275;Geraldine Bray Murphy;Ciencias Biologicas - Sorocaba;1;4;826.13
+276;Gavin Holt Lowe;Psicologia - Sao Carlos;1;1;826.11
+277;Andrew Rivas Buck;Pedagogia - Sorocaba;1;2;825.88
+278;Vernon Sanders Holman;Engenharia Florestal - Sorocaba;2;4;825.88
+279;Colleen Buck French;Biblioteconomia - Sao Carlos;1;4;825.63
+280;Leslie Coffey Wise;Linguistica - Sao Carlos;1;4;825.63
+281;Eric Medina Horton;Enfermagem - Sao Carlos;1;2;825.63
+282;Honorato Bishop Hyde;Engenharia Quimica - Sao Carlos;1;2;825.57
+283;Heather Kent Wyatt;Engenharia de Computacao - Sao Carlos;1;3;825.50
+284;John Mccall Eaton;Ciencia da Computacao - Sorocaba;1;2;825.38
+285;Mia Diaz Davenport;Enfermagem - Sao Carlos;1;1;825.38
+286;Ulla Britt Thornton;Enfermagem - Sao Carlos;2;4;825.38
+287;Gillian Mccray Sparks;Educacao Especial - Sao Carlos;1;3;825.14
+288;Renee Mcgowan Zamora;Engenharia Fisica - Sao Carlos;1;3;825.14
+289;Jackson Ortega Pollard;Administracao - Sorocaba;1;1;825.13
+290;Brendan Talley Key;Ciencia da Computacao - Sorocaba;1;1;825.13
+291;Callie Davis Curtis;Pedagogia - Sorocaba;1;2;825.00
+292;Laurel Ellis Norman;Letras - Sao Carlos;1;2;824.75
+293;Holmes Wagner Mclean;Biblioteconomia - Sao Carlos;1;1;824.75
+294;Eaton Warner Smith;Engenharia Agronomica - Lagoa do Sino;1;4;824.44
+295;Sean Leach Fuller;Ciencias Biologicas - Sao Carlos;1;2;823.75
+296;Serena Kidd Mendez;Letras - Sao Carlos;1;1;823.50
+297;Imogene Lopez Jacobs;Biblioteconomia - Sao Carlos;1;4;823.50
+298;Brittany Walter Sykes;Ciencias Sociais - Sao Carlos;1;3;823.43
+299;Merrill Valentine Faulkner;Engenharia Agronomica - Araras;1;4;823.29
+300;Jaime Ramsey Jefferson;Ciencias Biologicas - Sorocaba;1;2;823.25
+301;Carson Hopkins Burks;Estatistica - Sao Carlos;1;2;823.14
+302;Harper Mcmillan Shannon;Ciencias Biologicas - Araras;2;1;823.13
+303;Regan Mathews Macias;Fisica - Araras;1;3;823.00
+304;Virginia Whitehead Clayton;Ciencias Biologicas - Sao Carlos;1;4;823.00
+305;Chadwick Charles Barton;Agroecologia - Araras;2;1;823.00
+306;Felicia Horn Miranda;Engenharia Eletrica - Sao Carlos;1;5;823.00
+307;Natalie;Agroecologia - Araras;2;1;822.86
+308;Kiara Colon Burns;Agroecologia - Araras;1;5;822.57
+309;Kennan Thornton Reynolds;Medicina - Sao Carlos;1;1;822.29
+310;Mariko Hess Sampson;Enfermagem - Sao Carlos;1;4;822.25
+311;Bryar Miles Wooten;Engenharia Ambiental - Lagoa do Sino;1;4;822.22
+312;Marcia Fitzpatrick Pena;Engenharia de Computacao - Sao Carlos;1;5;822.13
+313;Imogene Stanley Burgess;Fisica - Araras;1;1;821.89
+314;Gage Chaney Dunn;Enhenharia de Producao - Sao Carlos;1;2;821.71
+315;Ahmed Duran Sellers;Matematica - Sao Carlos;1;4;821.71
+316;Trevor Barrett Allen;Fisica - Sorocaba;1;4;821.56
+317;Virginia Hewitt Mendoza;Fisica - Sorocaba;1;3;820.67
+318;Kameko Black Matthews;Engenharia Florestal - Sorocaba;1;1;820.50
+319;Erica Flowers Ware;Ciencia da Computacao - Sorocaba;1;3;820.50
+320;Knox Walsh Kirby;Fisica - Araras;1;5;820.44
+321;Nita Chaney Mullen;Educacao Especial - Sao Carlos;1;4;820.43
+322;Lareina Coleman Curry;Engenharia Agronomica - Araras;1;1;820.29
+323;Cadman Mcdaniel Pope;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;1;1;820.29
+324;Marshall Horton Knowles;Ciencia da Computacao - Sorocaba;1;4;820.13
+325;Leila Roach Lloyd;Fisioterapia - Sao Carlos;1;1;820.13
+326;Destiny;Agroecologia - Araras;1;5;820.00
+327;Amy Knapp Bean;Agroecologia - Araras;1;3;819.57
+328;Mara Vaughan Matthews;Matematica - Sorocaba;1;2;819.38
+329;Boris Key Rios;Enfermagem - Sao Carlos;1;5;819.38
+330;Anika Conrad Porter;Enhenharia de Producao - Sao Carlos;1;5;819.29
+331;Simone Hendrix Higgins;Engenharia Mecanica - Sao Carlos;1;5;819.14
+332;Zephania William Keller;Ciencia da Computacao - Sorocaba;2;2;819.13
+333;Rebekah Bennett Horton;Biblioteconomia - Sao Carlos;1;5;819.13
+334;Ciaran Leach Stephenson;Pedagogia - Sorocaba;1;4;819.00
+335;Caryn Dorsey Goodwin;Ciencia da Computacao - Sorocaba;1;3;818.88
+336;Prescott Mccray Brooks;Ciencia da Computacao - Sorocaba;1;2;818.88
+337;Grady Ramos Mcintyre;Imagem Som - Sao Carlos;1;2;818.88
+338;Elvis Walsh Vazquez;Biblioteconomia - Sao Carlos;1;4;818.50
+339;Vanna;Biotecnologia - Araras;1;3;818.44
+340;Delilah Myers Casey;Quimica - Sorocaba;1;3;818.33
+341;Cameron Baird Roy;Quimica - Araras;1;1;818.33
+342;Baxter;Agroecologia - Araras;1;2;818.29
+343;Demetria Moses Haynes;Psicologia - Sao Carlos;1;2;818.22
+344;Dominique Ashley Fuentes;Engenharia de Producao - Sorocaba;1;1;818.13
+345;Prescott Clemons Bell;Matematica - Sao Carlos;1;5;818.00
+346;Ira Kelly English;Ciencia da Computacao - Sorocaba;1;4;818.00
+347;Cara Savage Bright;Fisica - Araras;1;4;818.00
+348;Dorian Lawson Dyer;Engenharia de Materiais - Sao Carlos;1;4;817.86
+349;Vernon Mercado Browning;Engenharia de Materiais - Sao Carlos;1;3;817.86
+350;Kasper Vance Tran;Enhenharia de Producao - Sao Carlos;1;5;817.86
+351;Nola Decker Rivas;Ciencias Biologicas - Sorocaba;1;3;817.63
+352;Dorian Crosby Mitchell;Enhenharia de Producao - Sao Carlos;2;1;817.57
+353;Kenneth Perry Maddox;Quimica - Sorocaba;2;1;817.56
+354;Angela Langley Dixon;Biotecnologia - Araras;1;1;817.56
+355;Ahmed Jenkins Buck;Engenharia Agronomica - Lagoa do Sino;1;3;817.44
+356;Alexandra Jarvis Gordon;Gerontologia - Sao Carlos;1;2;817.44
+357;Isabelle Kelley Byrd;Quimica - Sao Carlos;1;4;817.40
+358;Rhona Mendez Todd;Engenharia Mecanica - Sao Carlos;1;3;817.14
+359;Nathaniel Taylor Guy;Engenharia Mecanica - Sao Carlos;1;1;817.14
+360;Cleo Thompson Kramer;Engenharia de Materiais - Sao Carlos;1;5;817.14
+361;Brendan Good Beard;Psicologia - Sao Carlos;1;5;817.11
+362;Kelsey Lowery Ellis;Engenharia Civil - Sao Carlos;2;2;817.00
+363;Silas Dale Hamilton;Engenharia de Producao - Sorocaba;1;3;816.88
+364;Benjamin William Mullins;Quimica - Araras;1;3;816.67
+365;Ahmed Deleon Baird;Engenharia Quimica - Sao Carlos;1;3;816.57
+366;Abraham Sims Simon;Fisica - Sao Carlos;1;3;816.57
+367;Kelly Mclaughlin Lopez;Biblioteconomia - Sao Carlos;1;2;816.13
+368;Raya Peck Michael;Fisioterapia - Sao Carlos;1;4;816.00
+369;Chadwick Patton Wade;Engenharia Ambiental - Lagoa do Sino;1;3;815.89
+370;Shafira Irwin Molina;Gerontologia - Sao Carlos;1;3;815.78
+371;Heidi Farley Weeks;Educacao Especial - Sao Carlos;1;5;815.57
+372;Taylor Acosta Flynn;Enhenharia de Producao - Sao Carlos;1;2;815.29
+373;Brenna Meadows Hurst;Engenharia Agronomica - Araras;1;5;815.14
+374;Lilah Kirkland Graham;Educacao Especial - Sao Carlos;1;1;815.00
+375;Eaton Guthrie Fuentes;Quimica - Sorocaba;1;2;815.00
+376;Keely Reeves Franklin;Engenharia Agronomica - Araras;1;2;814.86
+377;Nyssa Woodward Cooke;Engenharia Eletrica - Sao Carlos;1;5;814.86
+378;Yael Bird Grimes;Engenharia Ambiental - Lagoa do Sino;1;3;814.78
+379;Willa Parker Tucker;Geografia - Sorocaba;1;5;814.75
+380;Evan Page Gray;Engenharia Eletrica - Sao Carlos;1;5;814.71
+381;Tamara Joyce Cabrera;Ciencias Biologicas - Araras;1;4;814.63
+382;Hanna Finley Randall;Engenharia Civil - Sao Carlos;2;4;814.50
+383;Laura Pacheco Bradshaw;Imagem Som - Sao Carlos;1;3;814.50
+384;Hedley Puckett Molina;Estatistica - Sao Carlos;1;4;814.14
+385;Gil Summers Duffy;Ciencia da Computacao - Sorocaba;1;1;814.13
+386;Miranda Calhoun Blankenship;Engenharia Civil - Sao Carlos;1;3;814.13
+387;Ulysses Paul Baker;Linguistica - Sao Carlos;1;3;813.75
+388;Melodie Barker Houston;Matematica - Sao Carlos;1;2;813.71
+389;Stewart Charles Bishop;Engenharia Fisica - Sao Carlos;1;1;813.57
+390;Leigh Terry Kirkland;Matematica - Sao Carlos;1;4;813.57
+391;Kareem Foster Singleton;Pedagogia - Sao Carlos;2;4;813.14
+392;Conan Cook Myers;Enfermagem - Sao Carlos;1;1;813.13
+393;Georgia Blevins Ewing;Matematica - Sorocaba;1;4;813.13
+394;Kirsten Hammond Fischer;Educacao Especial - Sao Carlos;1;4;812.71
+395;Whitney;Agroecologia - Araras;2;2;812.71
+396;Ishmael Holman Shelton;Gerontologia - Sao Carlos;1;1;812.67
+397;David Hoover Barry;Ciencia da Computacao - Sorocaba;1;1;812.63
+398;Nyssa Kirkland Riddle;Ciencia da Computacao - Sao Carlos;2;3;812.50
+399;Rudyard Walls Ferguson;Engenharia Civil - Sao Carlos;1;3;812.38
+400;Zachary Larson Brady;Imagem Som - Sao Carlos;1;3;812.38
+401;Davis Barton Carney;Educacao Fisica - Sao Carlos;1;3;812.33
+402;Jarrod Travis Baker;Ciencias Econimcas - Sorocaba;1;3;812.33
+403;Lysandra;Agroecologia - Araras;1;5;812.29
+404;Madison Mcbride Kirby;Ciencia da Computacao - Sorocaba;1;3;812.13
+405;Nero Leblanc Juarez;Ciencias Econimcas - Sorocaba;1;1;811.78
+406;Clio Foreman Hyde;Enfermagem - Sao Carlos;2;1;811.75
+407;Kirsten Barker Reed;Medicina - Sao Carlos;2;2;811.43
+408;Shad Callahan Landry;Enhenharia de Producao - Sao Carlos;1;1;811.43
+409;Owen Flynn Cameron;Engenharia Civil - Sao Carlos;1;2;811.38
+410;Neil Orr Alvarado;Engenharia de Producao - Sorocaba;1;1;811.25
+411;Garrison Bryant Green;Quimica - Araras;1;2;811.22
+412;Marny Potter Stone;Quimica - Sao Carlos;1;4;811.20
+413;Zeph Harrington Peck;Engenharia de Materiais - Sao Carlos;1;1;811.14
+414;Bernard Santana Terrell;Matematica - Sao Carlos;2;1;811.14
+415;Tallulah Malone Kirkland;Engenharia Quimica - Sao Carlos;1;2;811.00
+416;Chester Briggs Andrews;Enfermagem - Sao Carlos;1;1;810.88
+417;Rebecca Tillman Shannon;Engenharia de Materiais - Sao Carlos;1;2;810.57
+418;Eve Conrad Daniels;Biotecnologia - Sao Carlos;1;5;810.50
+419;Candice Norman Tanner;Administracao - Sorocaba;1;3;810.50
+420;Garrison Yang Curry;Biotecnologia - Araras;1;2;810.33
+421;Victor Cruz Skinner;Ciencias Econimcas - Sorocaba;1;4;810.33
+422;Ciara Holman Potts;Linguistica - Sao Carlos;1;1;810.25
+423;Yasir Hatfield Mullen;Ciencias Biologicas - Sao Carlos;1;3;810.25
+424;Emi Robertson Sexton;Gestao e Analise Ambiental - Sao Carlos;1;5;810.13
+425;Ruth Everett Barlow;Ciencia da Computacao - Sao Carlos;1;5;810.00
+426;Erin Mckee Adkins;Ciencias Biologicas - Sorocaba;1;3;810.00
+427;Hop Roberson Keith;Fisica - Araras;1;4;809.89
+428;Malachi Crane Skinner;Administracao - Sorocaba;2;2;809.88
+429;Dorothy Stewart Whitfield;Matematica - Sao Carlos;1;2;809.86
+430;Mikayla Peters Watkins;Educacao Fisica - Sao Carlos;1;1;809.83
+431;Timothy Park Moody;Engenharia Mecanica - Sao Carlos;2;4;809.71
+432;Renee;Ciencias Biologicas - Araras;1;1;809.63
+433;Kameko Hendrix Horton;Gestao e Analise Ambiental - Sao Carlos;1;3;809.50
+434;Harrison Colon Ratliff;Ciencia da Computacao - Sao Carlos;1;2;809.50
+435;Xenos Phelps Wagner;Ciencias Sociais - Sao Carlos;2;2;809.43
+436;Lareina Waller Rodriguez;Engenharia Fisica - Sao Carlos;1;3;809.14
+437;Aline Jacobson Noel;Ciencias Sociais - Sao Carlos;1;4;809.14
+438;Isabella Sandoval Parker;Geografia - Sorocaba;1;1;809.13
+439;Jaden Pearson Santos;Engenharia de Producao - Sorocaba;1;1;809.13
+440;Xavier Lindsay Rollins;Imagem Som - Sao Carlos;1;1;809.13
+441;Jena Hawkins Hale;Psicologia - Sao Carlos;1;3;809.11
+442;Adria Meyers Sargent;Engenharia Agronomica - Lagoa do Sino;1;3;809.00
+443;Elton Waters Saunders;Biotecnologia - Sao Carlos;1;3;808.75
+444;Alea Mays Baxter;Engenharia de Producao - Sorocaba;1;5;808.75
+445;Daquan Watts Guerra;Engenharia de Materiais - Sao Carlos;1;2;808.43
+446;Peter Yang Welch;Matematica - Sao Carlos;1;4;808.43
+447;Porter Strickland Small;Agroecologia - Araras;1;1;808.43
+448;Hammett Maynard Mayer;Fisioterapia - Sao Carlos;1;3;808.38
+449;Orla Jenkins Gilbert;Ciencias Sociais - Sao Carlos;1;1;808.14
+450;Heidi Mendoza Yang;Quimica - Sorocaba;1;1;808.00
+451;Nora Blanchard Reilly;Fisica - Sorocaba;1;4;808.00
+452;Ross Hoover Montgomery;Ciencias Econimcas - Sorocaba;1;1;807.89
+453;Elaine Daniel Roman;Biblioteconomia - Sao Carlos;1;5;807.88
+454;Brendan Blanchard Nieves;Engenharia de Computacao - Sao Carlos;2;3;807.88
+455;Ruby Cortez Black;Engenharia Agronomica - Araras;1;1;807.86
+456;Francis Farrell Patterson;Estatistica - Sao Carlos;1;3;807.71
+457;Jescie Griffith Lamb;Psicologia - Sao Carlos;1;5;807.67
+458;Gray Olson Conner;Ciencias Biologicas - Sao Carlos;1;2;807.63
+459;Harding Hudson Carlson;Quimica - Sao Carlos;1;4;807.60
+460;Fay Le Peters;Matematica - Sorocaba;1;5;807.50
+461;Mercedes Noel Bolton;Educacao Fisica - Sao Carlos;1;1;807.33
+462;Declan Garcia Cole;Engenharia Agronomica - Araras;1;1;807.29
+463;Ahmed Ramsey Sweeney;Ciencias Sociais - Sao Carlos;1;3;807.14
+464;Noel Mueller Macias;Engenharia Fisica - Sao Carlos;1;5;807.14
+465;Savannah Hoffman Suarez;Terapia Ocupacional - Sao Carlos;1;3;807.11
+466;Boris Meadows Spence;Ciencias Biologicas - Sao Carlos;1;1;807.00
+467;Neve Wright Duran;Engenharia Agronomica - Lagoa do Sino;1;3;806.89
+468;Petra Garner Lawrence;Pedagogia - Sorocaba;2;5;806.88
+469;Hadassah Baldwin Harrison;Engenharia de Producao - Sorocaba;2;5;806.88
+470;David Hardy Conley;Administracao - Sorocaba;1;5;806.88
+471;Nomlanga Robinson Mccullough;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;1;3;806.71
+472;TaShya Wilkinson Steele;Engenharia Agronomica - Lagoa do Sino;1;2;806.56
+473;Sara Oneil Wilson;Engenharia Civil - Sao Carlos;2;2;806.38
+474;Echo Phillips Combs;Medicina - Sao Carlos;1;2;806.29
+475;Amethyst Deleon Bartlett;Ciencias Sociais - Sao Carlos;1;2;806.00
+476;Grant David Jones;Quimica - Araras;1;3;805.89
+477;Lee Rodriquez Sosa;Ciencias Biologicas - Araras;1;2;805.88
+478;Buckminster Mooney Marquez;Matematica - Sorocaba;1;3;805.88
+479;Serena Melton Burns;Filosofia - Sao Carlos;1;5;805.75
+480;Wylie Fowler Charles;Ciencia da Computacao - Sorocaba;1;5;805.63
+481;Maite Duncan Craft;Filosofia - Sao Carlos;1;5;805.63
+482;Patricia Zamora Wheeler;Ciencias Biologicas - Sorocaba;1;5;805.63
+483;Morgan Dickerson Odonnell;Matematica - Sorocaba;1;3;805.50
+484;Brynn Rivas Kemp;Pedagogia - Sao Carlos;1;3;805.29
+485;Burke Juarez Tyler;Engenharia Florestal - Sorocaba;1;2;805.25
+486;Wing Acevedo Greer;Linguistica - Sao Carlos;1;1;805.00
+487;Wade Petersen Garner;Enhenharia de Producao - Sao Carlos;2;2;805.00
+488;Tasha Kramer Cooper;Ciencias Biologicas - Sorocaba;2;5;805.00
+489;Ignacia Tate Cameron;Fisica - Sorocaba;1;5;804.89
+490;Chloe Fowler Vargas;Linguistica - Sao Carlos;1;1;804.88
+491;Kaden Michael Carson;Engenharia Fisica - Sao Carlos;1;4;804.71
+492;Nadine Carpenter Norton;Engenharia Civil - Sao Carlos;1;4;804.50
+493;Drake Bell Mueller;Engenharia Agronomica - Araras;1;5;804.43
+494;Mikayla Wolfe Velazquez;Engenharia Florestal - Sorocaba;1;5;804.38
+495;Merritt Wade Vance;Pedagogia - Sao Carlos;2;2;804.29
+496;Melanie Ellison Molina;Biblioteconomia - Sao Carlos;1;5;804.00
+497;Wendy Levy Kim;Ciencia da Computacao - Sorocaba;1;4;803.88
+498;Rylee Goodwin Gilmore;Ciencias Biologicas - Sao Carlos;1;2;803.88
+499;Britanney Moran Lopez;Matematica - Sorocaba;1;2;803.50
+500;Mechelle Fields Hunter;Engenharia Mecanica - Sao Carlos;1;5;803.43
+501;Stacey Russo Dorsey;Agroecologia - Araras;1;5;803.29
+502;Roanna Valenzuela Cochran;Engenharia de Computacao - Sao Carlos;1;5;803.25
+503;Daryl Bartlett Rivera;Educacao Fisica - Sao Carlos;1;3;803.17
+504;Chester Reynolds Flowers;Pedagogia - Sorocaba;1;1;803.13
+505;Reece Campbell Clemons;Engenharia Florestal - Sorocaba;1;3;803.00
+506;Talon Trujillo Dawson;Administracao - Sorocaba;2;4;803.00
+507;Ciara Hanson Turner;Engenharia Agronomica - Lagoa do Sino;1;1;802.89
+508;Hall Lowery Clemons;Engenharia Fisica - Sao Carlos;1;1;802.86
+509;Whoopi Montoya Roy;Enhenharia de Producao - Sao Carlos;1;4;802.86
+510;Lunea Brady Morse;Psicologia - Sao Carlos;1;1;802.78
+511;Jackson Salas Perry;Engenharia de Computacao - Sao Carlos;1;4;802.75
+512;Caio Augusto;Letras - Sao Carlos;1;5;802.75
+513;Stephen Sharp Robinson;Medicina - Sao Carlos;1;3;802.71
+514;Sara Gallegos Spence;Fisica - Sao Carlos;1;4;802.71
+515;Cherokee Padilla Farrell;Engenharia de alimentos - Lagoa do Sino;1;4;802.67
+516;Florence Stevens Frye;Agroecologia - Araras;1;1;802.57
+517;Chase Fletcher Figueroa;Engenharia de alimentos - Lagoa do Sino;1;5;802.44
+518;Macey Goff Mcleod;Filosofia - Sao Carlos;1;2;802.38
+519;Blaze Brewer Lewis;Educacao Fisica - Sao Carlos;1;2;802.33
+520;Meghan Leon Gill;Gestao e Analise Ambiental - Sao Carlos;1;1;802.25
+521;Nelle;Ciencias Biologicas - Araras;1;2;802.25
+522;Bertha Whitfield Burks;Pedagogia - Sorocaba;2;4;802.25
+523;Alexandra Ellison Castillo;Estatistica - Sao Carlos;1;2;802.14
+524;Teagan Soto Grant;Engenharia Agronomica - Araras;2;3;802.14
+525;Halee Schmidt Sharp;Biotecnologia - Sao Carlos;1;1;802.00
+526;Dakota Molina Herring;Enfermagem - Sao Carlos;1;5;801.75
+527;Yael Gregory Young;Engenharia Fisica - Sao Carlos;1;3;801.71
+528;Oscar Skinner Fowler;Biblioteconomia - Sao Carlos;1;3;801.50
+529;Vanna Holden Stokes;Enhenharia de Producao - Sao Carlos;2;4;801.43
+530;Thomas Simpson Brooks;Fisioterapia - Sao Carlos;1;3;801.38
+531;Giacomo Terry Williams;Engenharia Civil - Sao Carlos;1;3;801.13
+532;Chancellor Hull Velez;Engenharia Fisica - Sao Carlos;1;5;801.00
+533;Xanthus Russell Daniels;Matematica - Sao Carlos;1;1;801.00
+534;Warren Austin Richardson;Fisioterapia - Sao Carlos;1;2;800.88
+535;Clark Lester Patel;Gestao e Analise Ambiental - Sao Carlos;1;2;800.75
+536;Irene Shaffer Franks;Pedagogia - Sao Carlos;1;3;800.71
+537;Nora Zamora Ewing;Engenharia Agronomica - Araras;1;1;800.57
+538;Kirestin Perry Sweet;Engenharia Florestal - Sorocaba;1;3;800.50
+539;Gay Knox Hale;Ciencia da Computacao - Sao Carlos;2;4;800.50
+540;Iliana Cooley Graham;Engenharia Ambiental - Lagoa do Sino;1;2;800.33
+541;Pascale Pugh Waller;Biotecnologia - Sao Carlos;1;2;800.25
+542;Macy Lyons Vargas;Biotecnologia - Sao Carlos;1;1;800.25
+543;Josephine Ingram Michael;Psicologia - Sao Carlos;1;5;800.11
+544;Prescott Barton Mann;Engenharia Ambiental - Lagoa do Sino;1;1;800.00
+545;Ingrid Witt Nelson;Quimica - Araras;1;5;799.89
+546;Mark Noel Crane;Letras - Sao Carlos;2;3;799.88
+547;Minerva Mills Carroll;Engenharia Fisica - Sao Carlos;2;2;799.86
+548;Ebony William Barron;Engenharia de Producao - Sorocaba;1;4;799.75
+549;Daquan Rojas Hampton;Quimica - Araras;1;1;799.44
+550;Lisandra Thomas Gibbs;Fisica - Sao Carlos;2;5;799.43
+551;Brenna Bean Hines;Agroecologia - Araras;2;5;799.43
+552;Joan Shepard Mercado;Engenharia Agronomica - Lagoa do Sino;1;4;799.33
+553;Quynn Perkins Bridges;Ciencias Sociais - Sao Carlos;1;5;799.29
+554;Bethany Noble Conner;Enhenharia de Producao - Sao Carlos;1;1;799.29
+555;Leigh Strickland Harper;Imagem Som - Sao Carlos;2;4;799.25
+556;Jenna Hurley Simpson;Quimica - Araras;1;1;799.22
+557;Astra Fleming Reeves;Terapia Ocupacional - Sao Carlos;1;3;799.00
+558;Xena Tyler Mooney;Engenharia Ambiental - Lagoa do Sino;1;4;799.00
+559;Yoshi Alvarado Klein;Engenharia de Materiais - Sao Carlos;1;4;798.86
+560;Phoebe Powell Wheeler;Administracao - Sorocaba;2;2;798.75
+561;Paula Daniels Cain;Medicina - Sao Carlos;2;2;798.71
+562;Lillian;Biotecnologia - Araras;1;2;798.67
+563;Keaton Huffman Roberts;Engenharia Ambiental - Lagoa do Sino;1;1;798.44
+564;Baxter Combs Slater;Engenharia Agronomica - Lagoa do Sino;1;4;798.44
+565;Felicia Carpenter Tyler;Pedagogia - Sao Carlos;2;5;798.43
+566;Noelani Cote Donovan;Quimica - Sao Carlos;1;5;798.40
+567;Libby Lancaster Horn;Psicologia - Sao Carlos;1;5;798.33
+568;Boris Lamb Weber;Educacao Fisica - Sao Carlos;1;3;798.33
+569;Roth Newton Chandler;Engenharia de Producao - Sorocaba;1;3;798.25
+570;Silas Norris Vaughan;Engenharia Agronomica - Lagoa do Sino;2;3;798.22
+571;Roanna Mcdowell Velez;Quimica - Sao Carlos;1;5;798.20
+572;Quincy Gonzales Lynch;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;1;5;798.14
+573;Erasmus Pate Mcfarland;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;1;1;798.00
+574;Kiayada Villarreal Francis;Quimica - Sorocaba;1;1;797.78
+575;Carissa Mayo Zimmerman;Engenharia Eletrica - Sao Carlos;1;3;797.57
+576;Christopher Ayala Barron;Engenharia Mecanica - Sao Carlos;1;1;797.57
+577;Quynn Juarez Craft;Engenharia de alimentos - Lagoa do Sino;1;3;797.56
+578;Selma Barrera Benson;Gestao e Analise Ambiental - Sao Carlos;1;3;797.50
+579;Chastity Mckenzie Hester;Biotecnologia - Araras;1;4;797.33
+580;Vera Vargas Tillman;Biotecnologia - Sao Carlos;1;2;797.25
+581;Lavinia Barr Pruitt;Biblioteconomia - Sao Carlos;1;1;797.25
+582;Bertha Haynes Lowe;Engenharia Agronomica - Lagoa do Sino;1;2;797.22
+583;Freya Yang Campos;Biotecnologia - Araras;1;1;797.11
+584;Dylan Hines Orr;Engenharia de alimentos - Lagoa do Sino;1;2;797.00
+585;Patience Houston Henderson;Quimica - Araras;1;5;796.89
+586;Kennedy Guzman Sargent;Quimica - Sorocaba;1;5;796.89
+587;Emi Wong Cobb;Medicina - Sao Carlos;1;5;796.86
+588;Samuel Dickson Maddox;Quimica - Araras;1;1;796.78
+589;Garrett;Ciencias Biologicas - Araras;1;3;796.75
+590;Quon Oneal Kline;Biblioteconomia - Sao Carlos;2;2;796.75
+591;Winter Pugh Beach;Quimica - Araras;1;2;796.67
+592;Britanney Knox Farrell;Engenharia Ambiental - Lagoa do Sino;2;5;796.67
+593;Abra Lowe Brown;Linguistica - Sao Carlos;1;4;796.38
+594;Nyssa Garrett Rich;Fisica - Araras;1;4;796.33
+595;Allen Cruz Haney;Engenharia Agronomica - Lagoa do Sino;2;1;796.22
+596;Karleigh Lewis Wall;Educacao Especial - Sao Carlos;1;5;796.14
+597;Bo Hood Lucas;Matematica - Sao Carlos;1;4;796.14
+598;Aileen Adkins Bentley;Imagem Som - Sao Carlos;1;2;796.13
+599;Devin;Ciencias Biologicas - Araras;1;5;796.13
+600;Gay Alexander Hopkins;Engenharia Civil - Sao Carlos;1;3;796.00
+601;Karen Pierce Bowers;Psicologia - Sao Carlos;2;5;796.00
+602;Lydia Andrews Petty;Educacao Especial - Sao Carlos;1;2;796.00
+603;Martin Ramos Holmes;Turismo - Sorocaba;1;2;795.89
+604;Jacob Burt Curtis;Engenharia Ambiental - Lagoa do Sino;2;4;795.89
+605;Eden Cash Nixon;Quimica - Sao Carlos;1;5;795.80
+606;Felicia Stuart Thornton;Imagem Som - Sao Carlos;2;2;795.75
+607;Noelani;Agroecologia - Araras;2;1;795.57
+608;Joy Vaughn Franks;Fisica - Sorocaba;1;5;795.56
+609;Francesca Levy Powell;Fisioterapia - Sao Carlos;1;5;795.38
+610;Madison Steele Valenzuela;Enhenharia de Producao - Sao Carlos;1;2;795.29
+611;Bryar Terry Fleming;Ciencia da Computacao - Sorocaba;1;4;795.25
+612;Cade Ramsey Nolan;Engenharia Eletrica - Sao Carlos;1;2;795.14
+613;Regan Hodge Hester;Ciencia da Computacao - Sao Carlos;1;3;795.13
+614;Molly Perry Chavez;Engenharia de Computacao - Sao Carlos;1;1;795.13
+615;Signe Barron Estes;Quimica - Araras;2;1;795.00
+616;Kelsey Wilson Griffith;Ciencias Biologicas - Sorocaba;1;2;794.75
+617;Wendy Blankenship Giles;Linguistica - Sao Carlos;1;5;794.63
+618;Tatiana Stuart Raymond;Quimica - Araras;1;5;794.44
+619;Tarik Hughes Craig;Gestao e Analise Ambiental - Sao Carlos;2;4;794.38
+620;Aphrodite Abbott Hernandez;Matematica - Sorocaba;1;1;794.25
+621;Rhona Wise Avila;Medicina - Sao Carlos;1;3;794.14
+622;Jonas Powers Ramirez;Engenharia Quimica - Sao Carlos;1;5;794.14
+623;Orlando Burke Bauer;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;1;1;794.00
+624;Bree Pierce Holland;Turismo - Sorocaba;1;3;794.00
+625;Xandra Riggs Goff;Engenharia Agronomica - Lagoa do Sino;1;3;794.00
+626;Dolan Reeves Mcpherson;Ciencias Biologicas - Sorocaba;2;1;794.00
+627;Raven Golden Henderson;Engenharia Florestal - Sorocaba;1;2;793.88
+628;Wyoming Preston Galloway;Pedagogia - Sao Carlos;1;5;793.86
+629;Orson Norris Cruz;Ciencia da Computacao - Sao Carlos;1;4;793.75
+630;Bradley Jordan Acevedo;Engenharia Fisica - Sao Carlos;1;1;793.71
+631;Mira Ballard Chaney;Quimica - Sorocaba;1;4;793.67
+632;Blake Sharpe Collier;Ciencia da Computacao - Sorocaba;1;1;793.63
+633;Illiana Dickson Cox;Enhenharia de Producao - Sao Carlos;1;5;793.57
+634;Ruth Nash Bean;Gestao e Analise Ambiental - Sao Carlos;1;2;793.50
+635;Zoe Santos Clarke;Engenharia Civil - Sao Carlos;1;3;793.50
+636;Cedric House Norton;Imagem Som - Sao Carlos;1;4;793.50
+637;Colton Graves Black;Enhenharia de Producao - Sao Carlos;1;1;793.43
+638;Lucius Marquez Slater;Ciencia da Computacao - Sao Carlos;1;4;793.25
+639;Michael Stafford Short;Engenharia Agronomica - Lagoa do Sino;1;2;793.22
+640;Whitney Cohen Jefferson;Turismo - Sorocaba;1;1;793.22
+641;Yvette Hughes Austin;Psicologia - Sao Carlos;1;1;793.11
+642;Brian Hoover Underwood;Ciencia da Computacao - Sao Carlos;1;4;793.00
+643;Marvin Klein Mills;Quimica - Sao Carlos;1;2;793.00
+644;Hadassah Boyd Mack;Turismo - Sorocaba;1;4;792.89
+645;Inez Middleton Decker;Turismo - Sorocaba;1;3;792.89
+646;Autumn;Biotecnologia - Araras;2;3;792.78
+647;Damon Guy Bell;Agroecologia - Araras;1;3;792.71
+648;Arsenio;Ciencias Biologicas - Araras;1;5;792.63
+649;Lila;Biotecnologia - Araras;1;4;792.56
+650;Colt Miranda Bright;Turismo - Sorocaba;1;1;792.56
+651;Hall Mills Griffith;Administracao - Sorocaba;1;1;792.50
+652;Oliver;Agroecologia - Araras;1;3;792.43
+653;Demetria Chan Wells;Fisica - Sao Carlos;1;3;792.29
+654;Noelani Hester Griffin;Letras - Sao Carlos;1;2;792.25
+655;Jerry Price Leblanc;Fisica - Araras;1;5;792.22
+656;Amir Thompson Glover;Quimica - Sao Carlos;1;2;792.20
+657;Phyllis Pearson Sampson;Matematica - Sao Carlos;1;1;792.14
+658;Lawrence Fitzpatrick Langley;Engenharia Mecanica - Sao Carlos;2;1;792.14
+659;India Tate Guerrero;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;1;4;792.14
+660;Giacomo Golden Hodge;Ciencia da Computacao - Sorocaba;1;5;792.13
+661;Yoshio Cohen Case;Engenharia Eletrica - Sao Carlos;2;4;792.00
+662;Todd Becker Powers;Matematica - Sao Carlos;1;5;792.00
+663;Dora Briggs Forbes;Fisioterapia - Sao Carlos;1;1;791.88
+664;Kenyon Gates Morgan;Educacao Fisica - Sao Carlos;1;3;791.83
+665;Quin Riggs Colon;Imagem Som - Sao Carlos;1;5;791.75
+666;Skyler Pate Leon;Fisica - Sao Carlos;1;2;791.71
+667;India Briggs Frye;Ciencias Econimcas - Sorocaba;1;4;791.67
+668;Marsden Leblanc Long;Linguistica - Sao Carlos;1;1;791.63
+669;Vernon Thornton Hensley;Engenharia Florestal - Sorocaba;1;5;791.63
+670;Lamar Landry Ruiz;Matematica - Sorocaba;2;1;791.50
+671;Mira Frazier Gonzalez;Pedagogia - Sao Carlos;2;2;791.43
+672;Ivory;Agroecologia - Araras;1;5;791.43
+673;Nell Harper Marquez;Matematica - Sao Carlos;2;1;791.43
+674;Shea Roberson Grimes;Pedagogia - Sao Carlos;1;4;791.43
+675;Uriah Moore Campos;Enfermagem - Sao Carlos;1;1;791.25
+676;Mary Baldwin Goodwin;Engenharia Quimica - Sao Carlos;1;3;791.00
+677;Brady Mccoy Simpson;Educacao Especial - Sao Carlos;2;2;791.00
+678;Desirae Norris Curtis;Engenharia de Producao - Sorocaba;1;5;791.00
+679;Walker Mitchell Arnold;Biotecnologia - Sao Carlos;1;2;791.00
+680;Delilah Hahn Valencia;Engenharia Civil - Sao Carlos;1;1;790.88
+681;Mannix Burks Kemp;Quimica - Sorocaba;1;3;790.67
+682;Mary Stanley Sparks;Ciencia da Computacao - Sorocaba;1;3;790.63
+683;Dominic Bell Greer;Engenharia Quimica - Sao Carlos;1;4;790.57
+684;Emi Alston Parsons;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;2;3;790.43
+685;Kristen Stevens Cotton;Ciencias Sociais - Sao Carlos;1;1;790.43
+686;Wanda Osborne Contreras;Terapia Ocupacional - Sao Carlos;1;3;790.33
+687;Devin Schwartz Albert;Ciencia da Computacao - Sorocaba;2;4;790.25
+688;Rhona Webb Moreno;Engenharia de Producao - Sorocaba;1;3;790.13
+689;September Williamson Whitney;Engenharia Florestal - Sorocaba;1;1;790.00
+690;Lenore Mccarthy Gibson;Fisica - Araras;1;2;789.89
+691;McKenzie Cooke Marsh;Linguistica - Sao Carlos;1;1;789.88
+692;Hilda Fulton Gonzales;Pedagogia - Sorocaba;1;5;789.88
+693;Arsenio Santiago Lyons;Ciencias Sociais - Sao Carlos;2;3;789.86
+694;Bevis Larsen Larson;Matematica - Sao Carlos;1;1;789.86
+695;Jerry Battle Sargent;Letras - Sao Carlos;1;4;789.75
+696;Marsden Quinn Downs;Letras - Sao Carlos;1;2;789.75
+697;Leandra Boyd Mercado;Educacao Especial - Sao Carlos;1;4;789.71
+698;Oscar Page Floyd;Filosofia - Sao Carlos;1;4;789.63
+699;Laith Huff Bentley;Gestao e Analise Ambiental - Sao Carlos;1;5;789.63
+700;Tyrone Carney Langley;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;2;5;789.57
+701;Camille Sweet Benson;Ciencias Econimcas - Sorocaba;1;3;789.56
+702;Uta Schultz Bass;Ciencias Econimcas - Sorocaba;1;5;789.56
+703;Cleo Justice Frazier;Biotecnologia - Sao Carlos;2;4;789.50
+704;Hermione Horn Moody;Ciencias Biologicas - Sorocaba;1;5;789.50
+705;Hakeem Gilmore Mooney;Engenharia de Producao - Sorocaba;1;1;789.50
+706;Pamela Swanson Barrett;Turismo - Sorocaba;1;2;789.44
+707;Desirae Soto Sykes;Engenharia de Materiais - Sao Carlos;2;4;789.43
+708;Alfreda Garner Saunders;Engenharia Quimica - Sao Carlos;1;3;789.43
+709;Olivia Owens Wood;Enhenharia de Producao - Sao Carlos;1;4;789.29
+710;Calvin Hester Foley;Enhenharia de Producao - Sao Carlos;2;2;789.29
+711;Joel Flowers Livingston;Engenharia Quimica - Sao Carlos;1;5;789.00
+712;Zane Hale Garrett;Engenharia Quimica - Sao Carlos;2;4;789.00
+713;Zia Fitzgerald Cleveland;Gestao e Analise Ambiental - Sao Carlos;1;3;789.00
+714;Kristen Golden Gibson;Matematica - Sao Carlos;1;1;788.86
+715;Jack Patrick Hunt;Medicina - Sao Carlos;1;5;788.71
+716;Elliott Gay Roberts;Engenharia Agronomica - Araras;1;3;788.71
+717;Serina Miranda Petty;Engenharia Eletrica - Sao Carlos;1;3;788.71
+718;Marny Wheeler Acevedo;Engenharia Fisica - Sao Carlos;2;1;788.43
+719;Roanna Garner Berry;Engenharia Mecanica - Sao Carlos;1;1;788.29
+720;Mason Kidd Fuller;Quimica - Sao Carlos;1;1;788.20
+721;Dorian Russell Cox;Engenharia Eletrica - Sao Carlos;1;4;788.14
+722;Juliet Tran Moody;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;1;3;788.14
+723;Bo Johnson Fulton;Pedagogia - Sorocaba;2;2;788.00
+724;Julie Vaughan Coleman;Quimica - Araras;1;3;787.89
+725;Ali Sellers Craft;Pedagogia - Sorocaba;1;1;787.88
+726;Peter Wilder Johnson;Ciencias Biologicas - Araras;1;2;787.88
+727;Melyssa Sawyer Manning;Ciencias Biologicas - Sorocaba;1;3;787.88
+728;Nehru Odom Harrington;Engenharia de Producao - Sorocaba;1;1;787.75
+729;Melinda Henry Ellison;Biblioteconomia - Sao Carlos;2;3;787.63
+730;Charity Conrad Hicks;Gestao e Analise Ambiental - Sao Carlos;1;5;787.25
+731;Sylvester Gilliam Hull;Terapia Ocupacional - Sao Carlos;2;2;787.22
+732;Wesley Byrd Pittman;Linguistica - Sao Carlos;1;1;787.13
+733;Hyatt Carey Page;Engenharia Civil - Sao Carlos;2;3;787.00
+734;Cora Aguilar Dillon;Matematica - Sao Carlos;2;2;787.00
+735;Raymond Trevino Dominguez;Ciencias Sociais - Sao Carlos;1;1;787.00
+736;Oleg Fields Robles;Biotecnologia - Sao Carlos;1;5;787.00
+737;Athena Barber Bridges;Letras - Sao Carlos;1;3;787.00
+738;Yetta Crane Schneider;Filosofia - Sao Carlos;2;3;786.88
+739;Henry Avila Benjamin;Engenharia Quimica - Sao Carlos;2;3;786.71
+740;Mia Young Kaufman;Engenharia Agronomica - Lagoa do Sino;1;2;786.56
+741;Kaden Powell Brown;Gestao e Analise Ambiental - Sao Carlos;1;5;786.38
+742;Bryar Preston Montoya;Engenharia Agronomica - Lagoa do Sino;1;1;786.33
+743;Beau Mcmahon Guthrie;Psicologia - Sao Carlos;1;1;786.33
+744;Karleigh Savage Huber;Engenharia Quimica - Sao Carlos;2;3;786.29
+745;Rana Rich Foley;Engenharia de Materiais - Sao Carlos;1;2;786.14
+746;Phyllis Martin Shepherd;Engenharia Florestal - Sorocaba;2;3;786.00
+747;Olga Espinoza Combs;Engenharia Mecanica - Sao Carlos;1;1;786.00
+748;Hillary Slater Conner;Enfermagem - Sao Carlos;1;3;786.00
+749;Xandra Garrett Carr;Medicina - Sao Carlos;1;5;785.86
+750;Gavin Dyer Warner;Psicologia - Sao Carlos;1;3;785.78
+751;Sharon Clements Diaz;Engenharia de Producao - Sorocaba;2;3;785.63
+752;Aurelia Bruce Rodriquez;Educacao Especial - Sao Carlos;1;1;785.57
+753;Heather Kinney Kennedy;Ciencias Econimcas - Sorocaba;1;3;785.56
+754;Valentine Beach Lott;Administracao - Sorocaba;1;4;785.50
+755;Carter Williams Burris;Fisica - Sorocaba;1;1;785.44
+756;Pascale Waters Leblanc;Engenharia de Producao - Sorocaba;1;4;785.00
+757;Ursa Owens Stanton;Turismo - Sorocaba;1;5;784.89
+758;Lois Hardy House;Letras - Sao Carlos;1;1;784.75
+759;Ignacia Riggs Johnson;Fisioterapia - Sao Carlos;1;5;784.75
+760;Seth Roach Hickman;Engenharia Mecanica - Sao Carlos;1;1;784.71
+761;Uriel Contreras Johnson;Ciencia da Computacao - Sao Carlos;1;1;784.63
+762;Martin Carver Goodman;Engenharia de Materiais - Sao Carlos;1;2;784.43
+763;Upton Calhoun Deleon;Engenharia de Materiais - Sao Carlos;2;3;784.29
+764;Shana Dennis Deleon;Engenharia Fisica - Sao Carlos;1;4;784.14
+765;Kristen Woods Wolfe;Gestao e Analise Ambiental - Sao Carlos;1;1;784.00
+766;Teegan Bailey Ryan;Biotecnologia - Sao Carlos;1;4;784.00
+767;Mari Massey Ashley;Matematica - Sao Carlos;1;1;784.00
+768;Lenore Donovan Houston;Engenharia Fisica - Sao Carlos;1;3;784.00
+769;Colt Garrett Carlson;Turismo - Sorocaba;1;5;784.00
+770;Hope Hutchinson Cardenas;Linguistica - Sao Carlos;1;5;783.88
+771;Jillian Erickson Underwood;Ciencias Biologicas - Sorocaba;1;1;783.75
+772;Shana Wilder Lindsay;Engenharia Eletrica - Sao Carlos;1;3;783.57
+773;Gil Hays Roberson;Fisica - Sao Carlos;1;3;783.57
+774;McKenzie Sanchez Robbins;Terapia Ocupacional - Sao Carlos;1;5;783.56
+775;Herman Rios Humphrey;Educacao Especial - Sao Carlos;1;1;783.43
+776;Aspen Cabrera Morse;Engenharia Mecanica - Sao Carlos;1;1;783.43
+777;Carlos Tucker Kirkland;Pedagogia - Sao Carlos;1;5;783.43
+778;Ezekiel Morgan Combs;Fisica - Araras;1;1;783.33
+779;Ocean Stanton Lane;Matematica - Sorocaba;1;5;783.25
+780;Florence Berger Solis;Estatistica - Sao Carlos;1;2;783.14
+781;Gretchen Mack Davenport;Agroecologia - Araras;1;5;783.14
+782;Sylvia James Ward;Ciencias Biologicas - Araras;1;5;783.13
+783;Halla Kennedy Sharpe;Engenharia Agronomica - Lagoa do Sino;1;1;783.11
+784;Jada Santos Ferrell;Terapia Ocupacional - Sao Carlos;2;5;783.00
+785;Graham Miles Navarro;Imagem Som - Sao Carlos;1;1;783.00
+786;Marsden Hurst Barber;Psicologia - Sao Carlos;1;2;783.00
+787;Uriah Goff Campos;Terapia Ocupacional - Sao Carlos;1;1;782.89
+788;Anthony Ewing Mccarthy;Ciencias Sociais - Sao Carlos;1;3;782.86
+789;Ria Waters Padilla;Engenharia Fisica - Sao Carlos;1;5;782.86
+790;Hollee Browning Downs;Quimica - Sorocaba;1;4;782.78
+791;Rose Price Gutierrez;Engenharia de Producao - Sorocaba;1;5;782.75
+792;Amy Potter Guerrero;Imagem Som - Sao Carlos;1;1;782.75
+793;Salvador Oconnor Riley;Engenharia Ambiental - Lagoa do Sino;2;4;782.67
+794;Thaddeus Lindsay Battle;Engenharia Mecanica - Sao Carlos;2;5;782.57
+795;Nash;Agroecologia - Araras;1;3;782.57
+796;Gregory Camacho Erickson;Fisica - Araras;1;2;782.56
+797;Clark Mcneil Mcgowan;Turismo - Sorocaba;2;4;782.44
+798;Callie Watson Tate;Engenharia Agronomica - Araras;1;4;782.43
+799;Blaze Hale Roth;Engenharia Quimica - Sao Carlos;1;2;782.43
+800;Owen Olson Stout;Pedagogia - Sao Carlos;1;5;782.43
+801;Graham;Agroecologia - Araras;1;3;782.43
+802;Wilma Chaney Hopper;Engenharia Quimica - Sao Carlos;1;2;782.43
+803;Mohammad Hobbs Mcdaniel;Fisica - Sorocaba;1;2;782.33
+804;Dean Bailey Cameron;Enhenharia de Producao - Sao Carlos;1;1;782.29
+805;Haviva Yates Sykes;Biotecnologia - Sao Carlos;1;5;782.25
+806;Barclay Berg Wilkerson;Linguistica - Sao Carlos;1;3;782.25
+807;Baker Small Cash;Engenharia Agronomica - Araras;1;2;782.00
+808;Kiara Sims Alexander;Biotecnologia - Sao Carlos;1;1;782.00
+809;Demetria Shepard Foley;Enhenharia de Producao - Sao Carlos;1;3;782.00
+810;Sage Sellers Castillo;Gerontologia - Sao Carlos;1;3;781.89
+811;Roanna Turner Goodman;Ciencia da Computacao - Sao Carlos;1;2;781.88
+812;Rahim Klein Bond;Engenharia Fisica - Sao Carlos;1;3;781.86
+813;Autumn Dillon Buckley;Engenharia Fisica - Sao Carlos;1;4;781.86
+814;Joel Mosley Ortiz;Educacao Fisica - Sao Carlos;1;2;781.83
+815;Hermione Carey Craft;Engenharia Mecanica - Sao Carlos;2;4;781.71
+816;Barbara Reilly Hall;Engenharia de Producao - Sorocaba;1;4;781.63
+817;Xantha Hopkins Mayo;Engenharia Civil - Sao Carlos;1;4;781.50
+818;Travis Valenzuela Blanchard;Biotecnologia - Sao Carlos;2;1;781.50
+819;Candace Bell Santos;Engenharia de Materiais - Sao Carlos;1;5;781.43
+820;Isadora Turner Hendricks;Medicina - Sao Carlos;1;4;781.29
+821;Raphael Roberson Vang;Ciencias Biologicas - Araras;1;4;781.25
+822;Anika Pierce Harper;Engenharia Agronomica - Lagoa do Sino;1;4;781.11
+823;Claire Dotson Hart;Engenharia Florestal - Sorocaba;2;1;781.00
+824;Montana Noel Head;Ciencia da Computacao - Sao Carlos;1;2;781.00
+825;Ila Morris Mcknight;Quimica - Araras;1;4;780.89
+826;Giselle Holt Hatfield;Fisioterapia - Sao Carlos;1;4;780.88
+827;Amaya Cain Sanchez;Biotecnologia - Araras;1;5;780.78
+828;Keely Camacho Ortega;Engenharia Ambiental - Lagoa do Sino;1;5;780.78
+829;Sacha Mckinney Mueller;Fisica - Sao Carlos;1;5;780.71
+830;Rhoda Rios Warren;Engenharia de alimentos - Lagoa do Sino;1;1;780.44
+831;Dale Herrera Scott;Engenharia de alimentos - Lagoa do Sino;2;4;780.44
+832;Madeline Garza Norris;Matematica - Sao Carlos;2;1;780.43
+833;Farrah Buckley Pickett;Matematica - Sorocaba;1;5;780.38
+834;Adele Dixon Johnson;Turismo - Sorocaba;1;4;780.33
+835;Anastasia Holcomb Long;Letras - Sao Carlos;1;1;780.25
+836;Rebecca Lindsey Strickland;Quimica - Sorocaba;2;3;780.22
+837;Indigo Calderon Anderson;Estatistica - Sao Carlos;1;5;780.14
+838;Ruth Mccullough Mejia;Fisica - Sorocaba;1;5;780.00
+839;Kibo Chandler Christian;Engenharia Agronomica - Araras;1;2;779.86
+840;September Hubbard Bridges;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;2;2;779.86
+841;Dylan Soto Kelly;Fisica - Araras;1;1;779.78
+842;Oliver Hammond Gilmore;Linguistica - Sao Carlos;1;4;779.75
+843;Daphne Nash Logan;Engenharia Florestal - Sorocaba;1;3;779.75
+844;Wilma Osborne Lott;Administracao - Sorocaba;1;1;779.75
+845;Flavia Matthews Strickland;Pedagogia - Sao Carlos;1;3;779.57
+846;Shaine Gill Workman;Enfermagem - Sao Carlos;2;3;779.50
+847;Rafael Simmons Scott;Engenharia de Producao - Sorocaba;2;2;779.38
+848;Rinah Lott Shepard;Estatistica - Sao Carlos;2;1;779.29
+849;Cecilia Charles Morse;Fisica - Sao Carlos;2;2;779.29
+850;Myles Wood Norris;Gestao e Analise Ambiental - Sao Carlos;2;1;779.25
+851;Silas Mccarty Bright;Biotecnologia - Sao Carlos;2;3;779.25
+852;Olivia Hinton Morris;Enfermagem - Sao Carlos;1;5;779.13
+853;Sophia Gray Barry;Matematica - Sao Carlos;1;3;779.00
+854;Germane Turner Owens;Enhenharia de Producao - Sao Carlos;1;4;779.00
+855;Cameron Nolan Valenzuela;Medicina - Sao Carlos;1;4;779.00
+856;Minerva Prince Neal;Fisica - Sorocaba;1;5;778.78
+857;India Payne Ayers;Engenharia Agronomica - Araras;1;5;778.71
+858;Zenia May Nunez;Ciencias Econimcas - Sorocaba;1;1;778.67
+859;Drew Holt Ballard;Turismo - Sorocaba;1;1;778.67
+860;Britanney Palmer Reilly;Turismo - Sorocaba;1;3;778.67
+861;MacKenzie Yates Hays;Educacao Fisica - Sao Carlos;2;4;778.67
+862;Garth Vega Mcbride;Engenharia de Producao - Sorocaba;2;3;778.63
+863;Lance Yates Stephenson;Fisioterapia - Sao Carlos;1;5;778.63
+864;Althea Finley Greene;Biblioteconomia - Sao Carlos;1;2;778.50
+865;Macaulay Holland Flores;Geografia - Sorocaba;2;1;778.38
+866;Elliott Williamson Oconnor;Engenharia Fisica - Sao Carlos;1;1;778.29
+867;Camilla Riddle Santos;Matematica - Sao Carlos;1;3;778.29
+868;Magee Watkins Wolfe;Engenharia Eletrica - Sao Carlos;1;2;778.14
+869;Plato Mosley Lott;Psicologia - Sao Carlos;1;1;777.78
+870;Zia Lawson Maxwell;Engenharia Agronomica - Lagoa do Sino;1;4;777.67
+871;James Buckner Blankenship;Psicologia - Sao Carlos;1;5;777.67
+872;Claudia Madden Scott;Terapia Ocupacional - Sao Carlos;1;5;777.67
+873;Tanek Dennis Gates;Psicologia - Sao Carlos;2;5;777.56
+874;Dominic Norris Boone;Ciencias Sociais - Sao Carlos;1;1;777.43
+875;Lara Woodward Burgess;Pedagogia - Sao Carlos;1;1;777.29
+876;Brenden Carey Gray;Pedagogia - Sorocaba;2;3;777.25
+877;Wade Willis Jensen;Educacao Especial - Sao Carlos;1;2;777.14
+878;Ava Gallagher Vega;Engenharia Quimica - Sao Carlos;1;5;777.14
+879;Madonna Bartlett Riddle;Fisioterapia - Sao Carlos;1;4;777.13
+880;Kibo Decker Jenkins;Biblioteconomia - Sao Carlos;2;2;777.13
+881;Leilani Riddle Mccray;Engenharia de Producao - Sorocaba;1;2;777.00
+882;Leo Ware Buck;Educacao Especial - Sao Carlos;2;3;777.00
+883;Madison Pennington Charles;Engenharia Agronomica - Araras;1;2;777.00
+884;Gary Pena Wilkins;Gestao e Analise Ambiental - Sao Carlos;2;3;776.88
+885;Jaime Pena Suarez;Fisioterapia - Sao Carlos;1;1;776.88
+886;Curran Lopez Dillon;Engenharia de Materiais - Sao Carlos;1;2;776.86
+887;Patience Kidd Dudley;Medicina - Sao Carlos;2;5;776.86
+888;Sylvester Everett Burns;Engenharia Eletrica - Sao Carlos;1;1;776.86
+889;Ian Horne Franklin;Engenharia Eletrica - Sao Carlos;2;1;776.71
+890;Judah Ball Charles;Biblioteconomia - Sao Carlos;1;4;776.50
+891;Lawrence Ferguson Ferrell;Matematica - Sorocaba;1;5;776.50
+892;Dara Lloyd Mason;Ciencias Biologicas - Sorocaba;2;1;776.50
+893;Xenos Dominguez Rutledge;Engenharia Quimica - Sao Carlos;2;4;776.43
+894;Heidi Short Velasquez;Engenharia de Producao - Sorocaba;1;4;776.38
+895;Quamar Peterson Perry;Fisioterapia - Sao Carlos;1;5;776.38
+896;Yuri Bradshaw Vazquez;Engenharia Eletrica - Sao Carlos;2;2;776.29
+897;Maxwell Solomon Alford;Enhenharia de Producao - Sao Carlos;1;4;776.29
+898;Geraldine Johnson Todd;Engenharia Agronomica - Araras;2;1;776.29
+899;Plato Knapp Stone;Engenharia de alimentos - Lagoa do Sino;1;4;776.22
+900;Jasmine Pruitt Gomez;Fisica - Araras;2;5;776.22
+901;Amery Landry Stephens;Engenharia Civil - Sao Carlos;2;4;776.13
+902;Mariam;Ciencias Biologicas - Araras;1;5;776.13
+903;Yael Richard Barry;Ciencias Biologicas - Sorocaba;1;3;776.13
+904;Dacey Sanchez Santos;Educacao Especial - Sao Carlos;2;1;776.00
+905;Whilemina Atkinson Booth;Matematica - Sorocaba;2;5;776.00
+906;Eugenia Meyers Galloway;Quimica - Sao Carlos;1;2;775.80
+907;Joseph Garcia Heath;Engenharia de Materiais - Sao Carlos;2;2;775.71
+908;Clinton Taylor Nunez;Terapia Ocupacional - Sao Carlos;1;4;775.67
+909;Natalie Ward Wright;Enhenharia de Producao - Sao Carlos;1;5;775.57
+910;Jaime Meadows Lynn;Engenharia de Computacao - Sao Carlos;2;1;775.50
+911;Edan Hickman Houston;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;2;5;775.43
+912;Aubrey Blevins Preston;Medicina - Sao Carlos;1;5;775.29
+913;Guilherme Nishi;Engenharia de Computacao - Sao Carlos;1;5;775.25
+914;Serina Puckett Acosta;Pedagogia - Sorocaba;1;4;775.25
+915;Davis Randolph Christian;Biotecnologia - Sao Carlos;1;1;775.25
+916;Naomi Frazier Tyson;Engenharia Ambiental - Lagoa do Sino;1;5;775.22
+917;Florence Cochran May;Turismo - Sorocaba;2;1;775.22
+918;Alexander Keller Talley;Engenharia Civil - Sao Carlos;1;3;775.13
+919;Kasper William Owens;Letras - Sao Carlos;1;1;775.13
+920;Patricia Lloyd Holden;Fisioterapia - Sao Carlos;2;2;775.13
+921;Cherokee West Morse;Psicologia - Sao Carlos;1;5;775.11
+922;Ashely Rojas Quinn;Quimica - Sorocaba;1;5;775.00
+923;Eagan Rice Austin;Engenharia de alimentos - Lagoa do Sino;1;5;774.78
+924;Idona Harrell Guerrero;Engenharia Civil - Sao Carlos;1;5;774.75
+925;Aileen Guthrie Harris;Ciencias Sociais - Sao Carlos;1;1;774.71
+926;Susan Hughes Powell;Fisica - Sao Carlos;1;3;774.57
+927;Medge Nicholson Good;Engenharia de Materiais - Sao Carlos;1;3;774.57
+928;Jared Dalton Mcclain;Engenharia Eletrica - Sao Carlos;1;4;774.57
+929;Jack Maldonado Matthews;Turismo - Sorocaba;2;3;774.56
+930;Megan Rivera White;Engenharia Ambiental - Lagoa do Sino;2;2;774.44
+931;Leila Joyce Wolfe;Engenharia de Materiais - Sao Carlos;1;1;774.43
+932;Lawrence Patel Bruce;Engenharia Fisica - Sao Carlos;1;4;774.43
+933;Shay Gilmore Giles;Linguistica - Sao Carlos;1;5;774.38
+934;Nehru Richards Wallace;Administracao - Sorocaba;1;4;774.25
+935;Kerry;Biotecnologia - Araras;1;5;774.11
+936;Miranda Hickman Underwood;Agroecologia - Araras;1;5;774.00
+937;Rina James Decker;Geografia - Sorocaba;2;3;774.00
+938;Xerxes Howard Adkins;Terapia Ocupacional - Sao Carlos;2;3;773.78
+939;Ina Morris Huff;Educacao Especial - Sao Carlos;2;3;773.71
+940;Marcia Schroeder Hall;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;1;5;773.71
+941;Stuart Sanchez Wells;Educacao Fisica - Sao Carlos;1;2;773.67
+942;Celeste Carrillo Downs;Fisioterapia - Sao Carlos;1;5;773.63
+943;Shaine Wolf Hood;Pedagogia - Sorocaba;1;4;773.63
+944;Ishmael Burks Skinner;Geografia - Sorocaba;1;1;773.63
+945;Zachery Montoya Richard;Matematica - Sao Carlos;1;1;773.57
+946;Madeline Roy Hopper;Fisica - Sorocaba;2;2;773.56
+947;Jescie Davis Lyons;Biotecnologia - Araras;1;5;773.44
+948;Nelle Case Shaffer;Engenharia de Materiais - Sao Carlos;1;5;773.43
+949;Unity Gomez Schmidt;Ciencias Sociais - Sao Carlos;1;2;773.43
+950;Mallory Cooper Hickman;Engenharia de Materiais - Sao Carlos;1;1;773.43
+951;Walker Mcmillan Fowler;Ciencias Biologicas - Sorocaba;1;3;773.38
+952;Harding Shields Santiago;Medicina - Sao Carlos;1;3;773.29
+953;Unity Vaughn Gross;Filosofia - Sao Carlos;1;4;773.25
+954;Orla Castaneda Cain;Engenharia de Producao - Sorocaba;1;2;773.25
+955;Florence Guthrie Harper;Quimica - Sorocaba;1;5;773.22
+956;Aiko Kirkland Avila;Engenharia Quimica - Sao Carlos;1;1;773.14
+957;Devin Neal Whitehead;Ciencia da Computacao - Sorocaba;1;1;773.13
+958;Jasmine Acosta Watts;Enfermagem - Sao Carlos;2;5;773.00
+959;Jerome Woodward Bowers;Psicologia - Sao Carlos;1;5;772.89
+960;Hasad Young Blevins;Engenharia Fisica - Sao Carlos;1;2;772.86
+961;Dorian Conley Herring;Filosofia - Sao Carlos;1;5;772.75
+962;Dylan Buck Powers;Filosofia - Sao Carlos;1;3;772.63
+963;Claudia Frost Higgins;Engenharia Mecanica - Sao Carlos;1;3;772.57
+964;Bruno Luna Santiago;Engenharia Florestal - Sorocaba;1;3;772.50
+965;Wang Rollins Heath;Imagem Som - Sao Carlos;2;4;772.50
+966;Clare Singleton Rocha;Linguistica - Sao Carlos;1;3;772.50
+967;Constance Baker Golden;Fisioterapia - Sao Carlos;1;1;772.38
+968;Naida Tyson Benton;Estatistica - Sao Carlos;1;1;772.29
+969;Akeem Ingram Rutledge;Pedagogia - Sorocaba;1;2;772.25
+970;Veda Stevens Bean;Quimica - Sao Carlos;1;1;772.20
+971;Evan Walters Workman;Ciencia da Computacao - Sao Carlos;1;1;772.13
+972;Hanna Crosby Hopper;Pedagogia - Sorocaba;2;3;772.13
+973;Jana Wood Lynn;Ciencias Biologicas - Araras;1;5;772.13
+974;Dorian Lowery Klein;Administracao - Sorocaba;1;2;772.00
+975;Wyatt Barber Bauer;Estatistica - Sao Carlos;2;3;772.00
+976;Lester Hayden Malone;Quimica - Araras;2;5;771.44
+977;Charles Bryant Adams;Imagem Som - Sao Carlos;1;5;771.38
+978;Theodore Aguirre Morrison;Ciencias Biologicas - Araras;1;5;771.38
+979;Octavia Petty Meyer;Geografia - Sorocaba;1;2;771.38
+980;Dahlia Franco Cruz;Letras - Sao Carlos;1;3;771.25
+981;Akeem Burgess King;Quimica - Sorocaba;1;5;771.22
+982;Brooke Jordan Holland;Ciencias Econimcas - Sorocaba;1;5;771.22
+983;Vivien Faulkner Castro;Linguistica - Sao Carlos;2;2;771.13
+984;Abra Terrell Ray;Engenharia de alimentos - Lagoa do Sino;2;2;771.11
+985;Felix Sears Peck;Fisica - Araras;1;5;771.11
+986;Bruno Snider Wynn;Linguistica - Sao Carlos;2;5;771.00
+987;Kyle Alexander Conner;Administracao - Sorocaba;1;3;771.00
+988;Kelly Bean Skinner;Engenharia Agronomica - Araras;2;5;771.00
+989;Nigel Henderson Harper;Gestao e Analise Ambiental - Sao Carlos;1;1;770.88
+990;Rafael Atkinson Perez;Ciencias Biologicas - Sorocaba;2;3;770.63
+991;Aaron Phillips Floyd;Engenharia Agronomica - Araras;2;4;770.57
+992;Chantale Hammond Nieves;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;1;1;770.57
+993;Carl Tanner Spence;Engenharia de alimentos - Lagoa do Sino;1;2;770.56
+994;Eden Mcfarland Hester;Gestao e Analise Ambiental - Sao Carlos;1;3;770.50
+995;Adrian Buck Porter;Matematica - Sao Carlos;1;5;770.43
+996;Julie Hayden Gomez;Linguistica - Sao Carlos;1;5;770.38
+997;Kylie Mccray Harmon;Gestao e Analise Ambiental - Sao Carlos;1;1;770.38
+998;Cyrus Barrera Downs;Pedagogia - Sao Carlos;1;3;770.29
+999;Ulla Fox Mcguire;Administracao - Sorocaba;1;3;770.25
+1000;Mechelle Hyde Houston;Ciencias Biologicas - Sao Carlos;1;1;770.25
+1001;Kiara Cohen Booker;Engenharia de Computacao - Sao Carlos;1;1;770.25
+1002;Alec Garcia Graham;Ciencias Econimcas - Sorocaba;1;5;770.22
+1003;Curran Hinton Frazier;Medicina - Sao Carlos;2;4;770.14
+1004;Iliana Gill Frost;Fisioterapia - Sao Carlos;2;2;770.13
+1005;Baker Kidd Suarez;Administracao - Sorocaba;2;3;770.13
+1006;Otto Morin Scott;Pedagogia - Sao Carlos;2;3;770.00
+1007;Brett Burnett Rowland;Estatistica - Sao Carlos;1;5;770.00
+1008;Joelle Everett Klein;Terapia Ocupacional - Sao Carlos;2;2;770.00
+1009;Hayes Bolton Blankenship;Medicina - Sao Carlos;1;3;770.00
+1010;Miriam Nelson Fletcher;Engenharia Civil - Sao Carlos;2;5;769.88
+1011;Jelani Nixon Matthews;Engenharia Quimica - Sao Carlos;1;1;769.86
+1012;Imogene Rutledge Wynn;Terapia Ocupacional - Sao Carlos;1;5;769.78
+1013;Elmo Garza Silva;Fisica - Araras;1;2;769.78
+1014;Byron James Merritt;Engenharia Florestal - Sorocaba;1;4;769.75
+1015;Burton Burke Baird;Ciencias Biologicas - Sorocaba;1;5;769.63
+1016;Olga;Agroecologia - Araras;1;5;769.57
+1017;Germane Myers Preston;Ciencia da Computacao - Sorocaba;1;3;769.50
+1018;Gillian Rivera Goodwin;Administracao - Sorocaba;1;2;769.38
+1019;Portia Norris Moreno;Ciencia da Computacao - Sorocaba;1;3;769.38
+1020;Chantale Spence Castro;Administracao - Sorocaba;2;4;769.38
+1021;Benjamin Pacheco Jefferson;Letras - Sao Carlos;1;3;769.38
+1022;Paloma Miranda Calderon;Biotecnologia - Sao Carlos;1;4;769.25
+1023;Burton Lindsey Sharpe;Terapia Ocupacional - Sao Carlos;1;5;769.22
+1024;Edward Shepherd Hoffman;Engenharia Eletrica - Sao Carlos;2;1;769.14
+1025;Kirby Gregory Hardin;Enhenharia de Producao - Sao Carlos;2;1;769.14
+1026;Cairo Banks Williams;Turismo - Sorocaba;1;2;769.11
+1027;Jana Mcclain Kerr;Engenharia de Materiais - Sao Carlos;1;5;769.00
+1028;Lila Clarke Wade;Engenharia Mecanica - Sao Carlos;1;2;769.00
+1029;Minerva Wilder Haney;Ciencias Sociais - Sao Carlos;1;2;769.00
+1030;Avye Pratt Zimmerman;Engenharia de Producao - Sorocaba;1;3;768.88
+1031;Naomi Gonzales Wise;Pedagogia - Sorocaba;1;2;768.63
+1032;Rebekah English Bullock;Medicina - Sao Carlos;1;5;768.57
+1033;Jason Montoya Frazier;Ciencias Econimcas - Sorocaba;1;2;768.56
+1034;Gail Hopper Washington;Pedagogia - Sorocaba;1;3;768.50
+1035;Carla Garner Mcdonald;Engenharia Agronomica - Araras;2;5;768.43
+1036;Maggie Dodson Oliver;Fisica - Sao Carlos;1;5;768.43
+1037;Ashton Branch Myers;Filosofia - Sao Carlos;1;4;768.38
+1038;Julian Hatfield Perry;Terapia Ocupacional - Sao Carlos;2;1;768.33
+1039;Mark Padilla Solomon;Letras - Sao Carlos;1;1;768.25
+1040;Clare Willis May;Pedagogia - Sorocaba;1;5;768.25
+1041;Victor Ewing French;Geografia - Sorocaba;1;5;768.13
+1042;Kameko Byrd Trevino;Gerontologia - Sao Carlos;1;3;768.11
+1043;Darrel Higgins Woodard;Imagem Som - Sao Carlos;1;1;768.00
+1044;Charde Horn Peterson;Engenharia de alimentos - Lagoa do Sino;1;4;767.44
+1045;Helen Brewer Sexton;Engenharia Ambiental - Lagoa do Sino;1;5;767.44
+1046;Garrett Mccall Delaney;Letras - Sao Carlos;1;1;767.38
+1047;Christopher Mccarty Nash;Ciencia da Computacao - Sao Carlos;1;1;767.25
+1048;Raphael Underwood Vaughan;Ciencias Econimcas - Sorocaba;1;4;767.22
+1049;Nerea Pennington Alvarez;Medicina - Sao Carlos;2;3;767.14
+1050;Darryl Nolan Brennan;Matematica - Sao Carlos;1;4;767.14
+1051;Emerson James Calhoun;Engenharia Civil - Sao Carlos;1;5;767.00
+1052;Freya Green Ferrell;Terapia Ocupacional - Sao Carlos;2;5;767.00
+1053;Hiroko Donovan Hayes;Quimica - Sao Carlos;2;1;767.00
+1054;Tiger Vaughn Terrell;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;2;1;767.00
+1055;Drew Dalton Rollins;Imagem Som - Sao Carlos;2;1;767.00
+1056;Arsenio Ray Slater;Engenharia Mecanica - Sao Carlos;1;5;766.86
+1057;Ora Bass Forbes;Estatistica - Sao Carlos;1;4;766.71
+1058;Carol Velasquez Griffin;Turismo - Sorocaba;1;5;766.56
+1059;Lana Frazier Evans;Ciencias Biologicas - Sao Carlos;1;4;766.50
+1060;Patience Lyons Caldwell;Fisioterapia - Sao Carlos;1;3;766.50
+1061;Charde Small Buckley;Imagem Som - Sao Carlos;1;1;766.38
+1062;Unity Mcpherson Spence;Engenharia Civil - Sao Carlos;1;5;766.38
+1063;Charles Merritt Pollard;Matematica - Sao Carlos;1;2;766.29
+1064;Drew Campbell Bradford;Engenharia de Computacao - Sao Carlos;2;2;766.25
+1065;Tyrone Joyner Foreman;Ciencias Sociais - Sao Carlos;1;1;766.14
+1066;Steven Dejesus Preston;Biblioteconomia - Sao Carlos;1;1;765.75
+1067;Shea Velazquez Stephenson;Engenharia Quimica - Sao Carlos;2;4;765.71
+1068;Bell Cline Flynn;Letras - Sao Carlos;2;3;765.63
+1069;Shad Bryant Macdonald;Engenharia de Producao - Sorocaba;1;2;765.50
+1070;Madison Bean Henderson;Geografia - Sorocaba;1;4;765.50
+1071;Bell Hanson Rivers;Filosofia - Sao Carlos;1;3;765.50
+1072;Bell Turner Mosley;Agroecologia - Araras;1;4;765.43
+1073;Marcos Augusto;Gestao e Analise Ambiental - Sao Carlos;1;1;765.38
+1074;Flavia Reynolds Gibson;Fisica - Sao Carlos;1;4;765.29
+1075;Carter Jarvis Calhoun;Engenharia Ambiental - Lagoa do Sino;1;2;765.22
+1076;Jaden Andrews Ashley;Educacao Especial - Sao Carlos;1;2;765.14
+1077;Macon Todd Emerson;Engenharia de Computacao - Sao Carlos;1;2;765.00
+1078;Allistair Moody Dunn;Quimica - Araras;1;2;764.89
+1079;Jamalia Morris Whitaker;Matematica - Sorocaba;1;5;764.88
+1080;Halla Yang Crosby;Imagem Som - Sao Carlos;2;5;764.88
+1081;Clarke Elliott Bond;Filosofia - Sao Carlos;2;3;764.88
+1082;Quyn Summers Reese;Engenharia Mecanica - Sao Carlos;2;2;764.86
+1083;Colby Moran Burns;Administracao - Sorocaba;1;2;764.75
+1084;Rebekah Best Lawson;Fisioterapia - Sao Carlos;1;1;764.75
+1085;Amanda Walton Pratt;Estatistica - Sao Carlos;2;5;764.71
+1086;Kimberly Tanner Boyle;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;2;2;764.71
+1087;Wayne Roman Warren;Engenharia Ambiental - Lagoa do Sino;1;5;764.67
+1088;Bo Mcdowell Santos;Engenharia Agronomica - Araras;1;1;764.43
+1089;Lilah Colon Flynn;Engenharia Quimica - Sao Carlos;1;1;764.43
+1090;Sage Hudson Riley;Quimica - Araras;1;1;764.33
+1091;Wade Carr Lyons;Ciencias Sociais - Sao Carlos;1;1;764.29
+1092;Brock Morin Matthews;Psicologia - Sao Carlos;1;4;764.22
+1093;Glenna Mcneil Rice;Gestao e Analise Ambiental - Sao Carlos;1;2;764.13
+1094;Bianca Burgess Romero;Letras - Sao Carlos;2;3;764.00
+1095;Mikayla Estes Burton;Ciencias Econimcas - Sorocaba;1;5;763.78
+1096;Solomon Wells Lara;Geografia - Sorocaba;1;4;763.75
+1097;Driscoll Sanders Parsons;Engenharia Eletrica - Sao Carlos;2;5;763.71
+1098;Tamekah Chapman Mcknight;Geografia - Sorocaba;2;1;763.63
+1099;Sonia Bates Reilly;Matematica - Sao Carlos;2;5;763.57
+1100;Mariko Howell Dickson;Engenharia de alimentos - Lagoa do Sino;1;2;763.22
+1101;Adria Adkins Lang;Pedagogia - Sao Carlos;1;4;763.14
+1102;Britanni House Delacruz;Gerontologia - Sao Carlos;1;3;763.11
+1103;Marcia Stein Leon;Matematica - Sorocaba;2;2;763.00
+1104;Gary Shepard Payne;Ciencias Biologicas - Sao Carlos;1;3;763.00
+1105;Kamal Hoffman Guerra;Ciencias Biologicas - Sorocaba;1;4;763.00
+1106;Gareth;Agroecologia - Araras;1;5;762.86
+1107;Bertha Livingston Nieves;Ciencia da Computacao - Sorocaba;2;1;762.75
+1108;Bradley Barrera Farmer;Quimica - Sorocaba;1;5;762.67
+1109;Catherine Lamb Whitfield;Ciencias Biologicas - Sorocaba;1;5;762.63
+1110;Cyrus Norman Chandler;Engenharia Civil - Sao Carlos;2;2;762.63
+1111;Miriam Cantrell Armstrong;Engenharia Mecanica - Sao Carlos;2;2;762.57
+1112;Yen Horton Mcneil;Fisica - Araras;1;3;762.56
+1113;Colleen Cook Peck;Pedagogia - Sorocaba;2;3;762.50
+1114;Demetrius Moore Short;Ciencia da Computacao - Sao Carlos;2;2;762.25
+1115;Azalia Welch Finch;Gerontologia - Sao Carlos;1;4;762.22
+1116;Meredith Kline Duke;Estatistica - Sao Carlos;2;1;762.14
+1117;Seth Frederick Mcfarland;Ciencia da Computacao - Sao Carlos;1;3;762.13
+1118;Aspen Good Puckett;Ciencias Biologicas - Sao Carlos;2;5;762.13
+1119;Libby Carpenter Mercado;Engenharia de Computacao - Sao Carlos;1;5;762.13
+1120;Ginger Orr Trujillo;Engenharia de alimentos - Lagoa do Sino;2;3;762.11
+1121;Arsenio Beck Phelps;Psicologia - Sao Carlos;1;2;762.11
+1122;Plato Coffey Galloway;Quimica - Araras;1;3;762.00
+1123;Zachery;Biotecnologia - Araras;1;5;761.89
+1124;Sebastian Cannon Castillo;Engenharia Ambiental - Lagoa do Sino;1;1;761.89
+1125;Whoopi Moore Garza;Fisioterapia - Sao Carlos;1;1;761.88
+1126;Peter Cervantes Reese;Engenharia Mecanica - Sao Carlos;1;1;761.86
+1127;Leonard Brock Mccormick;Terapia Ocupacional - Sao Carlos;1;5;761.67
+1128;Quynn Hudson Figueroa;Quimica - Araras;2;2;761.56
+1129;Nerea Mullen Quinn;Gerontologia - Sao Carlos;1;3;761.56
+1130;Keane Kane Compton;Biotecnologia - Sao Carlos;2;5;761.50
+1131;TaShya Hogan Mccormick;Ciencias Biologicas - Sao Carlos;1;1;761.50
+1132;Chaney Mccoy Mccall;Estatistica - Sao Carlos;1;4;761.29
+1133;Alec Washington Beard;Fisica - Sao Carlos;1;1;761.14
+1134;Blythe Fitzgerald Nixon;Engenharia de Materiais - Sao Carlos;1;5;761.14
+1135;Gray Rich Hobbs;Administracao - Sorocaba;1;1;761.13
+1136;Nichole Foreman Grimes;Gerontologia - Sao Carlos;1;1;761.11
+1137;Steven Padilla Meadows;Medicina - Sao Carlos;2;3;761.00
+1138;Nayda;Ciencias Biologicas - Araras;1;5;761.00
+1139;Olga Burns Murray;Quimica - Araras;1;3;761.00
+1140;Yoshi Farley Miller;Filosofia - Sao Carlos;1;5;761.00
+1141;Kibo Barnett Navarro;Agroecologia - Araras;1;4;761.00
+1142;Sara Murray Strickland;Pedagogia - Sorocaba;2;5;760.88
+1143;Shana Garza Fisher;Ciencia da Computacao - Sao Carlos;1;1;760.88
+1144;Cara Wolf Mann;Engenharia Civil - Sao Carlos;1;1;760.88
+1145;Philip;Ciencias Biologicas - Araras;1;5;760.75
+1146;Brent Adams Matthews;Fisioterapia - Sao Carlos;1;2;760.75
+1147;Ria Salas Hernandez;Engenharia Quimica - Sao Carlos;2;2;760.71
+1148;Ciaran Moses Wooten;Estatistica - Sao Carlos;2;1;760.57
+1149;Ursula Vang Gates;Engenharia Eletrica - Sao Carlos;1;3;760.57
+1150;Macey Manning Gordon;Gerontologia - Sao Carlos;1;1;760.56
+1151;Eaton Hardin Whitley;Turismo - Sorocaba;1;5;760.56
+1152;Natalie Hull Henderson;Administracao - Sorocaba;2;3;760.50
+1153;Idona Harrington Weeks;Ciencias Econimcas - Sorocaba;1;2;760.33
+1154;Justin Padilla Espinoza;Fisica - Araras;1;5;760.33
+1155;Lucian Kemp Green;Engenharia Quimica - Sao Carlos;1;5;760.14
+1156;Reuben Galloway Mills;Ciencias Sociais - Sao Carlos;2;1;760.14
+1157;Ahmed Lara Farmer;Engenharia Civil - Sao Carlos;1;1;760.13
+1158;Jermaine Hampton Duncan;Pedagogia - Sorocaba;1;3;760.13
+1159;Stuart Jones Cooke;Engenharia de Materiais - Sao Carlos;1;1;760.00
+1160;Montana Aguilar Calderon;Engenharia Ambiental - Lagoa do Sino;1;4;759.89
+1161;Kiona Price Kemp;Ciencia da Computacao - Sorocaba;1;3;759.88
+1162;Natalie Bryant Fowler;Ciencias Biologicas - Sao Carlos;1;5;759.88
+1163;Carly Decker Livingston;Geografia - Sorocaba;1;1;759.63
+1164;Katelyn Ferguson Delaney;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;1;5;759.43
+1165;Pamela Fowler Curtis;Ciencia da Computacao - Sorocaba;2;3;759.38
+1166;Zoe Blevins Kline;Fisica - Sao Carlos;2;1;759.29
+1167;Isaac Hyde Barron;Ciencias Sociais - Sao Carlos;1;1;759.14
+1168;Kenyon Cote Church;Matematica - Sao Carlos;1;3;759.00
+1169;Scarlett Cherry Holman;Turismo - Sorocaba;1;2;758.89
+1170;Candice House Parker;Ciencias Biologicas - Sao Carlos;1;1;758.88
+1171;Rinah Salazar Durham;Imagem Som - Sao Carlos;1;3;758.75
+1172;Hillary Acosta Jarvis;Engenharia Civil - Sao Carlos;2;1;758.75
+1173;Kay Chen Reese;Geografia - Sorocaba;1;2;758.75
+1174;September Ware Hester;Engenharia Agronomica - Araras;1;3;758.71
+1175;Benedict Schneider Heath;Enfermagem - Sao Carlos;1;5;758.63
+1176;Dai Nichols Marks;Engenharia Agronomica - Lagoa do Sino;1;1;758.56
+1177;Jaime Wong Bryant;Engenharia de alimentos - Lagoa do Sino;2;1;758.44
+1178;Hu Yang Pope;Matematica - Sao Carlos;1;4;758.14
+1179;Hyatt Wheeler Jensen;Imagem Som - Sao Carlos;1;3;758.13
+1180;Zachery Camacho Dixon;Matematica - Sao Carlos;1;2;758.00
+1181;Anjolie Cruz Clay;Engenharia Agronomica - Lagoa do Sino;1;5;758.00
+1182;Maia Flores Powers;Filosofia - Sao Carlos;1;1;757.75
+1183;Kylan Rivers Hubbard;Engenharia Civil - Sao Carlos;2;3;757.63
+1184;Candice Mccray Glass;Linguistica - Sao Carlos;2;3;757.63
+1185;Hiroko Thornton Ray;Matematica - Sao Carlos;1;3;757.57
+1186;Honorato Jackson Maxwell;Terapia Ocupacional - Sao Carlos;1;4;757.44
+1187;Jelani Roach Mcguire;Ciencias Sociais - Sao Carlos;1;2;757.43
+1188;Henry Gay England;Engenharia Civil - Sao Carlos;1;3;757.38
+1189;Robin Daugherty Solis;Engenharia Quimica - Sao Carlos;1;5;757.29
+1190;Alvin Short York;Engenharia Agronomica - Araras;1;3;757.29
+1191;TaShya Webster Weiss;Psicologia - Sao Carlos;1;4;757.22
+1192;Kato Madden Dickson;Geografia - Sorocaba;2;1;757.13
+1193;Trevor Cooper Hunt;Engenharia Civil - Sao Carlos;1;5;757.13
+1194;Jenna Joyner Salinas;Engenharia Agronomica - Lagoa do Sino;1;5;757.11
+1195;Aline Cardenas Fitzgerald;Turismo - Sorocaba;1;5;757.00
+1196;Piper;Agroecologia - Araras;2;4;757.00
+1197;May Williamson Snyder;Terapia Ocupacional - Sao Carlos;2;4;756.89
+1198;Dean Hurst Morales;Ciencias Biologicas - Araras;2;5;756.63
+1199;Gloria Lane Dejesus;Pedagogia - Sorocaba;1;3;756.63
+1200;Cassandra Mills Terrell;Ciencias Econimcas - Sorocaba;1;3;756.44
+1201;Myra Dickson Nelson;Agroecologia - Araras;2;5;756.43
+1202;Jayme Huffman Daniel;Matematica - Sao Carlos;1;5;756.43
+1203;William Hicks Strickland;Geografia - Sorocaba;1;3;756.38
+1204;Calvin Stafford Fields;Ciencia da Computacao - Sao Carlos;1;5;756.25
+1205;Brielle Blanchard Rich;Educacao Especial - Sao Carlos;2;1;756.00
+1206;Aiko Montgomery Fletcher;Gestao e Analise Ambiental - Sao Carlos;2;5;756.00
+1207;Dexter Nielsen Vang;Engenharia de Producao - Sorocaba;1;1;755.75
+1208;Oliver Browning Rowland;Ciencia da Computacao - Sao Carlos;2;5;755.63
+1209;Jamalia;Agroecologia - Araras;2;4;755.57
+1210;Reuben Odom Sharp;Enfermagem - Sao Carlos;1;5;755.50
+1211;Timothy Becker Talley;Fisica - Sorocaba;1;5;755.44
+1212;Lewis Cain Aguilar;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;1;3;755.43
+1213;Maite Oneal Stout;Matematica - Sao Carlos;1;4;755.29
+1214;Illiana Decker Garrison;Ciencias Econimcas - Sorocaba;2;3;755.22
+1215;Adara Hensley Bell;Engenharia Mecanica - Sao Carlos;1;3;754.86
+1216;Portia Bryan Woods;Turismo - Sorocaba;1;5;754.78
+1217;Oleg York Mclaughlin;Ciencia da Computacao - Sao Carlos;2;5;754.75
+1218;Ashely Pugh Thornton;Letras - Sao Carlos;1;4;754.75
+1219;Ezra King Merrill;Engenharia Eletrica - Sao Carlos;1;2;754.71
+1220;Ainsley Decker Collier;Fisica - Araras;1;5;754.33
+1221;Hanna Barnett Morrow;Medicina - Sao Carlos;2;4;754.29
+1222;Kibo Nieves West;Engenharia Mecanica - Sao Carlos;1;4;754.29
+1223;Jeanette Campbell Shepherd;Administracao - Sorocaba;2;4;754.25
+1224;Hilary Robles Burris;Enhenharia de Producao - Sao Carlos;1;1;754.14
+1225;Bryar Palmer Forbes;Engenharia Eletrica - Sao Carlos;1;5;754.14
+1226;Summer Browning Grant;Ciencia da Computacao - Sorocaba;2;3;754.13
+1227;Rama Bond Hill;Ciencias Econimcas - Sorocaba;1;3;754.11
+1228;Elvis Murray Velasquez;Geografia - Sorocaba;2;5;754.00
+1229;Aristotle Sanchez Grant;Linguistica - Sao Carlos;1;2;754.00
+1230;Stuart Macias Watkins;Ciencias Sociais - Sao Carlos;2;2;753.57
+1231;Eric Woodward King;Administracao - Sorocaba;2;5;753.50
+1232;Wyatt Brock Bruce;Enhenharia de Producao - Sao Carlos;2;3;753.29
+1233;Rahim Mcintosh Salinas;Geografia - Sorocaba;2;2;753.13
+1234;Lane Kelly England;Filosofia - Sao Carlos;1;1;752.75
+1235;Erica Orr Cohen;Estatistica - Sao Carlos;1;5;752.57
+1236;Tana Rivers Moran;Engenharia Fisica - Sao Carlos;1;5;752.57
+1237;Ashton Morse Clarke;Ciencias Biologicas - Sorocaba;1;1;752.38
+1238;Mannix Lambert Underwood;Engenharia Eletrica - Sao Carlos;2;5;752.14
+1239;Aladdin Barlow Price;Imagem Som - Sao Carlos;1;3;752.13
+1240;Dai Lester Brown;Filosofia - Sao Carlos;2;1;752.00
+1241;Quinn Boyle Roy;Agroecologia - Araras;1;5;752.00
+1242;Alfonso Lloyd Swanson;Pedagogia - Sorocaba;2;4;751.88
+1243;Jana Cash Jones;Biblioteconomia - Sao Carlos;2;1;751.75
+1244;Macon Molina Wheeler;Fisica - Sorocaba;1;5;751.67
+1245;Leroy Gould Fry;Geografia - Sorocaba;2;1;751.63
+1246;Echo Erickson Clayton;Engenharia de Computacao - Sao Carlos;2;1;751.50
+1247;Sebastian Kennedy Blackwell;Pedagogia - Sao Carlos;1;1;751.43
+1248;Hope Bruce Boyd;Engenharia de Producao - Sorocaba;1;1;751.38
+1249;Tallulah Carter Grimes;Engenharia de Computacao - Sao Carlos;1;2;751.38
+1250;Sigourney Humphrey Greene;Ciencias Econimcas - Sorocaba;1;1;751.33
+1251;Tallulah Finch Hall;Administracao - Sorocaba;1;3;751.25
+1252;Alfonso House Daugherty;Engenharia de Producao - Sorocaba;1;3;751.13
+1253;Quyn Nieves Hess;Fisica - Araras;1;1;751.11
+1254;Idola David Gilliam;Engenharia de Producao - Sorocaba;2;2;751.00
+1255;Fatima Ashley Pope;Biblioteconomia - Sao Carlos;2;3;750.75
+1256;Shelby Torres Huff;Biblioteconomia - Sao Carlos;1;5;750.75
+1257;Emery Howe Meyer;Engenharia Quimica - Sao Carlos;2;3;750.71
+1258;Genevieve Benson Hatfield;Ciencias Econimcas - Sorocaba;1;2;750.44
+1259;Daryl Pearson Barker;Quimica - Sao Carlos;2;5;750.40
+1260;Cheyenne Washington Thompson;Engenharia de Producao - Sorocaba;2;3;750.38
+1261;Maisie Travis May;Terapia Ocupacional - Sao Carlos;1;5;749.89
+1262;Julian Dennis Massey;Biotecnologia - Sao Carlos;2;2;749.75
+1263;Cailin Hendricks Price;Pedagogia - Sorocaba;1;3;749.50
+1264;Bruno Carver Jones;Engenharia de Materiais - Sao Carlos;1;1;749.43
+1265;Derek Duncan Brock;Enhenharia de Producao - Sao Carlos;1;3;749.43
+1266;Bo Mullins Blair;Estatistica - Sao Carlos;2;1;749.43
+1267;Imani Suarez Buckley;Fisioterapia - Sao Carlos;2;3;749.38
+1268;Teagan Eaton Madden;Engenharia Ambiental - Lagoa do Sino;1;3;749.33
+1269;Amena Steele Ferrell;Ciencia da Computacao - Sao Carlos;1;3;749.25
+1270;Isadora Bond Pruitt;Engenharia Florestal - Sorocaba;1;5;749.25
+1271;Erica Daniel Walters;Pedagogia - Sorocaba;2;3;749.13
+1272;Reece Farley Chase;Ciencia da Computacao - Sao Carlos;1;2;748.88
+1273;Lenore Payne Hyde;Geografia - Sorocaba;1;3;748.88
+1274;Sage Suarez Adkins;Matematica - Sao Carlos;1;3;748.86
+1275;Hanae Joyce Allen;Engenharia Quimica - Sao Carlos;1;4;748.86
+1276;Gabriel Haley Keith;Educacao Especial - Sao Carlos;1;3;748.86
+1277;Stewart Doyle Byrd;Educacao Fisica - Sao Carlos;1;5;748.83
+1278;Nyssa Bonner Hickman;Ciencias Econimcas - Sorocaba;1;2;748.78
+1279;Britanni Sparks Martin;Pedagogia - Sorocaba;2;3;748.75
+1280;Bell Morrison Nunez;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;2;4;748.71
+1281;Gay Burke Gallagher;Quimica - Sorocaba;1;5;748.67
+1282;Scarlett Whitaker Delacruz;Engenharia de Materiais - Sao Carlos;1;3;748.57
+1283;Nina Bernard Riggs;Pedagogia - Sao Carlos;1;1;748.57
+1284;Francis Cochran Farley;Engenharia de Computacao - Sao Carlos;1;1;748.50
+1285;Carissa Mooney Ware;Ciencias Biologicas - Sao Carlos;1;3;748.38
+1286;Mallory Buck Cameron;Administracao - Sorocaba;1;1;748.38
+1287;Keelie Washington Hoffman;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;1;2;748.14
+1288;Sade Whitney Hopper;Ciencias Econimcas - Sorocaba;2;1;748.00
+1289;Kristen Wong Dean;Fisioterapia - Sao Carlos;2;3;747.75
+1290;Maggie Weeks Simon;Engenharia Quimica - Sao Carlos;1;5;747.71
+1291;Micah Stevenson Salazar;Medicina - Sao Carlos;1;5;747.71
+1292;Gannon Gordon Camacho;Enhenharia de Producao - Sao Carlos;1;2;747.57
+1293;Jesse Sutton Mcpherson;Engenharia Quimica - Sao Carlos;1;5;747.57
+1294;Kennan Vinson Mclean;Letras - Sao Carlos;1;4;747.50
+1295;Finn Kaufman Donaldson;Biblioteconomia - Sao Carlos;1;5;747.50
+1296;Garrison Vaughn Snyder;Engenharia Quimica - Sao Carlos;1;5;747.43
+1297;Medge Roach Dixon;Pedagogia - Sao Carlos;1;5;747.14
+1298;Judah Knight Avila;Administracao - Sorocaba;2;4;747.00
+1299;Jaime Steele Mcclain;Ciencias Sociais - Sao Carlos;2;4;746.71
+1300;Caryn Mccarthy Mckee;Medicina - Sao Carlos;1;5;746.57
+1301;Naomi Hubbard Dorsey;Matematica - Sao Carlos;2;3;746.43
+1302;Karyn Osborne Maldonado;Ciencias Biologicas - Sorocaba;1;5;746.38
+1303;Leslie Kerr Joyner;Engenharia Agronomica - Lagoa do Sino;1;5;746.22
+1304;Fritz Blake Bolton;Pedagogia - Sao Carlos;2;5;746.14
+1305;Montana Doyle Roth;Matematica - Sao Carlos;1;5;746.14
+1306;Willa Marquez Hensley;Terapia Ocupacional - Sao Carlos;2;5;746.11
+1307;Amelia Schneider Cherry;Matematica - Sorocaba;1;5;746.00
+1308;Jonah Mcintyre Franks;Fisica - Araras;1;1;745.89
+1309;Christian Ramos Bird;Engenharia de alimentos - Lagoa do Sino;1;2;745.89
+1310;Anika Watkins Fletcher;Biotecnologia - Sao Carlos;1;5;745.75
+1311;Abigail Finch Aguirre;Engenharia Civil - Sao Carlos;1;2;745.63
+1312;Cassady Cantu Meadows;Geografia - Sorocaba;1;5;745.50
+1313;Wyoming Foley Evans;Engenharia de alimentos - Lagoa do Sino;1;3;745.44
+1314;Irene Ryan Hammond;Imagem Som - Sao Carlos;1;3;745.38
+1315;Whitney Allison Harvey;Ciencias Biologicas - Sorocaba;1;4;745.38
+1316;Tate Payne Lyons;Pedagogia - Sao Carlos;1;1;745.14
+1317;Brenda Houston Santos;Administracao - Sorocaba;1;5;745.00
+1318;Hyatt Robles Reynolds;Engenharia de alimentos - Lagoa do Sino;1;1;745.00
+1319;Chaim Ortiz Rodriquez;Ciencias Biologicas - Sorocaba;1;5;745.00
+1320;Gisela Harrison Casey;Biotecnologia - Araras;2;5;744.89
+1321;Sandra Rocha Johns;Engenharia Quimica - Sao Carlos;2;5;744.86
+1322;Wylie Mueller Aguirre;Fisica - Sao Carlos;1;5;744.86
+1323;John;Ciencias Biologicas - Araras;1;5;744.75
+1324;Rowan Stevenson Bird;Engenharia Quimica - Sao Carlos;1;4;744.71
+1325;Risa Bowers Moss;Ciencia da Computacao - Sorocaba;2;5;744.63
+1326;Naomi Bond Gibbs;Fisica - Sorocaba;1;3;744.56
+1327;Bradley Hoffman Rutledge;Engenharia de Materiais - Sao Carlos;2;1;744.43
+1328;Dolan Dean Giles;Fisica - Sorocaba;2;3;744.33
+1329;Kato Powell Tanner;Engenharia Agronomica - Araras;2;5;744.29
+1330;Ginger James Mendoza;Engenharia Civil - Sao Carlos;2;4;744.25
+1331;Brianna Blackburn Rojas;Quimica - Sao Carlos;1;5;744.20
+1332;Chantale Gilmore Delgado;Fisioterapia - Sao Carlos;1;4;744.13
+1333;Brenden Ortiz Rivera;Ciencias Econimcas - Sorocaba;1;4;744.11
+1334;Shaeleigh Graham Hart;Biblioteconomia - Sao Carlos;1;3;744.00
+1335;Heidi Bradshaw Sanders;Engenharia Mecanica - Sao Carlos;2;2;744.00
+1336;Lamar Jennings Hardin;Enfermagem - Sao Carlos;1;5;744.00
+1337;Quon Kinney Petty;Geografia - Sorocaba;1;2;743.88
+1338;Caryn Henderson Kidd;Biblioteconomia - Sao Carlos;1;5;743.88
+1339;Gisela Butler James;Engenharia Quimica - Sao Carlos;1;1;743.86
+1340;Eagan Downs Sellers;Engenharia Mecanica - Sao Carlos;1;4;743.86
+1341;Desiree Barber Cline;Fisica - Araras;2;5;743.78
+1342;Doris Pratt Schultz;Fisica - Araras;1;3;743.67
+1343;Hyatt Gibson Yates;Fisica - Sao Carlos;1;5;743.57
+1344;Lisandra Kent Garza;Engenharia Quimica - Sao Carlos;1;1;743.43
+1345;Rahim Cooper Padilla;Educacao Especial - Sao Carlos;2;1;743.43
+1346;Paloma Stephens Hardy;Engenharia Quimica - Sao Carlos;1;1;743.29
+1347;Paki Cote Barry;Turismo - Sorocaba;1;1;743.22
+1348;Randall Byrd Atkinson;Administracao - Sorocaba;1;3;743.13
+1349;Madeson Carver Patterson;Biblioteconomia - Sao Carlos;1;3;743.13
+1350;Cynthia Rollins Oconnor;Engenharia Mecanica - Sao Carlos;1;3;743.00
+1351;Lacey;Biotecnologia - Araras;2;5;742.89
+1352;Anastasia Wilder Conrad;Engenharia de alimentos - Lagoa do Sino;1;5;742.78
+1353;Callum English Frederick;Geografia - Sorocaba;1;5;742.75
+1354;Vladimir Collier Baldwin;Pedagogia - Sao Carlos;2;5;742.71
+1355;Chiquita Wooten Miles;Engenharia Agronomica - Lagoa do Sino;2;1;742.67
+1356;Lael Barlow Kane;Ciencias Sociais - Sao Carlos;1;2;742.57
+1357;Carissa Gilliam Frye;Filosofia - Sao Carlos;1;5;742.50
+1358;Jana Moreno Larson;Psicologia - Sao Carlos;1;5;742.44
+1359;Azalia Singleton Harrington;Ciencias Econimcas - Sorocaba;2;1;742.44
+1360;Raya Mcfarland Lang;Linguistica - Sao Carlos;1;5;742.38
+1361;Stacy Lott Maynard;Ciencias Biologicas - Sao Carlos;1;5;742.38
+1362;Leila Weiss Taylor;Engenharia Civil - Sao Carlos;1;3;742.38
+1363;Anne Kaufman Lloyd;Engenharia Eletrica - Sao Carlos;1;1;742.14
+1364;Cassidy;Agroecologia - Araras;1;5;742.14
+1365;Alexandra Sims Mayo;Ciencias Econimcas - Sorocaba;1;2;742.00
+1366;Cole Davis Hester;Engenharia Eletrica - Sao Carlos;1;1;742.00
+1367;Holmes Crawford Cook;Agroecologia - Araras;1;5;742.00
+1368;Caleb Wall Mcleod;Engenharia Agronomica - Lagoa do Sino;1;1;741.89
+1369;Aubrey Rios Beck;Educacao Especial - Sao Carlos;2;3;741.71
+1370;Quyn Holder Henson;Imagem Som - Sao Carlos;2;3;741.63
+1371;Portia Tucker Rosario;Engenharia Eletrica - Sao Carlos;1;1;741.57
+1372;Amy Hubbard Huffman;Educacao Especial - Sao Carlos;1;5;741.57
+1373;Moana Acosta Mcdowell;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;2;4;741.43
+1374;Halla Ochoa Neal;Ciencias Biologicas - Sao Carlos;2;5;741.38
+1375;Alice Alford Navarro;Engenharia Agronomica - Lagoa do Sino;1;1;741.33
+1376;Olivia Church Kidd;Ciencias Biologicas - Sao Carlos;2;5;741.25
+1377;Justina Mcintyre Hensley;Geografia - Sorocaba;2;4;741.25
+1378;Berk Garrett Santana;Engenharia Ambiental - Lagoa do Sino;1;1;741.22
+1379;Curran Burns Nelson;Engenharia Fisica - Sao Carlos;1;5;741.00
+1380;Eaton Obrien Bonner;Administracao - Sorocaba;1;3;741.00
+1381;Sara Bennett Atkinson;Engenharia Quimica - Sao Carlos;1;3;740.86
+1382;Delilah Mcmillan Dotson;Engenharia de alimentos - Lagoa do Sino;2;5;740.67
+1383;Grant Gray Harrison;Linguistica - Sao Carlos;1;2;740.63
+1384;Garth Valdez Burgess;Biotecnologia - Sao Carlos;1;5;740.50
+1385;Britanni Mcmillan Mcclure;Engenharia Quimica - Sao Carlos;1;3;740.43
+1386;Vivien Warner Monroe;Engenharia Civil - Sao Carlos;2;4;740.38
+1387;Henry Butler Combs;Engenharia Ambiental - Lagoa do Sino;1;5;740.33
+1388;Claudia Rollins Trujillo;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;2;5;740.29
+1389;Deborah Mann Osborn;Biotecnologia - Sao Carlos;1;3;740.25
+1390;Abdul Manning Wolfe;Linguistica - Sao Carlos;1;2;740.25
+1391;Yvette Mayer Mccullough;Pedagogia - Sao Carlos;2;1;740.14
+1392;Hall Madden Kemp;Filosofia - Sao Carlos;1;5;740.13
+1393;Cally Zimmerman Hanson;Ciencia da Computacao - Sao Carlos;1;2;740.00
+1394;Walker Kirk Castaneda;Ciencia da Computacao - Sorocaba;1;5;739.88
+1395;Ebony Nielsen Rojas;Engenharia Mecanica - Sao Carlos;2;3;739.71
+1396;Sybill Young Gates;Turismo - Sorocaba;1;5;739.67
+1397;Tatyana Perry Day;Biotecnologia - Araras;1;5;739.67
+1398;Sigourney Wynn Randall;Fisica - Araras;2;3;739.44
+1399;Chase Pitts Pitts;Engenharia Mecanica - Sao Carlos;2;2;739.43
+1400;Hop Ward Mayer;Educacao Especial - Sao Carlos;2;3;739.43
+1401;Dorothy Bruce Rich;Ciencias Sociais - Sao Carlos;2;1;739.29
+1402;May Owen Powers;Imagem Som - Sao Carlos;1;1;739.25
+1403;Lyle Dunn Sweeney;Geografia - Sorocaba;2;3;739.25
+1404;Fritz Hess Simmons;Gerontologia - Sao Carlos;2;5;739.22
+1405;Aubrey;Ciencias Biologicas - Araras;1;5;739.00
+1406;Ross Lopez Bean;Psicologia - Sao Carlos;1;5;738.78
+1407;Unity Herman Taylor;Quimica - Sorocaba;1;5;738.78
+1408;Gray Anderson Burch;Geografia - Sorocaba;1;1;738.75
+1409;Chastity Garrett Petersen;Gerontologia - Sao Carlos;2;3;738.67
+1410;Noel Ochoa Jefferson;Biotecnologia - Sao Carlos;1;5;738.50
+1411;Amelia David Shannon;Enhenharia de Producao - Sao Carlos;1;2;738.43
+1412;Myra Vazquez Rosa;Pedagogia - Sao Carlos;2;5;738.29
+1413;Irene;Agroecologia - Araras;1;5;738.29
+1414;Victoria Carpenter Meyer;Enhenharia de Producao - Sao Carlos;1;5;738.29
+1415;Jolene Rojas Potts;Engenharia Florestal - Sorocaba;1;5;738.13
+1416;August Woodard Klein;Psicologia - Sao Carlos;1;5;737.89
+1417;Graham Travis Dale;Filosofia - Sao Carlos;2;1;737.88
+1418;Hu Garrison Santos;Fisica - Sao Carlos;1;5;737.86
+1419;Zia Owen Carney;Ciencia da Computacao - Sorocaba;2;1;737.75
+1420;Hayfa Mcneil Robinson;Fisica - Araras;2;1;737.67
+1421;Hop Bradford Willis;Quimica - Sao Carlos;1;1;737.60
+1422;Daryl Conway Hunt;Engenharia Agronomica - Lagoa do Sino;1;5;737.44
+1423;Candice Palmer Ellison;Biblioteconomia - Sao Carlos;1;2;737.25
+1424;Aurelia Gordon Potts;Engenharia Ambiental - Lagoa do Sino;1;5;737.22
+1425;Shelley Harrell Fuller;Ciencias Biologicas - Sao Carlos;1;4;737.13
+1426;Dacey Gardner Murray;Gestao e Analise Ambiental - Sao Carlos;1;3;737.13
+1427;Maite Parks James;Engenharia Agronomica - Araras;2;5;737.00
+1428;Austin Myers Harrington;Filosofia - Sao Carlos;1;5;737.00
+1429;Keely Hampton Meyer;Terapia Ocupacional - Sao Carlos;2;1;737.00
+1430;Angelica Stafford Spears;Ciencias Biologicas - Sorocaba;1;1;736.88
+1431;Riley Luna Henderson;Enhenharia de Producao - Sao Carlos;2;4;736.86
+1432;Sonya Love Snyder;Engenharia Civil - Sao Carlos;1;1;736.75
+1433;Carter Cook Bowen;Gerontologia - Sao Carlos;1;5;736.56
+1434;Sybill Wong Carver;Linguistica - Sao Carlos;1;5;736.38
+1435;Denise Hopper Jenkins;Engenharia Eletrica - Sao Carlos;1;3;736.29
+1436;Sylvia Castaneda Mejia;Engenharia de Producao - Sorocaba;1;5;736.13
+1437;Tana Garrison Puckett;Ciencias Biologicas - Sao Carlos;2;1;735.88
+1438;Neil Brooks Howell;Fisioterapia - Sao Carlos;2;4;735.75
+1439;Ignacia Oneil Chambers;Ciencias Sociais - Sao Carlos;1;4;735.71
+1440;Mona Fleming Greer;Ciencia da Computacao - Sao Carlos;1;3;735.63
+1441;Emerald Holloway Vazquez;Geografia - Sorocaba;1;5;735.50
+1442;Sylvester;Biotecnologia - Araras;1;5;735.44
+1443;Courtney Fleming Barrett;Engenharia Quimica - Sao Carlos;1;3;735.43
+1444;Ezekiel Lewis Frye;Engenharia Quimica - Sao Carlos;1;4;735.43
+1445;Chanda Mccormick Goodman;Engenharia Civil - Sao Carlos;1;5;735.38
+1446;April Kemp Burns;Quimica - Araras;1;5;735.33
+1447;Pascale Barber Rosa;Fisica - Araras;1;5;735.22
+1448;Libby Hunt Vaughn;Engenharia Fisica - Sao Carlos;1;5;735.14
+1449;Sade Holder Stevenson;Engenharia de alimentos - Lagoa do Sino;2;5;735.11
+1450;Kirestin Durham Hebert;Engenharia Civil - Sao Carlos;2;1;735.00
+1451;Hadley Christian Landry;Matematica - Sao Carlos;1;3;735.00
+1452;Yolanda Grimes David;Enhenharia de Producao - Sao Carlos;1;2;734.86
+1453;Hadley Jackson Boyd;Agroecologia - Araras;1;5;734.86
+1454;Denise Kelly Hayden;Engenharia Florestal - Sorocaba;1;5;734.75
+1455;Elizabeth Pacheco Giles;Fisioterapia - Sao Carlos;2;3;734.63
+1456;Ulric Serrano Huffman;Matematica - Sao Carlos;1;3;734.57
+1457;Dakota Bridges Harding;Psicologia - Sao Carlos;1;5;734.56
+1458;Kiayada Lowe Hines;Ciencias Econimcas - Sorocaba;2;5;734.44
+1459;Bianca Sharpe Massey;Administracao - Sorocaba;2;5;734.38
+1460;Victor Jensen Richardson;Engenharia Eletrica - Sao Carlos;2;3;734.29
+1461;Yen Murray Shannon;Enhenharia de Producao - Sao Carlos;2;4;734.29
+1462;Eden Little Hays;Biotecnologia - Sao Carlos;1;3;734.25
+1463;Rahim Townsend Allen;Biblioteconomia - Sao Carlos;2;5;734.25
+1464;Courtney Riggs Sandoval;Engenharia Fisica - Sao Carlos;2;5;734.14
+1465;Josiah Branch May;Engenharia de Materiais - Sao Carlos;1;1;734.14
+1466;Tallulah Orr Leonard;Agroecologia - Araras;1;5;734.14
+1467;Acton Ball Small;Administracao - Sorocaba;1;5;734.00
+1468;Roary Mendoza Moss;Engenharia de alimentos - Lagoa do Sino;2;1;734.00
+1469;Sylvia Sampson Mcfadden;Ciencia da Computacao - Sorocaba;1;5;734.00
+1470;Katell Perry Cohen;Gerontologia - Sao Carlos;2;1;734.00
+1471;Candace Shelton Hampton;Ciencias Sociais - Sao Carlos;2;5;734.00
+1472;Callie Buckley Vaughn;Gerontologia - Sao Carlos;2;1;733.89
+1473;Ingrid Mcguire Conner;Engenharia Eletrica - Sao Carlos;1;1;733.86
+1474;Serena Booth Wood;Terapia Ocupacional - Sao Carlos;2;3;733.78
+1475;Noel Duffy Rivas;Psicologia - Sao Carlos;1;3;733.78
+1476;Holmes Hancock Beach;Gerontologia - Sao Carlos;1;5;733.78
+1477;Gisela Jones Norman;Ciencias Biologicas - Sao Carlos;1;3;733.75
+1478;Lydia Griffith Fitzpatrick;Geografia - Sorocaba;1;1;733.75
+1479;Nerea Shaw Villarreal;Ciencias Sociais - Sao Carlos;2;3;733.71
+1480;Macaulay;Agroecologia - Araras;1;5;733.43
+1481;Naomi;Biotecnologia - Araras;1;5;733.22
+1482;Faith Velez Goodwin;Biotecnologia - Araras;1;5;733.22
+1483;Ashton Maddox Lopez;Engenharia Mecanica - Sao Carlos;1;3;733.14
+1484;Alec Manning Pugh;Pedagogia - Sao Carlos;2;3;733.14
+1485;Cleo Garner Sanford;Biotecnologia - Sao Carlos;1;5;733.00
+1486;Britanney Arnold Dunlap;Ciencia da Computacao - Sao Carlos;2;1;733.00
+1487;Jane Patrick Marshall;Ciencias Econimcas - Sorocaba;2;4;732.89
+1488;Ishmael Hebert Schneider;Engenharia Ambiental - Lagoa do Sino;1;1;732.89
+1489;Paul Parsons Hurst;Engenharia Eletrica - Sao Carlos;1;3;732.86
+1490;Kirk Guerrero Delaney;Educacao Especial - Sao Carlos;1;5;732.57
+1491;Jenna Peters Ryan;Engenharia de Materiais - Sao Carlos;1;2;732.57
+1492;Eden Sheppard Arnold;Biotecnologia - Araras;1;5;732.56
+1493;Tanek Meadows Tyler;Biotecnologia - Sao Carlos;1;5;732.50
+1494;Mira Ochoa David;Engenharia Civil - Sao Carlos;1;5;732.50
+1495;Murphy Wood Mckinney;Ciencias Biologicas - Sorocaba;1;1;732.38
+1496;Cameron Poole Dean;Educacao Fisica - Sao Carlos;1;5;732.33
+1497;Alea Hodges Joyner;Engenharia Eletrica - Sao Carlos;2;2;732.14
+1498;Jenna Mcbride Richards;Engenharia Quimica - Sao Carlos;1;3;732.14
+1499;Shannon Crosby Higgins;Terapia Ocupacional - Sao Carlos;1;5;732.00
+1500;Acton Bennett Wilkerson;Gerontologia - Sao Carlos;1;5;732.00
+1501;Violet Soto Tyler;Imagem Som - Sao Carlos;2;5;732.00
+1502;Orson Casey Wooten;Fisica - Sao Carlos;2;5;731.86
+1503;Cherokee Vega Mack;Psicologia - Sao Carlos;2;4;731.67
+1504;Thomas Sandoval Vazquez;Quimica - Sorocaba;1;5;731.67
+1505;Kyla Riddle Whitfield;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;2;5;731.57
+1506;Leandra Bolton Steele;Engenharia Eletrica - Sao Carlos;1;5;731.57
+1507;Tallulah Dyer Hutchinson;Engenharia Civil - Sao Carlos;1;5;731.38
+1508;Zephania Solis Hopkins;Terapia Ocupacional - Sao Carlos;1;1;731.22
+1509;Carlos Curtis Schultz;Psicologia - Sao Carlos;1;3;731.11
+1510;Audrey Quinn Nicholson;Engenharia Quimica - Sao Carlos;2;3;731.00
+1511;Dillon Lawrence Combs;Ciencias Sociais - Sao Carlos;1;3;730.86
+1512;Garrison Mcclure Kirby;Matematica - Sao Carlos;1;3;730.86
+1513;Kevin Vasquez Wilcox;Ciencia da Computacao - Sao Carlos;1;5;730.50
+1514;Justin Small Morrow;Engenharia de alimentos - Lagoa do Sino;2;5;730.44
+1515;Hayfa Cantu Sears;Matematica - Sorocaba;1;5;730.38
+1516;Yvonne Stein Cook;Geografia - Sorocaba;1;2;730.38
+1517;Cherokee Macias Kane;Fisica - Sao Carlos;1;1;730.29
+1518;Branden Wallace Knapp;Fisioterapia - Sao Carlos;2;5;730.25
+1519;Garrett Camacho Sanford;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;2;5;730.14
+1520;Lenore Kirk Cook;Matematica - Sao Carlos;1;3;730.00
+1521;Lacy Estrada Luna;Biblioteconomia - Sao Carlos;2;5;730.00
+1522;Patience Alexander Morris;Administracao - Sorocaba;1;1;729.88
+1523;Connor Holder Garrett;Engenharia Eletrica - Sao Carlos;1;5;729.86
+1524;Emily Tate Middleton;Ciencias Sociais - Sao Carlos;1;1;729.57
+1525;Neville Johnson Jacobs;Engenharia de Materiais - Sao Carlos;1;5;729.57
+1526;Justin Salazar Contreras;Matematica - Sorocaba;2;5;729.38
+1527;Christen Greer Cantu;Imagem Som - Sao Carlos;2;5;729.25
+1528;Mikayla Hampton Page;Gerontologia - Sao Carlos;2;5;729.22
+1529;Quemby Boyle Durham;Engenharia Florestal - Sorocaba;1;5;729.13
+1530;Galvin Hopkins Coffey;Geografia - Sorocaba;2;2;728.88
+1531;Holly Lara Wilder;Enfermagem - Sao Carlos;1;5;728.75
+1532;Lacota Mckenzie Wise;Engenharia Quimica - Sao Carlos;1;3;728.71
+1533;Nevada Chan Leonard;Turismo - Sorocaba;1;5;728.56
+1534;Barbara Callahan Park;Fisica - Araras;1;5;728.56
+1535;Nathan Potts Cherry;Engenharia de alimentos - Lagoa do Sino;1;3;728.44
+1536;Tiger Conley Bruce;Matematica - Sao Carlos;2;5;728.29
+1537;Fritz Willis Cobb;Imagem Som - Sao Carlos;1;5;728.25
+1538;Sydnee Morton Cameron;Filosofia - Sao Carlos;2;1;728.13
+1539;Orlando Nelson Hawkins;Psicologia - Sao Carlos;2;3;728.11
+1540;Simon Carr Underwood;Medicina - Sao Carlos;1;1;728.00
+1541;Amanda Odonnell Crane;Engenharia de Computacao - Sao Carlos;1;5;727.88
+1542;Bianca Dale Burns;Engenharia Eletrica - Sao Carlos;1;1;727.71
+1543;Barrett Caldwell Hale;Gerontologia - Sao Carlos;2;4;727.67
+1544;Joshua England Schwartz;Turismo - Sorocaba;1;5;727.56
+1545;Mason;Ciencias Biologicas - Araras;1;5;727.50
+1546;Regina Dyer Sanders;Pedagogia - Sorocaba;2;1;727.50
+1547;Lenore Clarke Kidd;Engenharia Quimica - Sao Carlos;1;5;727.14
+1548;Dieter Cummings Suarez;Gerontologia - Sao Carlos;1;5;727.11
+1549;Justine Long Edwards;Fisica - Sao Carlos;1;5;727.00
+1550;Jena Cooper Garrison;Engenharia de Materiais - Sao Carlos;1;5;727.00
+1551;Kerry Waller Zimmerman;Terapia Ocupacional - Sao Carlos;2;1;726.56
+1552;Zachary Malone Prince;Engenharia de alimentos - Lagoa do Sino;2;5;726.44
+1553;Rana Brock Bryant;Engenharia Eletrica - Sao Carlos;1;5;726.43
+1554;Ivy Nieves Cain;Engenharia Eletrica - Sao Carlos;2;2;726.43
+1555;Carissa Hart Reid;Engenharia Civil - Sao Carlos;1;3;726.25
+1556;Axel Horton Salas;Biblioteconomia - Sao Carlos;1;3;726.25
+1557;Iona Haney Williams;Ciencias Sociais - Sao Carlos;1;3;726.14
+1558;Dara Deleon Soto;Fisica - Sorocaba;1;5;726.11
+1559;Shannon Rosario Stuart;Fisioterapia - Sao Carlos;1;5;726.00
+1560;Leroy Ortiz Stanley;Ciencia da Computacao - Sorocaba;1;1;725.88
+1561;Rhoda Stanton Diaz;Matematica - Sao Carlos;2;2;725.86
+1562;Ava Pittman Hamilton;Engenharia Civil - Sao Carlos;1;3;725.75
+1563;Colt Pickett Parker;Enhenharia de Producao - Sao Carlos;2;3;725.71
+1564;Keegan Rowe Berg;Engenharia de alimentos - Lagoa do Sino;2;3;725.56
+1565;Keelie Garza Leonard;Engenharia Civil - Sao Carlos;1;1;725.38
+1566;Penelope Williams Day;Ciencia da Computacao - Sao Carlos;2;5;725.25
+1567;Shelley;Biotecnologia - Araras;1;5;725.22
+1568;Mariam Kane Lowe;Engenharia Mecanica - Sao Carlos;1;5;725.14
+1569;Willa Frederick Whitfield;Geografia - Sorocaba;1;4;724.88
+1570;Dominique Kirby Jarvis;Engenharia Fisica - Sao Carlos;2;5;724.86
+1571;Steven Frazier Weiss;Psicologia - Sao Carlos;1;4;724.78
+1572;Pascale Ball Battle;Geografia - Sorocaba;2;5;724.38
+1573;Haviva Melendez Marsh;Engenharia de Materiais - Sao Carlos;1;1;724.29
+1574;Kevin Franco Davis;Pedagogia - Sorocaba;1;5;724.25
+1575;Tobias Stevens Goodman;Biotecnologia - Araras;2;5;724.00
+1576;Macy Nicholson Munoz;Engenharia Quimica - Sao Carlos;2;1;724.00
+1577;Quinlan Hines Lopez;Engenharia Eletrica - Sao Carlos;2;5;724.00
+1578;Branden Klein Delgado;Geografia - Sorocaba;2;3;723.75
+1579;Rhea Howe Conley;Engenharia Agronomica - Araras;1;5;723.71
+1580;Xerxes Cunningham Lott;Enhenharia de Producao - Sao Carlos;1;3;723.57
+1581;Abbot Walls Gill;Engenharia de alimentos - Lagoa do Sino;2;3;723.44
+1582;Beck Mathews Boyle;Fisica - Sorocaba;2;5;723.44
+1583;Iliana Fields Little;Pedagogia - Sao Carlos;1;5;723.43
+1584;Gil Travis Pratt;Engenharia de alimentos - Lagoa do Sino;1;5;722.67
+1585;Xena Gonzales Munoz;Biblioteconomia - Sao Carlos;1;5;722.63
+1586;McKenzie Keith Greer;Quimica - Araras;2;5;722.44
+1587;Adrienne Powers Alston;Psicologia - Sao Carlos;1;5;722.33
+1588;Tobias Haynes Burgess;Enhenharia de Producao - Sao Carlos;1;1;722.29
+1589;Aspen Anthony Patterson;Engenharia Ambiental - Lagoa do Sino;1;5;722.11
+1590;Lucian Schwartz Giles;Terapia Ocupacional - Sao Carlos;1;5;721.89
+1591;Baker Klein Witt;Pedagogia - Sorocaba;2;5;721.88
+1592;Vaughan Simmons Dorsey;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;1;5;721.71
+1593;Stacy Tyson Maddox;Ciencias Sociais - Sao Carlos;1;1;721.71
+1594;Laith Wiggins Heath;Geografia - Sorocaba;1;3;721.63
+1595;Quintessa Matthews Alexander;Engenharia de Computacao - Sao Carlos;1;5;721.63
+1596;Jordan Banks Conner;Geografia - Sorocaba;2;4;721.50
+1597;Sopoline Gentry Barry;Quimica - Araras;2;5;721.22
+1598;Quinn Owens Cross;Ciencias Sociais - Sao Carlos;1;3;721.14
+1599;Bo Barker Greer;Ciencias Sociais - Sao Carlos;2;4;721.14
+1600;Sydney Day Rojas;Matematica - Sao Carlos;2;3;721.00
+1601;Hiroko Hogan Schroeder;Engenharia Agronomica - Lagoa do Sino;2;5;720.89
+1602;Rigel Wilkinson Hays;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;1;5;720.86
+1603;Cally Ramos Riggs;Enhenharia de Producao - Sao Carlos;1;5;720.86
+1604;Naomi Sims Gregory;Engenharia Quimica - Sao Carlos;1;1;720.86
+1605;Oprah Marsh Park;Geografia - Sorocaba;1;5;720.63
+1606;Fritz Barr Franks;Matematica - Sao Carlos;1;5;720.43
+1607;Fulton Manning Hobbs;Quimica - Sorocaba;1;5;720.33
+1608;Fritz Valencia Salinas;Enhenharia de Producao - Sao Carlos;2;3;720.00
+1609;Hedwig Norton Mcmillan;Engenharia Civil - Sao Carlos;1;5;720.00
+1610;Sebastian Vargas Graves;Engenharia de Computacao - Sao Carlos;2;5;720.00
+1611;Murphy;Ciencias Biologicas - Araras;2;5;719.75
+1612;Delilah Jimenez Moreno;Engenharia Civil - Sao Carlos;1;1;719.75
+1613;Quinn Watson Larsen;Matematica - Sao Carlos;2;5;719.71
+1614;Kirsten Aguilar Whitley;Engenharia Eletrica - Sao Carlos;1;5;719.71
+1615;Bethany Brennan Burns;Engenharia Quimica - Sao Carlos;2;1;719.57
+1616;Karly Barry Meyer;Enhenharia de Producao - Sao Carlos;2;3;719.57
+1617;Nell Sykes Williams;Administracao - Sorocaba;1;1;719.50
+1618;Yolanda;Ciencias Biologicas - Araras;2;5;719.38
+1619;Nadine Mcintosh Houston;Enhenharia de Producao - Sao Carlos;2;3;719.29
+1620;Craig Delaney Jarvis;Matematica - Sao Carlos;2;5;719.29
+1621;Reagan Craft Carney;Enhenharia de Producao - Sao Carlos;1;3;719.29
+1622;Sopoline Brock Maldonado;Ciencia da Computacao - Sao Carlos;2;1;718.88
+1623;Brynn Orr Brown;Enhenharia de Producao - Sao Carlos;2;5;718.86
+1624;Jolene Baldwin Richards;Fisioterapia - Sao Carlos;1;5;718.75
+1625;Rosalyn Cardenas Brewer;Linguistica - Sao Carlos;1;3;718.63
+1626;Madison Malone Acevedo;Fisica - Sao Carlos;1;1;718.57
+1627;Oprah Christian Combs;Fisioterapia - Sao Carlos;1;5;718.50
+1628;Bo Grant Sawyer;Matematica - Sao Carlos;2;2;718.29
+1629;Kiara Hardy Cooper;Ciencias Sociais - Sao Carlos;2;1;718.29
+1630;Sydnee Larson Hale;Engenharia de alimentos - Lagoa do Sino;1;3;718.00
+1631;Aurelia Rivas Wolf;Enhenharia de Producao - Sao Carlos;1;5;718.00
+1632;Xander Burns Warner;Ciencias Biologicas - Araras;1;5;718.00
+1633;Callum Pruitt Sosa;Pedagogia - Sao Carlos;1;5;717.86
+1634;Chandler Raymond William;Ciencia da Computacao - Sao Carlos;2;5;717.50
+1635;Noel Whitney Snyder;Fisica - Araras;1;5;717.33
+1636;Violet Shaw Mckinney;Engenharia de alimentos - Lagoa do Sino;1;1;717.33
+1637;Steven Watkins Mcguire;Enhenharia de Producao - Sao Carlos;2;1;717.29
+1638;Uma Brooks Burns;Medicina - Sao Carlos;2;1;717.00
+1639;Shea Shannon William;Letras - Sao Carlos;1;5;717.00
+1640;Alexandra Christian Morris;Geografia - Sorocaba;2;4;716.88
+1641;Lisandra Alston Randolph;Ciencia da Computacao - Sorocaba;1;1;716.88
+1642;Akeem Norman Lane;Enhenharia de Producao - Sao Carlos;1;3;716.86
+1643;Kellie Anthony Powell;Letras - Sao Carlos;2;5;716.75
+1644;Pamela Mueller Frazier;Matematica - Sao Carlos;2;5;716.71
+1645;Zoe Pacheco Greer;Matematica - Sao Carlos;1;3;716.43
+1646;Hayden Petersen Lamb;Psicologia - Sao Carlos;1;5;716.33
+1647;Joel Vaughn Lindsay;Engenharia Eletrica - Sao Carlos;1;1;716.14
+1648;Matthew Mendez Russo;Matematica - Sao Carlos;2;5;716.14
+1649;Jescie Carey Avery;Linguistica - Sao Carlos;1;5;716.13
+1650;Chanda Slater Sanders;Ciencias Econimcas - Sorocaba;1;5;715.89
+1651;Keane Livingston Beach;Ciencias Biologicas - Sao Carlos;1;5;715.88
+1652;Scott Bishop Winters;Gerontologia - Sao Carlos;1;5;715.78
+1653;Hilel Warner Colon;Geografia - Sorocaba;1;5;715.75
+1654;Jameson Nichols Fuller;Gerontologia - Sao Carlos;2;1;715.67
+1655;Maris Padilla Small;Engenharia de alimentos - Lagoa do Sino;1;1;715.22
+1656;Lamar Justice England;Matematica - Sao Carlos;1;5;715.14
+1657;Alexis Valentine Hawkins;Ciencia da Computacao - Sorocaba;1;5;715.13
+1658;Duncan Mccoy Wyatt;Terapia Ocupacional - Sao Carlos;1;5;715.00
+1659;Imani Armstrong Davenport;Engenharia Ambiental - Lagoa do Sino;1;3;714.89
+1660;Kimberley Salas Harris;Biotecnologia - Sao Carlos;2;5;714.75
+1661;Gil Santos Bradley;Turismo - Sorocaba;1;5;714.56
+1662;Xenos Lucas Olson;Biotecnologia - Sao Carlos;1;5;714.25
+1663;Ferris Bennett Hinton;Enhenharia de Producao - Sao Carlos;2;3;713.86
+1664;Juliet Mclean Carrillo;Engenharia Civil - Sao Carlos;2;1;713.75
+1665;Len Garner Adkins;Geografia - Sorocaba;1;3;713.50
+1666;Cairo Livingston Logan;Engenharia Ambiental - Lagoa do Sino;1;3;713.44
+1667;Keelie Bird Bass;Medicina - Sao Carlos;1;1;713.43
+1668;Keiko Bowman Tyler;Fisica - Sao Carlos;1;5;713.43
+1669;Hollee Weber Daugherty;Turismo - Sorocaba;1;5;713.33
+1670;Keaton Kelley Jimenez;Engenharia Quimica - Sao Carlos;2;5;712.71
+1671;Lee Kinney Barton;Ciencias Biologicas - Sorocaba;2;5;712.38
+1672;Eliana Martinez Hinton;Pedagogia - Sorocaba;2;1;712.38
+1673;Ifeoma Melton Copeland;Quimica - Araras;1;5;712.33
+1674;Elvis Baldwin Yates;Ciencias Biologicas - Sorocaba;1;5;712.25
+1675;Patricia Steele Gilbert;Ciencias Biologicas - Sorocaba;2;5;712.25
+1676;Kyle Mendoza Massey;Enhenharia de Producao - Sao Carlos;1;1;712.14
+1677;Alexander Vasquez Graves;Geografia - Sorocaba;2;5;711.75
+1678;Dolan Hopper Evans;Engenharia Mecanica - Sao Carlos;1;5;711.71
+1679;Claire Peterson Thompson;Estatistica - Sao Carlos;1;5;711.57
+1680;Zephania Hogan Horn;Engenharia Eletrica - Sao Carlos;2;5;711.57
+1681;Vivien Hammond Sutton;Engenharia de Materiais - Sao Carlos;1;5;711.43
+1682;Cora Peck Grant;Quimica - Sorocaba;2;5;711.33
+1683;Bo Bowers Park;Engenharia Mecanica - Sao Carlos;1;5;711.29
+1684;Chava Park England;Ciencias Biologicas - Sorocaba;1;5;711.25
+1685;Bruce Richmond Williams;Engenharia Civil - Sao Carlos;2;4;711.25
+1686;Carson Woodward Burch;Quimica - Sorocaba;1;5;711.11
+1687;Mannix Carlson Bender;Ciencia da Computacao - Sorocaba;1;5;710.75
+1688;Jelani Zamora Holland;Matematica - Sao Carlos;2;5;710.57
+1689;Desirae Goodman Rodriquez;Engenharia Civil - Sao Carlos;2;1;710.38
+1690;Noel Hanson Mccormick;Engenharia Civil - Sao Carlos;1;5;710.38
+1691;Aristotle Christian Leonard;Gerontologia - Sao Carlos;1;5;710.33
+1692;Rose Mcdowell Preston;Quimica - Sorocaba;1;5;710.22
+1693;Ciaran Hernandez Gould;Engenharia Florestal - Sorocaba;2;5;710.13
+1694;Mollie;Ciencias Biologicas - Araras;2;5;710.13
+1695;Garrett Britt Cantrell;Ciencias Sociais - Sao Carlos;2;4;710.00
+1696;Slade Buck Allen;Ciencias Biologicas - Sorocaba;1;5;710.00
+1697;Autumn Trujillo Hunter;Terapia Ocupacional - Sao Carlos;2;5;710.00
+1698;Joy Benton Donaldson;Engenharia de Producao - Sorocaba;1;5;709.88
+1699;Benjamin Gallagher Dixon;Pedagogia - Sao Carlos;1;5;709.57
+1700;Ryder Carson Curry;Quimica - Araras;1;5;709.56
+1701;Jack Holmes Kemp;Gestao e Analise Ambiental - Sao Carlos;1;5;709.50
+1702;Alana Dawson Lane;Engenharia de Computacao - Sao Carlos;1;5;709.50
+1703;Leilani Benton Ellison;Matematica - Sao Carlos;2;5;709.43
+1704;Kyle Fitzpatrick Horne;Ciencias Biologicas - Sao Carlos;1;5;709.38
+1705;Sybil Parker Boyd;Engenharia Mecanica - Sao Carlos;2;4;709.29
+1706;Oscar Rodriquez Wyatt;Ciencias Biologicas - Sorocaba;1;5;709.13
+1707;Sylvia Holcomb Peters;Engenharia de Computacao - Sao Carlos;1;5;709.00
+1708;Dylan Petty Mcbride;Engenharia Mecanica - Sao Carlos;2;5;708.86
+1709;Jeremy Nelson Mckinney;Matematica - Sao Carlos;1;5;708.86
+1710;Brennan Sandoval Silva;Fisica - Sao Carlos;1;1;708.86
+1711;Karyn Good Valentine;Linguistica - Sao Carlos;1;5;708.75
+1712;Ezra Moss Watkins;Enhenharia de Producao - Sao Carlos;1;1;708.57
+1713;Jade Mcclain Clark;Gestao e Analise Ambiental - Sao Carlos;1;5;708.50
+1714;Farrah Hewitt Cross;Engenharia de Producao - Sorocaba;1;5;708.00
+1715;Jamal Mckay Allen;Ciencias Sociais - Sao Carlos;2;3;707.86
+1716;Molly Booker Knight;Engenharia de Producao - Sorocaba;1;5;707.75
+1717;Louis Ayers Marsh;Linguistica - Sao Carlos;1;5;707.75
+1718;Jacqueline Frazier Campos;Engenharia Florestal - Sorocaba;2;5;707.63
+1719;Bree Dorsey Matthews;Gestao e Analise Ambiental - Sao Carlos;1;5;707.25
+1720;Christine Nolan Barry;Ciencia da Computacao - Sao Carlos;1;3;707.25
+1721;Bevis Horne Medina;Ciencias Econimcas - Sorocaba;2;5;707.22
+1722;Adara George Santiago;Ciencias Sociais - Sao Carlos;1;5;707.14
+1723;Mufutau Stanley Walters;Gerontologia - Sao Carlos;2;5;707.11
+1724;Chanda Velez Coffey;Quimica - Sao Carlos;1;5;707.00
+1725;Rachel Rogers Stuart;Quimica - Sao Carlos;1;5;707.00
+1726;Steven;Ciencias Biologicas - Araras;2;5;706.63
+1727;Haley Miranda Hammond;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;1;5;706.57
+1728;Carol Pena Mcguire;Enhenharia de Producao - Sao Carlos;2;3;706.57
+1729;Dawn Griffith Heath;Ciencias Sociais - Sao Carlos;1;4;706.29
+1730;Dennis Decker Ford;Pedagogia - Sorocaba;1;5;706.25
+1731;Evelyn Johnston Weber;Pedagogia - Sao Carlos;1;5;705.71
+1732;Halla Chan Vazquez;Ciencias Sociais - Sao Carlos;2;1;705.57
+1733;Sigourney Klein Decker;Engenharia de Materiais - Sao Carlos;2;3;705.29
+1734;Reece Cannon Rivers;Turismo - Sorocaba;2;5;705.11
+1735;Lysandra Dean Mcdowell;Fisica - Araras;1;5;705.00
+1736;Nash William Jennings;Fisica - Araras;2;5;705.00
+1737;Beatrice Slater Rowe;Engenharia Ambiental - Lagoa do Sino;1;5;704.56
+1738;David Carroll Golden;Engenharia Ambiental - Lagoa do Sino;1;5;704.44
+1739;Blaze Davidson Savage;Engenharia Agronomica - Lagoa do Sino;1;5;704.33
+1740;Chiquita Waters Savage;Ciencias Biologicas - Sorocaba;1;5;704.25
+1741;Abdul Nash Greer;Turismo - Sorocaba;1;5;704.22
+1742;Kasper Ross Richmond;Ciencias Biologicas - Sao Carlos;1;5;704.13
+1743;Charity Daniel Carney;Ciencias Econimcas - Sorocaba;2;1;704.11
+1744;Coby Cohen Robles;Engenharia Florestal - Sorocaba;1;5;703.88
+1745;Miranda Gibson Barton;Medicina - Sao Carlos;1;5;703.71
+1746;Ulysses Banks Fox;Engenharia Quimica - Sao Carlos;1;5;703.71
+1747;Kiona Cardenas Duffy;Ciencias Sociais - Sao Carlos;2;4;703.43
+1748;Wyoming Chandler Foley;Administracao - Sorocaba;1;1;703.38
+1749;Mason Foreman Calderon;Engenharia de Materiais - Sao Carlos;1;1;703.00
+1750;Sheila Woodard Mack;Engenharia Ambiental - Lagoa do Sino;2;3;702.89
+1751;Elizabeth Wilson Giles;Geografia - Sorocaba;2;3;702.75
+1752;Mollie Hammond Watts;Engenharia de Materiais - Sao Carlos;2;5;702.71
+1753;Gil Mcpherson Wade;Engenharia de Computacao - Sao Carlos;1;5;702.50
+1754;Paula Barnett Lopez;Educacao Fisica - Sao Carlos;1;5;702.50
+1755;Linda Durham Andrews;Administracao - Sorocaba;2;5;702.25
+1756;Alma Kemp Richards;Engenharia de Materiais - Sao Carlos;1;1;702.14
+1757;Derek Hammond Bernard;Matematica - Sorocaba;1;5;702.13
+1758;Rose Conway Mays;Enhenharia de Producao - Sao Carlos;1;3;702.00
+1759;Shafira Wong Melton;Estatistica - Sao Carlos;2;5;701.86
+1760;Anjolie;Ciencias Biologicas - Araras;2;5;701.75
+1761;Quinn Boyd Macias;Ciencias Sociais - Sao Carlos;1;3;701.29
+1762;Alexandra Hendricks Villarreal;Fisioterapia - Sao Carlos;2;5;701.25
+1763;Merrill Meyer Erickson;Quimica - Araras;1;5;701.22
+1764;Drew Hartman Perry;Estatistica - Sao Carlos;2;5;701.14
+1765;Zahir Manning Ramsey;Turismo - Sorocaba;1;5;701.00
+1766;Garrison Gilbert Kirby;Geografia - Sorocaba;1;5;701.00
+1767;Basia Hernandez Wilkins;Medicina - Sao Carlos;1;1;701.00
+1768;Lars Ware Taylor;Ciencias Sociais - Sao Carlos;1;3;700.71
+1769;April Duffy Schwartz;Engenharia Quimica - Sao Carlos;1;1;700.57
+1770;Bertha Velasquez Nolan;Engenharia Civil - Sao Carlos;1;5;700.50
+1771;Tad Zimmerman Evans;Engenharia Agronomica - Araras;1;5;700.29
+1772;Darius Peterson Atkins;Enfermagem - Sao Carlos;2;5;700.13
+1773;Alfonso Patrick Farmer;Engenharia Florestal - Sorocaba;1;5;700.13
+1774;Nola Morrison Munoz;Gestao e Analise Ambiental - Sao Carlos;2;5;699.88
+1775;Stephanie Porter Head;Engenharia Quimica - Sao Carlos;2;1;699.86
+1776;Shad Bonner Alexander;Estatistica - Sao Carlos;1;5;699.86
+1777;Brenna Armstrong Small;Engenharia de Materiais - Sao Carlos;1;5;699.57
+1778;Gail Vincent Morton;Fisica - Sorocaba;1;5;699.44
+1779;Anne Roman Parker;Engenharia Civil - Sao Carlos;1;5;699.38
+1780;Dillon Glass Lawrence;Educacao Fisica - Sao Carlos;2;5;699.17
+1781;Angelica Rivas Cotton;Gestao e Analise Ambiental - Sao Carlos;1;5;699.13
+1782;Paki Mcbride Mcmahon;Biblioteconomia - Sao Carlos;1;5;698.88
+1783;Clayton Haynes Norris;Matematica - Sorocaba;1;5;698.88
+1784;Rhona Townsend Hartman;Medicina - Sao Carlos;1;5;698.71
+1785;Garth Lane Marsh;Engenharia de Materiais - Sao Carlos;2;3;698.71
+1786;Luke Dixon Merrill;Fisica - Araras;1;5;698.67
+1787;Jessamine Mccoy Bolton;Quimica - Sao Carlos;1;5;698.60
+1788;Dillon Kane Barnett;Pedagogia - Sorocaba;1;1;698.50
+1789;George;Ciencias Biologicas - Araras;1;5;698.50
+1790;Kristen Gilliam Savage;Ciencias Econimcas - Sorocaba;1;5;698.22
+1791;Sopoline Herring Aguirre;Engenharia Ambiental - Lagoa do Sino;1;5;697.89
+1792;Lewis Pace Carney;Estatistica - Sao Carlos;2;5;697.86
+1793;Zelenia Boone Haney;Psicologia - Sao Carlos;1;5;697.78
+1794;Amena Pierce Glover;Matematica - Sorocaba;1;5;697.75
+1795;Freya Buck West;Quimica - Araras;1;5;697.67
+1796;MacKenzie Tillman Coffey;Engenharia de alimentos - Lagoa do Sino;1;5;697.56
+1797;Melanie Mcpherson Perkins;Engenharia Ambiental - Lagoa do Sino;1;5;696.89
+1798;Susan Davis Zimmerman;Ciencias Biologicas - Sorocaba;1;5;696.75
+1799;Hammett Spencer Valenzuela;Fisioterapia - Sao Carlos;1;5;696.63
+1800;Galvin Harding Pace;Engenharia Quimica - Sao Carlos;2;1;696.29
+1801;Chester Stark Mosley;Medicina - Sao Carlos;1;1;696.29
+1802;Janna Figueroa Graves;Engenharia Quimica - Sao Carlos;2;1;696.29
+1803;Sigourney Maynard Hooper;Linguistica - Sao Carlos;1;5;696.13
+1804;Timothy Clements Thornton;Engenharia Ambiental - Lagoa do Sino;1;3;696.11
+1805;Lucas Pennington Osborne;Quimica - Araras;1;5;696.00
+1806;Olympia Jefferson Morrow;Enhenharia de Producao - Sao Carlos;1;3;696.00
+1807;Shaeleigh Maldonado Stevens;Psicologia - Sao Carlos;1;5;695.89
+1808;Yardley Berg Oliver;Imagem Som - Sao Carlos;1;5;695.88
+1809;Emma Colon Robinson;Engenharia de Materiais - Sao Carlos;2;3;695.86
+1810;Sydney Duke Sparks;Pedagogia - Sao Carlos;1;5;695.57
+1811;Burton Sanford Page;Engenharia de Materiais - Sao Carlos;2;3;695.29
+1812;Keith Weaver Sweeney;Gestao e Analise Ambiental - Sao Carlos;1;5;695.25
+1813;Quyn Hampton Whitney;Filosofia - Sao Carlos;1;5;695.00
+1814;Velma Davenport Roy;Engenharia Quimica - Sao Carlos;2;5;695.00
+1815;Serina Sherman Drake;Engenharia Agronomica - Araras;2;5;694.86
+1816;Nathan Vaughn Watkins;Engenharia de Materiais - Sao Carlos;1;3;694.71
+1817;Robert Daniel Dyer;Engenharia de alimentos - Lagoa do Sino;2;1;694.67
+1818;Jessamine Hatfield Griffith;Pedagogia - Sorocaba;2;1;694.63
+1819;Regina Acevedo Russo;Engenharia Agronomica - Lagoa do Sino;1;5;694.33
+1820;Ethan Salas Koch;Engenharia Mecanica - Sao Carlos;1;5;694.14
+1821;Germane Adams Reed;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;2;5;693.86
+1822;Nicholas Mills Prince;Enfermagem - Sao Carlos;1;5;693.75
+1823;Yetta Quinn Hughes;Engenharia Florestal - Sorocaba;1;5;693.75
+1824;Cameron Gates Sanchez;Quimica - Araras;2;5;693.67
+1825;Adele Meadows Bentley;Pedagogia - Sorocaba;2;1;693.38
+1826;Vance Sloan Kane;Enhenharia de Producao - Sao Carlos;2;3;693.14
+1827;Velma Reed Wade;Engenharia de Producao - Sorocaba;1;5;693.00
+1828;Lars Odom Woodard;Engenharia de alimentos - Lagoa do Sino;2;5;692.67
+1829;Ralph Ruiz Todd;Engenharia Eletrica - Sao Carlos;1;5;692.57
+1830;Craig Schmidt Joyner;Engenharia de alimentos - Lagoa do Sino;1;5;692.22
+1831;Dylan Koch Atkinson;Linguistica - Sao Carlos;1;5;691.63
+1832;Kuame Burke Fox;Engenharia Agronomica - Araras;1;5;691.57
+1833;Keegan Spears Barton;Linguistica - Sao Carlos;2;5;691.25
+1834;Kadeem Haney Roy;Engenharia de Computacao - Sao Carlos;1;5;691.25
+1835;Shaeleigh Bowers Ellison;Ciencia da Computacao - Sao Carlos;1;5;690.88
+1836;Shay Malone Rivers;Engenharia Quimica - Sao Carlos;1;5;690.86
+1837;Michelle Brock Graham;Engenharia de alimentos - Lagoa do Sino;1;5;690.78
+1838;Nissim Knowles Stewart;Linguistica - Sao Carlos;1;5;690.63
+1839;Denton Calhoun Garner;Ciencia da Computacao - Sao Carlos;2;3;690.50
+1840;Macon Santana Ingram;Administracao - Sorocaba;1;5;690.50
+1841;Delilah Sherman Mccormick;Pedagogia - Sorocaba;1;1;690.25
+1842;Audra Cohen Bullock;Engenharia Eletrica - Sao Carlos;2;5;690.14
+1843;Xaviera Green Lara;Ciencias Sociais - Sao Carlos;1;1;690.00
+1844;Kaitlin Shepherd Marks;Ciencias Biologicas - Sao Carlos;1;5;690.00
+1845;Orlando Nixon Weaver;Pedagogia - Sorocaba;1;5;690.00
+1846;Dale Hewitt Walls;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;1;5;689.57
+1847;Carter Randolph Carlson;Pedagogia - Sorocaba;1;5;689.50
+1848;Lysandra Vance Lara;Engenharia Mecanica - Sao Carlos;2;5;689.14
+1849;Alea Mccall Christian;Ciencias Biologicas - Sao Carlos;1;5;689.13
+1850;Myra Marquez Walls;Filosofia - Sao Carlos;1;5;688.63
+1851;Kaden Whitfield Cotton;Engenharia Mecanica - Sao Carlos;2;5;688.57
+1852;Celeste Mcmahon Nichols;Filosofia - Sao Carlos;2;5;688.50
+1853;Jessica Lindsey Mcintosh;Imagem Som - Sao Carlos;1;5;688.50
+1854;Eliana Hensley Stanley;Ciencias Biologicas - Sao Carlos;1;5;688.50
+1855;Leslie Burns Kirby;Pedagogia - Sorocaba;1;5;688.38
+1856;Angela Burch Cantrell;Engenharia Ambiental - Lagoa do Sino;1;5;688.33
+1857;Cheyenne Rice Matthews;Engenharia Civil - Sao Carlos;2;1;688.25
+1858;Ori Mullen Washington;Pedagogia - Sorocaba;1;1;688.25
+1859;Idola Solis Small;Engenharia Eletrica - Sao Carlos;1;5;688.14
+1860;Harriet Conner Glass;Geografia - Sorocaba;2;5;688.13
+1861;Gavin Emerson Marsh;Ciencia da Computacao - Sao Carlos;1;5;687.50
+1862;Price Randall Acosta;Gestao e Analise Ambiental - Sao Carlos;2;5;687.13
+1863;Nita Guzman Sloan;Psicologia - Sao Carlos;1;5;686.89
+1864;Timothy Conner Chapman;Linguistica - Sao Carlos;1;5;686.75
+1865;Tanek Andrews Johnson;Engenharia de Materiais - Sao Carlos;2;1;686.71
+1866;Amelia Lindsey Salazar;Medicina - Sao Carlos;2;5;686.57
+1867;Brynn Mccarty Parsons;Estatistica - Sao Carlos;2;5;686.57
+1868;Lunea Solomon Watts;Ciencias Econimcas - Sorocaba;2;1;686.44
+1869;Jasper Mckenzie Ortiz;Matematica - Sao Carlos;2;5;685.86
+1870;Stella Oliver Baldwin;Ciencias Biologicas - Sao Carlos;1;5;685.75
+1871;Orli French Franco;Fisica - Araras;1;5;685.56
+1872;Jonah Arnold Webb;Geografia - Sorocaba;2;5;685.38
+1873;Odessa Roman Branch;Engenharia Agronomica - Lagoa do Sino;1;5;685.33
+1874;Amos Moon Davenport;Enhenharia de Producao - Sao Carlos;2;5;685.29
+1875;Maite Mcconnell Powers;Engenharia Mecanica - Sao Carlos;1;3;685.29
+1876;Cameran Nunez Frye;Engenharia Agronomica - Lagoa do Sino;2;5;685.22
+1877;Diana Anderson Cannon;Engenharia Agronomica - Araras;1;5;684.86
+1878;Alden Rasmussen Garza;Quimica - Araras;2;5;684.67
+1879;Ciaran Oneill Whitney;Engenharia de Producao - Sorocaba;2;5;684.38
+1880;Leonard Bridges Lowe;Ciencia da Computacao - Sorocaba;1;5;684.25
+1881;Brielle Rich Cortez;Engenharia Florestal - Sorocaba;2;5;684.25
+1882;Barclay Cunningham Kelley;Linguistica - Sao Carlos;1;5;684.00
+1883;Melvin Leach Skinner;Medicina - Sao Carlos;1;5;684.00
+1884;Amir Barnes Gordon;Ciencias Biologicas - Sao Carlos;2;5;683.88
+1885;Stacy Middleton Chen;Engenharia de Materiais - Sao Carlos;1;5;683.86
+1886;Cameron Valdez Bradshaw;Linguistica - Sao Carlos;1;5;683.75
+1887;Jordan Fischer Black;Biotecnologia - Sao Carlos;1;5;683.75
+1888;Autumn Patel Hoffman;Engenharia Ambiental - Lagoa do Sino;2;5;683.56
+1889;Omar Hodges Middleton;Letras - Sao Carlos;1;5;683.50
+1890;Sigourney Mcintosh Flowers;Engenharia de Materiais - Sao Carlos;1;3;683.43
+1891;Quynn Bowman Sellers;Engenharia Eletrica - Sao Carlos;1;5;683.29
+1892;Helen Huff Murphy;Ciencias Biologicas - Sorocaba;1;5;683.25
+1893;Odessa Walker Daugherty;Ciencias Biologicas - Sorocaba;1;5;683.25
+1894;Wade Yates Wyatt;Pedagogia - Sao Carlos;1;5;683.14
+1895;Anthony Franklin Melton;Enfermagem - Sao Carlos;1;5;682.88
+1896;Amal Cunningham Ferguson;Matematica - Sao Carlos;1;5;682.86
+1897;Mariko Sherman Talley;Gerontologia - Sao Carlos;2;5;682.78
+1898;Jarrod Franklin Hayes;Gerontologia - Sao Carlos;1;5;682.56
+1899;Harper Aguilar Medina;Filosofia - Sao Carlos;1;5;682.50
+1900;Ramona Ball Whitaker;Engenharia Ambiental - Lagoa do Sino;2;5;682.44
+1901;Jakeem Dickerson Villarreal;Engenharia de Materiais - Sao Carlos;1;1;682.43
+1902;Lev Vargas Hale;Enfermagem - Sao Carlos;1;5;682.38
+1903;Magee Whitaker Roach;Engenharia Eletrica - Sao Carlos;1;5;682.14
+1904;Nevada Summers Mathis;Engenharia Mecanica - Sao Carlos;1;5;682.00
+1905;Malik Sandoval Mcneil;Pedagogia - Sao Carlos;1;5;681.86
+1906;George Valentine Goodman;Engenharia de Materiais - Sao Carlos;1;3;681.71
+1907;Nigel Barnes Butler;Geografia - Sorocaba;2;5;681.50
+1908;Nayda Bryan Pennington;Enhenharia de Producao - Sao Carlos;2;1;681.29
+1909;Nicole Rios Torres;Engenharia Florestal - Sorocaba;2;5;680.88
+1910;Odette Goff Estes;Engenharia Eletrica - Sao Carlos;1;5;680.57
+1911;Graham Trujillo Barron;Filosofia - Sao Carlos;1;5;680.50
+1912;Ivy Clemons Skinner;Engenharia de Producao - Sorocaba;1;5;680.13
+1913;Jade Flores Kim;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;1;5;679.29
+1914;Camilla Burris Grimes;Engenharia de alimentos - Lagoa do Sino;2;5;678.89
+1915;Angelica Hutchinson Ayala;Biotecnologia - Sao Carlos;2;5;678.75
+1916;Maggy Gibbs Ballard;Engenharia Ambiental - Lagoa do Sino;1;5;678.44
+1917;Deanna Stuart Underwood;Medicina - Sao Carlos;1;5;678.43
+1918;Talon Owen Garner;Matematica - Sao Carlos;1;5;678.14
+1919;Haviva Wilcox Kirby;Enhenharia de Producao - Sao Carlos;1;5;677.71
+1920;Gary Barrera Hart;Engenharia de Materiais - Sao Carlos;1;5;677.57
+1921;Molly William Pratt;Linguistica - Sao Carlos;1;5;677.38
+1922;Risa Collier Cantrell;Pedagogia - Sorocaba;1;5;677.25
+1923;Olga Joyce Burnett;Engenharia Fisica - Sao Carlos;1;5;677.00
+1924;Aretha Castaneda Gardner;Engenharia Quimica - Sao Carlos;1;5;676.71
+1925;Ursula Hodge Bennett;Engenharia de Materiais - Sao Carlos;1;5;676.71
+1926;Chandler Paul Beard;Terapia Ocupacional - Sao Carlos;1;5;676.67
+1927;Aaron Ball Stuart;Fisica - Sorocaba;2;5;676.67
+1928;Evangeline Lowe Logan;Pedagogia - Sao Carlos;2;5;676.29
+1929;Jesse Lester Farrell;Engenharia de Producao - Sorocaba;1;5;676.25
+1930;Molly Schroeder Walter;Ciencia da Computacao - Sao Carlos;2;5;676.25
+1931;Hillary Reed Coffey;Letras - Sao Carlos;1;5;676.13
+1932;Gareth Andrews Buckley;Engenharia Ambiental - Lagoa do Sino;1;5;676.00
+1933;Darius Mejia Marshall;Traducao e Interpretacao em Lingua Brasileira de Sinais - Libras/Lingua Portuguesa - Sao Carlos;1;5;675.86
+1934;Bell Hewitt Gardner;Ciencias Econimcas - Sorocaba;1;5;675.78
+1935;Lenore Rush Harvey;Filosofia - Sao Carlos;1;5;675.75
+1936;Kevin Murphy Mckee;Educacao Fisica - Sao Carlos;1;5;675.67
+1937;Julian Stephenson Golden;Engenharia Fisica - Sao Carlos;2;5;675.57
+1938;Chantale Beasley Stevens;Enfermagem - Sao Carlos;1;5;675.38
+1939;Michael Meyers Russell;Matematica - Sao Carlos;2;5;674.86
+1940;Oscar Hoover Patterson;Quimica - Sao Carlos;1;5;674.60
+1941;Desirae Watts Carr;Filosofia - Sao Carlos;2;5;674.50
+1942;Blaine Carlson Rosario;Quimica - Sao Carlos;1;5;674.20
+1943;Yen French Potts;Engenharia Florestal - Sorocaba;2;5;673.63
+1944;Magee Church Little;Engenharia de Materiais - Sao Carlos;1;1;673.57
+1945;Yetta Finley King;Enhenharia de Producao - Sao Carlos;2;1;673.57
+1946;Price Harper Caldwell;Biblioteconomia - Sao Carlos;1;5;673.38
+1947;Ulric Good Conrad;Engenharia Florestal - Sorocaba;2;5;673.38
+1948;Ruby Hampton Wright;Engenharia Agronomica - Lagoa do Sino;1;5;673.11
+1949;Kelsey Valencia Reeves;Ciencia da Computacao - Sorocaba;1;5;672.88
+1950;Ariana Richmond Craft;Ciencias Biologicas - Sorocaba;2;5;672.75
+1951;Cherokee Burris Stewart;Ciencias Biologicas - Sao Carlos;1;5;672.75
+1952;Devin Diaz Robbins;Educacao Especial - Sao Carlos;1;5;672.71
+1953;Ralph Suarez Pierce;Educacao Fisica - Sao Carlos;1;5;672.50
+1954;Jolie Berg Bradford;Engenharia Florestal - Sorocaba;1;5;672.50
+1955;Quin Thompson Lynn;Engenharia de Materiais - Sao Carlos;2;3;672.43
+1956;Reece Cooke Pittman;Biblioteconomia - Sao Carlos;1;5;672.38
+1957;Priscilla Stuart Blevins;Quimica - Araras;2;5;671.78
+1958;Wing Nolan Reese;Educacao Fisica - Sao Carlos;2;5;671.67
+1959;Daniel Schultz Fry;Engenharia de alimentos - Lagoa do Sino;1;5;671.67
+1960;Jolie Leach Emerson;Educacao Especial - Sao Carlos;1;5;671.14
+1961;Germaine Cobb Leonard;Engenharia Mecanica - Sao Carlos;1;5;671.00
+1962;Ezekiel Waller Ewing;Educacao Especial - Sao Carlos;1;5;671.00
+1963;Xyla Mcbride Hayes;Quimica - Araras;2;5;670.67
+1964;Thor Schroeder Fuller;Engenharia de Materiais - Sao Carlos;1;5;670.29
+1965;Thomas Pratt Goodwin;Engenharia Florestal - Sorocaba;2;5;670.25
+1966;Hiroko Vasquez Steele;Engenharia Mecanica - Sao Carlos;2;5;670.00
+1967;Melanie Wolfe Tate;Terapia Ocupacional - Sao Carlos;2;5;669.89
+1968;Rebekah Stevens Lucas;Letras - Sao Carlos;1;5;669.88
+1969;Kalia Mejia Vaughn;Ciencias Sociais - Sao Carlos;2;3;669.86
+1970;Quyn Smith Keith;Engenharia de Computacao - Sao Carlos;1;5;669.50
+1971;Wesley Hunter Goodwin;Engenharia Ambiental - Lagoa do Sino;2;5;669.44
+1972;Berk Franks Matthews;Ciencias Sociais - Sao Carlos;1;3;669.43
+1973;Dolan Summers Wood;Gerontologia - Sao Carlos;1;5;668.89
+1974;Ayanna Schultz Hickman;Engenharia Ambiental - Lagoa do Sino;1;5;668.78
+1975;Alexandra Kemp Parker;Gestao e Analise Ambiental - Sao Carlos;1;5;668.75
+1976;Halla Dixon Spears;Engenharia Quimica - Sao Carlos;1;5;668.71
+1977;Nyssa Miles Boyle;Educacao Especial - Sao Carlos;1;5;668.71
+1978;Hashim Guerrero Sosa;Ciencias Sociais - Sao Carlos;2;3;668.57
+1979;Carla Cohen Bean;Fisica - Sao Carlos;2;5;668.57
+1980;Zachery Lancaster Potter;Engenharia Agronomica - Lagoa do Sino;1;5;668.00
+1981;Candace Paul Gibbs;Letras - Sao Carlos;2;5;667.63
+1982;Hasad Allen Bridges;Pedagogia - Sao Carlos;1;5;667.43
+1983;Regan Gill Sanders;Administracao - Sorocaba;1;5;667.25
+1984;Ahmed Evans Barlow;Biblioteconomia - Sao Carlos;2;5;667.13
+1985;Karina Reid Marks;Fisica - Araras;1;5;666.67
+1986;Justin Gilmore Patrick;Engenharia de Producao - Sorocaba;2;5;666.63
+1987;Rebekah Frazier Mcintosh;Engenharia de Materiais - Sao Carlos;1;5;666.57
+1988;Hope Winters Giles;Ciencias Biologicas - Sao Carlos;2;5;666.50
+1989;Thaddeus Manning Mcintosh;Biotecnologia - Sao Carlos;1;5;666.50
+1990;Abra Mullins Snider;Educacao Especial - Sao Carlos;1;5;666.43
+1991;Emerson Mejia Frye;Matematica - Sao Carlos;1;5;666.29
+1992;Abraham Jennings Navarro;Geografia - Sorocaba;1;5;666.00
+1993;Armand Mcknight Horn;Fisica - Sorocaba;1;5;665.89
+1994;Jordan Prince Dunlap;Engenharia Agronomica - Lagoa do Sino;1;5;665.67
+1995;Beatrice Gilmore Harmon;Enhenharia de Producao - Sao Carlos;2;5;665.57
+1996;Ria Kaufman Clay;Educacao Especial - Sao Carlos;1;5;665.43
+1997;Brynn Snyder Hamilton;Terapia Ocupacional - Sao Carlos;1;5;665.33
+1998;Kelly Greer Spears;Imagem Som - Sao Carlos;1;5;665.25
+1999;Elijah Byrd Becker;Engenharia Ambiental - Lagoa do Sino;2;5;665.11
+2000;Reece Dunn Randall;Ciencias Biologicas - Sorocaba;2;5;665.00
+2001;Abel Savage Kennedy;Quimica - Sao Carlos;2;5;665.00
+2002;Brenden Pugh Avery;Engenharia Ambiental - Lagoa do Sino;2;5;664.44
+2003;Barclay Brady Grant;Geografia - Sorocaba;1;5;664.00
+2004;Ali Hurley Pugh;Pedagogia - Sao Carlos;1;5;663.71
+2005;Maxine Black Ewing;Matematica - Sao Carlos;2;5;663.43
+2006;Tyler Leonard Evans;Engenharia de Materiais - Sao Carlos;2;5;663.14
+2007;Illiana Osborn Rivera;Estatistica - Sao Carlos;1;5;663.14
+2008;Daryl Hernandez Cole;Fisioterapia - Sao Carlos;2;5;662.38
+2009;Hillary Houston Farley;Fisioterapia - Sao Carlos;1;5;662.25
+2010;Georgia Charles Contreras;Engenharia de Materiais - Sao Carlos;2;5;662.00
+2011;Ali Crosby Berger;Medicina - Sao Carlos;1;5;662.00
+2012;Shaine Nguyen Daniel;Engenharia Agronomica - Lagoa do Sino;2;5;661.78
+2013;Urielle Ferguson Spence;Enfermagem - Sao Carlos;2;5;661.75
+2014;Roary Hobbs Clark;Enfermagem - Sao Carlos;1;5;661.75
+2015;Brendan Newton Watkins;Engenharia Fisica - Sao Carlos;2;5;661.14
+2016;Ethan Mckay Pruitt;Enhenharia de Producao - Sao Carlos;2;5;661.00
+2017;Lucius Ross Ayala;Engenharia Agronomica - Araras;1;5;660.71
+2018;Paul Maldonado Rogers;Pedagogia - Sorocaba;2;5;659.75
+2019;Ezekiel Mullen Perkins;Engenharia Quimica - Sao Carlos;2;5;659.71
+2020;Kimberley Solomon Leon;Engenharia de Materiais - Sao Carlos;2;5;659.57
+2021;Dai Winters Rivas;Turismo - Sorocaba;1;5;659.33
+2022;Ursa Strong Horn;Geografia - Sorocaba;1;5;659.25
+2023;Paul Hill Guthrie;Educacao Especial - Sao Carlos;2;5;659.14
+2024;William Calhoun Callahan;Ciencias Econimcas - Sorocaba;2;5;658.78
+2025;Travis Mcpherson Johnson;Pedagogia - Sorocaba;1;5;658.75
+2026;Leigh Herman Holcomb;Engenharia Eletrica - Sao Carlos;2;5;658.71
+2027;Elijah Webster Alford;Medicina - Sao Carlos;2;5;658.71
+2028;Frances Combs Moss;Engenharia de Computacao - Sao Carlos;2;5;658.25
+2029;Rina Ayers Stone;Imagem Som - Sao Carlos;2;5;657.63
+2030;Avye Levy Logan;Fisica - Sao Carlos;1;5;657.14
+2031;Whitney Fitzpatrick Walton;Engenharia Fisica - Sao Carlos;2;5;657.00
+2032;Hakeem Parks Branch;Engenharia de alimentos - Lagoa do Sino;1;5;656.67
+2033;Isabella Williamson Jenkins;Estatistica - Sao Carlos;1;5;656.29
+2034;Amanda Colon Rivers;Medicina - Sao Carlos;1;5;656.29
+2035;Nerea Harris Kemp;Engenharia Quimica - Sao Carlos;1;5;656.14
+2036;Macon Cleveland Mays;Letras - Sao Carlos;1;5;655.75
+2037;Howard Holder Gomez;Engenharia de Producao - Sorocaba;1;5;655.75
+2038;Skyler Herman Mayo;Administracao - Sorocaba;1;5;655.63
+2039;Judith Bird Galloway;Gestao e Analise Ambiental - Sao Carlos;1;5;655.25
+2040;Kimberly Page Morgan;Fisioterapia - Sao Carlos;1;5;655.25
+2041;TaShya Maynard Keith;Engenharia Agronomica - Araras;2;5;655.00
+2042;Baxter York Wilcox;Engenharia de Producao - Sorocaba;1;5;654.63
+2043;Adena Everett Miranda;Engenharia Agronomica - Araras;1;5;654.57
+2044;Kalia Cervantes Pitts;Letras - Sao Carlos;2;5;654.50
+2045;Brenden Freeman Palmer;Quimica - Araras;1;5;654.44
+2046;Merrill Randall Randall;Engenharia Quimica - Sao Carlos;1;5;654.29
+2047;Ryan Mendez Curry;Engenharia Mecanica - Sao Carlos;1;5;654.00
+2048;Victor Avery Thomas;Enhenharia de Producao - Sao Carlos;1;5;654.00
+2049;Paki Guerrero Chambers;Biblioteconomia - Sao Carlos;2;5;654.00
+2050;Haley Figueroa Bender;Biotecnologia - Sao Carlos;1;5;653.75
+2051;Devin Winters Vargas;Fisica - Sorocaba;2;5;653.11
+2052;Connor Quinn Mccoy;Terapia Ocupacional - Sao Carlos;1;5;653.11
+2053;Aimee Cox Lindsey;Engenharia de Producao - Sorocaba;2;5;653.00
+2054;Colleen Farrell Mcdonald;Engenharia Ambiental - Lagoa do Sino;1;5;651.89
+2055;Odysseus Moss Green;Terapia Ocupacional - Sao Carlos;1;5;651.22
+2056;Callie Becker Crane;Administracao - Sorocaba;1;5;651.13
+2057;Heidi Sutton Cobb;Terapia Ocupacional - Sao Carlos;2;5;650.78
+2058;Keiko Vazquez Coleman;Engenharia de alimentos - Lagoa do Sino;1;5;650.78
+2059;Omar Perez Stein;Estatistica - Sao Carlos;2;5;650.57
+2060;Jeremy Shepard Gilliam;Biotecnologia - Sao Carlos;1;5;650.25
+2061;Deacon Trujillo Burton;Ciencias Econimcas - Sorocaba;2;5;649.78
+2062;Patricia Huff Ratliff;Engenharia Quimica - Sao Carlos;2;5;649.43
+2063;Stewart Stein Ayala;Fisioterapia - Sao Carlos;1;5;649.25
+2064;Byron Bryant Holden;Fisioterapia - Sao Carlos;1;5;649.25
+2065;Whoopi Butler Bryant;Engenharia Mecanica - Sao Carlos;2;5;648.71
+2066;Barry Quinn Knowles;Fisioterapia - Sao Carlos;2;5;648.63
+2067;Slade Nieves Campbell;Gestao e Analise Ambiental - Sao Carlos;1;5;648.38
+2068;Lawrence Brown Hess;Biblioteconomia - Sao Carlos;1;5;648.25
+2069;Knox Dillon Burks;Engenharia Civil - Sao Carlos;1;5;648.13
+2070;Bree Hanson Barton;Administracao - Sorocaba;1;5;648.13
+2071;Kessie Thompson Guy;Engenharia Agronomica - Lagoa do Sino;2;5;648.00
+2072;Fleur Hicks Townsend;Quimica - Sao Carlos;2;5;647.80
+2073;Branden Mccormick Thompson;Engenharia Agronomica - Araras;1;5;647.57
+2074;Odessa Matthews Houston;Matematica - Sao Carlos;1;5;647.43
+2075;Melissa Chandler Wolfe;Pedagogia - Sorocaba;1;5;647.38
+2076;Edan Hansen Guzman;Turismo - Sorocaba;1;5;647.33
+2077;Ferdinand Nicholson Douglas;Imagem Som - Sao Carlos;1;5;647.25
+2078;Jack Jennings Mercer;Pedagogia - Sorocaba;1;5;647.00
+2079;Nichole Jones Hancock;Estatistica - Sao Carlos;1;5;647.00
+2080;Zephr Clayton Dean;Administracao - Sorocaba;1;5;646.38
+2081;Gisela Hale Olson;Fisioterapia - Sao Carlos;1;5;646.13
+2082;Emery Travis Howell;Engenharia Fisica - Sao Carlos;2;5;646.00
+2083;Helen Contreras Quinn;Engenharia Quimica - Sao Carlos;1;5;645.86
+2084;Tallulah Foreman Baxter;Fisica - Araras;1;5;645.67
+2085;Chiquita Stout Farrell;Engenharia Mecanica - Sao Carlos;2;5;645.43
+2086;Zeph Reeves Hansen;Geografia - Sorocaba;1;5;645.38
+2087;Skyler Figueroa Bowers;Letras - Sao Carlos;1;5;645.38
+2088;Kibo Howe Keller;Enhenharia de Producao - Sao Carlos;1;1;645.29
+2089;Sonia Benjamin Riggs;Matematica - Sao Carlos;1;5;645.29
+2090;Price Bullock Gilmore;Engenharia Florestal - Sorocaba;2;5;645.00
+2091;Katell Howard Ryan;Fisica - Araras;1;5;644.78
+2092;Zelenia Dorsey Mccarthy;Imagem Som - Sao Carlos;1;5;644.63
+2093;Piper Dotson Waters;Ciencias Biologicas - Sorocaba;2;5;644.38
+2094;Dale King Martinez;Enhenharia de Producao - Sao Carlos;2;5;643.43
+2095;Alfonso May Guy;Letras - Sao Carlos;1;5;643.13
+2096;Arthur Holland Cherry;Ciencias Econimcas - Sorocaba;2;5;642.22
+2097;Kirestin Burton Cabrera;Estatistica - Sao Carlos;2;5;641.43
+2098;Carol Myers Leonard;Matematica - Sao Carlos;2;5;641.14
+2099;Shoshana Emerson Strong;Fisica - Sao Carlos;2;5;640.71
+2100;Micah Bright Maddox;Pedagogia - Sorocaba;1;5;640.38
+2101;Howard Reynolds Humphrey;Engenharia Ambiental - Lagoa do Sino;1;5;640.22
+2102;Tara Velazquez Watts;Engenharia Fisica - Sao Carlos;1;5;639.71
+2103;Chastity Gates Meyers;Engenharia de Producao - Sorocaba;1;5;639.50
+2104;Sean Kim Byers;Geografia - Sorocaba;1;5;639.38
+2105;Jessamine Bradford Underwood;Terapia Ocupacional - Sao Carlos;2;5;639.33
+2106;Demetria Davis Flowers;Educacao Fisica - Sao Carlos;1;5;639.00
+2107;Shana Ferguson Lawson;Letras - Sao Carlos;1;5;638.88
+2108;Jarrod Woods Gallagher;Estatistica - Sao Carlos;1;5;638.86
+2109;Nerea Henderson Owens;Medicina - Sao Carlos;1;5;638.57
+2110;MacKenzie Guerrero Campbell;Ciencias Econimcas - Sorocaba;1;5;638.56
+2111;Sydnee Carney Carroll;Engenharia de Materiais - Sao Carlos;1;5;638.29
+2112;Vanna Swanson Myers;Fisica - Sao Carlos;1;5;638.14
+2113;Hedley Gallegos Le;Engenharia Florestal - Sorocaba;1;5;638.13
+2114;Nichole Haley Potter;Engenharia Fisica - Sao Carlos;2;5;638.00
+2115;Signe Ramirez Watson;Turismo - Sorocaba;2;5;637.89
+2116;Harper Kirby Bradley;Biotecnologia - Sao Carlos;2;5;637.25
+2117;Keith Mathews Best;Imagem Som - Sao Carlos;1;5;637.25
+2118;Hayfa Oliver Ball;Ciencia da Computacao - Sao Carlos;1;5;637.00
+2119;Justin Buckley Hull;Engenharia Civil - Sao Carlos;2;5;636.88
+2120;Lunea Owens Mack;Letras - Sao Carlos;1;5;636.63
+2121;Margaret Hopkins Ferrell;Educacao Especial - Sao Carlos;2;5;636.14
+2122;Rafael Albert Barton;Engenharia Agronomica - Lagoa do Sino;2;5;635.89
+2123;Melanie Pennington Coleman;Engenharia Agronomica - Araras;1;5;635.14
+2124;Shaeleigh Kent Mccall;Quimica - Sao Carlos;1;5;635.00
+2125;Blythe Morris Mcintosh;Engenharia Agronomica - Araras;1;5;634.86
+2126;Clare Case Baxter;Enhenharia de Producao - Sao Carlos;1;5;634.57
+2127;Bianca Snyder Riddle;Engenharia Agronomica - Lagoa do Sino;1;5;633.56
+2128;Zenaida Duffy Jordan;Geografia - Sorocaba;1;5;633.50
+2129;Jamalia Gallagher Rodriguez;Gerontologia - Sao Carlos;1;5;633.33
+2130;Adria Duran Randall;Biblioteconomia - Sao Carlos;1;5;633.25
+2131;Lael Murphy French;Engenharia de alimentos - Lagoa do Sino;1;5;633.22
+2132;Walker Thomas Hart;Ciencia da Computacao - Sao Carlos;1;5;633.13
+2133;Shannon Raymond Sutton;Educacao Especial - Sao Carlos;1;5;632.86
+2134;Kirk Wynn Brown;Engenharia Agronomica - Araras;1;5;632.71
+2135;Arden Owen Harding;Quimica - Sao Carlos;1;5;632.40
+2136;Abel Shepherd Frazier;Engenharia Civil - Sao Carlos;1;5;632.00
+2137;Kyle Harrington Padilla;Engenharia Ambiental - Lagoa do Sino;1;5;631.78
+2138;Ivy Cash Nunez;Ciencia da Computacao - Sao Carlos;1;5;631.38
+2139;Odette Porter Hardy;Pedagogia - Sao Carlos;1;5;631.29
+2140;Neville Mcfadden Ewing;Estatistica - Sao Carlos;2;5;631.29
+2141;Victoria Salazar William;Engenharia Mecanica - Sao Carlos;1;5;630.86
+2142;Felix Morse Arnold;Pedagogia - Sorocaba;1;5;630.50
+2143;Catherine Hawkins Rich;Engenharia Florestal - Sorocaba;1;5;629.88
+2144;Calista Castillo Mcpherson;Ciencias Econimcas - Sorocaba;1;5;629.78
+2145;Vincent Dunlap Tate;Fisioterapia - Sao Carlos;1;5;629.38
+2146;Marah Russo Patrick;Matematica - Sao Carlos;2;5;629.14
+2147;Otto Horn Mendez;Educacao Fisica - Sao Carlos;2;5;629.00
+2148;Ifeoma Sullivan Donovan;Biblioteconomia - Sao Carlos;1;5;628.88
+2149;Tanner Foley Knight;Engenharia de alimentos - Lagoa do Sino;1;5;628.56
+2150;Ursa Jacobson Soto;Geografia - Sorocaba;1;5;628.38
+2151;Tiger Byers Mercado;Enhenharia de Producao - Sao Carlos;1;5;628.29
+2152;Paula Morgan Wheeler;Engenharia de Materiais - Sao Carlos;1;5;628.14
+2153;Gabriel Lambert Cleveland;Engenharia de Materiais - Sao Carlos;2;5;627.57
+2154;Acton Leon Pratt;Ciencias Sociais - Sao Carlos;1;5;627.29
+2155;Ima Hinton Mcgowan;Geografia - Sorocaba;1;5;627.00
+2156;Nina Waller Daniels;Pedagogia - Sao Carlos;1;5;625.29
+2157;Macon Rice Ramirez;Ciencia da Computacao - Sao Carlos;1;5;624.25
+2158;Courtney Mercado Sharpe;Educacao Especial - Sao Carlos;1;5;624.14
+2159;Sydnee Gamble Neal;Fisica - Sao Carlos;2;5;623.00
+2160;Calista Mcintosh Fields;Biblioteconomia - Sao Carlos;1;5;622.88
+2161;Stephanie Wilkerson Craft;Engenharia Mecanica - Sao Carlos;1;5;622.29
+2162;Jena Clayton Snow;Engenharia Quimica - Sao Carlos;2;5;621.86
+2163;Dylan Moran Garrison;Engenharia Eletrica - Sao Carlos;1;5;621.29
+2164;Doris Hoffman Austin;Medicina - Sao Carlos;1;5;621.00
+2165;Adara Anderson Stein;Engenharia Eletrica - Sao Carlos;1;5;619.86
+2166;Cherokee Bradford Hodges;Engenharia Fisica - Sao Carlos;2;5;619.71
+2167;Cole Carey Brewer;Engenharia Agronomica - Lagoa do Sino;1;5;619.00
+2168;Noelani Herring Johnson;Engenharia de alimentos - Lagoa do Sino;1;5;618.89
+2169;Phoebe Bray Valdez;Engenharia de Producao - Sorocaba;1;5;618.88
+2170;Kyla Kelly Barron;Geografia - Sorocaba;1;5;618.00
+2171;Rhona Reilly Harmon;Educacao Fisica - Sao Carlos;2;5;617.83
+2172;Nina Cole Mckinney;Geografia - Sorocaba;2;5;617.75
+2173;Mollie Sosa Holden;Matematica - Sao Carlos;1;5;616.86
+2174;Shoshana Mathis Buchanan;Engenharia de Producao - Sorocaba;1;5;616.75
+2175;India Cross Bishop;Engenharia de Producao - Sorocaba;2;5;616.50
+2176;Jorden Parker Mejia;Ciencia da Computacao - Sorocaba;2;5;615.50
+2177;Vaughan Haney Roth;Engenharia Agronomica - Lagoa do Sino;2;5;615.11
+2178;Ian Shields Stevenson;Fisioterapia - Sao Carlos;2;5;615.00
+2179;Adam Chavez Hester;Engenharia de alimentos - Lagoa do Sino;2;5;615.00
+2180;Maxwell Shannon Good;Imagem Som - Sao Carlos;2;5;614.63
+2181;Caesar Ochoa Bowman;Educacao Fisica - Sao Carlos;1;5;614.50
+2182;Cherokee Herman Hartman;Matematica - Sao Carlos;1;5;614.43
+2183;Sybill Macdonald Malone;Educacao Fisica - Sao Carlos;2;5;614.33
+2184;Macy Wong Anderson;Matematica - Sao Carlos;2;5;613.71
+2185;Kathleen Sykes Mcdowell;Matematica - Sao Carlos;1;5;613.57
+2186;Simon Mullins Beck;Medicina - Sao Carlos;1;5;613.57
+2187;Patricia Rich Booth;Engenharia Agronomica - Araras;1;5;613.57
+2188;Lamar Rasmussen Summers;Engenharia Civil - Sao Carlos;2;5;613.50
+2189;Kathleen Dalton Wright;Engenharia de Computacao - Sao Carlos;1;5;613.38
+2190;Anastasia Myers Huff;Engenharia Agronomica - Lagoa do Sino;2;5;613.22
+2191;Jeremy Lara Mason;Engenharia Agronomica - Lagoa do Sino;2;5;612.78
+2192;Lila Page Vinson;Engenharia Fisica - Sao Carlos;1;5;611.43
+2193;Jakeem Bentley Bullock;Gerontologia - Sao Carlos;1;5;611.11
+2194;Brock Norton Giles;Engenharia de alimentos - Lagoa do Sino;1;5;610.33
+2195;Germane Spears Wilkins;Educacao Fisica - Sao Carlos;1;5;609.17
+2196;Gretchen Rosa Bullock;Engenharia Eletrica - Sao Carlos;1;5;609.14
+2197;Gemma Beard Hart;Gestao e Analise Ambiental - Sao Carlos;2;5;608.75
+2198;Whoopi Herring Dunlap;Engenharia de Producao - Sorocaba;1;5;608.63
+2199;Shelly Galloway Bennett;Enhenharia de Producao - Sao Carlos;1;5;607.71
+2200;Hilda Gates Zamora;Engenharia Civil - Sao Carlos;1;5;607.50
+2201;Nayda Le Walter;Medicina - Sao Carlos;1;5;607.43
+2202;Montana Callahan Saunders;Engenharia Agronomica - Lagoa do Sino;1;5;607.33
+2203;Rebecca Hester Bird;Engenharia Agronomica - Araras;2;5;607.29
+2204;Lacey Farrell Wooten;Engenharia de Producao - Sorocaba;2;5;607.00
+2205;Chadwick Vazquez Snider;Fisioterapia - Sao Carlos;2;5;606.50
+2206;Abel Rodriquez Copeland;Gestao e Analise Ambiental - Sao Carlos;2;5;606.00
+2207;Christen Wilkinson Waters;Engenharia de alimentos - Lagoa do Sino;2;5;605.67
+2208;Willa Wallace Sykes;Engenharia de Producao - Sorocaba;2;5;605.63
+2209;Paki Mosley Hardy;Gestao e Analise Ambiental - Sao Carlos;1;5;605.63
+2210;Jane Vargas Chaney;Engenharia de alimentos - Lagoa do Sino;1;5;605.44
+2211;Bree Owens Jefferson;Engenharia Agronomica - Lagoa do Sino;1;5;605.33
+2212;Aline Reese Rocha;Matematica - Sao Carlos;2;5;605.14
+2213;Ori Rodriguez Mccoy;Engenharia Agronomica - Araras;1;5;605.14
+2214;Noelani Oneil Hendrix;Ciencia da Computacao - Sorocaba;1;5;605.13
+2215;Yen Ingram Vance;Letras - Sao Carlos;1;5;604.63
+2216;Alan Wilder Morrison;Ciencia da Computacao - Sorocaba;1;5;603.75
+2217;Lyle Chavez Battle;Engenharia Agronomica - Lagoa do Sino;1;5;603.44
+2218;Raja French Vasquez;Enhenharia de Producao - Sao Carlos;1;5;602.86
+2219;Joel Mcclure Hahn;Engenharia Mecanica - Sao Carlos;1;5;602.00
+2220;Amy Freeman Solomon;Estatistica - Sao Carlos;2;5;600.29
+2221;Leilani Mcknight Lyons;Fisioterapia - Sao Carlos;1;5;599.88
+2222;Arthur Crosby Mccarthy;Biotecnologia - Sao Carlos;1;5;599.75
+2223;Orlando Dominguez Price;Engenharia Agronomica - Araras;2;5;599.71
+2224;Akeem Lewis Hardy;Engenharia Agronomica - Lagoa do Sino;2;5;599.67
+2225;MacKenzie Beck Head;Fisioterapia - Sao Carlos;2;5;598.88
+2226;Justina Holder Paul;Letras - Sao Carlos;1;5;598.25
+2227;Channing Shaw Hood;Educacao Especial - Sao Carlos;2;5;598.00
+2228;Whilemina Thomas Velazquez;Educacao Especial - Sao Carlos;1;5;597.43
+2229;Imani Nichols Stafford;Gestao e Analise Ambiental - Sao Carlos;1;5;597.38
+2230;Laith Garner Grimes;Ciencia da Computacao - Sorocaba;2;5;597.38
+2231;Melodie Crane Deleon;Turismo - Sorocaba;2;5;597.11
+2232;Leilani Norris Whitney;Enhenharia de Producao - Sao Carlos;1;5;595.43
+2233;Cassidy Kelley Ochoa;Pedagogia - Sorocaba;2;5;593.38
+2234;Hilda Lindsey Duffy;Enhenharia de Producao - Sao Carlos;1;5;593.29
+2235;Baxter Justice Gutierrez;Fisica - Araras;1;5;593.22
+2236;Rae Mitchell Gillespie;Estatistica - Sao Carlos;2;5;592.86
+2237;Jerome Fox Galloway;Ciencia da Computacao - Sao Carlos;1;5;592.50
+2238;Tara Galloway Frye;Fisica - Sao Carlos;1;5;591.57
+2239;Stacy Holloway Love;Matematica - Sao Carlos;1;5;591.14
+2240;Summer Bennett Davidson;Engenharia Agronomica - Araras;1;5;590.71
+2241;Shad Webster Patterson;Ciencia da Computacao - Sao Carlos;2;5;590.25
+2242;Lucas Adams Burnett;Biotecnologia - Sao Carlos;1;5;589.25
+2243;Geraldine Beach Mason;Pedagogia - Sorocaba;1;5;587.88
+2244;Tatum Cherry Parsons;Engenharia Civil - Sao Carlos;2;5;587.75
+2245;Cairo Diaz Bates;Geografia - Sorocaba;2;5;587.75
+2246;Meredith Ortega Bryan;Ciencia da Computacao - Sao Carlos;1;5;586.63
+2247;Germaine Santiago Frank;Matematica - Sao Carlos;2;5;586.57
+2248;Mannix Coleman Sawyer;Estatistica - Sao Carlos;1;5;585.43
+2249;Heather Stone Lowe;Engenharia Fisica - Sao Carlos;1;5;585.14
+2250;Beverly Serrano Sanchez;Estatistica - Sao Carlos;2;5;584.57
+2251;Tanek Macdonald Martin;Engenharia Eletrica - Sao Carlos;2;5;584.14
+2252;Lance Andrews Graves;Estatistica - Sao Carlos;2;5;583.71
+2253;Dustin Mcdaniel Russo;Ciencia da Computacao - Sao Carlos;1;5;583.13
+2254;Lunea Thompson Carney;Engenharia de Materiais - Sao Carlos;1;5;582.57
+2255;Melodie Calhoun Mooney;Engenharia Mecanica - Sao Carlos;1;5;582.14
+2256;Murphy Roberson Cotton;Geografia - Sorocaba;2;5;579.75
+2257;Xandra Copeland Blackburn;Ciencias Sociais - Sao Carlos;1;5;578.86
+2258;Maia Briggs Randolph;Matematica - Sao Carlos;1;5;577.57
+2259;Penelope Davenport Burt;Ciencias Econimcas - Sorocaba;2;5;576.67
+2260;Aimee Lott Pena;Educacao Especial - Sao Carlos;2;5;576.57
+2261;Hanna Orr Willis;Ciencia da Computacao - Sao Carlos;2;5;576.38
+2262;Daphne Valencia Garrett;Biotecnologia - Sao Carlos;2;5;575.25
+2263;Imelda Stanley Merrill;Ciencias Econimcas - Sorocaba;1;5;573.33
+2264;Nevada Spencer Villarreal;Engenharia Mecanica - Sao Carlos;1;5;573.00
+2265;Britanni Robles Foster;Pedagogia - Sorocaba;1;5;571.25
+2266;Marah Branch Ayers;Engenharia de Producao - Sorocaba;1;5;571.13
+2267;Yetta Johnson Dale;Engenharia de alimentos - Lagoa do Sino;2;5;571.11
+2268;Leila Goodman Hayes;Enhenharia de Producao - Sao Carlos;1;5;568.86
+2269;Hanae Petersen Elliott;Pedagogia - Sorocaba;2;5;568.75
+2270;Sarah Mann Larsen;Engenharia Quimica - Sao Carlos;2;5;567.86
+2271;Bianca Cantrell Montoya;Fisioterapia - Sao Carlos;1;5;566.38
+2272;Naida Carney Bush;Engenharia Quimica - Sao Carlos;2;5;566.00
+2273;Imelda Pacheco Cain;Letras - Sao Carlos;1;5;565.50
+2274;Paloma Harding Austin;Biotecnologia - Sao Carlos;2;5;565.00
+2275;Noah Herman Rivas;Turismo - Sorocaba;2;5;564.33
+2276;Venus Hicks Garrison;Biblioteconomia - Sao Carlos;1;5;561.75
+2277;Rama Nieves Marshall;Engenharia Civil - Sao Carlos;1;5;561.50
+2278;Guy Salas Hood;Biotecnologia - Sao Carlos;1;5;559.25
+2279;Rudyard Estes Frederick;Engenharia Eletrica - Sao Carlos;1;5;556.86
+2280;Ira Harrington Woods;Engenharia de Producao - Sorocaba;1;5;556.75
+2281;Nissim Whitehead Dean;Ciencias Sociais - Sao Carlos;2;5;556.43
+2282;Quintessa Donovan Garza;Administracao - Sorocaba;1;5;555.00
+2283;Phillip Rodriquez Cross;Engenharia Fisica - Sao Carlos;1;5;553.57
+2284;Vielka Brown Conway;Fisioterapia - Sao Carlos;1;5;553.00
+2285;Lois Zimmerman Warren;Engenharia de Materiais - Sao Carlos;1;5;552.14
+2286;Lareina Valenzuela Foster;Engenharia Quimica - Sao Carlos;2;5;552.14
+2287;Bethany Weiss Wells;Matematica - Sao Carlos;1;5;551.43
+2288;Hanae Kerr Rutledge;Gerontologia - Sao Carlos;1;5;550.78
+2289;Fleur Norris Knowles;Turismo - Sorocaba;1;5;547.56
+2290;Beck Avery Rowland;Fisica - Araras;1;5;547.00
+2291;Tate Mejia Welch;Fisica - Araras;2;5;545.67
+2292;Berk Quinn Powell;Engenharia Mecanica - Sao Carlos;2;5;543.57
+2293;Len Hopkins Kane;Educacao Especial - Sao Carlos;2;5;543.14
+2294;Brody Welch Carrillo;Engenharia Civil - Sao Carlos;1;5;542.75
+2295;Amos Benjamin Merrill;Enhenharia de Producao - Sao Carlos;2;5;538.14
+2296;Ginger Albert Walter;Ciencia da Computacao - Sao Carlos;1;5;537.00
+2297;Rose Webb Rollins;Ciencias Sociais - Sao Carlos;1;5;531.71
+2298;Josephine Rowe Ward;Ciencias Econimcas - Sorocaba;2;5;527.44
+2299;Maxine Mcknight Chambers;Administracao - Sorocaba;1;5;526.88
+2300;Jennifer Holman Garza;Biotecnologia - Sao Carlos;1;5;521.50
+2301;Price Whitney Colon;Ciencias Sociais - Sao Carlos;1;5;519.00
+2302;Igor Harvey Brown;Ciencias Econimcas - Sorocaba;2;5;515.11
+2303;Hedy Malone Rutledge;Matematica - Sao Carlos;2;5;514.29
+2304;August Blair Palmer;Biblioteconomia - Sao Carlos;2;5;514.25
+2305;Dennis Rowe Brown;Engenharia Mecanica - Sao Carlos;1;5;509.14
+2306;Rahim Gaines Herring;Engenharia Mecanica - Sao Carlos;2;5;507.14
+2307;Zelda Foley Carlson;Engenharia de Materiais - Sao Carlos;1;5;490.86
+2308;Alice Dale Gilmore;Matematica - Sao Carlos;2;5;486.86
